@@ -1,0 +1,28 @@
+{
+  "name": "reskins-angels",
+  "version": "0.0.1",
+  "factorio_version": "0.18",
+  "title": "Artisanal Reskins: Angel's Mods",
+  "author": "Kirazy",
+  "contact": "kirazy@live.com",
+  "dependencies": 
+  [	
+    "base >= 0.18.36",
+    "reskins-library >= 0.0.13",
+    "? angelsbioprocessing",
+    "? angelsexploration",
+    "? angelsindustries",
+    "? angelspetrochem",
+    "? angelsrefining",
+    "? angelssmelting",
+    "(?) angelsaddons-cab",
+    "(?) angelsaddons-crawlertrain",
+    "(?) angelsaddons-oresilos",
+    "(?) angelsaddons-petrotrain",
+    "(?) angelsaddons-pressuretanks",
+    "(?) angelsaddons-smeltingtrain",
+    "(?) angelsaddons-warehouses",
+    "(?) ShinyBobGFX",
+    "(?) ShinyAngelGFX"
+  ]
+}
