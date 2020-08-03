@@ -9,6 +9,7 @@
   [	
     "base >= 0.18.36",
     "reskins-library >= 0.0.13",
+    "? reskins-bobs >= 0.0.19",
     "? angelsbioprocessing",
     "? angelsexploration",
     "? angelsindustries",
