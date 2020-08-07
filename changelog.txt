@@ -3,3 +3,4 @@ Version: 0.0.1
 Date: 2020.XX.XX
   Features:
     - Initial Beta Release
+    - Implemented sintering oven, strand casting machine, and related technologies
