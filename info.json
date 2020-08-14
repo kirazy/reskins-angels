@@ -1,14 +1,14 @@
 {
   "name": "reskins-angels",
-  "version": "0.0.1",
-  "factorio_version": "0.18",
+  "version": "1.0.1",
+  "factorio_version": "1.0",
   "title": "Artisanal Reskins: Angel's Mods",
   "author": "Kirazy",
   "contact": "kirazy@live.com",
   "dependencies": 
   [	
-    "base >= 0.18.36",
-    "reskins-library >= 0.0.13",
+    "base >= 1.0.0",
+    "reskins-library >= 0.0.16",
     "? reskins-bobs",
     "? angelsbioprocessing",
     "? angelsexploration",
