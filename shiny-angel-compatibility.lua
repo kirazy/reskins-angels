@@ -97,7 +97,6 @@ require("prototypes.entity.smelting.strand-casting-machine")
 -- require("prototypes.items.industries")
 -- require("prototypes.items.petrochem")
 -- require("prototypes.items.refining")
--- require("prototypes.items.smelting")
 
 ----------------------------------------------------------------------------------------------------
 -- TECHNOLOGY
