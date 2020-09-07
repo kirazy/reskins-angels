@@ -5,7 +5,7 @@
 
 -- Check to see if reskinning needs to be done.
 if not mods["angelssmelting"] then return end
-if reskins.lib.setting("reskins-bobs-do-angelssmelting") == false then return end
+if reskins.lib.setting("reskins-angels-do-angelssmelting") == false then return end
 
 -- Set input parameters
 local inputs = {
@@ -45,13 +45,13 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = inputs.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-base.png",
+                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-base.png",
                 priority = "high",
                 width = 165,
                 height = 177,
                 shift = util.by_pixel(-1, -6),
                 hr_version = {
-                    filename = inputs.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-base.png",
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-base.png",
                     priority = "high",
                     width = 326,
                     height = 350,
@@ -61,14 +61,14 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = inputs.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-shadow.png",
+                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-shadow.png",
                 priority = "high",
                 width = 197,
                 height = 123,
                 shift = util.by_pixel(16, 22),
                 draw_as_shadow = true,
                 hr_version = {
-                    filename = inputs.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-shadow.png",
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-shadow.png",
                     priority = "high",
                     width = 391,
                     height = 242,
@@ -85,14 +85,14 @@ for name, map in pairs(tier_map) do
         {
             effect = "uranium-glow",
             animation = {
-                filename = inputs.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-glow.png",
+                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-glow.png",
                 priority = "high",
                 width = 165,
                 height = 177,
                 blend_mode = "additive",
                 shift = util.by_pixel(-1, -6),
                 hr_version = {
-                    filename = inputs.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-glow.png",
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-glow.png",
                     priority = "high",
                     width = 326,
                     height = 350,
@@ -108,13 +108,13 @@ for name, map in pairs(tier_map) do
             draw_as_sprite = false,
             draw_as_light = true,
             animation = {
-                filename = inputs.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-light.png",
+                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-light.png",
                 priority = "high",
                 width = 165,
                 height = 177,
                 shift = util.by_pixel(-1, -6),
                 hr_version = {
-                    filename = inputs.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-light.png",
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-light.png",
                     priority = "high",
                     width = 326,
                     height = 350,

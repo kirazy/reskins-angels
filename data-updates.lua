@@ -8,5 +8,15 @@ if mods["ShinyAngelGFX"] then
     require("shiny-angel-compatibility")
 end
 
+----------------------------------------------------------------------------------------------------
+-- ITEMS
+----------------------------------------------------------------------------------------------------
+require("prototypes.items.smelting.ores")
+
+----------------------------------------------------------------------------------------------------
+-- COMPATIBILITY
+----------------------------------------------------------------------------------------------------
+require("prototypes.compatibility.bobselectronics")
+
 -- Assign deferred icons
 reskins.lib.assign_deferred_icons("angels", "data-updates")
