@@ -5,8 +5,8 @@
   "title": "Artisanal Reskins: Angel's Mods",
   "author": "Kirazy",
   "contact": "kirazy@live.com",
-  "dependencies": 
-  [	
+  "dependencies":
+  [
     "base >= 1.0.0",
     "reskins-library >= 0.0.16",
     "? reskins-bobs",

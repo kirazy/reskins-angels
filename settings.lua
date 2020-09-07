@@ -1,6 +1,6 @@
 -- Copyright (c) 2020 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
---     
+--
 -- See LICENSE.md in the project directory for license information.
 
 -- Core settings
@@ -10,7 +10,8 @@ data:extend({
         name = "reskins-angels-use-angels-tier-colors",
         setting_type = "startup",
         order = "a",
-        default_value = true,
+        default_value = false,
+        hidden = true,
     }
 })
 
@@ -92,68 +93,92 @@ if mods["angelsaddons-cab"] then
     })
 end
 
-if mods["angelsaddons-crawlertrain"] then
+-- Handle Mobility vs deprecated individual mobility mods
+if mods["angelsaddons-mobility"] then
     data:extend({
         {
             type = "bool-setting",
-            name = "reskins-angels-do-angelsaddons-crawlertrain",
+            name = "reskins-angels-do-angelsaddons-mobility",
             setting_type = "startup",
             default_value = true,
         }
     })
+else
+    if mods["angelsaddons-crawlertrain"] then
+        data:extend({
+            {
+                type = "bool-setting",
+                name = "reskins-angels-do-angelsaddons-crawlertrain",
+                setting_type = "startup",
+                default_value = true,
+            }
+        })
+    end
+
+    if mods["angelsaddons-petrotrain"] then
+        data:extend({
+            {
+                type = "bool-setting",
+                name = "reskins-angels-do-angelsaddons-petrotrain",
+                setting_type = "startup",
+                default_value = true,
+            }
+        })
+    end
+
+    if mods["angelsaddons-smeltingtrain"] then
+        data:extend({
+            {
+                type = "bool-setting",
+                name = "reskins-angels-do-angelsaddons-smeltingtrain",
+                setting_type = "startup",
+                default_value = true,
+            }
+        })
+    end
 end
 
-if mods["angelsaddons-oresilos"] then
+-- Handle Storage vs deprecated individual storage mods
+if mods["angelsaddons-storage"] then
     data:extend({
         {
             type = "bool-setting",
-            name = "reskins-angels-do-angelsaddons-oresilos",
+            name = "reskins-angels-do-angelsaddons-storage",
             setting_type = "startup",
             default_value = true,
         }
     })
-end
+else
+    if mods["angelsaddons-oresilos"] then
+        data:extend({
+            {
+                type = "bool-setting",
+                name = "reskins-angels-do-angelsaddons-oresilos",
+                setting_type = "startup",
+                default_value = true,
+            }
+        })
+    end
 
-if mods["angelsaddons-petrotrain"] then
-    data:extend({
-        {
-            type = "bool-setting",
-            name = "reskins-angels-do-angelsaddons-petrotrain",
-            setting_type = "startup",
-            default_value = true,
-        }
-    })
-end
+    if mods["angelsaddons-pressuretanks"] then
+        data:extend({
+            {
+                type = "bool-setting",
+                name = "reskins-angels-do-angelsaddons-pressuretanks",
+                setting_type = "startup",
+                default_value = true,
+            }
+        })
+    end
 
-if mods["angelsaddons-pressuretanks"] then
-    data:extend({
-        {
-            type = "bool-setting",
-            name = "reskins-angels-do-angelsaddons-pressuretanks",
-            setting_type = "startup",
-            default_value = true,
-        }
-    })
-end
-
-if mods["angelsaddons-smeltingtrain"] then
-    data:extend({
-        {
-            type = "bool-setting",
-            name = "reskins-angels-do-angelsaddons-smeltingtrain",
-            setting_type = "startup",
-            default_value = true,
-        }
-    })
-end
-
-if mods["angelsaddons-warehouses"] then
-    data:extend({
-        {
-            type = "bool-setting",
-            name = "reskins-angels-do-angelsaddons-warehouses",
-            setting_type = "startup",
-            default_value = true,
-        }
-    })
+    if mods["angelsaddons-warehouses"] then
+        data:extend({
+            {
+                type = "bool-setting",
+                name = "reskins-angels-do-angelsaddons-warehouses",
+                setting_type = "startup",
+                default_value = true,
+            }
+        })
+    end
 end

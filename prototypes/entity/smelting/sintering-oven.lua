@@ -1,11 +1,11 @@
 -- Copyright (c) 2020 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
---     
+--
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
 if not mods["angelssmelting"] then return end
--- if reskins.lib.setting("reskins-bobs-do-angelssmelting") == false then return end
+if reskins.lib.setting("reskins-bobs-do-angelssmelting") == false then return end
 
 -- Set input parameters
 local inputs = {
@@ -34,7 +34,7 @@ for name, map in pairs(tier_map) do
 
     -- Check if entity exists, if not, skip this iteration
     if not entity then goto continue end
-      
+
     -- Determine what tint we're using
     inputs.tint = map.tint or reskins.lib.tint_index["tier-"..map.tier]
 
@@ -126,5 +126,5 @@ for name, map in pairs(tier_map) do
     }
 
     -- Label to skip to next iteration
-    ::continue::    
+    ::continue::
 end
