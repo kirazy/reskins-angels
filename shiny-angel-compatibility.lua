@@ -79,7 +79,7 @@
 -- require("prototypes.entity.smelting.chemical-furnace")
 -- require("prototypes.entity.smelting.cooling-tower")
 -- require("prototypes.entity.smelting.induction-furnace")
--- require("prototypes.entity.smelting.ore-processing-machine")
+require("prototypes.entity.smelting.ore-processing-machine")
 require("prototypes.entity.smelting.pellet-press")
 require("prototypes.entity.smelting.powder-mixer")
 require("prototypes.entity.smelting.sintering-oven")
