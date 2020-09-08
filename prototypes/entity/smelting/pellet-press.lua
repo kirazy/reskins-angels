@@ -26,3 +26,72 @@ local tier_map = {
     ["pellet-press-3"] = {tier = 3},
     ["pellet-press-4"] = {tier = 4},
 }
+
+-- Reskin entities, create and assign extra details
+for name, map in pairs(tier_map) do
+    -- Fetch entity
+    local entity = data.raw[inputs.type][name]
+
+    -- Check if entity exists, if not, skip this iteration
+    if not entity then goto continue end
+
+    -- Determine what tint we're using
+    inputs.tint = map.tint or reskins.lib.tint_index["tier-"..map.tier]
+
+    reskins.lib.setup_standard_entity(name, map.tier, inputs)
+
+    -- Reskin entities
+    entity.animation = {
+        layers = {
+            -- Base
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/pellet-press-base.png",
+                priority = "high",
+                width = 102,
+                height = 101,
+                line_length = 10,
+                frame_count = 60,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0.5, 0.5),
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/hr-pellet-press-base.png",
+                    priority = "high",
+                    width = 200,
+                    height = 199,
+                    line_length = 10,
+                    frame_count = 60,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(0, 0),
+                    scale = 0.5,
+                }
+            },
+            -- Shadow
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/pellet-press-shadow.png",
+                priority = "high",
+                width = 123,
+                height = 76,
+                line_length = 6,
+                frame_count = 60,
+                animation_speed = 0.5,
+                draw_as_shadow = true,
+                shift = util.by_pixel(11.5, 13),
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/hr-pellet-press-shadow.png",
+                    priority = "high",
+                    width = 241,
+                    height = 149,
+                    line_length = 6,
+                    frame_count = 60,
+                    animation_speed = 0.5,
+                    draw_as_shadow = true,
+                    shift = util.by_pixel(11, 12.5),
+                    scale = 0.5,
+                }
+            },
+        }
+    }
+
+    -- Label to skip to next iteration
+    ::continue::
+end
