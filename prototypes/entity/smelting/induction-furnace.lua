@@ -20,10 +20,10 @@ local inputs = {
 }
 
 local tier_map = {
-    ["induction-furnace"] = {tier = 1},
-    ["induction-furnace-2"] = {tier = 2},
-    ["induction-furnace-3"] = {tier = 3},
-    ["induction-furnace-4"] = {tier = 4},
+    ["induction-furnace"] = {tier = 1, prog_tier = 2},
+    ["induction-furnace-2"] = {tier = 2, prog_tier = 3},
+    ["induction-furnace-3"] = {tier = 3, prog_tier = 4},
+    ["induction-furnace-4"] = {tier = 4, prog_tier = 5},
 }
 
 -- Reskin entities, create and assign extra details
@@ -34,10 +34,16 @@ for name, map in pairs(tier_map) do
     -- Check if entity exists, if not, skip this iteration
     if not entity then goto continue end
 
-    -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tint_index["tier-"..map.tier]
+    -- Handle tier
+    local tier = map.tier
+    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+        tier = map.prog_tier or map.tier
+    end
 
-    reskins.lib.setup_standard_entity(name, map.tier, inputs)
+    -- Determine what tint we're using
+    inputs.tint = map.tint or reskins.lib.tint_index["tier-"..tier]
+
+    reskins.lib.setup_standard_entity(name, tier, inputs)
 
     -- Reskin entities
     entity.animation = {

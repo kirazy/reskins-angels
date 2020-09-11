@@ -2,6 +2,6 @@
 Version: 1.0.0
 Date: 2020.09.XX
   Features:
-    - Initial Beta Release
-    - Implements sintering oven, strand casting machine, and related technologies
+    - Initial work-in-progress release
+    - Implements machines and related technologies from Angel's Smelting
     - Implements plate items and ores added by Angel's Smelting and Angel's Refining

@@ -16,15 +16,14 @@ local inputs = {
     mod = "angels",
     particles = {["big"] = 1, ["medium"] = 2},
     group = "smelting",
-    icon_layers = 1,
     make_remnants = false,
 }
 
 local tier_map = {
-    ["pellet-press"] = {tier = 1},
-    ["pellet-press-2"] = {tier = 2},
-    ["pellet-press-3"] = {tier = 3},
-    ["pellet-press-4"] = {tier = 4},
+    ["pellet-press"] = {tier = 1, prog_tier = 2},
+    ["pellet-press-2"] = {tier = 2, prog_tier = 3},
+    ["pellet-press-3"] = {tier = 3, prog_tier = 4},
+    ["pellet-press-4"] = {tier = 4, prog_tier = 5},
 }
 
 -- Reskin entities, create and assign extra details
@@ -35,10 +34,16 @@ for name, map in pairs(tier_map) do
     -- Check if entity exists, if not, skip this iteration
     if not entity then goto continue end
 
-    -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tint_index["tier-"..map.tier]
+    -- Handle tier
+    local tier = map.tier
+    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+        tier = map.prog_tier or map.tier
+    end
 
-    reskins.lib.setup_standard_entity(name, map.tier, inputs)
+    -- Determine what tint we're using
+    inputs.tint = map.tint or reskins.lib.tint_index["tier-"..tier]
+
+    reskins.lib.setup_standard_entity(name, tier, inputs)
 
     -- Reskin entities
     entity.animation = {
@@ -62,6 +67,54 @@ for name, map in pairs(tier_map) do
                     frame_count = 60,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0, 0),
+                    scale = 0.5,
+                }
+            },
+            -- Mask
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/pellet-press-mask.png",
+                priority = "high",
+                width = 102,
+                height = 101,
+                line_length = 10,
+                frame_count = 60,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0.5, 0.5),
+                tint = inputs.tint,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/hr-pellet-press-mask.png",
+                    priority = "high",
+                    width = 200,
+                    height = 199,
+                    line_length = 10,
+                    frame_count = 60,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(0, 0),
+                    tint = inputs.tint,
+                    scale = 0.5,
+                }
+            },
+            -- Highlights
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/pellet-press-highlights.png",
+                priority = "high",
+                width = 102,
+                height = 101,
+                line_length = 10,
+                frame_count = 60,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0.5, 0.5),
+                blend_mode = reskins.lib.blend_mode,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/hr-pellet-press-highlights.png",
+                    priority = "high",
+                    width = 200,
+                    height = 199,
+                    line_length = 10,
+                    frame_count = 60,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(0, 0),
+                    blend_mode = reskins.lib.blend_mode,
                     scale = 0.5,
                 }
             },

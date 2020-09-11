@@ -32,10 +32,10 @@ local technologies = {
 
     -- Ore Processing
     ["ore-processing-1"] = {tier = 1, icon_name = "ore-processing", icon_base = "ore-processing-machine"},
-    ["ore-processing-2"] = {tier = 2, icon_name = "ore-processing", icon_base = "pellet-press"},
-    ["ore-processing-3"] = {tier = 3, icon_name = "ore-processing", icon_base = "pellet-press"},
-    ["ore-processing-4"] = {tier = 4, icon_name = "ore-processing", icon_base = "pellet-press"},
-    ["ore-processing-5"] = {tier = 5, icon_name = "ore-processing", icon_base = "pellet-press"},
+    ["ore-processing-2"] = {tier = 1, prog_tier = 2, icon_name = "pellet-press", technology_icon_layers = 3},
+    ["ore-processing-3"] = {tier = 2, prog_tier = 3, icon_name = "pellet-press", technology_icon_layers = 3},
+    ["ore-processing-4"] = {tier = 3, prog_tier = 4, icon_name = "pellet-press", technology_icon_layers = 3},
+    ["ore-processing-5"] = {tier = 4, prog_tier = 5, icon_name = "pellet-press", technology_icon_layers = 3},
 }
 
 reskins.lib.create_icons_from_list(technologies, inputs)
