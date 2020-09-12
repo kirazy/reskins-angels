@@ -16,15 +16,14 @@ local inputs = {
     mod = "angels",
     particles = {["big"] = 1, ["medium"] = 2},
     group = "smelting",
-    icon_layers = 1,
     make_remnants = false,
 }
 
 local tier_map = {
-    ["powder-mixer"] = {tier = 1},
-    ["powder-mixer-2"] = {tier = 2},
-    ["powder-mixer-3"] = {tier = 3},
-    ["powder-mixer-4"] = {tier = 4},
+    ["powder-mixer"] = {tier = 1, prog_tier = 2},
+    ["powder-mixer-2"] = {tier = 2, prog_tier = 3},
+    ["powder-mixer-3"] = {tier = 3, prog_tier = 4},
+    ["powder-mixer-4"] = {tier = 4, prog_tier = 5},
 }
 
 -- Reskin entities, create and assign extra details
@@ -68,6 +67,54 @@ for name, map in pairs(tier_map) do
                     frame_count = 4,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0.5, -9.5),
+                    scale = 0.5,
+                }
+            },
+            -- Mask
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/powder-mixer-mask.png",
+                priority = "high",
+                width = 71,
+                height = 87,
+                line_length = 4,
+                frame_count = 4,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -10),
+                tint = inputs.tint,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/hr-powder-mixer-mask.png",
+                    priority = "high",
+                    width = 138,
+                    height = 170,
+                    line_length = 4,
+                    frame_count = 4,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(0.5, -9.5),
+                    tint = inputs.tint,
+                    scale = 0.5,
+                }
+            },
+            -- Highlights
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/powder-mixer-highlights.png",
+                priority = "high",
+                width = 71,
+                height = 87,
+                line_length = 4,
+                frame_count = 4,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -10),
+                blend_mode = reskins.lib.blend_mode,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/hr-powder-mixer-highlights.png",
+                    priority = "high",
+                    width = 138,
+                    height = 170,
+                    line_length = 4,
+                    frame_count = 4,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(0.5, -9.5),
+                    blend_mode = reskins.lib.blend_mode,
                     scale = 0.5,
                 }
             },

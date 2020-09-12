@@ -14,28 +14,27 @@ local inputs = {
     type = "technology",
     technology_icon_size = 256,
     technology_icon_mipmaps = 2,
-    technology_icon_layers = 1,
 }
 
 local technologies = {
     -- Strand Casting
-    ["strand-casting-1"] = {tier = 1, icon_name = "strand-casting"},
-    ["strand-casting-2"] = {tier = 2, icon_name = "strand-casting"},
-    ["strand-casting-3"] = {tier = 3, icon_name = "strand-casting"},
-    ["strand-casting-4"] = {tier = 4, icon_name = "strand-casting"},
+    ["strand-casting-1"] = {tier = 1, prog_tier = 2, icon_name = "strand-casting", technology_icon_layers = 1},
+    ["strand-casting-2"] = {tier = 2, prog_tier = 3, icon_name = "strand-casting", technology_icon_layers = 1},
+    ["strand-casting-3"] = {tier = 3, prog_tier = 4, icon_name = "strand-casting", technology_icon_layers = 1},
+    ["strand-casting-4"] = {tier = 4, prog_tier = 5, icon_name = "strand-casting", technology_icon_layers = 1},
 
     -- Powder Metallurgy
-    ["powder-metallurgy-1"] = {tier = 1, icon_name = "powder-metallurgy"},
-    ["powder-metallurgy-2"] = {tier = 2, icon_name = "powder-metallurgy"},
-    ["powder-metallurgy-3"] = {tier = 3, icon_name = "powder-metallurgy"},
-    ["powder-metallurgy-4"] = {tier = 4, icon_name = "powder-metallurgy"},
+    ["powder-metallurgy-1"] = {tier = 1, prog_tier = 2, icon_name = "powder-metallurgy", technology_icon_layers = 1},
+    ["powder-metallurgy-2"] = {tier = 2, prog_tier = 3, icon_name = "powder-metallurgy", technology_icon_layers = 1},
+    ["powder-metallurgy-3"] = {tier = 3, prog_tier = 4, icon_name = "powder-metallurgy", technology_icon_layers = 1},
+    ["powder-metallurgy-4"] = {tier = 4, prog_tier = 5, icon_name = "powder-metallurgy", technology_icon_layers = 1},
 
     -- Ore Processing
-    ["ore-processing-1"] = {tier = 1, icon_name = "ore-processing", icon_base = "ore-processing-machine"},
-    ["ore-processing-2"] = {tier = 1, prog_tier = 2, icon_name = "pellet-press", technology_icon_layers = 3},
-    ["ore-processing-3"] = {tier = 2, prog_tier = 3, icon_name = "pellet-press", technology_icon_layers = 3},
-    ["ore-processing-4"] = {tier = 3, prog_tier = 4, icon_name = "pellet-press", technology_icon_layers = 3},
-    ["ore-processing-5"] = {tier = 4, prog_tier = 5, icon_name = "pellet-press", technology_icon_layers = 3},
+    ["ore-processing-1"] = {tier = 1, icon_name = "ore-processing", icon_base = "ore-processing-machine", technology_icon_layers = 1},
+    ["ore-processing-2"] = {tier = 1, prog_tier = 2, icon_name = "pellet-press"},
+    ["ore-processing-3"] = {tier = 2, prog_tier = 3, icon_name = "pellet-press"},
+    ["ore-processing-4"] = {tier = 3, prog_tier = 4, icon_name = "pellet-press"},
+    ["ore-processing-5"] = {tier = 4, prog_tier = 5, icon_name = "pellet-press"},
 }
 
 reskins.lib.create_icons_from_list(technologies, inputs)
