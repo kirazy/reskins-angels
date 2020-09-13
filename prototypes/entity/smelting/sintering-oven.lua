@@ -16,7 +16,6 @@ local inputs = {
     mod = "angels",
     particles = {["medium"] = 2},
     group = "smelting",
-    icon_layers = 1,
     make_remnants = false,
 }
 
@@ -62,6 +61,42 @@ for name, map in pairs(tier_map) do
                     width = 326,
                     height = 350,
                     shift = util.by_pixel(-1, -6.5),
+                    scale = 0.5,
+                }
+            },
+            -- Mask
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-mask.png",
+                priority = "high",
+                width = 165,
+                height = 177,
+                shift = util.by_pixel(-1, -6),
+                tint = inputs.tint,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-mask.png",
+                    priority = "high",
+                    width = 326,
+                    height = 350,
+                    shift = util.by_pixel(-1, -6.5),
+                    tint = inputs.tint,
+                    scale = 0.5,
+                }
+            },
+            -- Highlights
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-highlights.png",
+                priority = "high",
+                width = 165,
+                height = 177,
+                shift = util.by_pixel(-1, -6),
+                blend_mode = reskins.lib.blend_mode,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-highlights.png",
+                    priority = "high",
+                    width = 326,
+                    height = 350,
+                    shift = util.by_pixel(-1, -6.5),
+                    blend_mode = reskins.lib.blend_mode,
                     scale = 0.5,
                 }
             },
