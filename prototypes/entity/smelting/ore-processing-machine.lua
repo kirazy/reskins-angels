@@ -16,7 +16,6 @@ local inputs = {
     mod = "angels",
     particles = {["big"] = 1, ["medium"] = 2},
     group = "smelting",
-    icon_layers = 1,
     make_remnants = false,
 }
 
@@ -126,6 +125,54 @@ for name, map in pairs(tier_map) do
                     frame_count = 25,
                     animation_speed = 0.5,
                     shift = util.by_pixel(-0.5, -2 ),
+                    scale = 0.5,
+                }
+            },
+            -- Mask
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-mask.png",
+                priority = "high",
+                width = 100,
+                height = 105,
+                line_length = 5,
+                frame_count = 25,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -3),
+                tint = inputs.tint,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-mask.png",
+                    priority = "high",
+                    width = 196,
+                    height = 206,
+                    line_length = 5,
+                    frame_count = 25,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(-0.5, -2 ),
+                    tint = inputs.tint,
+                    scale = 0.5,
+                }
+            },
+            -- Highlights
+            {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-highlights.png",
+                priority = "high",
+                width = 100,
+                height = 105,
+                line_length = 5,
+                frame_count = 25,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -3),
+                blend_mode = reskins.lib.blend_mode,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-highlights.png",
+                    priority = "high",
+                    width = 196,
+                    height = 206,
+                    line_length = 5,
+                    frame_count = 25,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(-0.5, -2 ),
+                    blend_mode = reskins.lib.blend_mode,
                     scale = 0.5,
                 }
             },

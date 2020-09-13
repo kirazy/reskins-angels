@@ -30,7 +30,7 @@ local technologies = {
     ["powder-metallurgy-4"] = {tier = 4, prog_tier = 5, icon_name = "powder-metallurgy", technology_icon_layers = 1},
 
     -- Ore Processing
-    ["ore-processing-1"] = {tier = 1, icon_name = "ore-processing", icon_base = "ore-processing-machine", technology_icon_layers = 1},
+    ["ore-processing-1"] = {tier = 1, icon_name = "ore-processing-machine"},
     ["ore-processing-2"] = {tier = 1, prog_tier = 2, icon_name = "pellet-press"},
     ["ore-processing-3"] = {tier = 2, prog_tier = 3, icon_name = "pellet-press"},
     ["ore-processing-4"] = {tier = 3, prog_tier = 4, icon_name = "pellet-press"},
