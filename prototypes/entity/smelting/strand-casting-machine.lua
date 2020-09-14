@@ -15,7 +15,6 @@ local inputs = {
     mod = "angels",
     particles = {["big-tint"] = 5, ["medium"] = 2},
     group = "smelting",
-    icon_layers = 1,
     make_remnants = false,
 }
 
@@ -25,6 +24,81 @@ local tier_map = {
     ["strand-casting-machine-3"] = {tier = 3, prog_tier = 4},
     ["strand-casting-machine-4"] = {tier = 4, prog_tier = 5},
 }
+
+local function mask(tint)
+    return
+    {
+        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-mask.png",
+        priority = "high",
+        width = 167,
+        height = 197,
+        repeat_count = 24,
+        animation_speed = 0.5,
+        shift = util.by_pixel(0, -16.5),
+        tint = tint,
+        hr_version = {
+            filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
+            priority = "high",
+            width = 329,
+            height = 392,
+            repeat_count = 24,
+            animation_speed = 0.5,
+            shift = util.by_pixel(0, -16.5),
+            tint = tint,
+            scale = 0.5,
+        }
+    }
+end
+
+local function highlights(blend_mode)
+    return
+    {
+        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-highlights.png",
+        priority = "high",
+        width = 167,
+        height = 197,
+        repeat_count = 24,
+        animation_speed = 0.5,
+        shift = util.by_pixel(0, -16.5),
+        blend_mode = blend_mode,
+        hr_version = {
+            filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
+            priority = "high",
+            width = 329,
+            height = 392,
+            repeat_count = 24,
+            animation_speed = 0.5,
+            shift = util.by_pixel(0, -16.5),
+            blend_mode = blend_mode,
+            scale = 0.5,
+        }
+    }
+end
+
+local function shadow()
+    return
+    {
+        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-shadow.png",
+        priority = "high",
+        width = 206,
+        height = 157,
+        repeat_count = 24,
+        animation_speed = 0.5,
+        draw_as_shadow = true,
+        shift = util.by_pixel(21.5, 4.5),
+        hr_version = {
+            filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-shadow.png",
+            priority = "high",
+            width = 410,
+            height = 311,
+            repeat_count = 24,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(21.5, 4.5),
+            scale = 0.5,
+        }
+    }
+end
 
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
@@ -70,28 +144,37 @@ for name, map in pairs(tier_map) do
                     scale = 0.5,
                 }
             },
-            -- Shadow
+            mask(inputs.tint),
+            highlights(reskins.lib.blend_mode),
+            shadow(),
+        }
+    }
+
+    entity.idle_animation = {
+        layers = {
+            -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-shadow.png",
+                filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-idle-base.png",
                 priority = "high",
-                width = 206,
-                height = 157,
+                width = 167,
+                height = 197,
                 repeat_count = 24,
                 animation_speed = 0.5,
-                draw_as_shadow = true,
-                shift = util.by_pixel(21.5, 4.5),
+                shift = util.by_pixel(0, -16.5),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-shadow.png",
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-idle-base.png",
                     priority = "high",
-                    width = 410,
-                    height = 311,
+                    width = 329,
+                    height = 392,
                     repeat_count = 24,
                     animation_speed = 0.5,
-                    draw_as_shadow = true,
-                    shift = util.by_pixel(21.5, 4.5),
+                    shift = util.by_pixel(0, -16.5),
                     scale = 0.5,
                 }
             },
+            mask(inputs.tint),
+            highlights(reskins.lib.blend_mode),
+            shadow(),
         }
     }
 
