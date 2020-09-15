@@ -17,6 +17,12 @@ local inputs = {
 }
 
 local technologies = {
+    -- Metallurgy
+    -- ["angels-metallurgy-1"] = {tier = 1, icon_name = "metallurgy"},
+    -- ["angels-metallurgy-2"] = {tier = 2, icon_name = "metallurgy"},
+    -- ["angels-metallurgy-3"] = {tier = 3, icon_name = "metallurgy"},
+    -- ["angels-metallurgy-4"] = {tier = 4, icon_name = "metallurgy"},
+
     -- Strand Casting
     ["strand-casting-1"] = {tier = 1, prog_tier = 2, icon_name = "strand-casting"},
     ["strand-casting-2"] = {tier = 2, prog_tier = 3, icon_name = "strand-casting"},
