@@ -73,17 +73,17 @@ for name, map in pairs(tier_map) do
                     {
                         filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-shadow.png",
                         priority = "high",
-                        width = 272,
+                        width = 223,
                         height = 157,
                         draw_as_shadow = true,
-                        shift = util.by_pixel(53.5, 3),
+                        shift = util.by_pixel(29.5, 3.5),
                         hr_version = {
                             filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-shadow.png",
                             priority = "high",
-                            width = 540,
+                            width = 444,
                             height = 311,
                             draw_as_shadow = true,
-                            shift = util.by_pixel(53.5, 3),
+                            shift = util.by_pixel(29.5, 3.5),
                             scale = 0.5,
                         }
                     }

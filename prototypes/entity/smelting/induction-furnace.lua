@@ -223,6 +223,30 @@ for name, map in pairs(tier_map) do
             }
         },
 
+        -- Vertical Pipe Shadow Patch
+        {
+            always_draw = true,
+            north_animation = {
+                filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 64,
+                height = 64,
+                repeat_count = 36,
+                draw_as_shadow = true,
+                shift = {2, -2},
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-vertical-pipe-shadow-patch.png",
+                    priority = "high",
+                    width = 128,
+                    height = 128,
+                    repeat_count = 36,
+                    draw_as_shadow = true,
+                    shift = {2, -2},
+                    scale = 0.5,
+                }
+            },
+        },
+
         -- Glow
         {
             draw_as_sprite = false,
