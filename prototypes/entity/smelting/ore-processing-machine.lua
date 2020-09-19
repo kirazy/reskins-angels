@@ -19,42 +19,6 @@ local inputs = {
     make_remnants = false,
 }
 
--- These are super half-assed, just to ensure working_visualisations was working properly
-local recipe_tints = {
-    ["bauxite"] = {primary = util.color("ffde0080"), secondary = util.color("b39b00")},
-    ["chrome"] = {primary = util.color("a78cff80"), secondary = util.color("645499")},
-    ["cobalt"] = {primary = util.color("0045ad80"), secondary = util.color("002761")},
-    ["copper"] = {primary = util.color("be553880"), secondary = util.color("59281a")},
-    ["gold"] = {primary = util.color("e4b71d80"), secondary = util.color("7d6410")},
-    ["iron"] = {primary = util.color("9ec5e480"), secondary = util.color("566c7d")},
-    ["lead"] = {primary = util.color("47485480"), secondary = util.color("1c1d21")},
-    ["manganese"] = {primary = util.color("e0323280"), secondary = util.color("7a1b1b")},
-    ["nickel"] = {primary = util.color("2b887f80"), secondary = util.color("15312e")},
-    ["silica"] = {primary = util.color("cccccc80"), secondary = util.color("808080")},
-    ["silver"] = {primary = util.color("bad0de80"), secondary = util.color("778289")},
-    ["tin"] = {primary = util.color("7abd8780"), secondary = util.color("527158")},
-    ["titanium"] = {primary = util.color("b387ae80"), secondary = util.color("6d556a")},
-    ["tungsten"] = {primary = util.color("7e5a3c80"), secondary = util.color("4d3a2a")},
-    ["zinc"] = {primary = util.color("5caaa480"), secondary = util.color("3e6663")},
-}
-
-for name, tints in pairs(recipe_tints) do
-    -- Fetch recipe
-    local recipe = data.raw.recipe[name.."-ore-processing"]
-
-    -- Check if recipe exists, if not, skip this iteration
-    if not recipe then goto continue end
-
-    -- Set the primary recipe tint
-    recipe.crafting_machine_tint = {
-        primary = tints.primary,
-        secondary = tints.secondary,
-    }
-
-    -- Label to skip to next iteration
-    ::continue::
-end
-
 local tier_map = {
     ["ore-processing-machine"] = {tier = 1},
     ["ore-processing-machine-2"] = {tier = 2},
@@ -180,21 +144,21 @@ for name, map in pairs(tier_map) do
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-shadow.png",
                 priority = "high",
-                width = 114,
-                height = 76,
+                width = 122,
+                height = 70,
                 repeat_count = 25,
                 animation_speed = 0.5,
                 draw_as_shadow = true,
-                shift = util.by_pixel(8, 13),
+                shift = util.by_pixel(13, 16),
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-shadow.png",
                     priority = "high",
-                    width = 224,
-                    height = 150,
+                    width = 243,
+                    height = 137,
                     repeat_count = 25,
                     animation_speed = 0.5,
                     draw_as_shadow = true,
-                    shift = util.by_pixel(7.5, 13),
+                    shift = util.by_pixel(12.5, 16),
                     scale = 0.5,
                 }
             },
