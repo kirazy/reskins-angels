@@ -52,3 +52,26 @@ function reskins.angels.num_tier(tier, mod)
         }
     }
 end
+
+function reskins.angels.vertical_pipe_shadow(shift)
+    return
+    {
+        filename = reskins.angels.directory.."/graphics/entity/common/pipe-patches/vertical-pipe-shadow-patch.png",
+        priority = "high",
+        width = 64,
+        height = 64,
+        repeat_count = 36,
+        draw_as_shadow = true,
+        shift = shift,
+        hr_version = {
+            filename = reskins.angels.directory.."/graphics/entity/common/pipe-patches/hr-vertical-pipe-shadow-patch.png",
+            priority = "high",
+            width = 128,
+            height = 128,
+            repeat_count = 36,
+            draw_as_shadow = true,
+            shift = shift,
+            scale = 0.5,
+        }
+    }
+end
