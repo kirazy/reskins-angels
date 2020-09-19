@@ -11,10 +11,10 @@ if reskins.lib.setting("reskins-angels-do-angelssmelting") == false then return 
 local inputs = {
     type = "assembling-machine",
     icon_name = "sintering-oven",
-    base_entity = "roboport",
+    base_entity = "oil-refinery",
     directory = reskins.angels.directory,
     mod = "angels",
-    particles = {["medium"] = 2},
+    particles = {["big-tint"] = 5, ["medium"] = 2},
     group = "smelting",
     make_remnants = false,
 }

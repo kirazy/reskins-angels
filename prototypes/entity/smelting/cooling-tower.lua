@@ -18,7 +18,6 @@ local inputs = {
     group = "smelting",
     tint = util.color("f5f4f4"),
     icon_layers = 1,
-    make_icons = false,
     make_remnants = false,
 }
 
