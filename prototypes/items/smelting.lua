@@ -18,11 +18,12 @@ local intermediaries = {
     ----------------------------------------------------------------------------------------------------
     -- Intermediaries
     ----------------------------------------------------------------------------------------------------
-    -- Pure Angels Plates
+    -- Vanilla Plates
     ["copper-plate"] = {icon_filename = "__base__/graphics/icons/copper-plate.png", icon_size = 64, icon_mipmaps = 4},
     ["iron-plate"] = {subgroup = "plates", image = "angels-plate-iron"},
     ["steel-plate"] = {icon_filename = "__base__/graphics/icons/steel-plate.png", icon_size = 64, icon_mipmaps = 4},
 
+    -- Pure Angels Plates
     ["angels-plate-aluminium"] = {subgroup = "plates"},
     ["angels-plate-chrome"] = {subgroup = "plates"},
     ["angels-plate-cobalt"] = {subgroup = "plates"},
@@ -42,13 +43,13 @@ local intermediaries = {
 
     -- Bob's Plates
     ["aluminium-plate"] = {subgroup = "plates", image = "angels-plate-aluminium"},
-    -- ["bronze-alloy"] = {},
-    -- ["brass-alloy"] = {},
+    ["bronze-alloy"] = {subgroup = "plates"},
+    ["brass-alloy"] = {subgroup = "plates"},
     ["cobalt-plate"] = {subgroup = "plates", image = "angels-plate-cobalt"},
     ["cobalt-steel-alloy"] = {subgroup = "plates"},
     ["glass"] = {mod = "lib", group = "shared", subgroup = "items"}, -- Shared with Bobs
     ["gold-plate"] = {mod = "lib", group = "shared", subgroup = "items"}, -- Shared with Bobs
-    -- ["gunmetal-alloy"] = {},
+    ["gunmetal-alloy"] = {subgroup = "plates"},
     ["invar-alloy"] = {subgroup = "plates"},
     ["lead-plate"] = {subgroup = "plates", image = "angels-plate-lead"},
     ["nickel-plate"] = {subgroup = "plates", image = "angels-plate-nickel"},
