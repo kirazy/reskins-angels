@@ -77,7 +77,7 @@ require("prototypes.entity.refining.pipes")
 -- Angel's Smelting
 require("prototypes.entity.smelting.blast-furnace")
 require("prototypes.entity.smelting.casting-machine")
--- require("prototypes.entity.smelting.chemical-furnace")
+require("prototypes.entity.smelting.chemical-furnace")
 require("prototypes.entity.smelting.cooling-tower")
 require("prototypes.entity.smelting.induction-furnace")
 require("prototypes.entity.smelting.ore-processing-machine")
