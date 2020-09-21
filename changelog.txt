@@ -1,9 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-Date: 2020.09.20
+Date: 2020.09.21
   Features:
     - Initial work-in-progress release
     - Implements machines and related technologies from Angel's Smelting
-    - Implements plate items and ores added by Angel's Smelting and Angel's Refining
+    - Implements plates, wires and most ores added by Angel's Smelting and Angel's Refining
   Locale:
-    - Fully supports Czech and German
+    - Includes Czech and German localizations
