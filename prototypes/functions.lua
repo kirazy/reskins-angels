@@ -36,6 +36,7 @@ end
 
 -- Fetch angels numerical tier icons, return an icon_extras table
 local number_tints = {
+    ["petrochem"] = util.color("ffffff1a"),
     ["smelting"] = util.color("ffcc0080"),
 }
 
@@ -53,6 +54,7 @@ function reskins.angels.num_tier(tier, mod)
     }
 end
 
+-- Connecting north/south oriented pipe shadow overlay
 function reskins.angels.vertical_pipe_shadow(shift)
     return
     {
