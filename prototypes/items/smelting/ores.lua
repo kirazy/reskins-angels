@@ -25,7 +25,7 @@ local ores = {
     -- "tin-ore", (green)
 }
 
-if reskins.lib.settings("reskins-angels-use-vanilla-style-ores") then
+if reskins.lib.setting("reskins-angels-use-vanilla-style-ores") then
     table.insert(ores, {
         "angels-ore1", -- Saphirite
         "angels-ore3", -- Stiratite
