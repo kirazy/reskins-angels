@@ -1,10 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2020.10.04
-  Features:
-    -
   Changes:
     - Revised icon number overlay to retrieve tints from angelsmods global
+  Bugfixes:
+    - Fixed that recipe icons were twice as large as intended in alt-view
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2020.09.21

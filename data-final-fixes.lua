@@ -7,6 +7,7 @@
 -- ITEMS
 ----------------------------------------------------------------------------------------------------
 require("prototypes.items.petrochem")
+require("prototypes.items.petrochem.sulfur")
 require("prototypes.items.smelting")
 
 -- Assign deferred icons

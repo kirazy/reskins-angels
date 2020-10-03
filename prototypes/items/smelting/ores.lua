@@ -14,10 +14,25 @@ local inputs = {
 reskins.lib.parse_inputs(inputs)
 
 local ores = {
+    -- "angels-ore2", -- Jivolite
+    -- "angels-ore4", -- Crotinnium
+    -- "chrome-ore",
+    -- "lead-ore",
+    -- "manganese-ore",
+    -- "platinum-ore",
+    -- "rutile-ore", -- Titanium (dark purple)
     "thorium-ore",
     -- "tin-ore", (green)
-    "sulfer",
 }
+
+if reskins.lib.settings("reskins-angels-use-vanilla-style-ores") then
+    table.insert(ores, {
+        "angels-ore1", -- Saphirite
+        "angels-ore3", -- Stiratite
+        "angels-ore5", -- Rubyte
+        "angels-ore6", -- Bobmonium
+    })
+end
 
 for _, name in pairs(ores) do
     -- Fetch entity
@@ -27,18 +42,13 @@ for _, name in pairs(ores) do
     if not item then goto continue end
 
     -- Setup icons
-    if name == "sulfur" then
-        inputs.icon = "__base__/graphics/icons/sulfur.png"
-        inputs.icon_picture = nil
-    else
-        inputs.icon = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name..".png"
-        inputs.icon_picture = {
-            { size = 64, filename = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name..".png",   scale = 0.25, mipmap_count = 4 },
-            { size = 64, filename = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name.."-1.png", scale = 0.25, mipmap_count = 4 },
-            { size = 64, filename = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name.."-2.png", scale = 0.25, mipmap_count = 4 },
-            { size = 64, filename = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name.."-3.png", scale = 0.25, mipmap_count = 4 }
-        }
-    end
+    inputs.icon = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name..".png"
+    inputs.icon_picture = {
+        { size = 64, filename = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name..".png",   scale = 0.25, mipmap_count = 4 },
+        { size = 64, filename = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name.."-1.png", scale = 0.25, mipmap_count = 4 },
+        { size = 64, filename = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name.."-2.png", scale = 0.25, mipmap_count = 4 },
+        { size = 64, filename = reskins.angels.directory.."/graphics/icons/smelting/ores/"..name.."/"..name.."-3.png", scale = 0.25, mipmap_count = 4 },
+    }
 
     reskins.lib.assign_icons(name, inputs)
 

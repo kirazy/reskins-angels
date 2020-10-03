@@ -67,7 +67,15 @@ if mods["angelsrefining"] then
             name = "reskins-angels-do-angelsrefining",
             setting_type = "startup",
             default_value = true,
-        }
+        },
+        {
+            type = "bool-setting",
+            name = "reskins-angels-use-vanilla-style-ores",
+            setting_type = "startup",
+            default_value = false,
+            order = "a",
+            hidden = true,
+        },
     })
 end
 
