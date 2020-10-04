@@ -9,26 +9,30 @@ if not mods["angelspetrochem"] then return end
 local inputs = {
     directory = reskins.angels.directory,
     mod = "angels",
+    icon = "__base__/graphics/icons/sulfur.png",
 }
 
 reskins.lib.parse_inputs(inputs)
+reskins.lib.assign_icons("sulfur", inputs)
 
-local ores = {
-    "sulfer",
-}
+-- Fix recipe icons, but in the lazy hard-coded way we'll come back to later.
+-- TO-DO: Make this a more general, robust process rather than a one-off
+if data.raw.recipe["solid-sulfur"] and data.raw.recipe["solid-sulfur"].icons and data.raw.recipe["solid-sulfur"].icons[5] then
+    data.raw.recipe["solid-sulfur"].icons[5] = {
+        icon = inputs.icon,
+        icon_size = 64,
+        icon_mipmaps = 4,
+        scale = 0.16,
+        shift = {-11.5, 12},
+    }
+end
 
-for _, name in pairs(ores) do
-    -- Fetch entity
-    local item = data.raw.item[name]
-
-    -- Check if item exists, if not, skip this iteration
-    if not item then goto continue end
-
-    inputs.icon = "__base__/graphics/icons/sulfur.png"
-    inputs.icon_picture = nil
-
-    reskins.lib.assign_icons(name, inputs)
-
-    -- Label to skip to next iteration
-    ::continue::
+if data.raw.recipe["yellow-waste-water-purification"] and data.raw.recipe["yellow-waste-water-purification"].icons and data.raw.recipe["yellow-waste-water-purification"].icons[12] then
+    data.raw.recipe["yellow-waste-water-purification"].icons[12] = {
+        icon = inputs.icon,
+        icon_size = 64,
+        icon_mipmaps = 4,
+        scale = 0.16,
+        shift = {0, 12},
+    }
 end
