@@ -9,7 +9,7 @@
   "dependencies":
   [
     "base >= 1.0.0",
-    "reskins-library >= 1.0.5",
+    "reskins-library >= 1.0.6",
     "? reskins-bobs",
     "? angelsbioprocessing",
     "? angelsexploration",
