@@ -125,7 +125,7 @@ local composite_recipes = {
 
     -- Invar
     ["angels-plate-invar"] = {["invar-alloy"] = {}, ["liquid-molten-invar"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten invar
-    ["invar-alloy"] = {["invar-alloy"] = {}, ["nickel-plate"] = {scale = scale, shift = {-12, -20}}, ["iron-plate"] = {scale = scale, shift = shift}}, -- Nickel/Iron plates
+    ["invar-alloy"] = {["invar-alloy"] = {}, ["nickel-plate"] = {scale = scale, shift = {-6, -10}}, ["iron-plate"] = {scale = scale, shift = shift}}, -- Nickel/Iron plates
 
     -- Iron
     ["angelsore1-crushed-smelting"] = {["iron-plate"] = {}, ["angels-ore1-crushed"] = {scale = scale, shift = shift}}, -- Crushed saphirite

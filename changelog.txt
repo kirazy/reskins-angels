@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2020.10.04
+  Features:
+    - Implemented sulfur, lead, titanium, tin, aluminium, cobalt, gold, nickel, silicon, silver, tungsten, and zinc ores, and updated related recipe icons
   Changes:
     - Revised icon number overlay to retrieve tints from angelsmods global
   Bugfixes:

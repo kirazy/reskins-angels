@@ -38,7 +38,7 @@ local shift = reskins.angels.constants.recipe_corner_shift
 local scale = reskins.angels.constants.recipe_corner_scale
 
 local composite_recipes = {
-    ["bio-resin-wood-reprocessing"] = {["resin"] = {}, ["wood"] = {scale = 0.5, shift = {-16, -16}}},
+    ["bio-resin-wood-reprocessing"] = {["resin"] = {}, ["wood"] = {scale = 0.5, shift = {-8, -8}}},
 }
 
 for name, sources in pairs(composite_recipes) do
