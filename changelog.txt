@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2020.11.XX
+  Changes:
+    - Changed how default indicators for true/false setting descriptions are handled internally
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2020.10.04
   Features:
