@@ -40,6 +40,7 @@
 
 -- Angel's Petrochem
 -- require("prototypes.entity.petrochem.advanced-chemical-plant")
+require("prototypes.entity.petrochem.advanced-gas-refinery")
 -- require("prototypes.entity.petrochem.air-filter")
 -- require("prototypes.entity.petrochem.chemical-plant")
 -- require("prototypes.entity.petrochem.electric-boiler")
@@ -104,7 +105,7 @@ require("prototypes.entity.smelting.strand-casting-machine")
 -- require("prototypes.technology.bioprocessing")
 -- require("prototypes.technology.exploration")
 -- require("prototypes.technology.industries")
--- require("prototypes.technology.petrochem")
+require("prototypes.technology.petrochem")
 -- require("prototypes.technology.refining")
 require("prototypes.technology.smelting")
 

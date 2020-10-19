@@ -16,7 +16,7 @@ end
 hide_setting("bool-setting", "reskins-angels-do-angelsbioprocessing")
 hide_setting("bool-setting", "reskins-angels-do-angelsexploration")
 hide_setting("bool-setting", "reskins-angels-do-angelsindustries")
-hide_setting("bool-setting", "reskins-angels-do-angelspetrochem")
+-- hide_setting("bool-setting", "reskins-angels-do-angelspetrochem")
 hide_setting("bool-setting", "reskins-angels-do-angelsrefining")
 -- hide_setting("bool-setting", "reskins-angels-do-angelssmelting")
 
