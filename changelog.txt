@@ -5,6 +5,8 @@ Date: 2020.11.XX
     - Implemented the advanced gas refinery
   Changes:
     - Changed how default indicators for true/false setting descriptions are handled internally
+  Locale:
+    - Updated Czech and German localizations
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2020.10.04
