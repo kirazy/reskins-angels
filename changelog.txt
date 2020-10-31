@@ -6,7 +6,7 @@ Date: 2020.11.XX
   Changes:
     - Changed how default indicators for true/false setting descriptions are handled internally
   Locale:
-    - Updated Czech and German localizations
+    - Updated Czech and German localizations, added Brazilian Portuguese localization
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2020.10.04
