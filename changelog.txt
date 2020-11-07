@@ -15,6 +15,7 @@ Date: 2020.11.XX
   Bugfixes:
     - Fixed that the recipes "Glowing hot iron plate" and "Steel plate" had improper icons due to recent updates in Angel's Smelting
   Locale:
+    - Modified setting names and descriptions for consistency
     - Updated Czech and German localizations, added Brazilian Portuguese localization
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
