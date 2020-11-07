@@ -55,13 +55,13 @@ for name, map in pairs(tier_map) do
                 layers = {
                     -- Idle State
                     {
-                        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-idle-state.png",
+                        filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-idle-state.png",
                         priority = "high",
                         width = 167,
                         height = 197,
                         shift = util.by_pixel(0, -16.5),
                         hr_version = {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-idle-state.png",
+                            filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-idle-state.png",
                             priority = "high",
                             width = 329,
                             height = 392,
@@ -71,14 +71,14 @@ for name, map in pairs(tier_map) do
                     },
                     -- Shadow
                     {
-                        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-shadow.png",
+                        filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-shadow.png",
                         priority = "high",
                         width = 223,
                         height = 157,
                         draw_as_shadow = true,
                         shift = util.by_pixel(29.5, 3.5),
                         hr_version = {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-shadow.png",
+                            filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-shadow.png",
                             priority = "high",
                             width = 444,
                             height = 311,
@@ -96,13 +96,13 @@ for name, map in pairs(tier_map) do
             apply_recipe_tint = "primary",
             always_draw = true,
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-recipe-mask.png",
+                filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-recipe-mask.png",
                 priority = "high",
                 width = 167,
                 height = 197,
                 shift = util.by_pixel(0, -16.5),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-recipe-mask.png",
+                    filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-recipe-mask.png",
                     priority = "high",
                     width = 329,
                     height = 392,
@@ -116,7 +116,7 @@ for name, map in pairs(tier_map) do
         {
             fadeout = true,
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-working-animation.png",
+                filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-working-animation.png",
                 priority = "high",
                 width = 167,
                 height = 197,
@@ -125,7 +125,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 shift = util.by_pixel(0, -16.5),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-working-animation.png",
+                    filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-working-animation.png",
                     priority = "high",
                     width = 329,
                     height = 392,
@@ -188,13 +188,13 @@ for name, map in pairs(tier_map) do
             draw_as_sprite = false,
             draw_as_light = true,
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-light.png",
+                filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-light.png",
                 priority = "high",
                 width = 167,
                 height = 197,
                 shift = util.by_pixel(0, -16.5),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-light.png",
+                    filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-light.png",
                     priority = "high",
                     width = 329,
                     height = 392,

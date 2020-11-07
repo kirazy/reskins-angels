@@ -27,7 +27,7 @@ local tier_map = {
 }
 
 local dust = {
-    filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-dust.png",
+    filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
     priority = "high",
     width = 36,
     height = 57,
@@ -36,7 +36,7 @@ local dust = {
     animation_speed = 0.40,
     shift = util.by_pixel(0, -15),
     hr_version = {
-        filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-dust.png",
+        filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
         priority = "high",
         width = 107,
         height = 170,
@@ -72,7 +72,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-base.png",
+                filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-base.png",
                 priority = "high",
                 width = 100,
                 height = 105,
@@ -81,7 +81,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 shift = util.by_pixel(0, -3),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-base.png",
+                    filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-base.png",
                     priority = "high",
                     width = 196,
                     height = 206,
@@ -142,7 +142,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-shadow.png",
                 priority = "high",
                 width = 122,
                 height = 70,
@@ -151,7 +151,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 shift = util.by_pixel(13, 16),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-shadow.png",
+                    filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-shadow.png",
                     priority = "high",
                     width = 243,
                     height = 137,
@@ -185,13 +185,13 @@ for name, map in pairs(tier_map) do
         {
             always_draw = true,
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-top.png",
+                filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-top.png",
                 priority = "high",
                 width = 97,
                 height = 71,
                 shift = util.by_pixel(0, -23),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-top.png",
+                    filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-top.png",
                     priority = "high",
                     width = 192,
                     height = 139,

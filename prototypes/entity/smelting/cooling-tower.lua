@@ -36,13 +36,13 @@ entity.animation = reskins.lib.make_4way_animation_from_spritesheet({
     layers = {
         -- Base
         {
-            filename = reskins.angels.directory.."/graphics/entity/smelting/cooling-tower/cooling-tower.png",
+            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower.png",
             priority = "high",
             width = 108,
             height = 157,
             shift = util.by_pixel(0, -19),
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/cooling-tower/hr-cooling-tower.png",
+                filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower.png",
                 priority = "high",
                 width = 213,
                 height = 309,
@@ -52,14 +52,14 @@ entity.animation = reskins.lib.make_4way_animation_from_spritesheet({
         },
         -- Shadow
         {
-            filename = reskins.angels.directory.."/graphics/entity/smelting/cooling-tower/cooling-tower-shadow.png",
+            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
             priority = "high",
             width = 160,
             height = 100,
             shift = util.by_pixel(28, 10),
             draw_as_shadow = true,
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/cooling-tower/hr-cooling-tower-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower-shadow.png",
                 priority = "high",
                 width = 320,
                 height = 197,
@@ -77,13 +77,13 @@ entity.working_visualisations = {
     {
         always_draw = true,
         animation = {
-            filename = reskins.angels.directory.."/graphics/entity/smelting/cooling-tower/fan-animation.png",
+            filename = "__angelssmelting__/graphics/entity/cooling-tower/fan-animation.png",
             priority = "high",
             width = 36,
             height = 32,
             shift = util.by_pixel(0, -74),
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/cooling-tower/hr-fan-animation.png",
+                filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-fan-animation.png",
                 priority = "high",
                 width = 69,
                 height = 60,
@@ -96,7 +96,7 @@ entity.working_visualisations = {
     -- Working state
     {
         animation = {
-            filename = reskins.angels.directory.."/graphics/entity/smelting/cooling-tower/fan-animation.png",
+            filename = "__angelssmelting__/graphics/entity/cooling-tower/fan-animation.png",
             priority = "high",
             width = 36,
             height = 32,
@@ -105,7 +105,7 @@ entity.working_visualisations = {
             animation_speed = 2.4, -- 60 fps
             shift = util.by_pixel(0, -74),
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/cooling-tower/hr-fan-animation.png",
+                filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-fan-animation.png",
                 priority = "high",
                 width = 69,
                 height = 60,

@@ -50,7 +50,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/powder-mixer-base.png",
+                filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-base.png",
                 priority = "high",
                 width = 71,
                 height = 87,
@@ -59,7 +59,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 shift = util.by_pixel(0, -10),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/hr-powder-mixer-base.png",
+                    filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
                     priority = "high",
                     width = 138,
                     height = 170,
@@ -120,7 +120,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/powder-mixer-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
                 priority = "high",
                 width = 93,
                 height = 51,
@@ -129,7 +129,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 shift = util.by_pixel(13.5, 9.5),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/hr-powder-mixer-shadow.png",
+                    filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
                     priority = "high",
                     width = 183,
                     height = 99,

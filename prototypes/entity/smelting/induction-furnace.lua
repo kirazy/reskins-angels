@@ -50,7 +50,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/induction-furnace-base.png",
+                filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-base.png",
                 priority = "high",
                 width = 170,
                 height = 192,
@@ -65,12 +65,12 @@ for name, map in pairs(tier_map) do
                     frame_count = 36,
                     stripes = {
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-base_01.png",
+                            filename = "__angelssmelting__/graphics/entity/induction-furnace/hr-induction-furnace-base_01.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-base_02.png",
+                            filename = "__angelssmelting__/graphics/entity/induction-furnace/hr-induction-furnace-base_02.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
@@ -150,7 +150,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/induction-furnace-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-shadow.png",
                 priority = "high",
                 width = 216,
                 height = 170,
@@ -166,12 +166,12 @@ for name, map in pairs(tier_map) do
                     frame_count = 36,
                     stripes = {
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-shadow_01.png",
+                            filename = "__angelssmelting__/graphics/entity/induction-furnace/hr-induction-furnace-shadow_01.png",
                             width_in_frames = 3,
                             height_in_frames = 6,
                         },
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-shadow_02.png",
+                            filename = "__angelssmelting__/graphics/entity/induction-furnace/hr-induction-furnace-shadow_02.png",
                             width_in_frames = 3,
                             height_in_frames = 6,
                         },
@@ -191,7 +191,7 @@ for name, map in pairs(tier_map) do
             apply_recipe_tint = "primary",
             always_draw = true,
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/induction-furnace-working-recipe-tint-mask.png",
+                filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-recipe-tint-mask.png",
                 priority = "high",
                 width = 170,
                 height = 192,
@@ -206,12 +206,12 @@ for name, map in pairs(tier_map) do
                     frame_count = 36,
                     stripes = {
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-working-recipe-tint-mask_01.png",
+                            filename = "__angelssmelting__/graphics/entity/induction-furnace/hr-induction-furnace-working-recipe-tint-mask_01.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-working-recipe-tint-mask_02.png",
+                            filename = "__angelssmelting__/graphics/entity/induction-furnace/hr-induction-furnace-working-recipe-tint-mask_02.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
@@ -235,7 +235,7 @@ for name, map in pairs(tier_map) do
             draw_as_light = true,
             always_draw = true,
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/induction-furnace-working-lights.png",
+                filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-working-lights.png",
                 priority = "high",
                 width = 170,
                 height = 192,
@@ -250,12 +250,12 @@ for name, map in pairs(tier_map) do
                     frame_count = 36,
                     stripes = {
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-working-lights_01.png",
+                            filename = "__angelssmelting__/graphics/entity/induction-furnace/hr-induction-furnace-working-lights_01.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-working-lights_02.png",
+                            filename = "__angelssmelting__/graphics/entity/induction-furnace/hr-induction-furnace-working-lights_02.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },

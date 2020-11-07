@@ -50,7 +50,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/pellet-press-base.png",
+                filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-base.png",
                 priority = "high",
                 width = 102,
                 height = 101,
@@ -59,7 +59,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 shift = util.by_pixel(0.5, 0.5),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/hr-pellet-press-base.png",
+                    filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-base.png",
                     priority = "high",
                     width = 200,
                     height = 199,
@@ -120,7 +120,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/pellet-press-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-shadow.png",
                 priority = "high",
                 width = 125,
                 height = 68,
@@ -130,7 +130,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 shift = util.by_pixel(12, 17),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/hr-pellet-press-shadow.png",
+                    filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
                     priority = "high",
                     width = 246,
                     height = 132,

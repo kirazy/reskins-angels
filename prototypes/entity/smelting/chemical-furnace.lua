@@ -50,7 +50,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/chemical-furnace-base.png",
+                filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
                 priority = "high",
                 width = 168,
                 height = 189,
@@ -65,12 +65,12 @@ for name, map in pairs(tier_map) do
                     frame_count = 36,
                     stripes = {
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-base_01.png",
+                            filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_01.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-base_02.png",
+                            filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-base_02.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
@@ -150,7 +150,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/chemical-furnace-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
                 priority = "high",
                 width = 224,
                 height = 141,
@@ -166,12 +166,12 @@ for name, map in pairs(tier_map) do
                     frame_count = 36,
                     stripes = {
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-shadow_01.png",
+                            filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_01.png",
                             width_in_frames = 4,
                             height_in_frames = 7,
                         },
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-shadow_02.png",
+                            filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-shadow_02.png",
                             width_in_frames = 4,
                             height_in_frames = 2,
                         },
@@ -192,7 +192,7 @@ for name, map in pairs(tier_map) do
             draw_as_light = true,
             always_draw = true,
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/chemical-furnace-light.png",
+                filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
                 priority = "high",
                 width = 168,
                 height = 189,
@@ -207,12 +207,12 @@ for name, map in pairs(tier_map) do
                     frame_count = 36,
                     stripes = {
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-light_01.png",
+                            filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_01.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-light_02.png",
+                            filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_02.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
