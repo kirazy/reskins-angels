@@ -3,16 +3,34 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
--- Check to see if reskinning needs to be done.
-if not mods["angelssmelting"] then return end
-
--- Setup inputs
+-- Setup inputs and constants
 local inputs = {
     mod = "angels",
     group = "smelting",
     make_icon_pictures = false,
     flat_icon = true,
 }
+
+local shift = reskins.angels.constants.recipe_corner_shift
+local scale = reskins.angels.constants.recipe_corner_scale
+
+-- Check to see if reskinning needs to be done.
+if not mods["angelssmelting"] then
+    -- Handle the few composite recipes that fall through the cracks
+    local composite_recipes = {
+        -- Lead
+        ["angelsore5-crushed-smelting"] = {["lead-plate"] = {}, ["angels-ore5-crushed"] = {scale = scale, shift = shift}}, -- Crushed rubyte
+
+        -- Tin
+        ["angelsore6-crushed-smelting"] = {["tin-plate"] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}}, -- Crushed bobmonium
+    }
+
+    for name, sources in pairs(composite_recipes) do
+        reskins.lib.composite_existing_icons(name, "recipe", sources)
+    end
+
+    return
+end
 
 local intermediaries = {
     ----------------------------------------------------------------------------------------------------
@@ -90,10 +108,12 @@ if mods["reskins-bobs"] then
     intermediaries["tungsten-carbide-2"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "plates", image = "tungsten-carbide", icon_extras = reskins.angels.num_tier(2, inputs.group)} -- "2"
 end
 
-reskins.lib.create_icons_from_list(intermediaries, inputs)
+-- Handle coloring intermediaries with either Angel's coloring or Bob's coloring
+if reskins.lib.setting("") then
 
-local shift = reskins.angels.constants.recipe_corner_shift
-local scale = reskins.angels.constants.recipe_corner_scale
+end
+
+reskins.lib.create_icons_from_list(intermediaries, inputs)
 
 local composite_recipes = {
     ----------------------------------------------------------------------------------------------------

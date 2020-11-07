@@ -4,6 +4,7 @@ Date: 2020.11.XX
   Features:
     - Implemented the advanced gas refinery
     - Added icon for "Glowing hot iron plate"
+    - Now reskins plate recipes for Lead and Tin when Angel's Smelting is not present
   Changes:
     - Changed how default indicators for true/false setting descriptions are handled internally
   Bugfixes:
