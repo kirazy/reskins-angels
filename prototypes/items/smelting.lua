@@ -38,57 +38,57 @@ local intermediaries = {
     ----------------------------------------------------------------------------------------------------
     -- Vanilla Plates
     ["copper-plate"] = {icon_filename = "__base__/graphics/icons/copper-plate.png", icon_size = 64, icon_mipmaps = 4},
-    ["iron-plate"] = {subgroup = "plates/colored", image = "angels-plate-iron"},
+    ["iron-plate"] = {subgroup = "plates", image = "angels-plate-iron"},
     ["steel-plate"] = {icon_filename = "__base__/graphics/icons/steel-plate.png", icon_size = 64, icon_mipmaps = 4},
 
     -- Pure Angels Plates
-    ["angels-plate-aluminium"] = {subgroup = "plates/colored"},
+    ["angels-plate-aluminium"] = {subgroup = "plates"},
     ["angels-plate-chrome"] = {subgroup = "plates"},
-    ["angels-plate-cobalt"] = {subgroup = "plates/colored"},
+    ["angels-plate-cobalt"] = {subgroup = "plates"},
     ["angels-plate-glass"] = {mod = "lib", group = "shared", subgroup = "items", image = "glass"},
     ["angels-plate-gold"] = {mod = "lib", group = "shared", subgroup = "items", image = "gold-plate"},
     ["angels-plate-hot-iron"] = {subgroup = "plates"},
-    ["angels-plate-iron"] = {subgroup = "plates/colored"},
-    ["angels-plate-lead"] = {subgroup = "plates/colored"},
+    ["angels-plate-iron"] = {subgroup = "plates"},
+    ["angels-plate-lead"] = {subgroup = "plates"},
     ["angels-plate-manganese"] = {subgroup = "plates"},
-    ["angels-plate-nickel"] = {subgroup = "plates/colored"},
+    ["angels-plate-nickel"] = {subgroup = "plates"},
     ["angels-plate-platinum"] = {subgroup = "plates"},
     ["angels-plate-silver"] = {subgroup = "plates"},
     ["angels-plate-steel"] = {icon_filename = "__base__/graphics/icons/steel-plate.png", icon_size = 64, icon_mipmaps = 4},
-    ["angels-plate-tin"] = {subgroup = "plates/colored"},
-    ["angels-plate-titanium"] = {subgroup = "plates/colored"},
-    ["angels-plate-tungsten"] = {subgroup = "plates/colored"},
-    ["angels-plate-zinc"] = {subgroup = "plates/colored"},
+    ["angels-plate-tin"] = {subgroup = "plates"},
+    ["angels-plate-titanium"] = {subgroup = "plates"},
+    ["angels-plate-tungsten"] = {subgroup = "plates"},
+    ["angels-plate-zinc"] = {subgroup = "plates"},
 
     -- Bob's Plates
-    ["aluminium-plate"] = {subgroup = "plates/colored", image = "angels-plate-aluminium"},
+    ["aluminium-plate"] = {subgroup = "plates", image = "angels-plate-aluminium"},
     ["bronze-alloy"] = {subgroup = "plates"},
     ["brass-alloy"] = {subgroup = "plates"},
-    ["cobalt-plate"] = {subgroup = "plates/colored", image = "angels-plate-cobalt"},
-    ["cobalt-steel-alloy"] = {subgroup = "plates/colored"},
+    ["cobalt-plate"] = {subgroup = "plates", image = "angels-plate-cobalt"},
+    ["cobalt-steel-alloy"] = {subgroup = "plates"},
     ["glass"] = {mod = "lib", group = "shared", subgroup = "items"}, -- Shared with Bobs
     ["gold-plate"] = {mod = "lib", group = "shared", subgroup = "items"}, -- Shared with Bobs
-    ["gunmetal-alloy"] = {subgroup = "plates/colored"},
-    ["invar-alloy"] = {subgroup = "plates/colored"},
-    ["lead-plate"] = {subgroup = "plates/colored", image = "angels-plate-lead"},
-    ["nickel-plate"] = {subgroup = "plates/colored", image = "angels-plate-nickel"},
-    ["nitinol-alloy"] = {subgroup = "plates/colored"},
+    ["gunmetal-alloy"] = {subgroup = "plates"},
+    ["invar-alloy"] = {subgroup = "plates"},
+    ["lead-plate"] = {subgroup = "plates", image = "angels-plate-lead"},
+    ["nickel-plate"] = {subgroup = "plates", image = "angels-plate-nickel"},
+    ["nitinol-alloy"] = {subgroup = "plates"},
     ["silver-plate"] = {subgroup = "plates", image = "angels-plate-silver"},
-    ["tin-plate"] = {subgroup = "plates/colored", image = "angels-plate-tin"},
-    ["titanium-plate"] = {subgroup = "plates/colored", image = "angels-plate-titanium"},
-    ["tungsten-plate"] = {subgroup = "plates/colored", image = "angels-plate-tungsten"},
-    ["zinc-plate"] = {subgroup = "plates/colored", image = "angels-plate-zinc"},
+    ["tin-plate"] = {subgroup = "plates", image = "angels-plate-tin"},
+    ["titanium-plate"] = {subgroup = "plates", image = "angels-plate-titanium"},
+    ["tungsten-plate"] = {subgroup = "plates", image = "angels-plate-tungsten"},
+    ["zinc-plate"] = {subgroup = "plates", image = "angels-plate-zinc"},
 
     -- Pure Angels Wires
     ["angels-wire-gold"] = {mod = "lib", group = "shared", subgroup = "items", image = "gilded-copper-cable"},
     ["angels-wire-platinum"] = {subgroup = "intermediaries"},
     ["angels-wire-silver"] = {subgroup = "intermediaries"},
-    ["angels-wire-tin"] = {subgroup = "intermediaries/colored"},
+    ["angels-wire-tin"] = {subgroup = "intermediaries"},
 
     -- Wires
     ["copper-cable"] = {icon_filename = "__base__/graphics/icons/copper-cable.png", icon_size = 64, icon_mipmaps = 4},
     ["gilded-copper-cable"] = {mod = "lib", group = "shared", subgroup = "items"},
-    ["tinned-copper-cable"] = {subgroup = "intermediaries/colored", image = "angels-wire-tin"},
+    ["tinned-copper-cable"] = {subgroup = "intermediaries", image = "angels-wire-tin"},
 
     ----------------------------------------------------------------------------------------------------
     -- Recipes
@@ -109,26 +109,27 @@ if mods["reskins-bobs"] then
 end
 
 -- Check if we're using Angel's material colors
--- if reskins.lib.setting("reskins-angels-use-angels-material-colors") then
---     -- Gears
---     intermediaries["cobalt-steel-gear-wheel"] = {subgroup = "intermediaries/colored"}
---     intermediaries["iron-gear-wheel"] = {subgroup = "intermediaries/colored"}
---     intermediaries["nitinol-gear-wheel"] = {subgroup = "intermediaries/colored"}
---     intermediaries["titanium-gear-wheel"] = {subgroup = "intermediaries/colored"}
---     intermediaries["tungsten-gear-wheel"] = {subgroup = "intermediaries/colored"}
+if reskins.lib.setting("reskins-angels-use-angels-material-colors") then
+    -- Gears
+    intermediaries["cobalt-steel-gear-wheel"] = {subgroup = "gears"}
+    -- intermediaries["iron-gear-wheel"] = {subgroup = "gears"}
+    intermediaries["nitinol-gear-wheel"] = {subgroup = "gears"}
+    intermediaries["titanium-gear-wheel"] = {subgroup = "gears"}
+    intermediaries["tungsten-gear-wheel"] = {subgroup = "gears"}
 
---     -- Bearing Balls
---     intermediaries["ceramic-bearing-ball"] = {subgroup = "intermediaries/colored"}
---     intermediaries["cobalt-steel-bearing-ball"] = {subgroup = "intermediaries/colored"}
---     intermediaries["nitinol-bearing-ball"] = {subgroup = "intermediaries/colored"}
---     intermediaries["titanium-bearing-ball"] = {subgroup = "intermediaries/colored"}
+    -- Bearing Balls
+    -- intermediaries["ceramic-bearing-ball"] = {subgroup = "intermediaries"}
+    intermediaries["cobalt-steel-bearing-ball"] = {subgroup = "bearing-balls"}
+    intermediaries["nitinol-bearing-ball"] = {subgroup = "bearing-balls"}
+    intermediaries["titanium-bearing-ball"] = {subgroup = "bearing-balls"}
 
---     -- Bearings
---     intermediaries["ceramic-bearing"] = {subgroup = "intermediaries/colored"}
---     intermediaries["cobalt-steel-bearing"] = {subgroup = "intermediaries/colored"}
---     intermediaries["nitinol-bearing"] = {subgroup = "intermediaries/colored"}
---     intermediaries["titanium-steel-bearing"] = {subgroup = "intermediaries/colored"}
--- else
+    -- Bearings
+    -- intermediaries["ceramic-bearing"] = {subgroup = "intermediaries"}
+    intermediaries["cobalt-steel-bearing"] = {subgroup = "bearings"}
+    intermediaries["nitinol-bearing"] = {subgroup = "bearings"}
+    intermediaries["titanium-bearing"] = {subgroup = "bearings"}
+end
+
 --     -- Plates
 --     intermediaries["iron-plate"].subgroup = "plates/natural"
 --     intermediaries["angels-plate-aluminium"].subgroup = "plates/natural"
@@ -156,7 +157,6 @@ end
 --     -- Wires
 --     intermediaries["angels-wire-tin"].subgroup = "intermediaries/natural"
 --     intermediaries["tinned-copper-cable"].subgroup = "intermediares/natural"
--- end
 
 reskins.lib.create_icons_from_list(intermediaries, inputs)
 
