@@ -26,28 +26,6 @@ local tier_map = {
     ["ore-processing-machine-4"] = {tier = 4},
 }
 
-local dust = {
-    filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-dust.png",
-    priority = "high",
-    width = 36,
-    height = 57,
-    line_length = 5,
-    frame_count = 20,
-    animation_speed = 0.40,
-    shift = util.by_pixel(0, -15),
-    hr_version = {
-        filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-dust.png",
-        priority = "high",
-        width = 107,
-        height = 170,
-        line_length = 5,
-        frame_count = 20,
-        animation_speed = 0.40,
-        shift = util.by_pixel(0, -21.5),
-        scale = 0.5,
-    }
-}
-
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
     -- Fetch entity
@@ -162,43 +140,6 @@ for name, map in pairs(tier_map) do
                     scale = 0.5,
                 }
             },
-        }
-    }
-
-    entity.working_visualisations = {
-        -- Dust
-        {
-            fade_out = true,
-            constant_speed = true,
-            animation = dust,
-        },
-
-        -- Dust Tinted
-        {
-            apply_recipe_tint = "primary",
-            fade_out = true,
-            constant_speed = true,
-            animation = dust,
-        },
-
-        -- Machine Top
-        {
-            always_draw = true,
-            animation = {
-                filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-top.png",
-                priority = "high",
-                width = 97,
-                height = 71,
-                shift = util.by_pixel(0, -23),
-                hr_version = {
-                    filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-top.png",
-                    priority = "high",
-                    width = 192,
-                    height = 139,
-                    shift = util.by_pixel(0, -22.5),
-                    scale = 0.5,
-                }
-            }
         }
     }
 

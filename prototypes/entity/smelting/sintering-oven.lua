@@ -121,51 +121,6 @@ for name, map in pairs(tier_map) do
         }
     }
 
-    entity.working_visualisations = {
-        -- Glow
-        {
-            effect = "uranium-glow",
-            animation = {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
-                priority = "high",
-                width = 165,
-                height = 177,
-                blend_mode = "additive",
-                shift = util.by_pixel(-1, -7),
-                hr_version = {
-                    filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
-                    priority = "high",
-                    width = 326,
-                    height = 350,
-                    blend_mode = "additive",
-                    shift = util.by_pixel(-1, -6.5),
-                    scale = 0.5,
-                }
-            }
-        },
-        -- Light
-        {
-            effect = "uranium-glow",
-            draw_as_sprite = false,
-            draw_as_light = true,
-            animation = {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
-                priority = "high",
-                width = 165,
-                height = 177,
-                shift = util.by_pixel(-1, -7),
-                hr_version = {
-                    filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
-                    priority = "high",
-                    width = 326,
-                    height = 350,
-                    shift = util.by_pixel(-1, -6.5),
-                    scale = 0.5,
-                }
-            }
-        }
-    }
-
     -- Label to skip to next iteration
     ::continue::
 end

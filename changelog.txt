@@ -9,8 +9,9 @@ Date: 2020.11.XX
     - Now reskins "Metallurgy smelting 5" technology
   Changes:
     - Changed how default indicators for true/false setting descriptions are handled internally
-    - Changed to use base angels smelting graphics to reduce mod size
-    - Updated the tiers of the Chemical furnaces
+    - Changed to refer to Angel's Smelting graphics where possible to reduce mod size
+    - Changed the progression tiers of the Chemical Furnace from 1-4 to 2-5 to reflect changes in Angel's Smelting
+    - Removed progression tiers from the Powder Mixer (now tier 1-4 in all cases) to reflect changes in Angel's Smelting
   Bugfixes:
     - Fixed that the recipes "Glowing hot iron plate" and "Steel plate" had improper icons due to recent updates in Angel's Smelting
   Locale:

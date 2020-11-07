@@ -20,10 +20,10 @@ local inputs = {
 }
 
 local tier_map = {
-    ["angels-chemical-furnace"] = {tier = 2},
-    ["angels-chemical-furnace-2"] = {tier = 3},
-    ["angels-chemical-furnace-3"] = {tier = 4},
-    ["angels-chemical-furnace-4"] = {tier = 5},
+    ["angels-chemical-furnace"] = {tier = 1, prog_tier = 2},
+    ["angels-chemical-furnace-2"] = {tier = 2, prog_tier = 3},
+    ["angels-chemical-furnace-3"] = {tier = 3, prog_tier = 4},
+    ["angels-chemical-furnace-4"] = {tier = 4, prog_tier = 5},
 }
 
 -- Reskin entities, create and assign extra details
@@ -182,46 +182,6 @@ for name, map in pairs(tier_map) do
                     scale = 0.5,
                 }
             },
-        }
-    }
-
-    entity.working_visualisations = {
-        -- Glow
-        {
-            draw_as_sprite = false,
-            draw_as_light = true,
-            always_draw = true,
-            animation = {
-                filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-light.png",
-                priority = "high",
-                width = 168,
-                height = 189,
-                line_length = 6,
-                frame_count = 36,
-                animation_speed = 0.5,
-                shift = util.by_pixel(-1, -12),
-                hr_version = {
-                    priority = "high",
-                    width = 332,
-                    height = 374,
-                    frame_count = 36,
-                    stripes = {
-                        {
-                            filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_01.png",
-                            width_in_frames = 6,
-                            height_in_frames = 3,
-                        },
-                        {
-                            filename = "__angelssmelting__/graphics/entity/chemical-furnace/hr-chemical-furnace-light_02.png",
-                            width_in_frames = 6,
-                            height_in_frames = 3,
-                        },
-                    },
-                    animation_speed = 0.5,
-                    shift = util.by_pixel(-1, -11.5),
-                    scale = 0.5,
-                }
-            }
         }
     }
 
