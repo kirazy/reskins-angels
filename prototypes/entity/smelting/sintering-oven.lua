@@ -50,13 +50,13 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-base.png",
+                filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
                 priority = "high",
                 width = 165,
                 height = 177,
                 shift = util.by_pixel(-1, -7),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-base.png",
+                    filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
                     priority = "high",
                     width = 326,
                     height = 350,
@@ -102,64 +102,19 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
                 priority = "high",
                 width = 213,
                 height = 115,
                 shift = util.by_pixel(24, 29),
                 draw_as_shadow = true,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-shadow.png",
+                    filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
                     priority = "high",
                     width = 424,
                     height = 227,
                     shift = util.by_pixel(23, 28),
                     draw_as_shadow = true,
-                    scale = 0.5,
-                }
-            }
-        }
-    }
-
-    entity.working_visualisations = {
-        -- Glow
-        {
-            effect = "uranium-glow",
-            animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-glow.png",
-                priority = "high",
-                width = 165,
-                height = 177,
-                blend_mode = "additive",
-                shift = util.by_pixel(-1, -7),
-                hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-glow.png",
-                    priority = "high",
-                    width = 326,
-                    height = 350,
-                    blend_mode = "additive",
-                    shift = util.by_pixel(-1, -6.5),
-                    scale = 0.5,
-                }
-            }
-        },
-        -- Light
-        {
-            effect = "uranium-glow",
-            draw_as_sprite = false,
-            draw_as_light = true,
-            animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-light.png",
-                priority = "high",
-                width = 165,
-                height = 177,
-                shift = util.by_pixel(-1, -7),
-                hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-light.png",
-                    priority = "high",
-                    width = 326,
-                    height = 350,
-                    shift = util.by_pixel(-1, -6.5),
                     scale = 0.5,
                 }
             }

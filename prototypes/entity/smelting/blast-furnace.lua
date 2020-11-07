@@ -50,13 +50,13 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/blast-furnace-base.png",
+                filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
                 priority = "high",
                 width = 164,
                 height = 189,
                 shift = util.by_pixel(0, -14),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/hr-blast-furnace-base.png",
+                    filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
                     priority = "high",
                     width = 328,
                     height = 376,
@@ -102,14 +102,14 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/blast-furnace-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
                 priority = "high",
                 width = 224,
                 height = 124,
                 shift = util.by_pixel(30, 20),
                 draw_as_shadow = true,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/hr-blast-furnace-shadow.png",
+                    filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
                     priority = "high",
                     width = 445,
                     height = 245,
@@ -130,7 +130,7 @@ for name, map in pairs(tier_map) do
             west_position = {0, 0},
             light = {intensity = 1, size = 2, color = {r = 1.0, g = 1.0, b = 1.0}, shift = util.by_pixel(7, 38)},
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/blast-furnace-fire.png",
+                filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
                 priority = "high",
                 width = 12,
                 height = 25,
@@ -139,7 +139,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 shift = util.by_pixel(4, 29),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/hr-blast-furnace-fire.png",
+                    filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
                     priority = "high",
                     width = 23,
                     height = 50,
@@ -176,14 +176,14 @@ for name, map in pairs(tier_map) do
             west_position = {0, 0},
             effect = "flicker",
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/blast-furnace-working-light.png",
+                filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
                 priority = "high",
                 width = 17,
                 height = 20,
                 blend_mode = "additive",
                 shift = util.by_pixel(4.5, 40),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/hr-blast-furnace-working-light.png",
+                    filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
                     priority = "high",
                     width = 34,
                     height = 40,
@@ -193,11 +193,6 @@ for name, map in pairs(tier_map) do
                 }
             }
         }
-    }
-
-    -- Hide the light from the burner energy source
-    entity.energy_source.light_flicker = {
-        color = {0, 0, 0}
     }
 
     -- Label to skip to next iteration

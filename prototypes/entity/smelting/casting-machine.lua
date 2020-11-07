@@ -50,7 +50,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/casting-machine-base.png",
+                filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-base.png",
                 priority = "high",
                 width = 104,
                 height = 123,
@@ -59,7 +59,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 shift = util.by_pixel(1, -2),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/hr-casting-machine-base.png",
+                    filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-base.png",
                     priority = "high",
                     width = 205,
                     height = 244,
@@ -120,7 +120,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/casting-machine-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-shadow.png",
                 priority = "high",
                 width = 125,
                 height = 104,
@@ -130,7 +130,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 shift = util.by_pixel(12, 9),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/hr-casting-machine-shadow.png",
+                    filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
                     priority = "high",
                     width = 248,
                     height = 206,
@@ -152,13 +152,13 @@ for name, map in pairs(tier_map) do
             draw_as_light = true,
             always_draw = true,
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/casting-machine-light.png",
+                filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
                 priority = "high",
                 width = 111,
                 height = 104,
                 shift = util.by_pixel(1, -2),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/hr-casting-machine-light.png",
+                    filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
                     priority = "high",
                     width = 205,
                     height = 244,
