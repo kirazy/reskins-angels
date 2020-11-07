@@ -20,10 +20,10 @@ local inputs = {
 }
 
 local tier_map = {
-    ["angels-chemical-furnace"] = {tier = 1},
-    ["angels-chemical-furnace-2"] = {tier = 2},
-    ["angels-chemical-furnace-3"] = {tier = 3},
-    ["angels-chemical-furnace-4"] = {tier = 4},
+    ["angels-chemical-furnace"] = {tier = 2},
+    ["angels-chemical-furnace-2"] = {tier = 3},
+    ["angels-chemical-furnace-3"] = {tier = 4},
+    ["angels-chemical-furnace-4"] = {tier = 5},
 }
 
 -- Reskin entities, create and assign extra details

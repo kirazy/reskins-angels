@@ -6,8 +6,11 @@ Date: 2020.11.XX
     - Added settings to use Angel's material colors for pipes and intermediaries (default on)
     - Added icon for "Glowing hot iron plate"
     - Now reskins plate recipes for Lead and Tin when Angel's Smelting is not present
+    - Now reskins "Metallurgy smelting 5" technology
   Changes:
     - Changed how default indicators for true/false setting descriptions are handled internally
+    - Changed to use base angels smelting graphics to reduce mod size
+    - Updated the tiers of the Chemical furnaces
   Bugfixes:
     - Fixed that the recipes "Glowing hot iron plate" and "Steel plate" had improper icons due to recent updates in Angel's Smelting
   Locale:
