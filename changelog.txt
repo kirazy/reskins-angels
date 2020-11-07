@@ -3,8 +3,11 @@ Version: 1.0.2
 Date: 2020.11.XX
   Features:
     - Implemented the advanced gas refinery
+    - Added icon for "Glowing hot iron plate"
   Changes:
     - Changed how default indicators for true/false setting descriptions are handled internally
+  Bugfixes:
+    - Fixed that the recipes "Glowing hot iron plate" and "Steel plate" had improper icons due to recent updates in Angel's Smelting
   Locale:
     - Updated Czech and German localizations, added Brazilian Portuguese localization
 ---------------------------------------------------------------------------------------------------

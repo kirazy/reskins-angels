@@ -29,6 +29,7 @@ local intermediaries = {
     ["angels-plate-cobalt"] = {subgroup = "plates"},
     ["angels-plate-glass"] = {mod = "lib", group = "shared", subgroup = "items", image = "glass"},
     ["angels-plate-gold"] = {mod = "lib", group = "shared", subgroup = "items", image = "gold-plate"},
+    ["angels-plate-hot-iron"] = {subgroup = "plates"},
     ["angels-plate-iron"] = {subgroup = "plates"},
     ["angels-plate-lead"] = {subgroup = "plates"},
     ["angels-plate-manganese"] = {subgroup = "plates"},
@@ -161,7 +162,8 @@ local composite_recipes = {
     ["angels-roll-silver-converting"] = {["silver-plate"] = {}, ["angels-roll-silver"] = {scale = scale, shift = shift}}, -- Silver sheet coil
 
     -- Steel plate
-    ["steel-plate"] = {["steel-plate"] = {}, ["iron-plate"] = {scale = scale, shift = shift}}, -- Iron plate
+    ["steel-plate"] = {["angels-plate-hot-iron"] = {}, ["iron-plate"] = {scale = scale, shift = shift}}, -- Hot-Iron plate
+    ["angels-plate-steel-pre-heating"] = {["steel-plate"] = {}, ["angels-plate-hot-iron"] = {scale = scale, shift = shift}},
     ["angels-plate-steel"] = {["steel-plate"] = {}, ["liquid-molten-steel"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten steel
     ["angels-roll-steel-converting"] = {["steel-plate"] = {}, ["angels-roll-steel"] = {scale = scale, shift = shift}}, -- Steel sheet coil
 
