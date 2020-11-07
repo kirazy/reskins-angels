@@ -3,6 +3,7 @@ Version: 1.0.2
 Date: 2020.11.XX
   Features:
     - Implemented the advanced gas refinery
+    - Added settings to use Angel's material colors for pipes and intermediaries (default on)
     - Added icon for "Glowing hot iron plate"
     - Now reskins plate recipes for Lead and Tin when Angel's Smelting is not present
   Changes:
