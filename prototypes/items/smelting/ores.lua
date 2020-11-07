@@ -35,6 +35,12 @@ if reskins.lib.setting("reskins-angels-use-vanilla-style-ores") then
     })
 end
 
+-- Check if we're using Angel's material colors
+if reskins.lib.setting("reskins-angels-use-angels-material-colors") == false then
+    ores["lead-ore"] = {mod = "lib", group = "shared"}
+    ores["tin-ore"] = {mod = "lib", group = "shared", variations = 8}
+end
+
 if not mods["bobores"] or not mods["reskins-bobs"] then
     ores["bauxite-ore"] = {mod = "lib", group = "shared", variations = 8}
     ores["cobalt-ore"] = {mod = "lib", group = "shared"}

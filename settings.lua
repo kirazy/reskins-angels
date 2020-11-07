@@ -86,6 +86,20 @@ if mods["angelssmelting"] then
             name = "reskins-angels-do-angelssmelting",
             setting_type = "startup",
             default_value = true,
+        },
+        {
+            type = "bool-setting",
+            name = "reskins-angels-use-angels-material-colors",
+            setting_type = "startup",
+            default_value = true,
+            order = "a",
+        },
+        {
+            type = "bool-setting",
+            name = "reskins-angels-use-angels-material-colors-pipes",
+            setting_type = "startup",
+            default_value = true,
+            order = "a",
         }
     })
 end
