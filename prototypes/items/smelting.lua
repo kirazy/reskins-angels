@@ -112,51 +112,22 @@ end
 if reskins.lib.setting("reskins-angels-use-angels-material-colors") then
     -- Gears
     intermediaries["cobalt-steel-gear-wheel"] = {subgroup = "gears"}
-    -- intermediaries["iron-gear-wheel"] = {subgroup = "gears"}
     intermediaries["nitinol-gear-wheel"] = {subgroup = "gears"}
     intermediaries["titanium-gear-wheel"] = {subgroup = "gears"}
     intermediaries["tungsten-gear-wheel"] = {subgroup = "gears"}
 
     -- Bearing Balls
-    -- intermediaries["ceramic-bearing-ball"] = {subgroup = "intermediaries"}
+    intermediaries["ceramic-bearing-ball"] = {subgroup = "bearing-balls"}
     intermediaries["cobalt-steel-bearing-ball"] = {subgroup = "bearing-balls"}
     intermediaries["nitinol-bearing-ball"] = {subgroup = "bearing-balls"}
     intermediaries["titanium-bearing-ball"] = {subgroup = "bearing-balls"}
 
     -- Bearings
-    -- intermediaries["ceramic-bearing"] = {subgroup = "intermediaries"}
+    intermediaries["ceramic-bearing"] = {subgroup = "bearings"}
     intermediaries["cobalt-steel-bearing"] = {subgroup = "bearings"}
     intermediaries["nitinol-bearing"] = {subgroup = "bearings"}
     intermediaries["titanium-bearing"] = {subgroup = "bearings"}
 end
-
---     -- Plates
---     intermediaries["iron-plate"].subgroup = "plates/natural"
---     intermediaries["angels-plate-aluminium"].subgroup = "plates/natural"
---     intermediaries["angels-plate-cobalt"].subgroup = "plates/natural"
---     intermediaries["angels-plate-iron"].subgroup = "plates/natural"
---     intermediaries["angels-plate-lead"].subgroup = "plates/natural"
---     intermediaries["angels-plate-nickel"].subgroup = "plates/natural"
---     intermediaries["angels-plate-tin"].subgroup = "plates/natural"
---     intermediaries["angels-plate-titanium"].subgroup = "plates/natural"
---     intermediaries["angels-plate-tungsten"].subgroup = "plates/natural"
---     intermediaries["angels-plate-zinc"].subgroup = "plates/natural"
---     intermediaries["aluminium-plate"].subgroup = "plates/natural"
---     intermediaries["cobalt-plate"].subgroup = "plates/natural"
---     intermediaries["cobalt-steel-alloy"].subgroup = "plates/natural"
---     intermediaries["gunmetal-alloy"].subgroup = "plates/natural"
---     intermediaries["invar-alloy"].subgroup = "plates/natural"
---     intermediaries["lead-plate"].subgroup = "plates/natural"
---     intermediaries["nickel-plate"].subgroup = "plates/natural"
---     intermediaries["nitinol-alloy"].subgroup = "plates/natural"
---     intermediaries["tin-plate"].subgroup = "plates/natural"
---     intermediaries["titanium-plate"].subgroup = "plates/natural"
---     intermediaries["tungsten-plate"].subgroup = "plates/natural"
---     intermediaries["zinc-plate"].subgroup = "plates/natural"
-
---     -- Wires
---     intermediaries["angels-wire-tin"].subgroup = "intermediaries/natural"
---     intermediaries["tinned-copper-cable"].subgroup = "intermediares/natural"
 
 reskins.lib.create_icons_from_list(intermediaries, inputs)
 

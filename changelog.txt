@@ -9,7 +9,7 @@ Date: 2020.11.XX
     - Now reskins "Metallurgy smelting 5" technology
   Changes:
     - Changed how default indicators for true/false setting descriptions are handled internally
-    - Changed to refer to Angel's Smelting graphics where possible to reduce mod size
+    - Changed to refer to Angel's Smelting graphics where possible to reduce mod size; now dependent on Angel's Smelting version 0.6.12+
     - Changed the progression tiers of the chemical furnace from 1-4 to 2-5 to reflect changes in Angel's Smelting
     - Removed progression tiers from the powder mixer (now tier 1-4 in all cases) to reflect changes in Angel's Smelting
   Bugfixes:

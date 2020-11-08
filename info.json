@@ -16,7 +16,7 @@
     "? angelsindustries",
     "? angelspetrochem",
     "? angelsrefining",
-    "? angelssmelting",
+    "? angelssmelting >= 0.6.12",
     "(?) angelsaddons-cab",
     "(?) angelsaddons-mobility",
     "(?) angelsaddons-crawlertrain",
