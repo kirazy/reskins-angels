@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
-Date: 2020.11.XX
+Date: 2020.11.08
   Features:
     - Implemented the advanced gas refinery
     - Added settings to use Angel's material colors for pipes and intermediaries (default on)
