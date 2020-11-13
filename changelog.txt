@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2020.12.XX
+  Changes:
+    - Adjusted handling of Bob's electronics related recipes due to changes in Artisanal Reskins: Bob's Mods
+---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2020.11.08
   Features:
