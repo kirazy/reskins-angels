@@ -22,7 +22,7 @@ local ores = {
     -- ["manganese-ore"] = {},
     -- ["platinum-ore"] = {},
     ["rutile-ore"] = {}, -- Titanium (dark purple)
-    ["thorium-ore"] = {},
+    ["thorium-ore"] = {}, -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
     ["tin-ore"] = {variations = 8}, -- (green)
 }
 
