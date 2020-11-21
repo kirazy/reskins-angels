@@ -6,6 +6,16 @@
 -- Core functions
 require("prototypes.functions")
 
+----------------------------------------------------------------------------------------------------
+-- ENTITIES
+----------------------------------------------------------------------------------------------------
+require("prototypes.entity.addons-storage.logistics-chests")
+
+----------------------------------------------------------------------------------------------------
+-- TECHNOLOGY
+----------------------------------------------------------------------------------------------------
+require("prototypes.technology.addons-storage")
+
 -- Compatibility with ShinyAngelGFX (requires must be done in data-updates)
 if mods["ShinyAngelGFX"] then return end
 
