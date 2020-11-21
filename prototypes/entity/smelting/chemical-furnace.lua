@@ -12,7 +12,6 @@ local inputs = {
     type = "assembling-machine",
     icon_name = "chemical-furnace",
     base_entity = "oil-refinery",
-    directory = reskins.angels.directory,
     mod = "angels",
     particles = {["big-tint"] = 5, ["medium"] = 2},
     group = "smelting",

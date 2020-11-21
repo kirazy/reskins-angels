@@ -12,7 +12,6 @@ local inputs = {
     type = "assembling-machine",
     icon_name = "casting-machine",
     base_entity = "chemical-plant",
-    directory = reskins.angels.directory,
     mod = "angels",
     particles = {["big"] = 1, ["medium"] = 2},
     group = "smelting",

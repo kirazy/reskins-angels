@@ -12,7 +12,6 @@ local inputs = {
     type = "assembling-machine",
     icon_name = "ore-processing-machine",
     base_entity = "assembling-machine-1",
-    directory = reskins.angels.directory,
     mod = "angels",
     particles = {["big"] = 1, ["medium"] = 2},
     group = "smelting",
