@@ -187,79 +187,83 @@ end
 
 -- Reskin Big Chests
 if reskins.angels.triggers.industries.big_chests then
---     for chest, map in pairs(logistic_map) do
---         -- Fetch entity
---         local name = "angels-big-chest-"..chest
---         local entity = data.raw[inputs.type][name]
+    for chest, map in pairs(logistic_map) do
+        -- Fetch entity
+        local name = "angels-logistic-chest-"..chest
+        local entity = data.raw[inputs.type][name]
 
---         -- Check if entity exists, if not, skip this iteration
---         if not entity then goto continue end
+        -- Check if entity exists, if not, skip this iteration
+        if not entity then goto continue end
 
---         -- Determine what tint we're using
---         inputs.tint = map.tint
+        -- Determine what tint we're using
+        inputs.tint = map.tint
 
---         inputs.icon_name = "big-chest"
+        inputs.group = "addons-storage"
 
---         reskins.lib.setup_standard_entity(name, 0, inputs)
+        -- Setup icon details
+        inputs.icon_name = "big-chest"
+        inputs.icon_base = "logistic-big-chest-"..chest
 
---         entity.picture = {
---             layers = {
---                 -- Base
---                 {
---                     filename = reskins.angels.directory.."/graphics/entity/industries/big-chest/big-chest-"..chest.."-base.png",
---                     priority = "high",
---                     width = 164,
---                     height = 189,
---                     shift = util.by_pixel(0, 0),
---                     hr_version = {
---                         filename = reskins.angels.directory.."/graphics/entity/industries/big-chest/hr-big-chest-"..chest.."-base.png",
---                         priority = "high",
---                         width = 328,
---                         height = 376,
---                         shift = util.by_pixel(0, 0),
---                         scale = 0.5,
---                     }
---                 },
---                 -- Shadow
---                 {
---                     filename = reskins.angels.directory.."/graphics/entity/industries/big-chest/big-chest-"..chest.."-shadow.png",
---                     priority = "high",
---                     width = 164,
---                     height = 189,
---                     shift = util.by_pixel(0, 0),
---                     draw_as_shadow = true,
---                     hr_version = {
---                         filename = reskins.angels.directory.."/graphics/entity/industries/big-chest/hr-big-chest-"..chest.."-shadow.png",
---                         priority = "high",
---                         width = 328,
---                         height = 376,
---                         shift = util.by_pixel(0, 0),
---                         draw_as_shadow = true,
---                         scale = 0.5,
---                     }
---                 },
---                 -- Light
---                 {
---                     filename = reskins.angels.directory.."/graphics/entity/industries/big-chest/big-chest-"..chest.."-light.png",
---                     priority = "high",
---                     width = 164,
---                     height = 189,
---                     shift = util.by_pixel(0, 0),
---                     draw_as_light = true,
---                     hr_version = {
---                         filename = reskins.angels.directory.."/graphics/entity/industries/big-chest/hr-big-chest-"..chest.."-light.png",
---                         priority = "high",
---                         width = 328,
---                         height = 376,
---                         shift = util.by_pixel(0, 0),
---                         draw_as_light = true,
---                         scale = 0.5,
---                     }
---                 },
---             }
---         }
+        reskins.lib.setup_standard_entity(name, 0, inputs)
 
---         -- Label to skip to next iteration
---         ::continue::
---     end
+        entity.picture = {
+            layers = {
+                -- Base
+                {
+                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/logistic-big-chest-"..chest..".png",
+                    priority = "high",
+                    width = 68,
+                    height = 85,
+                    shift = util.by_pixel(0, -10),
+                    hr_version = {
+                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-"..chest..".png",
+                        priority = "high",
+                        width = 135,
+                        height = 169,
+                        shift = util.by_pixel(-0.5, -10.5),
+                        scale = 0.5,
+                    }
+                },
+                -- Shadow
+                {
+                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/logistic-big-chest-shadow.png",
+                    priority = "high",
+                    width = 107,
+                    height = 50,
+                    shift = util.by_pixel(19, 9),
+                    draw_as_shadow = true,
+                    hr_version = {
+                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-shadow.png",
+                        priority = "high",
+                        width = 209,
+                        height = 97,
+                        shift = util.by_pixel(18.5, 8.5),
+                        draw_as_shadow = true,
+                        scale = 0.5,
+                    }
+                },
+                -- Light
+                -- {
+                --     filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/logistic-big-chest-light.png",
+                --     priority = "high",
+                --     width = 4,
+                --     height = 9,
+                --     shift = util.by_pixel(21, -42),
+                --     draw_as_light = true,
+                --     hr_version = {
+                --         filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-light.png",
+                --         priority = "high",
+                --         width = 5,
+                --         height = 15,
+                --         shift = util.by_pixel(20.5, -41.5),
+                --         draw_as_light = true,
+                --         scale = 0.5,
+                --     }
+                -- },
+            }
+        }
+
+        -- Label to skip to next iteration
+        ::continue::
+    end
 end
