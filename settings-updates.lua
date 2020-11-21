@@ -30,7 +30,7 @@ hide_setting("bool-setting", "reskins-angels-do-angelsaddons-petrotrain")
 hide_setting("bool-setting", "reskins-angels-do-angelsaddons-smeltingtrain")
 
 -- Storage and deprecated individual mods
-hide_setting("bool-setting", "reskins-angels-do-angelsaddons-storage")
+-- hide_setting("bool-setting", "reskins-angels-do-angelsaddons-storage")
 hide_setting("bool-setting", "reskins-angels-do-angelsaddons-oresilos")
 hide_setting("bool-setting", "reskins-angels-do-angelsaddons-pressuretanks")
-hide_setting("bool-setting", "reskins-angels-do-angelsaddons-warehouses")
+-- hide_setting("bool-setting", "reskins-angels-do-angelsaddons-warehouses")

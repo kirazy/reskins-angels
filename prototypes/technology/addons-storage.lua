@@ -18,7 +18,7 @@ local technologies = {}
 -- Reskin warehouse technologies
 if reskins.angels.triggers.storage.warehouses then
     technologies["angels-logistic-warehouses"] = {subgroup = "warehouses"}
-    -- technologies["angels-warehouses"] = {subgroup = "warehouses"}
+    technologies["angels-warehouses"] = {subgroup = "warehouses"}
 end
 
 -- Reskin silo technologies

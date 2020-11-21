@@ -61,14 +61,14 @@ if reskins.angels.triggers.storage.warehouses then
                 },
                 -- Shadow
                 {
-                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/warehouse-shadow.png",
+                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/logistic-warehouse-shadow.png",
                     priority = "high",
                     width = 297,
                     height = 140,
                     shift = util.by_pixel(51, 30),
                     draw_as_shadow = true,
                     hr_version = {
-                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/hr-warehouse-shadow.png",
+                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/hr-logistic-warehouse-shadow.png",
                         priority = "high",
                         width = 592,
                         height = 276,
@@ -97,6 +97,9 @@ if reskins.angels.triggers.storage.warehouses then
                 -- },
             }
         }
+
+        -- Fix drawing box
+        entity.drawing_box = {{-3, -3.5}, {3, 3}}
 
         -- Label to skip to next iteration
         ::continue::
