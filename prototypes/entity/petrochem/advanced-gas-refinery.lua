@@ -159,6 +159,9 @@ for name, map in pairs(tier_map) do
         },
     }
 
+    -- Fix drawing box
+    entity.drawing_box = {{-3.5, -6.5}, {3.5, 3.5}}
+
     -- Label to skip to next iteration
     ::continue::
 end

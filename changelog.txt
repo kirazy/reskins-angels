@@ -5,6 +5,7 @@ Date: 2020.12.XX
     - Added ore silos, logistic silos, warehouses, logistic warehouses, and the pressure tank and in-line tank from Angel's Addons - Storage Options
   Changes:
     - Adjusted handling of Bob's electronics related recipes due to changes in Artisanal Reskins: Bob's Mods
+    - Adjusted `drawing_box` for several structures
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2020.11.08
