@@ -7,6 +7,8 @@ Date: 2020.12.XX
   Changes:
     - Adjusted handling of Bob's electronics related recipes due to changes in Artisanal Reskins: Bob's Mods
     - Adjusted `drawing_box` for several structures
+  Locale:
+    - Updated German localizations
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2020.11.08
