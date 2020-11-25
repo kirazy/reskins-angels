@@ -78,23 +78,23 @@ if reskins.angels.triggers.storage.warehouses then
                     }
                 },
                 -- Light
-                -- {
-                --     filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/logistic-warehouse-light.png",
-                --     priority = "high",
-                --     width = 7,
-                --     height = 16,
-                --     shift = util.by_pixel(72, -104),
-                --     draw_as_light = true,
-                --     hr_version = {
-                --         filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/hr-logistic-warehouse-light.png",
-                --         priority = "high",
-                --         width = 9,
-                --         height = 28,
-                --         shift = util.by_pixel(71.5, -104),
-                --         draw_as_light = true,
-                --         scale = 0.5,
-                --     }
-                -- },
+                {
+                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/logistic-warehouse-light.png",
+                    priority = "high",
+                    width = 7,
+                    height = 16,
+                    shift = util.by_pixel(72, -104),
+                    draw_as_light = true,
+                    hr_version = {
+                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/hr-logistic-warehouse-light.png",
+                        priority = "high",
+                        width = 9,
+                        height = 28,
+                        shift = util.by_pixel(71.5, -104),
+                        draw_as_light = true,
+                        scale = 0.5,
+                    }
+                },
             }
         }
 
@@ -243,23 +243,23 @@ if reskins.angels.triggers.industries.big_chests then
                     }
                 },
                 -- Light
-                -- {
-                --     filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/logistic-big-chest-light.png",
-                --     priority = "high",
-                --     width = 4,
-                --     height = 9,
-                --     shift = util.by_pixel(21, -42),
-                --     draw_as_light = true,
-                --     hr_version = {
-                --         filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-light.png",
-                --         priority = "high",
-                --         width = 5,
-                --         height = 15,
-                --         shift = util.by_pixel(20.5, -41.5),
-                --         draw_as_light = true,
-                --         scale = 0.5,
-                --     }
-                -- },
+                {
+                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/logistic-big-chest-light.png",
+                    priority = "high",
+                    width = 4,
+                    height = 9,
+                    shift = util.by_pixel(21, -42),
+                    draw_as_light = true,
+                    hr_version = {
+                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-light.png",
+                        priority = "high",
+                        width = 5,
+                        height = 15,
+                        shift = util.by_pixel(20.5, -41.5),
+                        draw_as_light = true,
+                        scale = 0.5,
+                    }
+                },
             }
         }
 

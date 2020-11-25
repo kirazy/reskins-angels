@@ -185,20 +185,20 @@ for name, map in pairs(tier_map) do
 
         -- Light
         {
-            draw_as_sprite = false,
-            draw_as_light = true,
             animation = {
                 filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-light.png",
                 priority = "high",
                 width = 167,
                 height = 197,
                 shift = util.by_pixel(0, -16.5),
+                draw_as_light = true,
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-light.png",
                     priority = "high",
                     width = 329,
                     height = 392,
                     shift = util.by_pixel(0, -16.5),
+                    draw_as_light = true,
                     scale = 0.5,
                 }
             }

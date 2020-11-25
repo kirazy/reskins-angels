@@ -25,6 +25,27 @@ local tier_map = {
     ["gas-refinery-4"] = {tier = 4, prog_tier = 6},
 }
 
+-- Create light layer for working visualisation
+local refinery_lights = reskins.lib.make_4way_animation_from_spritesheet({
+    filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-light.png",
+    priority = "high",
+    width = 232,
+    height = 330,
+    shift = util.by_pixel(0, -41),
+    blend_mode = "additive-soft",
+    draw_as_glow = true,
+    hr_version = {
+        filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-light.png",
+        priority = "high",
+        width = 462,
+        height = 657,
+        shift = util.by_pixel(0, -42),
+        blend_mode = "additive-soft",
+        draw_as_glow = true,
+        scale = 0.5,
+    }
+})
+
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
     -- Fetch entity
@@ -127,7 +148,8 @@ for name, map in pairs(tier_map) do
     entity.working_visualisations = {
         -- Flame
         {
-
+            fadeout = true,
+            constant_speed = true,
             north_position = util.by_pixel(-89.5, -135),
             east_position = util.by_pixel(35.5, -205.5),
             south_position = util.by_pixel(90.5, -92.5),
@@ -139,6 +161,7 @@ for name, map in pairs(tier_map) do
                 height = 40,
                 frame_count = 60,
                 animation_speed = 0.75,
+                draw_as_glow = true,
                 hr_version = {
                     filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
                     line_length = 10,
@@ -146,10 +169,19 @@ for name, map in pairs(tier_map) do
                     height = 81,
                     frame_count = 60,
                     animation_speed = 0.75,
+                    draw_as_glow = true,
                     scale = 0.5,
                 },
             },
-            light = {intensity = 0.8, size = 3, color = {r = 1.0, g = 1.0, b = 1.0}},
+        },
+
+        -- Light
+        {
+            fadeout = true,
+            north_animation = refinery_lights.north,
+            east_animation = refinery_lights.east,
+            south_animation = refinery_lights.south,
+            west_animation = refinery_lights.west,
         },
 
         -- Vertical Pipe Shadow Patch

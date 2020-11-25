@@ -147,8 +147,6 @@ for name, map in pairs(tier_map) do
     entity.working_visualisations = {
         -- Light
         {
-            draw_as_sprite = false,
-            draw_as_light = true,
             always_draw = true,
             animation = {
                 filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
@@ -156,12 +154,14 @@ for name, map in pairs(tier_map) do
                 width = 111,
                 height = 104,
                 shift = util.by_pixel(1, -2),
+                draw_as_light = true,
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
                     priority = "high",
                     width = 205,
                     height = 244,
                     shift = util.by_pixel(0, -2),
+                    draw_as_light = true,
                     scale = 0.5,
                 }
             }

@@ -47,7 +47,14 @@ local intermediaries = {
     ["angels-plate-cobalt"] = {subgroup = "plates"},
     ["angels-plate-glass"] = {mod = "lib", group = "shared", subgroup = "items", image = "glass"},
     ["angels-plate-gold"] = {mod = "lib", group = "shared", subgroup = "items", image = "gold-plate"},
-    ["angels-plate-hot-iron"] = {subgroup = "plates"},
+    ["angels-plate-hot-iron"] = {subgroup = "plates"}, --[[make_icon_pictures = true, icon_picture_extras = {{
+        filename = reskins.angels.directory.."/graphics/icons/smelting/plates/angels-plate-hot-iron-light.png",
+        blend_mode = "additive-soft",
+        draw_as_light = true,
+        size = 64,
+        mipmap_count = 4,
+        scale = 0.25,
+    }}},]]--
     ["angels-plate-iron"] = {subgroup = "plates"},
     ["angels-plate-lead"] = {subgroup = "plates"},
     ["angels-plate-manganese"] = {subgroup = "plates"},
