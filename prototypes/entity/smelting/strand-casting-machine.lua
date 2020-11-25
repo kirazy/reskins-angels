@@ -47,163 +47,51 @@ for name, map in pairs(tier_map) do
     -- Reskin entities
     entity.animation = nil
 
-    entity.working_visualisations = {
-        -- Idle state
-        {
-            always_draw = true,
-            animation = {
-                layers = {
-                    -- Idle State
-                    {
-                        filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-idle-state.png",
-                        priority = "high",
-                        width = 167,
-                        height = 197,
-                        shift = util.by_pixel(0, -16.5),
-                        hr_version = {
-                            filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-idle-state.png",
-                            priority = "high",
-                            width = 329,
-                            height = 392,
-                            shift = util.by_pixel(0, -16.5),
-                            scale = 0.5,
-                        }
-                    },
-                    -- Shadow
-                    {
-                        filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-shadow.png",
-                        priority = "high",
-                        width = 223,
-                        height = 157,
-                        draw_as_shadow = true,
-                        shift = util.by_pixel(29.5, 3.5),
-                        hr_version = {
-                            filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-shadow.png",
-                            priority = "high",
-                            width = 444,
-                            height = 311,
-                            draw_as_shadow = true,
-                            shift = util.by_pixel(29.5, 3.5),
-                            scale = 0.5,
-                        }
-                    }
-                }
-            }
-        },
-
-        -- Recipe Mask
-        {
-            apply_recipe_tint = "primary",
-            always_draw = true,
-            animation = {
-                filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-recipe-mask.png",
-                priority = "high",
-                width = 167,
-                height = 197,
-                shift = util.by_pixel(0, -16.5),
-                hr_version = {
-                    filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-recipe-mask.png",
+    table.insert(entity.working_visualisations, #entity.working_visualisations-1,
+    -- Color Mask
+    {
+        always_draw = true,
+        animation = {
+            layers = {
+                -- Mask
+                {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-mask.png",
                     priority = "high",
-                    width = 329,
-                    height = 392,
+                    width = 167,
+                    height = 197,
                     shift = util.by_pixel(0, -16.5),
-                    scale = 0.5,
-                }
-            },
-        },
-
-        -- Animation
-        {
-            fadeout = true,
-            animation = {
-                filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-working-animation.png",
-                priority = "high",
-                width = 167,
-                height = 197,
-                line_length = 6,
-                frame_count = 24,
-                animation_speed = 0.5,
-                shift = util.by_pixel(0, -16.5),
-                hr_version = {
-                    filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-working-animation.png",
-                    priority = "high",
-                    width = 329,
-                    height = 392,
-                    line_length = 6,
-                    frame_count = 24,
-                    animation_speed = 0.5,
-                    shift = util.by_pixel(0, -16.5),
-                    scale = 0.5,
-                }
-            }
-        },
-
-        -- Color Mask
-        {
-            always_draw = true,
-            animation = {
-                layers = {
-                    -- Mask
-                    {
-                        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-mask.png",
+                    tint = inputs.tint,
+                    hr_version = {
+                        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
                         priority = "high",
-                        width = 167,
-                        height = 197,
+                        width = 329,
+                        height = 392,
                         shift = util.by_pixel(0, -16.5),
                         tint = inputs.tint,
-                        hr_version = {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
-                            priority = "high",
-                            width = 329,
-                            height = 392,
-                            shift = util.by_pixel(0, -16.5),
-                            tint = inputs.tint,
-                            scale = 0.5,
-                        }
-                    },
-                    -- Highlights
-                    {
-                        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-highlights.png",
+                        scale = 0.5,
+                    }
+                },
+                -- Highlights
+                {
+                    filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-highlights.png",
+                    priority = "high",
+                    width = 167,
+                    height = 197,
+                    shift = util.by_pixel(0, -16.5),
+                    blend_mode = reskins.lib.blend_mode,
+                    hr_version = {
+                        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
                         priority = "high",
-                        width = 167,
-                        height = 197,
+                        width = 329,
+                        height = 392,
                         shift = util.by_pixel(0, -16.5),
                         blend_mode = reskins.lib.blend_mode,
-                        hr_version = {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
-                            priority = "high",
-                            width = 329,
-                            height = 392,
-                            shift = util.by_pixel(0, -16.5),
-                            blend_mode = reskins.lib.blend_mode,
-                            scale = 0.5,
-                        }
+                        scale = 0.5,
                     }
-                }
-            }
-        },
-
-        -- Light
-        {
-            animation = {
-                filename = "__angelssmelting__/graphics/entity/strand-casting-machine/strand-casting-machine-light.png",
-                priority = "high",
-                width = 167,
-                height = 197,
-                shift = util.by_pixel(0, -16.5),
-                draw_as_light = true,
-                hr_version = {
-                    filename = "__angelssmelting__/graphics/entity/strand-casting-machine/hr-strand-casting-machine-light.png",
-                    priority = "high",
-                    width = 329,
-                    height = 392,
-                    shift = util.by_pixel(0, -16.5),
-                    draw_as_light = true,
-                    scale = 0.5,
                 }
             }
         }
-    }
+    })
 
     -- Label to skip to next iteration
     ::continue::
