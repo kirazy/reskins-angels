@@ -18,16 +18,16 @@ triggers.industries = {
 
 -- Angel's Addons - Mobility and related deprecated mods
 triggers.mobility = {
-    crawler_train = reskins.lib.setting("reskins-angels-do-angelsaddons-mobility") or reskins.lib.setting("reskins-angels-do-angelsaddons-crawlertrain"),
-    petro_train = reskins.lib.setting("reskins-angels-do-angelsaddons-mobility") or reskins.lib.setting("reskins-angels-do-angelsaddons-petrotrain"),
-    smelting_train = reskins.lib.setting("reskins-angels-do-angelsaddons-mobility") or reskins.lib.setting("reskins-angels-do-angelsaddons-smeltingtrain"),
+    crawler_train = reskins.lib.setting("reskins-angels-do-angelsaddons-mobility"),
+    petro_train = reskins.lib.setting("reskins-angels-do-angelsaddons-mobility"),
+    smelting_train = reskins.lib.setting("reskins-angels-do-angelsaddons-mobility"),
 }
 
 -- Angel's Addons - Storage and related deprecated mods
 triggers.storage = {
-    warehouses = reskins.lib.setting("reskins-angels-do-angelsaddons-storage") or reskins.lib.setting("reskins-angels-do-angelsaddons-warehouses"),
-    silos = reskins.lib.setting("reskins-angels-do-angelsaddons-storage") or reskins.lib.setting("reskins-angels-do-angelsaddons-silos"),
-    pressure_tanks = reskins.lib.setting("reskins-angels-do-angelsaddons-storage") or reskins.lib.setting("reskins-angels-do-angelsaddons-pressuretanks"),
+    warehouses = reskins.lib.setting("reskins-angels-do-angelsaddons-storage"),
+    silos = reskins.lib.setting("reskins-angels-do-angelsaddons-storage"),
+    pressure_tanks = reskins.lib.setting("reskins-angels-do-angelsaddons-storage"),
 }
 
 return triggers

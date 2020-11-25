@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.3
-Date: 2020.12.XX
+Version: 1.1.0
+Date: 2020.11.XX
   Features:
+    - Moved to Factorio 1.1
     - Added big chests and logistic chests from Angel's Industries
-    - Added ore silos, logistic silos, warehouses, logistic warehouses, and the pressure tank and in-line tank from Angel's Addons - Storage Options
+    - Added warehouses and logistic warehouses,from Angel's Addons - Storage Options
   Changes:
     - Adjusted handling of Bob's electronics related recipes due to changes in Artisanal Reskins: Bob's Mods
     - Adjusted `drawing_box` for several structures

@@ -115,7 +115,6 @@ if mods["angelsaddons-cab"] then
     })
 end
 
--- Handle Mobility vs deprecated individual mobility mods
 if mods["angelsaddons-mobility"] then
     data:extend({
         {
@@ -125,42 +124,8 @@ if mods["angelsaddons-mobility"] then
             default_value = true,
         }
     })
-else
-    if mods["angelsaddons-crawlertrain"] then
-        data:extend({
-            {
-                type = "bool-setting",
-                name = "reskins-angels-do-angelsaddons-crawlertrain",
-                setting_type = "startup",
-                default_value = true,
-            }
-        })
-    end
-
-    if mods["angelsaddons-petrotrain"] then
-        data:extend({
-            {
-                type = "bool-setting",
-                name = "reskins-angels-do-angelsaddons-petrotrain",
-                setting_type = "startup",
-                default_value = true,
-            }
-        })
-    end
-
-    if mods["angelsaddons-smeltingtrain"] then
-        data:extend({
-            {
-                type = "bool-setting",
-                name = "reskins-angels-do-angelsaddons-smeltingtrain",
-                setting_type = "startup",
-                default_value = true,
-            }
-        })
-    end
 end
 
--- Handle Storage vs deprecated individual storage mods
 if mods["angelsaddons-storage"] then
     data:extend({
         {
@@ -170,37 +135,4 @@ if mods["angelsaddons-storage"] then
             default_value = true,
         }
     })
-else
-    if mods["angelsaddons-oresilos"] then
-        data:extend({
-            {
-                type = "bool-setting",
-                name = "reskins-angels-do-angelsaddons-oresilos",
-                setting_type = "startup",
-                default_value = true,
-            }
-        })
-    end
-
-    if mods["angelsaddons-pressuretanks"] then
-        data:extend({
-            {
-                type = "bool-setting",
-                name = "reskins-angels-do-angelsaddons-pressuretanks",
-                setting_type = "startup",
-                default_value = true,
-            }
-        })
-    end
-
-    if mods["angelsaddons-warehouses"] then
-        data:extend({
-            {
-                type = "bool-setting",
-                name = "reskins-angels-do-angelsaddons-warehouses",
-                setting_type = "startup",
-                default_value = true,
-            }
-        })
-    end
 end

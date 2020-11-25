@@ -15,22 +15,12 @@ end
 -- Core mods
 hide_setting("bool-setting", "reskins-angels-do-angelsbioprocessing")
 hide_setting("bool-setting", "reskins-angels-do-angelsexploration")
-hide_setting("bool-setting", "reskins-angels-do-angelsindustries")
+-- hide_setting("bool-setting", "reskins-angels-do-angelsindustries")
 -- hide_setting("bool-setting", "reskins-angels-do-angelspetrochem")
 hide_setting("bool-setting", "reskins-angels-do-angelsrefining")
 -- hide_setting("bool-setting", "reskins-angels-do-angelssmelting")
 
 -- Addons
 hide_setting("bool-setting", "reskins-angels-do-angelsaddons-cab")
-
--- Mobility and deprecated individual mods
 hide_setting("bool-setting", "reskins-angels-do-angelsaddons-mobility")
-hide_setting("bool-setting", "reskins-angels-do-angelsaddons-crawlertrain")
-hide_setting("bool-setting", "reskins-angels-do-angelsaddons-petrotrain")
-hide_setting("bool-setting", "reskins-angels-do-angelsaddons-smeltingtrain")
-
--- Storage and deprecated individual mods
 -- hide_setting("bool-setting", "reskins-angels-do-angelsaddons-storage")
-hide_setting("bool-setting", "reskins-angels-do-angelsaddons-oresilos")
-hide_setting("bool-setting", "reskins-angels-do-angelsaddons-pressuretanks")
--- hide_setting("bool-setting", "reskins-angels-do-angelsaddons-warehouses")
