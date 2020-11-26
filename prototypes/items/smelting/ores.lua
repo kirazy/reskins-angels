@@ -22,7 +22,7 @@ local ores = {
     -- ["manganese-ore"] = {},
     -- ["platinum-ore"] = {},
     ["rutile-ore"] = {}, -- Titanium (dark purple)
-    ["thorium-ore"] = {}, -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
+    ["thorium-ore"] = {make_glow = true}, -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
     ["tin-ore"] = {variations = 8}, -- (green)
 }
 
@@ -144,6 +144,10 @@ local slag_processing_list = {
     "slag-processing-8",
     "slag-processing-9",
 }
+
+if mods["SeaBlock"] then
+    table.insert(slag_processing_list, "slag-processing-1")
+end
 
 local slag_recipe_shifts = {
     {-11.5, 12},

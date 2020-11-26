@@ -120,6 +120,13 @@ for name, map in pairs(tier_map) do
         }
     }
 
+    -- Handle ambient-light
+    entity.energy_source.light_flicker = {
+        color = {0, 0, 0},
+        minimum_light_size = 0,
+        light_intensity_to_size_coefficient = 0,
+    }
+
     -- Label to skip to next iteration
     ::continue::
 end

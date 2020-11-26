@@ -1,10 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
-Date: 2020.11.XX
+Date: 2020.11.26
   Features:
     - Moved to Factorio 1.1
     - Added big chests and logistic chests from Angel's Industries
     - Added warehouses and logistic warehouses from Angel's Addons - Storage Options
+    - Added support for the recipe processing mineral sludge when playing Sea Block
+    - Added lighting to several items and intermediaries
   Changes:
     - Adjusted handling of Bob's electronics related recipes due to changes in Artisanal Reskins: Bob's Mods
     - Adjusted `drawing_box` for several structures
