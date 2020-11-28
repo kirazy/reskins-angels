@@ -187,7 +187,7 @@ for name, map in pairs(tier_map) do
         -- Vertical Pipe Shadow Patch
         {
             always_draw = true,
-            north_animation = reskins.angels.vertical_pipe_shadow({3, -3})
+            north_animation = reskins.lib.vertical_pipe_shadow({3, -3})
         },
     }
 
