@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2020.12.XX
+  Features:
+    - Added icon support for silicon wafers and solder
   Changes:
     - Moved function `vertical_pipe_shadow` into Artisanal Reskins: Library, now dependent on 1.1.1
 ---------------------------------------------------------------------------------------------------
