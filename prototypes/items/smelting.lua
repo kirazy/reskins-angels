@@ -97,6 +97,11 @@ local intermediaries = {
     ["gilded-copper-cable"] = {mod = "lib", group = "shared", subgroup = "items"},
     ["tinned-copper-cable"] = {subgroup = "intermediaries", image = "angels-wire-tin"},
 
+    -- Miscellaneous
+    ["solder "] = {mod = "lib", group = "shared", subgroup = "items"},
+    ["angels-solder"] = {mod = "lib", group = "shared", subgroup = "items", image = "solder"},
+    ["angels-silicon-wafer"] = {mod = "lib", group = "shared", subgroup = "items", image = "silicon-wafer"},
+
     ----------------------------------------------------------------------------------------------------
     -- Recipes
     ----------------------------------------------------------------------------------------------------
@@ -246,6 +251,11 @@ local composite_recipes = {
     -- Tin cable
     ["basic-tinned-copper-wire"] = {["tinned-copper-cable"] = {}, ["tin-plate"] = {scale = scale, shift = shift}}, -- Tin plate
     ["angels-wire-coil-tin-converting"] = {["tinned-copper-cable"] = {}, ["angels-wire-coil-tin"] = {scale = scale, shift = shift}}, -- Tin wire coil
+
+    -- Solder
+    ["angels-solder-mixture-smelting"] = {["solder"] = {}, ["angels-solder-mixture"] = {scale = scale, shift = shift}},
+    ["angels-solder"] = {["solder"] = {}, ["liquid-molten-solder"] = {type = "fluid", scale = scale, shift = shift}},
+    ["angels-roll-solder-converting"] = {["solder"] = {}, ["angels-roll-solder"] = {scale = scale, shift = shift}},
 }
 
 -- Handle the Pure Angels case
@@ -292,6 +302,13 @@ if not mods["bobplates"] then
     -- Zinc
     composite_recipes["angels-plate-zinc"] = {["angels-plate-zinc"] = {}, ["liquid-molten-zinc"] = {type = "fluid", scale = scale, shift = shift}} -- Molten Zinc
     composite_recipes["angels-roll-zinc-converting"] = {["angels-plate-zinc"] = {}, ["angels-roll-zinc"] = {scale = scale, shift = shift}} -- Zinc sheet coil
+end
+
+if not mods["bobelectronics"] then
+    -- Solder
+    composite_recipes["angels-solder-mixture-smelting"] = {["angels-solder"] = {}, ["angels-solder-mixture"] = {scale = scale, shift = shift}}
+    composite_recipes["angels-solder"] = {["angels-solder"] = {}, ["liquid-molten-solder"] = {type = "fluid", scale = scale, shift = shift}}
+    composite_recipes["angels-roll-solder-converting"] = {["angels-solder"] = {}, ["angels-roll-solder"] = {scale = scale, shift = shift}}
 end
 
 for name, sources in pairs(composite_recipes) do
