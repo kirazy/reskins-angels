@@ -98,7 +98,7 @@ local intermediaries = {
     ["tinned-copper-cable"] = {subgroup = "intermediaries", image = "angels-wire-tin"},
 
     -- Miscellaneous
-    ["solder "] = {mod = "lib", group = "shared", subgroup = "items"},
+    ["solder"] = {mod = "lib", group = "shared", subgroup = "items"},
     ["angels-solder"] = {mod = "lib", group = "shared", subgroup = "items", image = "solder"},
     ["angels-silicon-wafer"] = {mod = "lib", group = "shared", subgroup = "items", image = "silicon-wafer"},
 

@@ -10,5 +10,10 @@ require("prototypes.items.petrochem")
 require("prototypes.items.petrochem.sulfur")
 require("prototypes.items.smelting")
 
+----------------------------------------------------------------------------------------------------
+-- COMPATIBILITY
+----------------------------------------------------------------------------------------------------
+require("prototypes.compatibility.angels-smelting-extended-items")
+
 -- Assign deferred icons
 reskins.lib.assign_deferred_icons("angels", "data-final-fixes")

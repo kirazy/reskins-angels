@@ -11,6 +11,7 @@
     "base",
     "reskins-library >= 1.1.1",
     "? reskins-bobs",
+
     "? angelsbioprocessing",
     "? angelsexploration",
     "? angelsindustries",
@@ -19,14 +20,11 @@
     "? angelssmelting",
     "(?) angelsaddons-cab",
     "(?) angelsaddons-mobility",
-    "(?) angelsaddons-crawlertrain",
-    "(?) angelsaddons-petrotrain",
-    "(?) angelsaddons-smeltingtrain",
     "(?) angelsaddons-storage",
-    "(?) angelsaddons-oresilos",
-    "(?) angelsaddons-pressuretanks",
-    "(?) angelsaddons-warehouses",
+
     "(?) ShinyBobGFX",
-    "(?) ShinyAngelGFX"
+    "(?) ShinyAngelGFX",
+
+    "(?) angels-smelting-extended"
   ]
 }
