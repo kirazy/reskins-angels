@@ -12,6 +12,13 @@ data:extend({
         order = "a",
         default_value = false,
         hidden = true,
+    },
+    {
+        type = "bool-setting",
+        name = "reskins-angels-use-item-variations",
+        setting_type = "startup",
+        order = "a",
+        default_value = true
     }
 })
 
