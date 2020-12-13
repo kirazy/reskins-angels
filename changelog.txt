@@ -2,7 +2,7 @@
 Version: 1.1.1
 Date: 2020.12.XX
   Features:
-    - Added icon support for pellets, silicon wafers and solder
+    - Added icon support for pellets, sheet coils, silicon wafers and solder
     - Added support for items and recipes added by Angel's Extended Smelting and Compression mod
     - Added icon support for ingots, and included variations, controllable with startup setting "Item variations" (default on)
   Changes:

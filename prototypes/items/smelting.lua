@@ -138,6 +138,33 @@ local intermediaries = {
     ["pellet-tungsten"] = {subgroup = "pellets"},
     ["pellet-zinc"] = {subgroup = "pellets"},
 
+    -- Sheet Coils
+    ["angels-roll-aluminium"] = {subgroup = "rolls"},
+    ["angels-roll-chrome"] = {subgroup = "rolls"},
+    ["angels-roll-cobalt"] = {subgroup = "rolls"},
+    ["angels-roll-copper"] = {subgroup = "rolls"},
+    ["angels-roll-gold"] = {subgroup = "rolls"},
+    ["angels-roll-iron"] = {subgroup = "rolls"},
+    ["angels-roll-lead"] = {subgroup = "rolls"},
+    ["angels-roll-manganese"] = {subgroup = "rolls"},
+    ["angels-roll-nickel"] = {subgroup = "rolls"},
+    ["angels-roll-platinum"] = {subgroup = "rolls"},
+    ["angels-roll-silver"] = {subgroup = "rolls"},
+    ["angels-roll-tin"] = {subgroup = "rolls"},
+    ["angels-roll-titanium"] = {subgroup = "rolls"},
+    ["angels-roll-tungsten"] = {subgroup = "rolls"},
+    ["angels-roll-zinc"] = {subgroup = "rolls"},
+    ["angels-roll-steel"] = {subgroup = "rolls"},
+
+    -- Sheet Coils from Angel's Extended Smelting and Compression
+    ["angels-roll-bronze"] = {subgroup = "rolls"},
+    ["angels-roll-invar"] = {subgroup = "rolls"},
+    ["angels-roll-nitinol"] = {subgroup = "rolls"},
+    ["angels-roll-cobalt-steel"] = {subgroup = "rolls"},
+    ["angels-roll-brass"] = {subgroup = "rolls"},
+    ["angels-roll-gunmetal"] = {subgroup = "rolls"},
+
+
     ----------------------------------------------------------------------------------------------------
     -- Recipes
     ----------------------------------------------------------------------------------------------------
@@ -203,6 +230,73 @@ local intermediaries = {
     ["zinc-ore-smelting"] = {type = "recipe", subgroup = "ingots/zinc", image = "ingot-zinc", icon_extras = reskins.angels.num_tier(1, inputs.group)},
     ["processed-zinc-smelting"] = {type = "recipe", subgroup = "ingots/zinc", image = "ingot-zinc", icon_extras = reskins.angels.num_tier(1, inputs.group)},
     ["cathode-zinc-smelting"] = {type = "recipe", subgroup = "ingots/zinc", image = "ingot-zinc", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+
+    -- Sheet Coils
+    ["roll-aluminium-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-aluminium", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-aluminium-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-aluminium", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-chrome-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-chrome", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-chrome-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-chrome", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-cobalt-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-cobalt", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-cobalt-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-cobalt", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-copper-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-copper", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-copper-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-copper", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-gold-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-gold", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-gold-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-gold", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-iron-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-iron", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-iron-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-iron", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-lead-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-lead", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-lead-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-lead", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-manganese-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-manganese", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-manganese-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-manganese", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-nickel-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-nickel", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-nickel-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-nickel", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-platinum-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-platinum", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-platinum-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-platinum", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-silver-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-silver", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-silver-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-silver", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-tin-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-tin", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-tin-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-tin", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-titanium-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-titanium", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-titanium-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-titanium", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["roll-zinc-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-zinc", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["roll-zinc-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-zinc", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["angels-roll-tungsten-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-tungsten", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["angels-roll-tungsten-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-tungsten", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["angels-roll-steel-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-steel", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["angels-roll-steel-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-steel", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["angels-roll-bronze-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-bronze", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["angels-roll-bronze-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-bronze", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["angels-roll-invar-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-invar", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["angels-roll-invar-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-invar", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["angels-roll-nitinol-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-nitinol", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["angels-roll-nitinol-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-nitinol", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["angels-roll-cobalt-steel-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-cobalt-steel", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["angels-roll-cobalt-steel-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-cobalt-steel", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["angels-roll-brass-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-brass", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["angels-roll-brass-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-brass", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["angels-roll-gunmetal-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-gunmetal", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["angels-roll-gunmetal-casting-fast"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-gunmetal", icon_extras = reskins.angels.num_tier(2, inputs.group)},
 }
 
 if mods["reskins-bobs"] then
