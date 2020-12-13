@@ -120,6 +120,24 @@ local intermediaries = {
     ["ingot-titanium"] = {subgroup = "ingots/titanium"},
     ["ingot-zinc"] = {subgroup = "ingots/zinc"},
 
+    -- Pellets
+    ["pellet-aluminium"] = {subgroup = "pellets"},
+    ["pellet-chrome"] = {subgroup = "pellets"},
+    ["pellet-cobalt"] = {subgroup = "pellets"},
+    ["pellet-copper"] = {subgroup = "pellets"},
+    ["pellet-gold"] = {subgroup = "pellets"},
+    ["pellet-iron"] = {subgroup = "pellets"},
+    ["pellet-lead"] = {subgroup = "pellets"},
+    ["pellet-manganese"] = {subgroup = "pellets"},
+    ["pellet-nickel"] = {subgroup = "pellets"},
+    ["pellet-platinum"] = {subgroup = "pellets"},
+    ["pellet-silica"] = {subgroup = "pellets"},
+    ["pellet-silver"] = {subgroup = "pellets"},
+    ["pellet-tin"] = {subgroup = "pellets"},
+    ["pellet-titanium"] = {subgroup = "pellets"},
+    ["pellet-tungsten"] = {subgroup = "pellets"},
+    ["pellet-zinc"] = {subgroup = "pellets"},
+
     ----------------------------------------------------------------------------------------------------
     -- Recipes
     ----------------------------------------------------------------------------------------------------
@@ -433,4 +451,20 @@ if reskins.lib.setting("reskins-angels-use-item-variations") then
 
         ::continue::
     end
+end
+
+-- Clear recipe icons
+local recipes = {
+    "aluminium-processed-processing",
+    "zinc-processed-processing",
+}
+
+for _, name in pairs(recipes) do
+    local recipe = data.raw.recipe[name]
+    if not recipe then goto continue end
+
+    recipe.icon = nil
+    recipe.icons = nil
+
+    ::continue::
 end
