@@ -21,11 +21,11 @@ require("prototypes.items.smelting.ores")
 ----------------------------------------------------------------------------------------------------
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------
+require("prototypes.technology.smelting-updates")
 
 ----------------------------------------------------------------------------------------------------
 -- COMPATIBILITY
 ----------------------------------------------------------------------------------------------------
-require("prototypes.compatibility.bobselectronics")
 
 -- Assign deferred icons
 reskins.lib.assign_deferred_icons("angels", "data-updates")

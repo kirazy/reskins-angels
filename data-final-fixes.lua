@@ -11,9 +11,15 @@ require("prototypes.items.petrochem.sulfur")
 require("prototypes.items.smelting")
 
 ----------------------------------------------------------------------------------------------------
+-- TECHNOLOGY
+----------------------------------------------------------------------------------------------------
+-- require("prototypes.technology.smelting-final-fixes")
+
+----------------------------------------------------------------------------------------------------
 -- COMPATIBILITY
 ----------------------------------------------------------------------------------------------------
 require("prototypes.compatibility.angels-smelting-extended-items")
+require("prototypes.compatibility.bobselectronics")
 
 -- Assign deferred icons
 reskins.lib.assign_deferred_icons("angels", "data-final-fixes")
