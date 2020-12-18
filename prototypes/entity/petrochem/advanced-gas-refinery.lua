@@ -150,10 +150,10 @@ for name, map in pairs(tier_map) do
         {
             fadeout = true,
             constant_speed = true,
-            north_position = util.by_pixel(-89.5, -135),
-            east_position = util.by_pixel(35.5, -205.5),
-            south_position = util.by_pixel(90.5, -92.5),
-            west_position = util.by_pixel(-16, -33.5),
+            north_position = util.by_pixel(-89, -136.5),
+            east_position = util.by_pixel(34.5, -207.5),
+            south_position = util.by_pixel(90.5, -94),
+            west_position = util.by_pixel(-16, -35),
             animation = {
                 filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
                 line_length = 10,
@@ -187,7 +187,19 @@ for name, map in pairs(tier_map) do
         -- Vertical Pipe Shadow Patch
         {
             always_draw = true,
-            north_animation = reskins.lib.vertical_pipe_shadow({3, -3})
+            north_animation = {
+                layers = {
+                    reskins.lib.vertical_pipe_shadow({-1, -3}),
+                    reskins.lib.vertical_pipe_shadow({3, -3}),
+                }
+            },
+            south_animation = {
+                layers = {
+                    reskins.lib.vertical_pipe_shadow({-3, 3}),
+                    reskins.lib.vertical_pipe_shadow({-1, 3}),
+                    reskins.lib.vertical_pipe_shadow({1, 3})
+                }
+            }
         },
     }
 

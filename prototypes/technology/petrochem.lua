@@ -18,7 +18,7 @@ local inputs = {
 
 local technologies = {
     -- Gas Processing (Gas Refinery)
-    -- ["gas-processing"] = {tier = 1, prog_tier = 2, icon_name = "gas-processing"},
+    ["gas-processing"] = {tier = 1, prog_tier = 2, icon_name = "gas-processing", technology_icon_mipmaps = 4},
 
     -- Advanced Chemistry
     -- ["angels-advanced-chemistry-1"] = {tier = 1, prog_tier = 2, icon_name = "advanced-chemistry"},
@@ -28,8 +28,8 @@ local technologies = {
 
 
     -- Advanced Gas Processing
-    ["angels-advanced-gas-processing"] = {tier = 1, prog_tier = 3, icon_name = "advanced-gas-processing"}, -- 1st AGR
-    ["angels-advanced-gas-processing-2"] = {tier = 4, prog_tier = 6, icon_name = "advanced-gas-processing"}, -- 4th AGR
+    ["angels-advanced-gas-processing"] = {tier = 1, prog_tier = 3, icon_name = "advanced-gas-processing"},
+    ["angels-advanced-gas-processing-2"] = {tier = 4, prog_tier = 6, icon_name = "advanced-gas-processing"}, -- Added by Extended Angels
 }
 
 reskins.lib.create_icons_from_list(technologies, inputs)
