@@ -6,7 +6,7 @@ Date: 2020.12.XX
     - Added icon support for molten metals, glass, concrete and related technologies
     - Added icon support for ingots, and included variations, controllable with startup setting "Item variations" (default on)
     - Added support for items and recipes added by Angel's Extended Smelting and Compression mod
-    - Implemented the gas refinery and petrochem gas tank
+    - Implemented the gas refinery and petrochem gas and oil tanks
   Changes:
     - Moved function `vertical_pipe_shadow` into Artisanal Reskins: Library, now dependent on 1.1.1
     - Revised the advanced gas refinery sprite, improved pipe connection shadows, and adjusted flare positioning

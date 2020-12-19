@@ -48,10 +48,11 @@ require("prototypes.entity.petrochem.advanced-gas-refinery")
 -- require("prototypes.entity.petrochem.flare-stack")
 -- require("prototypes.entity.petrochem.fluid-splitter")
 require("prototypes.entity.petrochem.gas-refinery")
+require("prototypes.entity.petrochem.petrochem-gas-tank")
+require("prototypes.entity.petrochem.petrochem-oil-tank")
 -- require("prototypes.entity.petrochem.polymerization-chamber")
 -- require("prototypes.entity.petrochem.separator")
 -- require("prototypes.entity.petrochem.steam-cracker")
-require("prototypes.entity.petrochem.storage-tanks")
 -- require("prototypes.entity.petrochem.valve")
 
 -- Angel's Refining
