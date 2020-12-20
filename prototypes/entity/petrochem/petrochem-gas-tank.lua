@@ -3,10 +3,6 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
--- Check to see if reskinning needs to be done.
-if not mods["angelspetrochem"] then return end
-if reskins.lib.setting("reskins-angels-do-angelspetrochem") == false then return end
-
 -- Set input parameters
 local inputs = {
     type = "storage-tank",
