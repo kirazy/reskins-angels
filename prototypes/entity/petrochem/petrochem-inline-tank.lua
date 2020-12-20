@@ -10,7 +10,9 @@ local inputs = {
     base_entity = "storage-tank",
     mod = "angels",
     group = "petrochem",
+    tint = util.color("c20600"), -- Red
     icon_layers = 1,
+    particles = {["big"] = 1},
     make_remnants = false,
 }
 
@@ -47,7 +49,7 @@ entity.pictures.picture = {
             priority = "extra-high",
             frames = 4,
             width = 106,
-            height = 69,
+            height = 101,
             shift = util.by_pixel(17, 8),
             draw_as_shadow = true,
             hr_version = {
