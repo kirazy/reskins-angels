@@ -64,3 +64,6 @@ entity.pictures.picture = {
         }
     }
 }
+
+-- Fix drawing box
+entity.drawing_box = {{-2.5, -3.75}, {2.5, 2.5}}
