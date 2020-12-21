@@ -54,7 +54,7 @@ require("prototypes.entity.petrochem.petrochem-oil-tank")
 -- require("prototypes.entity.petrochem.polymerization-chamber")
 -- require("prototypes.entity.petrochem.separator")
 -- require("prototypes.entity.petrochem.steam-cracker")
--- require("prototypes.entity.petrochem.valve")
+require("prototypes.entity.petrochem.valve")
 
 -- Angel's Refining
 -- require("prototypes.entity.refining.barreling-pump")
