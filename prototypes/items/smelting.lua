@@ -199,6 +199,26 @@ local intermediaries = {
     ["liquid-molten-brass"] = {type = "fluid", subgroup = "liquid-material"},
     ["liquid-molten-gunmetal"] = {type = "fluid", subgroup = "liquid-material"},
 
+    -- Powders
+    ["powder-aluminium"] = {subgroup = "powders/aluminium"},
+    ["casting-powder-tungsten"] = {subgroup = "powders/tungsten-mixture", image = "powder-tungsten-mixture"},
+    ["powder-chrome"] = {subgroup = "powders/chrome"},
+    ["powder-cobalt"] = {subgroup = "powders/cobalt"},
+    ["powder-copper"] = {subgroup = "powders/copper"},
+    ["powder-gold"] = {subgroup = "powders/gold"},
+    ["powder-iron"] = {subgroup = "powders/iron"},
+    ["powder-steel"] = {subgroup = "powders/steel"},
+    ["powder-lead"] = {subgroup = "powders/lead"},
+    ["powder-manganese"] = {subgroup = "powders/manganese"},
+    ["powder-nickel"] = {subgroup = "powders/nickel"},
+    ["powder-platinum"] = {subgroup = "powders/platinum"},
+    ["silicon-powder"] = {subgroup = "powders/silicon", image = "powder-silicon"},
+    ["powder-silver"] = {subgroup = "powders/silver"},
+    ["powder-tin"] = {subgroup = "powders/tin"},
+    ["powder-titanium"] = {subgroup = "powders/titanium"},
+    ["powdered-tungsten"] = {subgroup = "powders/tungsten", image = "powder-tungsten"},
+    ["powder-zinc"] = {subgroup = "powders/zinc"},
+
     -- Rods
     -- ["angels-rod-iron"]
     -- ["angels-rod-steel"]
@@ -424,6 +444,13 @@ local intermediaries = {
     ["angels-brass-smelting-3"] = {type = "recipe", subgroup = "liquid-material", image = "liquid-molten-brass", icon_extras = reskins.angels.num_tier(3, inputs.group)},
 
     ["angels-gunmetal-smelting-1"] = {type = "recipe", subgroup = "liquid-material", image = "liquid-molten-gunmetal"},
+
+    -- Powders
+    ["gas-tungsten-hexafluoride-smelting"] = {type = "recipe", subgroup = "powders/tungsten", image = "powder-tungsten", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["solid-ammonium-paratungstate-smelting"] = {type = "recipe", subgroup = "powders/tungsten", image = "powder-tungsten", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+
+    ["casting-powder-tungsten-1"] = {type = "recipe", subgroup = "powders/tungsten-mixture", image = "powder-tungsten-mixture", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["casting-powder-tungsten-2"] = {type = "recipe", subgroup = "powders/tungsten-mixture", image = "powder-tungsten-mixture", icon_extras = reskins.angels.num_tier(2, inputs.group)},
 }
 
 if mods["reskins-bobs"] then
@@ -678,6 +705,47 @@ if reskins.lib.setting("reskins-angels-use-item-variations") then
 
         ::continue::
     end
+end
+
+-- Make variations for powders
+local powder_variations = {
+    ["powder-aluminium"] = "aluminium",
+    ["casting-powder-tungsten"] = "tungsten-mixture",
+    ["powder-chrome"] = "chrome",
+    ["powder-cobalt"] = "cobalt",
+    ["powder-copper"] = "copper",
+    ["powder-gold"] = "gold",
+    ["powder-iron"] = "iron",
+    ["powder-steel"] = "steel",
+    ["powder-lead"] = "lead",
+    ["powder-manganese"] = "manganese",
+    ["powder-nickel"] = "nickel",
+    ["powder-platinum"] = "platinum",
+    ["silicon-powder"] = "silicon",
+    ["powder-silver"] = "silver",
+    ["powder-tin"] = "tin",
+    ["powder-titanium"] = "titanium",
+    ["powdered-tungsten"] = "tungsten",
+    ["powder-zinc"] = "zinc",
+}
+
+for powder, material in pairs(powder_variations) do
+    local item = data.raw.item[powder]
+    if not item then goto continue end
+
+    -- Setup initial pictures table
+    item.pictures = {}
+
+    for i = 1, 6, 1 do
+        table.insert(item.pictures, {
+            filename = reskins.angels.directory.."/graphics/icons/smelting/powders/"..material.."/powder-"..material.."-"..i..".png",
+            size = 64,
+            mipmap_count = 4,
+            scale = 0.25,
+        })
+    end
+
+    ::continue::
 end
 
 -- Clear recipe icons

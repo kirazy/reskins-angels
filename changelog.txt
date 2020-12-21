@@ -2,7 +2,7 @@
 Version: 1.1.1
 Date: 2020.12.XX
   Features:
-    - Added icon support for pellets, sheet coils, wire coils, glass fiber, silicon wafer and solder
+    - Added icon support for pellets, sheet coils, wire coils, glass fiber, metal powders, silicon wafer and solder
     - Added icon support for molten metals, glass, concrete and related technologies
     - Added icon support for ingots, and included variations, controllable with startup setting "Item variations" (default on)
     - Added support for items and recipes added by Angel's Extended Smelting and Compression mod
