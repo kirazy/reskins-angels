@@ -101,6 +101,9 @@ local intermediaries = {
     ["solder"] = {mod = "lib", group = "shared", subgroup = "items"},
     ["angels-solder"] = {mod = "lib", group = "shared", subgroup = "items", image = "solder"},
     ["angels-silicon-wafer"] = {mod = "lib", group = "shared", subgroup = "items", image = "silicon-wafer"},
+    ["solid-lime"] = {subgroup = "intermediaries"},
+    ["solid-limestone"] = {subgroup = "intermediaries"},
+    ["angels-quartz-crucible"] = {subgroup = "intermediaries"},
 
     -- Ingots
     ["ingot-aluminium"] = {subgroup = "ingots/aluminium"},
@@ -218,6 +221,24 @@ local intermediaries = {
     ["powder-titanium"] = {subgroup = "powders/titanium"},
     ["powdered-tungsten"] = {subgroup = "powders/tungsten", image = "powder-tungsten"},
     ["powder-zinc"] = {subgroup = "powders/zinc"},
+
+    -- Processed Ores
+    ["processed-aluminium"] = {subgroup = "processed-ores"},
+    ["processed-chrome"] = {subgroup = "processed-ores"},
+    ["processed-cobalt"] = {subgroup = "processed-ores"},
+    ["processed-copper"] = {subgroup = "processed-ores"},
+    ["processed-gold"] = {subgroup = "processed-ores"},
+    ["processed-iron"] = {subgroup = "processed-ores"},
+    ["processed-lead"] = {subgroup = "processed-ores"},
+    ["processed-manganese"] = {subgroup = "processed-ores"},
+    ["processed-nickel"] = {subgroup = "processed-ores"},
+    ["processed-platinum"] = {subgroup = "processed-ores"},
+    ["processed-silica"] = {subgroup = "processed-ores"},
+    ["processed-silver"] = {subgroup = "processed-ores"},
+    ["processed-tin"] = {subgroup = "processed-ores"},
+    ["processed-titanium"] = {subgroup = "processed-ores"},
+    ["processed-tungsten"] = {subgroup = "processed-ores"},
+    ["processed-zinc"] = {subgroup = "processed-ores"},
 
     -- Rods
     -- ["angels-rod-iron"]
@@ -752,6 +773,8 @@ end
 local recipes = {
     "aluminium-processed-processing",
     "zinc-processed-processing",
+    "bauxite-ore-processing",
+    "zinc-ore-processing",
 }
 
 for _, name in pairs(recipes) do
