@@ -6,6 +6,7 @@
 ----------------------------------------------------------------------------------------------------
 -- ITEMS
 ----------------------------------------------------------------------------------------------------
+require("prototypes.items.refining")
 require("prototypes.items.petrochem")
 require("prototypes.items.petrochem.sulfur")
 require("prototypes.items.smelting")
