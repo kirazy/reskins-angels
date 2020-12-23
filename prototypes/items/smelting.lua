@@ -101,7 +101,6 @@ local intermediaries = {
     ["solder"] = {mod = "lib", group = "shared", subgroup = "items"},
     ["angels-solder"] = {mod = "lib", group = "shared", subgroup = "items", image = "solder"},
     ["angels-silicon-wafer"] = {mod = "lib", group = "shared", subgroup = "items", image = "silicon-wafer"},
-    ["solid-lime"] = {subgroup = "intermediaries"},
     ["solid-limestone"] = {subgroup = "intermediaries"},
     ["angels-quartz-crucible"] = {subgroup = "intermediaries"},
 
@@ -296,19 +295,19 @@ local intermediaries = {
     ["gas-silane-smelting"] = {type = "recipe", subgroup = "ingots/silicon", image = "ingot-silicon", icon_extras = reskins.angels.num_tier(3, inputs.group)},
 
     ["silver-ore-smelting"] = {type = "recipe", subgroup = "ingots/silver", image = "ingot-silver", icon_extras = reskins.angels.num_tier(1, inputs.group)},
-    ["solid-silver-nitrate-smelting"] = {type = "recipe", subgroup = "ingots/silver", image = "ingot-silver", icon_extras = reskins.angels.num_tier(1, inputs.group)},
-    ["cathode-silver-smelting"] = {type = "recipe", subgroup = "ingots/silver", image = "ingot-silver", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["solid-silver-nitrate-smelting"] = {type = "recipe", subgroup = "ingots/silver", image = "ingot-silver", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+    ["cathode-silver-smelting"] = {type = "recipe", subgroup = "ingots/silver", image = "ingot-silver", icon_extras = reskins.angels.num_tier(3, inputs.group)},
 
     ["tin-ore-smelting"] = {type = "recipe", subgroup = "ingots/tin", image = "ingot-tin", icon_extras = reskins.angels.num_tier(1, inputs.group)},
-    ["processed-tin-smelting"] = {type = "recipe", subgroup = "ingots/tin", image = "ingot-tin", icon_extras = reskins.angels.num_tier(1, inputs.group)},
-    ["pellet-tin-smelting"] = {type = "recipe", subgroup = "ingots/tin", image = "ingot-tin", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["processed-tin-smelting"] = {type = "recipe", subgroup = "ingots/tin", image = "ingot-tin", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+    ["pellet-tin-smelting"] = {type = "recipe", subgroup = "ingots/tin", image = "ingot-tin", icon_extras = reskins.angels.num_tier(3, inputs.group)},
 
     ["sponge-titanium-smelting"] = {type = "recipe", subgroup = "ingots/titanium", image = "ingot-titanium", icon_extras = reskins.angels.num_tier(1, inputs.group)},
-    ["pellet-titanium-smelting"] = {type = "recipe", subgroup = "ingots/titanium", image = "ingot-titanium", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["pellet-titanium-smelting"] = {type = "recipe", subgroup = "ingots/titanium", image = "ingot-titanium", icon_extras = reskins.angels.num_tier(2, inputs.group)},
 
     ["zinc-ore-smelting"] = {type = "recipe", subgroup = "ingots/zinc", image = "ingot-zinc", icon_extras = reskins.angels.num_tier(1, inputs.group)},
-    ["processed-zinc-smelting"] = {type = "recipe", subgroup = "ingots/zinc", image = "ingot-zinc", icon_extras = reskins.angels.num_tier(1, inputs.group)},
-    ["cathode-zinc-smelting"] = {type = "recipe", subgroup = "ingots/zinc", image = "ingot-zinc", icon_extras = reskins.angels.num_tier(1, inputs.group)},
+    ["processed-zinc-smelting"] = {type = "recipe", subgroup = "ingots/zinc", image = "ingot-zinc", icon_extras = reskins.angels.num_tier(2, inputs.group)},
+    ["cathode-zinc-smelting"] = {type = "recipe", subgroup = "ingots/zinc", image = "ingot-zinc", icon_extras = reskins.angels.num_tier(3, inputs.group)},
 
     -- Sheet Coils
     ["roll-aluminium-casting"] = {type = "recipe", subgroup = "rolls", image = "angels-roll-aluminium", icon_extras = reskins.angels.num_tier(1, inputs.group)},
