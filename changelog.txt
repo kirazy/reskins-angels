@@ -2,14 +2,15 @@
 Version: 1.1.1
 Date: 2020.12.XX
   Features:
-    - Added icon support for pellets, sheet coils, wire coils, glass fiber, metal powders, processed ores, quartz crucible, lime, limestone, silicon wafer and solder
-    - Added icon support for molten metals, glass, concrete and related technologies
+    - Added icon support for pellets, sheet coils, wire coils, glass fiber, metal powders, processed ores, quartz crucible, lime, limestone, silicon wafers and solder
+    - Added icon support for molten metals, glass, and concret, credit NeveHanter for providing icons with realistic fluid simulations, and separate technologies icons, revisions forthcoming
     - Added icon support for ingots, and included variations, controllable with startup setting "Item variations" (default on)
     - Added support for items and recipes added by Angel's Extended Smelting and Compression mod
     - Implemented the flare stack, gas refinery, petrochem gas, oil and inline tanks and valves
   Changes:
     - Moved function `vertical_pipe_shadow` into Artisanal Reskins: Library, now dependent on 1.1.1
     - Revised the advanced gas refinery sprite, improved pipe connection shadows, and adjusted flare positioning
+    - Revised numeral overlays with sharper, clearer sprites for recipes touched by this mod
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2020.11.26
