@@ -30,4 +30,9 @@ triggers.storage = {
     pressure_tanks = reskins.lib.setting("reskins-angels-do-angelsaddons-storage"),
 }
 
+-- Mad Clown's Compatibility
+triggers.mad_clowns = {
+    is_active = mods["Clowns-AngelBob-Nuclear"] and true or mods["Clowns-Extended-Minerals"] and true or mods["Clowns-Nuclear"] and true or mods["Clowns-Processing"] and true or mods["Clowns-Science"] and true or false
+}
+
 return triggers
