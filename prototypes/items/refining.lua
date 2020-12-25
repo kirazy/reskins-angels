@@ -22,7 +22,8 @@ local intermediaries = {
     -- Intermediaries
     ----------------------------------------------------------------------------------------------------
     -- Miscellaneous
-    ["solid-lime"] = {group = "smelting", subgroup = "intermediaries"},
+    ["solid-limestone"] = {subgroup = "intermediaries"},
+    ["slag"] = {subgroup = "intermediaries"},
 }
 
 reskins.lib.create_icons_from_list(intermediaries, inputs)

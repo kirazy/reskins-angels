@@ -101,7 +101,7 @@ local intermediaries = {
     ["solder"] = {mod = "lib", group = "shared", subgroup = "items"},
     ["angels-solder"] = {mod = "lib", group = "shared", subgroup = "items", image = "solder"},
     ["angels-silicon-wafer"] = {mod = "lib", group = "shared", subgroup = "items", image = "silicon-wafer"},
-    ["solid-limestone"] = {subgroup = "intermediaries"},
+    ["solid-lime"] = {subgroup = "intermediaries"},
     ["angels-quartz-crucible"] = {subgroup = "intermediaries"},
 
     -- Ingots

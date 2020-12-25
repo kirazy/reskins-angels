@@ -18,6 +18,13 @@ local intermediaries = {
     ----------------------------------------------------------------------------------------------------
     -- Intermediaries
     ----------------------------------------------------------------------------------------------------
+    -- Miscellaneous
+    ["pellet-coke"] = {subgroup = "intermediaries"},
+
+    ----------------------------------------------------------------------------------------------------
+    -- Recipes
+    ----------------------------------------------------------------------------------------------------
+    -- Miscellaneous
     ["bob-rubber"] = {type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(1, inputs.group)}, -- "1"
     ["solid-rubber"] = {type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(2, inputs.group)}, -- "2"
 }
