@@ -96,3 +96,9 @@ end
 for name, sources in pairs(composite_recipes) do
     reskins.lib.composite_existing_icons(name, "recipe", sources)
 end
+
+-- Fix Mad Clown's brass casting recipe sorting
+if data.raw["item-subgroup"]["angels-brass-casting"] and data.raw.recipe["angels-brass-smelting-4"] then
+    data.raw.recipe["angels-brass-smelting-4"].order = "d"
+    data.raw.recipe["angels-brass-smelting-4"].subgroup = "angels-brass-casting"
+end
