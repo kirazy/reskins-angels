@@ -5,19 +5,28 @@
 
 -- Core settings
 data:extend({
-    {
-        type = "bool-setting",
-        name = "reskins-angels-use-angels-tier-colors",
-        setting_type = "startup",
-        order = "a",
-        default_value = false,
-        hidden = true,
-    },
+    -- {
+    --     type = "bool-setting",
+    --     name = "reskins-angels-use-angels-tier-colors",
+    --     setting_type = "startup",
+    --     order = "b",
+    --     default_value = false,
+    --     hidden = true,
+    -- },
+    -- {
+    --     type = "bool-setting",
+    --     name = "reskins-angels-belts-use-angels-tier-colors",
+    --     setting_type = "startup",
+    --     order = "bb",
+    --     default_value = false,
+    --     -- localised_description = {"mod-setting-description.reskins-angels-belts-use-angels-tier-colors", {"mod-setting-name.reskins-angels-use-angels-tier-colors"}},
+    --     hidden = true,
+    -- },
     {
         type = "bool-setting",
         name = "reskins-angels-use-item-variations",
         setting_type = "startup",
-        order = "a",
+        order = "c",
         default_value = true
     }
 })
