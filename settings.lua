@@ -11,7 +11,7 @@ data:extend({
     --     setting_type = "startup",
     --     order = "b",
     --     default_value = false,
-    --     hidden = true,
+    --     -- hidden = true,
     -- },
     -- {
     --     type = "bool-setting",
@@ -19,8 +19,8 @@ data:extend({
     --     setting_type = "startup",
     --     order = "bb",
     --     default_value = false,
-    --     -- localised_description = {"mod-setting-description.reskins-angels-belts-use-angels-tier-colors", {"mod-setting-name.reskins-angels-use-angels-tier-colors"}},
-    --     hidden = true,
+    --     localised_description = {"mod-setting-description.reskins-angels-belts-use-angels-tier-colors", {"mod-setting-name.reskins-angels-use-angels-tier-colors"}},
+    --     -- hidden = true,
     -- },
     {
         type = "bool-setting",
