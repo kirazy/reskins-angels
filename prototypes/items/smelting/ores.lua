@@ -145,23 +145,6 @@ local slag_processing_list = {
     "slag-processing-9",
 }
 
-if mods["SeaBlock"] then
-    table.insert(slag_processing_list, "slag-processing-1")
-
-    -- Additional support for SeaBlock's Clown support
-    if mods['Clowns-Extended-Minerals'] then
-        table.insert(slag_processing_list, "sb-slag-processing-clowns-1")
-        table.insert(slag_processing_list, "sb-slag-processing-clowns-2")
-        table.insert(slag_processing_list, "sb-slag-processing-clowns-3")
-        table.insert(slag_processing_list, "sb-slag-processing-clowns-4")
-        table.insert(slag_processing_list, "sb-slag-processing-clowns-5")
-        table.insert(slag_processing_list, "sb-slag-processing-clowns-6")
-        table.insert(slag_processing_list, "sb-slag-processing-clowns-7")
-        table.insert(slag_processing_list, "sb-slag-processing-clowns-8")
-        table.insert(slag_processing_list, "sb-slag-processing-clowns-9")
-    end
-end
-
 local slag_recipe_shifts = {
     {-11.5, 12},
     {11.5, 12},
