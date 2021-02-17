@@ -156,7 +156,7 @@ for _, name in pairs(slag_processing_list) do
     local recipe = data.raw.recipe[name]
     if not recipe then goto continue end
 
-    local recipe_results = recipe.normal.results or recipe.results
+    local recipe_results = recipe.normal and recipe.normal.results or recipe.results
 
     -- Build icon overlays based on recipe ingredients
     if recipe_results[1].name ~= "angels-void" then

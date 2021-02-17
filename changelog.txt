@@ -5,6 +5,8 @@ Date: 2021.02.XX
     - Code revisions to support changes in Artisanal Reskins: Library, now dependent on 1.1.3
     - Removed legacy code now that Angel's Smelting 0.6.14 has released
     - Removed Sea Block slag processing compatibility patches, now natively implemented in Sea Block
+  Bugfixes:
+    - Added check for `recipe.normal` when processing org slag recipes to avoid a startup error condition
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2021.01.31
