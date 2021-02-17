@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2021.02.XX
+  Features:
+    - Added support for Sea Block's Mad Clown's ore slag processing recipes
   Changes:
     - Code revisions to support changes in Artisanal Reskins: Library, now dependent on 1.1.3
     - Removed legacy code now that Angel's Smelting 0.6.14 has released
