@@ -7,6 +7,8 @@ Date: 2021.02.XX
     - Revised numeral handling function to support upcoming numeral rework in Angel's Refining
   Bugfixes:
     - Added check for `recipe.normal` when processing org slag recipes to avoid a startup error condition
+  Locale:
+    - Updated German localization
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2021.01.31
