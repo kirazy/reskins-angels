@@ -4,7 +4,7 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not mods["angelssmelting"] then return end
+if not reskins.angels and reskins.angels.triggers.smelting.items then return end
 
 local inputs = {
     directory = reskins.angels.directory,

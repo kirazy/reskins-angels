@@ -21,7 +21,7 @@ local logistic_map = {
 }
 
 -- Reskin Warehouses
-if reskins.angels.triggers.storage.warehouses then
+if reskins.angels and reskins.angels.triggers.storage.entities then
     for chest, map in pairs(logistic_map) do
         -- Fetch entity
         local name = "angels-warehouse-"..chest
@@ -107,7 +107,7 @@ if reskins.angels.triggers.storage.warehouses then
 end
 
 -- Reskin Silos
-if reskins.angels.triggers.storage.silos then
+if reskins.angels and reskins.angels.triggers.storage.entities then
 --     for chest, map in pairs(logistic_map) do
 --         -- Fetch entity
 --         local name = "angels-warehouse-"..chest
@@ -185,8 +185,8 @@ if reskins.angels.triggers.storage.silos then
 --     end
 end
 
--- Reskin Big Chests
-if reskins.angels.triggers.industries.big_chests then
+-- Reskin Big Chests from Angel's Industries
+if reskins.angels and reskins.angels.triggers.industries.entities then
     for chest, map in pairs(logistic_map) do
         -- Fetch entity
         local name = "angels-logistic-chest-"..chest

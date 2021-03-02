@@ -3,6 +3,9 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
+-- Check to see if reskinning needs to be done.
+if not reskins.angels and reskins.angels.triggers.storage.technologies then return end
+
 -- Setup standard inputs
 local inputs = {
     mod = "angels",
@@ -16,15 +19,11 @@ local inputs = {
 local technologies = {}
 
 -- Reskin warehouse technologies
-if reskins.angels.triggers.storage.warehouses then
-    technologies["angels-logistic-warehouses"] = {subgroup = "warehouses"}
-    technologies["angels-warehouses"] = {subgroup = "warehouses"}
-end
+technologies["angels-logistic-warehouses"] = {subgroup = "warehouses"}
+technologies["angels-warehouses"] = {subgroup = "warehouses"}
 
 -- Reskin silo technologies
-if reskins.angels.triggers.storage.warehouses then
-    -- technologies["logistic-silos"] = {subgroup = "silos"}
-    -- technologies["ore-silos"] = {subgroup = "silos"}
-end
+-- technologies["logistic-silos"] = {subgroup = "silos"}
+-- technologies["ore-silos"] = {subgroup = "silos"}
 
 reskins.lib.create_icons_from_list(technologies, inputs)

@@ -14,7 +14,7 @@ local inputs = {
 }
 
 -- Reskin Warehouses
-if reskins.angels.triggers.storage.warehouses then
+if reskins.angels and reskins.angels.triggers.storage.entities then
     -- Fetch entity
     local name = "angels-warehouse"
     local entity = data.raw[inputs.type][name]
@@ -71,7 +71,7 @@ if reskins.angels.triggers.storage.warehouses then
 end
 
 -- Reskin Silos
-if reskins.angels.triggers.storage.silos then
+if reskins.angels and reskins.angels.triggers.storage.entities then
     -- -- Fetch entity
     -- local name = "angels-warehouse"
     -- local entity = data.raw[inputs.type][name]
@@ -128,7 +128,7 @@ if reskins.angels.triggers.storage.silos then
 end
 
 -- Reskin Big Chests
-if reskins.angels.triggers.industries.big_chests then
+if reskins.angels and reskins.angels.triggers.industries.entities then
     -- Fetch entity
     local name = "angels-big-chest"
     local entity = data.raw[inputs.type][name]

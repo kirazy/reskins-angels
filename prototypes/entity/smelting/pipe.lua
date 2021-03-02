@@ -3,9 +3,9 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
--- Check to see if reskinning needs to be done
-if not mods["angelssmelting"] then return end
-if reskins.lib.setting("reskins-bobs-do-boblogistics") == false then return end
+-- Check to see if reskinning needs to be done.
+if not reskins.angels and reskins.angels.triggers.smelting.entities then return end
+if not reskins.bobs and reskins.bobs.triggers.logistics.entities then return end
 
 -- Set input parameters
 local inputs = {

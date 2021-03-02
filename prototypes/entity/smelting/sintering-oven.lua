@@ -4,8 +4,7 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not mods["angelssmelting"] then return end
-if reskins.lib.setting("reskins-angels-do-angelssmelting") == false then return end
+if not reskins.angels and reskins.angels.triggers.smelting.entities then return end
 
 -- Set input parameters
 local inputs = {
