@@ -20,16 +20,16 @@ local scale = reskins.angels.constants.recipe_corner_scale
 -- Check to see if reskinning needs to be done.
 if not mods["angelssmelting"] then return end
 
-local intermediaries = {
+local intermediates = {
     ----------------------------------------------------------------------------------------------------
-    -- Intermediaries
+    -- Intermediates
     ----------------------------------------------------------------------------------------------------
     -- Miscellaneous
-    ["solid-limestone"] = {subgroup = "intermediaries"},
-    ["slag"] = {subgroup = "intermediaries"},
+    ["solid-limestone"] = {subgroup = "intermediates"},
+    ["slag"] = {subgroup = "intermediates"},
 }
 
-reskins.lib.create_icons_from_list(intermediaries, inputs)
+reskins.lib.create_icons_from_list(intermediates, inputs)
 
 -- local composite_recipes = {}
 

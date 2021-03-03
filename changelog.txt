@@ -40,7 +40,7 @@ Date: 2020.11.26
     - Added big chests and logistic chests from Angel's Industries
     - Added warehouses and logistic warehouses from Angel's Addons - Storage Options
     - Added support for the recipe processing mineral sludge when playing Sea Block
-    - Added lighting to several items and intermediaries
+    - Added lighting to several items and intermediates
   Changes:
     - Adjusted handling of Bob's electronics related recipes due to changes in Artisanal Reskins: Bob's Mods
     - Adjusted `drawing_box` for several structures
@@ -53,7 +53,7 @@ Version: 1.0.2
 Date: 2020.11.08
   Features:
     - Implemented the advanced gas refinery
-    - Added settings to use Angel's material colors for pipes and intermediaries (default on)
+    - Added settings to use Angel's material colors for pipes and intermediates (default on)
     - Added icon for "Glowing hot iron plate"
     - Now reskins plate recipes for lead and tin when Angel's Smelting is not present
     - Now reskins "Metallurgy smelting 5" technology

@@ -35,9 +35,9 @@ local function make_item_light_layer(name)
     }
 end
 
-local intermediaries = {
+local intermediates = {
     ----------------------------------------------------------------------------------------------------
-    -- Intermediaries
+    -- Intermediates
     ----------------------------------------------------------------------------------------------------
     -- Nuclear fuel cells
     ["angels-deuterium-fuel-cell"] = {subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = {reskins.lib.lit_icon_pictures_layer("lib", "fuel-cell")}},
@@ -61,4 +61,4 @@ local intermediaries = {
     ["uranium-235"] = {subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = make_item_light_layer("uranium-235")},
 }
 
-reskins.lib.create_icons_from_list(intermediaries, inputs)
+reskins.lib.create_icons_from_list(intermediates, inputs)

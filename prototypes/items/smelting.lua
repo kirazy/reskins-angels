@@ -35,9 +35,9 @@ if not mods["angelssmelting"] then
     return
 end
 
-local intermediaries = {
+local intermediates = {
     ----------------------------------------------------------------------------------------------------
-    -- Intermediaries
+    -- Intermediates
     ----------------------------------------------------------------------------------------------------
     -- Vanilla Plates
     ["copper-plate"] = {icon_filename = "__base__/graphics/icons/copper-plate.png", icon_size = 64, icon_mipmaps = 4},
@@ -91,21 +91,21 @@ local intermediaries = {
 
     -- Pure Angels Wires
     ["angels-wire-gold"] = {mod = "lib", group = "shared", subgroup = "items", image = "gilded-copper-cable"},
-    ["angels-wire-platinum"] = {subgroup = "intermediaries"},
-    ["angels-wire-silver"] = {subgroup = "intermediaries"},
-    ["angels-wire-tin"] = {subgroup = "intermediaries"},
+    ["angels-wire-platinum"] = {subgroup = "intermediates"},
+    ["angels-wire-silver"] = {subgroup = "intermediates"},
+    ["angels-wire-tin"] = {subgroup = "intermediates"},
 
     -- Wires
     ["copper-cable"] = {icon_filename = "__base__/graphics/icons/copper-cable.png", icon_size = 64, icon_mipmaps = 4},
     ["gilded-copper-cable"] = {mod = "lib", group = "shared", subgroup = "items"},
-    ["tinned-copper-cable"] = {subgroup = "intermediaries", image = "angels-wire-tin"},
+    ["tinned-copper-cable"] = {subgroup = "intermediates", image = "angels-wire-tin"},
 
     -- Miscellaneous
     ["solder"] = {mod = "lib", group = "shared", subgroup = "items"},
     ["angels-solder"] = {mod = "lib", group = "shared", subgroup = "items", image = "solder"},
     ["angels-silicon-wafer"] = {mod = "lib", group = "shared", subgroup = "items", image = "silicon-wafer"},
-    ["solid-lime"] = {subgroup = "intermediaries"},
-    ["angels-quartz-crucible"] = {subgroup = "intermediaries"},
+    ["solid-lime"] = {subgroup = "intermediates"},
+    ["angels-quartz-crucible"] = {subgroup = "intermediates"},
 
     -- Ingots
     ["ingot-aluminium"] = {subgroup = "ingots/aluminium"},
@@ -477,32 +477,32 @@ local intermediaries = {
 }
 
 if mods["reskins-bobs"] then
-    intermediaries["tungsten-carbide"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "plates", image = "tungsten-carbide", icon_extras = reskins.angels.num_tier(1, inputs.group)} -- "1"
-    intermediaries["tungsten-carbide-2"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "plates", image = "tungsten-carbide", icon_extras = reskins.angels.num_tier(2, inputs.group)} -- "2"
+    intermediates["tungsten-carbide"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "plates", image = "tungsten-carbide", icon_extras = reskins.angels.num_tier(1, inputs.group)} -- "1"
+    intermediates["tungsten-carbide-2"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "plates", image = "tungsten-carbide", icon_extras = reskins.angels.num_tier(2, inputs.group)} -- "2"
 end
 
 -- Check if we're using Angel's material colors
 if reskins.lib.setting("reskins-angels-use-angels-material-colors") then
     -- Gears
-    intermediaries["cobalt-steel-gear-wheel"] = {subgroup = "gears"}
-    intermediaries["nitinol-gear-wheel"] = {subgroup = "gears"}
-    intermediaries["titanium-gear-wheel"] = {subgroup = "gears"}
-    intermediaries["tungsten-gear-wheel"] = {subgroup = "gears"}
+    intermediates["cobalt-steel-gear-wheel"] = {subgroup = "gears"}
+    intermediates["nitinol-gear-wheel"] = {subgroup = "gears"}
+    intermediates["titanium-gear-wheel"] = {subgroup = "gears"}
+    intermediates["tungsten-gear-wheel"] = {subgroup = "gears"}
 
     -- Bearing Balls
-    intermediaries["ceramic-bearing-ball"] = {subgroup = "bearing-balls"}
-    intermediaries["cobalt-steel-bearing-ball"] = {subgroup = "bearing-balls"}
-    intermediaries["nitinol-bearing-ball"] = {subgroup = "bearing-balls"}
-    intermediaries["titanium-bearing-ball"] = {subgroup = "bearing-balls"}
+    intermediates["ceramic-bearing-ball"] = {subgroup = "bearing-balls"}
+    intermediates["cobalt-steel-bearing-ball"] = {subgroup = "bearing-balls"}
+    intermediates["nitinol-bearing-ball"] = {subgroup = "bearing-balls"}
+    intermediates["titanium-bearing-ball"] = {subgroup = "bearing-balls"}
 
     -- Bearings
-    intermediaries["ceramic-bearing"] = {subgroup = "bearings"}
-    intermediaries["cobalt-steel-bearing"] = {subgroup = "bearings"}
-    intermediaries["nitinol-bearing"] = {subgroup = "bearings"}
-    intermediaries["titanium-bearing"] = {subgroup = "bearings"}
+    intermediates["ceramic-bearing"] = {subgroup = "bearings"}
+    intermediates["cobalt-steel-bearing"] = {subgroup = "bearings"}
+    intermediates["nitinol-bearing"] = {subgroup = "bearings"}
+    intermediates["titanium-bearing"] = {subgroup = "bearings"}
 end
 
-reskins.lib.create_icons_from_list(intermediaries, inputs)
+reskins.lib.create_icons_from_list(intermediates, inputs)
 
 local composite_recipes = {
     ----------------------------------------------------------------------------------------------------
@@ -591,7 +591,7 @@ local composite_recipes = {
     ["angels-roll-zinc-converting"] = {["zinc-plate"] = {}, ["angels-roll-zinc"] = {scale = scale, shift = shift}}, -- Zinc sheet coil
 
     ----------------------------------------------------------------------------------------------------
-    -- Intermediaries
+    -- Intermediates
     ----------------------------------------------------------------------------------------------------
     -- Copper cable
     ["copper-cable"] = {["copper-cable"] = {}, ["copper-plate"] = {scale = scale, shift = shift}}, -- Copper plate

@@ -14,12 +14,12 @@ local inputs = {
     flat_icon = true,
 }
 
-local intermediaries = {
+local intermediates = {
     ----------------------------------------------------------------------------------------------------
-    -- Intermediaries
+    -- Intermediates
     ----------------------------------------------------------------------------------------------------
     -- Miscellaneous
-    ["pellet-coke"] = {subgroup = "intermediaries"},
+    ["pellet-coke"] = {subgroup = "intermediates"},
 
     ----------------------------------------------------------------------------------------------------
     -- Recipes
@@ -30,16 +30,16 @@ local intermediaries = {
 }
 
 if mods["reskins-bobs"] then
-    intermediaries["bob-resin-wood"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin", icon_extras = reskins.angels.num_tier(1, inputs.group)}
-    intermediaries["solid-resin"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin"}
+    intermediates["bob-resin-wood"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin", icon_extras = reskins.angels.num_tier(1, inputs.group)}
+    intermediates["solid-resin"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin"}
 end
 
 if not data.raw.recipe["bob-rubber"] then
-    intermediaries["solid-rubber"].icon_extras = nil
-    intermediaries["solid-rubber"].type = nil
+    intermediates["solid-rubber"].icon_extras = nil
+    intermediates["solid-rubber"].type = nil
 end
 
-reskins.lib.create_icons_from_list(intermediaries, inputs)
+reskins.lib.create_icons_from_list(intermediates, inputs)
 
 local shift = reskins.angels.constants.recipe_corner_shift
 local scale = reskins.angels.constants.recipe_corner_scale

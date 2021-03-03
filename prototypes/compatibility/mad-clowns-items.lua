@@ -17,9 +17,9 @@ local inputs = {
 local shift = reskins.angels.constants.recipe_corner_shift
 local scale = reskins.angels.constants.recipe_corner_scale
 
-local intermediaries = {
+local intermediates = {
     ----------------------------------------------------------------------------------------------------
-    -- Intermediaries
+    -- Intermediates
     ----------------------------------------------------------------------------------------------------
     -- Processed Ores
     ["processed-depleted-uranium"] = {subgroup = "processed-ores"},
@@ -67,7 +67,7 @@ local intermediaries = {
     ["magnesium-pellet-smelting"] = {type = "recipe", subgroup = "ingots/magnesium", image = "ingot-magnesium"},
 }
 
-reskins.lib.create_icons_from_list(intermediaries, inputs)
+reskins.lib.create_icons_from_list(intermediates, inputs)
 
 -- local composite_recipes = {}
 
