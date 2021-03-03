@@ -5,7 +5,6 @@
 
 -- Add this mod to the reskins function host.
 if not reskins.angels then reskins.angels = {} end
-reskins.angels.triggers = require("triggers")
 reskins.angels.directory = "__reskins-angels__"
 reskins.angels.constants = {
     recipe_corner_shift = {-10, -10},
