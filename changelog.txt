@@ -7,6 +7,7 @@ Date: 2021.03.XX
     - Code revisions to support changes in Artisanal Reskins: Library, now dependent on 1.1.3
     - Removed Sea Block slag processing compatibility patches, now natively implemented in Sea Block
     - Revised numeral handling function to support upcoming numeral rework in Angel's Refining
+    - Internal code revisions such that reskinning is trigger-based
   Bugfixes:
     - Added check for `recipe.normal` when processing org slag recipes to avoid a startup error condition
   Locale:
