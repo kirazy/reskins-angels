@@ -8,6 +8,7 @@ Date: 2021.03.XX
     - Removed Sea Block slag processing compatibility patches, now natively implemented in Sea Block
     - Revised numeral handling function to support upcoming numeral rework in Angel's Refining
     - Internal code revisions such that reskinning is trigger-based
+    - Moved mod compatibility for Angel's Extended Smelting and Compression and MadClown01's Processing into a new mod, Artisanal Reskins: Compatibility
   Bugfixes:
     - Added check for `recipe.normal` when processing org slag recipes to avoid a startup error condition
   Locale:

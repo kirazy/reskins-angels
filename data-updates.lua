@@ -17,13 +17,11 @@ require("prototypes.entity.smelting.pipe")
 -- ITEMS
 ----------------------------------------------------------------------------------------------------
 require("prototypes.items.smelting.ores")
-require("prototypes.compatibility.mad-clowns-items")
 
 ----------------------------------------------------------------------------------------------------
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------
 require("prototypes.technology.smelting-updates")
-require("prototypes.compatibility.mad-clowns-technology")
 
 ----------------------------------------------------------------------------------------------------
 -- COMPATIBILITY

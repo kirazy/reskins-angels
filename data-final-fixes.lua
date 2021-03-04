@@ -19,7 +19,6 @@ require("prototypes.items.smelting")
 ----------------------------------------------------------------------------------------------------
 -- COMPATIBILITY
 ----------------------------------------------------------------------------------------------------
-require("prototypes.compatibility.angels-smelting-extended-items")
 require("prototypes.compatibility.bobselectronics")
 
 -- Assign deferred icons
