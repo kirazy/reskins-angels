@@ -2,7 +2,8 @@
 Version: 1.1.5
 Date: 2021.04.XX
   Features:
-    - Implemented the crystallizer, electro whinning cell, filtration unit and the ore crusher, floatation cell, leaching plant, and refinery from Angel's Refining; this is a preliminary fast pass that will be replaced in the future with upgraded models re-rendered in high resolution
+    - The following entity implementations are preliminary fast-passes that will be gradually be replaced in the future with upgraded models re-rendered in high resolution, and are intended merely to complete the color tiering
+    - Implemented the crystallizer, electro-whinning cell, filtration unit, hydro plant, liquifier, ore crusher, ore floatation cell, ore leaching plant, ore powderizer, ore refinery, ore sorting facility, salination plant and the washing plant from Angel's Refining
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2021.03.13
