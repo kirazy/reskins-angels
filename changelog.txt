@@ -3,9 +3,9 @@ Version: 1.1.5
 Date: 2021.04.XX
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
-Date: 2021.03.08
+Date: 2021.03.13
   Locale:
-    - Added Korean localization, updated German localization
+    - Added Chinese Traditional and Korean localizations, updated German localization
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2021.03.04
