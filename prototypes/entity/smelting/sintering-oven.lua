@@ -49,13 +49,13 @@ for name, map in pairs(tier_map) do
             -- Base
             {
                 filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 165,
                 height = 177,
                 shift = util.by_pixel(-1, -7),
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 326,
                     height = 350,
                     shift = util.by_pixel(-1, -6.5),
@@ -65,14 +65,14 @@ for name, map in pairs(tier_map) do
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-mask.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 165,
                 height = 177,
                 shift = util.by_pixel(-1, -7),
                 tint = inputs.tint,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-mask.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 326,
                     height = 350,
                     shift = util.by_pixel(-1, -6.5),
@@ -83,14 +83,14 @@ for name, map in pairs(tier_map) do
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/sintering-oven-highlights.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 165,
                 height = 177,
                 shift = util.by_pixel(-1, -7),
                 blend_mode = reskins.lib.blend_mode,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/sintering-oven/hr-sintering-oven-highlights.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 326,
                     height = 350,
                     shift = util.by_pixel(-1, -6.5),
@@ -101,14 +101,14 @@ for name, map in pairs(tier_map) do
             -- Shadow
             {
                 filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 213,
                 height = 115,
                 shift = util.by_pixel(24, 29),
                 draw_as_shadow = true,
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 424,
                     height = 227,
                     shift = util.by_pixel(23, 28),

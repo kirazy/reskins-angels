@@ -49,13 +49,13 @@ for name, map in pairs(tier_map) do
             -- Base
             {
                 filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 164,
                 height = 189,
                 shift = util.by_pixel(0, -14),
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 328,
                     height = 376,
                     shift = util.by_pixel(0, -13.5),
@@ -65,14 +65,14 @@ for name, map in pairs(tier_map) do
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/blast-furnace-mask.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 164,
                 height = 189,
                 shift = util.by_pixel(0, -14),
                 tint = inputs.tint,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/hr-blast-furnace-mask.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 328,
                     height = 376,
                     shift = util.by_pixel(0, -13.5),
@@ -83,14 +83,14 @@ for name, map in pairs(tier_map) do
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/blast-furnace-highlights.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 164,
                 height = 189,
                 shift = util.by_pixel(0, -14),
                 blend_mode = reskins.lib.blend_mode,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/hr-blast-furnace-highlights.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 328,
                     height = 376,
                     shift = util.by_pixel(0, -13.5),
@@ -101,14 +101,14 @@ for name, map in pairs(tier_map) do
             -- Shadow
             {
                 filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 224,
                 height = 124,
                 shift = util.by_pixel(30, 20),
                 draw_as_shadow = true,
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 445,
                     height = 245,
                     shift = util.by_pixel(29, 19.5),

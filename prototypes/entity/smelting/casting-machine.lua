@@ -49,7 +49,7 @@ for name, map in pairs(tier_map) do
             -- Base
             {
                 filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-base.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 104,
                 height = 123,
                 line_length = 7,
@@ -58,7 +58,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(1, -2),
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-base.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 205,
                     height = 244,
                     line_length = 7,
@@ -71,7 +71,7 @@ for name, map in pairs(tier_map) do
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/casting-machine-mask.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 104,
                 height = 123,
                 line_length = 7,
@@ -81,7 +81,7 @@ for name, map in pairs(tier_map) do
                 tint = inputs.tint,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/hr-casting-machine-mask.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 205,
                     height = 244,
                     line_length = 7,
@@ -95,7 +95,7 @@ for name, map in pairs(tier_map) do
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/casting-machine-highlights.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 104,
                 height = 123,
                 line_length = 7,
@@ -105,7 +105,7 @@ for name, map in pairs(tier_map) do
                 blend_mode = reskins.lib.blend_mode,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/casting-machine/hr-casting-machine-highlights.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 205,
                     height = 244,
                     line_length = 7,
@@ -119,7 +119,7 @@ for name, map in pairs(tier_map) do
             -- Shadow
             {
                 filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-shadow.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 125,
                 height = 104,
                 line_length = 7,
@@ -129,7 +129,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(12, 9),
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 248,
                     height = 206,
                     line_length = 7,

@@ -49,7 +49,7 @@ for name, map in pairs(tier_map) do
             -- Base
             {
                 filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-base.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 100,
                 height = 105,
                 line_length = 5,
@@ -58,7 +58,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(0, -3),
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-base.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 196,
                     height = 206,
                     line_length = 5,
@@ -71,7 +71,7 @@ for name, map in pairs(tier_map) do
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-mask.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 100,
                 height = 105,
                 line_length = 5,
@@ -81,7 +81,7 @@ for name, map in pairs(tier_map) do
                 tint = inputs.tint,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-mask.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 196,
                     height = 206,
                     line_length = 5,
@@ -95,7 +95,7 @@ for name, map in pairs(tier_map) do
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-highlights.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 100,
                 height = 105,
                 line_length = 5,
@@ -105,7 +105,7 @@ for name, map in pairs(tier_map) do
                 blend_mode = reskins.lib.blend_mode,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-highlights.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 196,
                     height = 206,
                     line_length = 5,
@@ -119,7 +119,7 @@ for name, map in pairs(tier_map) do
             -- Shadow
             {
                 filename = "__angelssmelting__/graphics/entity/ore-processing-machine/ore-processing-machine-shadow.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 122,
                 height = 70,
                 repeat_count = 25,
@@ -128,7 +128,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(13, 16),
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/ore-processing-machine/hr-ore-processing-machine-shadow.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 243,
                     height = 137,
                     repeat_count = 25,

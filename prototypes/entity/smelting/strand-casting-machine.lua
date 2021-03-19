@@ -55,14 +55,14 @@ for name, map in pairs(tier_map) do
                 -- Mask
                 {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-mask.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 167,
                     height = 197,
                     shift = util.by_pixel(0, -16.5),
                     tint = inputs.tint,
                     hr_version = {
                         filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
-                        priority = "high",
+                        priority = "extra-high",
                         width = 329,
                         height = 392,
                         shift = util.by_pixel(0, -16.5),
@@ -73,14 +73,14 @@ for name, map in pairs(tier_map) do
                 -- Highlights
                 {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-highlights.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 167,
                     height = 197,
                     shift = util.by_pixel(0, -16.5),
                     blend_mode = reskins.lib.blend_mode,
                     hr_version = {
                         filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
-                        priority = "high",
+                        priority = "extra-high",
                         width = 329,
                         height = 392,
                         shift = util.by_pixel(0, -16.5),

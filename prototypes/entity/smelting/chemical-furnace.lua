@@ -49,7 +49,7 @@ for name, map in pairs(tier_map) do
             -- Base
             {
                 filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-base.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 168,
                 height = 189,
                 line_length = 6,
@@ -57,7 +57,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 shift = util.by_pixel(-1, -12),
                 hr_version = {
-                    priority = "high",
+                    priority = "extra-high",
                     width = 332,
                     height = 374,
                     frame_count = 36,
@@ -81,7 +81,7 @@ for name, map in pairs(tier_map) do
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/chemical-furnace-mask.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 168,
                 height = 189,
                 line_length = 6,
@@ -90,7 +90,7 @@ for name, map in pairs(tier_map) do
                 tint = inputs.tint,
                 shift = util.by_pixel(-1, -12),
                 hr_version = {
-                    priority = "high",
+                    priority = "extra-high",
                     width = 332,
                     height = 374,
                     frame_count = 36,
@@ -115,7 +115,7 @@ for name, map in pairs(tier_map) do
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/chemical-furnace/chemical-furnace-highlights.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 168,
                 height = 189,
                 line_length = 6,
@@ -124,7 +124,7 @@ for name, map in pairs(tier_map) do
                 blend_mode = reskins.lib.blend_mode,
                 shift = util.by_pixel(-1, -12),
                 hr_version = {
-                    priority = "high",
+                    priority = "extra-high",
                     width = 332,
                     height = 374,
                     frame_count = 36,
@@ -149,7 +149,7 @@ for name, map in pairs(tier_map) do
             -- Shadow
             {
                 filename = "__angelssmelting__/graphics/entity/chemical-furnace/chemical-furnace-shadow.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 224,
                 height = 141,
                 line_length = 6,
@@ -158,7 +158,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 shift = util.by_pixel(28, 13),
                 hr_version = {
-                    priority = "high",
+                    priority = "extra-high",
                     width = 448,
                     height = 280,
                     frame_count = 36,

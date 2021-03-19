@@ -21,7 +21,7 @@ local inputs = {
 -- Create light layer for working visualisation
 local refinery_lights = reskins.lib.make_4way_animation_from_spritesheet({
     filename = reskins.angels.directory.."/graphics/entity/petrochem/flare-stack/flare-stack-light.png",
-    priority = "high",
+    priority = "extra-high",
     width = 71,
     height = 215,
     shift = util.by_pixel(-0.5, -64),
@@ -29,7 +29,7 @@ local refinery_lights = reskins.lib.make_4way_animation_from_spritesheet({
     draw_as_glow = true,
     hr_version = {
         filename = reskins.angels.directory.."/graphics/entity/petrochem/flare-stack/hr-flare-stack-light.png",
-        priority = "high",
+        priority = "extra-high",
         width = 142,
         height = 429,
         shift = util.by_pixel(0, -65),

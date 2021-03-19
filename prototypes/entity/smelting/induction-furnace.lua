@@ -49,7 +49,7 @@ for name, map in pairs(tier_map) do
             -- Base
             {
                 filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-base.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 170,
                 height = 192,
                 line_length = 6,
@@ -57,7 +57,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 shift = util.by_pixel(0.5, -5.5),
                 hr_version = {
-                    priority = "high",
+                    priority = "extra-high",
                     width = 336,
                     height = 381,
                     frame_count = 36,
@@ -81,7 +81,7 @@ for name, map in pairs(tier_map) do
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/induction-furnace-mask.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 170,
                 height = 192,
                 line_length = 6,
@@ -90,7 +90,7 @@ for name, map in pairs(tier_map) do
                 tint = inputs.tint,
                 shift = util.by_pixel(0.5, -5.5),
                 hr_version = {
-                    priority = "high",
+                    priority = "extra-high",
                     width = 336,
                     height = 381,
                     frame_count = 36,
@@ -115,7 +115,7 @@ for name, map in pairs(tier_map) do
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/induction-furnace-highlights.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 170,
                 height = 192,
                 line_length = 6,
@@ -124,7 +124,7 @@ for name, map in pairs(tier_map) do
                 blend_mode = reskins.lib.blend_mode,
                 shift = util.by_pixel(0.5, -5.5),
                 hr_version = {
-                    priority = "high",
+                    priority = "extra-high",
                     width = 336,
                     height = 381,
                     frame_count = 36,
@@ -149,7 +149,7 @@ for name, map in pairs(tier_map) do
             -- Shadow
             {
                 filename = "__angelssmelting__/graphics/entity/induction-furnace/induction-furnace-shadow.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 216,
                 height = 170,
                 line_length = 6,
@@ -158,7 +158,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 shift = util.by_pixel(24, 9),
                 hr_version = {
-                    priority = "high",
+                    priority = "extra-high",
                     width = 429,
                     height = 336,
                     frame_count = 36,

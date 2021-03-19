@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 2021.04.XX
+  Features:
+    - Implemented the crystallizer, electro whinning cell, filtration unit and the ore crusher, floatation cell, leaching plant, and refinery from Angel's Refining; this is a preliminary fast pass that will be replaced in the future with upgraded models re-rendered in high resolution
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2021.03.13

@@ -49,7 +49,7 @@ for name, map in pairs(tier_map) do
             -- Base
             {
                 filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-base.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 102,
                 height = 101,
                 line_length = 10,
@@ -58,7 +58,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(0.5, 0.5),
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-base.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 200,
                     height = 199,
                     line_length = 10,
@@ -71,7 +71,7 @@ for name, map in pairs(tier_map) do
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/pellet-press-mask.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 102,
                 height = 101,
                 line_length = 10,
@@ -81,7 +81,7 @@ for name, map in pairs(tier_map) do
                 tint = inputs.tint,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/hr-pellet-press-mask.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 200,
                     height = 199,
                     line_length = 10,
@@ -95,7 +95,7 @@ for name, map in pairs(tier_map) do
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/pellet-press-highlights.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 102,
                 height = 101,
                 line_length = 10,
@@ -105,7 +105,7 @@ for name, map in pairs(tier_map) do
                 blend_mode = reskins.lib.blend_mode,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/smelting/pellet-press/hr-pellet-press-highlights.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 200,
                     height = 199,
                     line_length = 10,
@@ -119,7 +119,7 @@ for name, map in pairs(tier_map) do
             -- Shadow
             {
                 filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-shadow.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 125,
                 height = 68,
                 line_length = 6,
@@ -129,7 +129,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(12, 17),
                 hr_version = {
                     filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 246,
                     height = 132,
                     line_length = 6,

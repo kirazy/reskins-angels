@@ -27,7 +27,7 @@ local tier_map = {
 -- Create light layer for working visualisation
 local refinery_lights = reskins.lib.make_4way_animation_from_spritesheet({
     filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/gas-refinery-light.png",
-    priority = "high",
+    priority = "extra-high",
     width = 167,
     height = 278,
     shift = util.by_pixel(-0.5, -47),
@@ -35,7 +35,7 @@ local refinery_lights = reskins.lib.make_4way_animation_from_spritesheet({
     draw_as_glow = true,
     hr_version = {
         filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/hr-gas-refinery-light.png",
-        priority = "high",
+        priority = "extra-high",
         width = 334,
         height = 553,
         shift = util.by_pixel(0, -48),
@@ -70,13 +70,13 @@ for name, map in pairs(tier_map) do
             -- Base
             {
                 filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/gas-refinery-base.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 167,
                 height = 278,
                 shift = util.by_pixel(-0.5, -47),
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/hr-gas-refinery-base.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 334,
                     height = 553,
                     shift = util.by_pixel(0, -48),
@@ -86,14 +86,14 @@ for name, map in pairs(tier_map) do
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/gas-refinery-mask.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 167,
                 height = 278,
                 shift = util.by_pixel(-0.5, -47),
                 tint = inputs.tint,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/hr-gas-refinery-mask.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 334,
                     height = 553,
                     shift = util.by_pixel(0, -48),
@@ -104,14 +104,14 @@ for name, map in pairs(tier_map) do
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/gas-refinery-highlights.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 167,
                 height = 278,
                 shift = util.by_pixel(-0.5, -47),
                 blend_mode = reskins.lib.blend_mode,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/hr-gas-refinery-highlights.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 334,
                     height = 553,
                     shift = util.by_pixel(0, -48),
@@ -122,14 +122,14 @@ for name, map in pairs(tier_map) do
             -- Shadow
             {
                 filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/gas-refinery-shadow.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 255,
                 height = 171,
                 shift = util.by_pixel(44, 7),
                 draw_as_shadow = true,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/petrochem/gas-refinery/hr-gas-refinery-shadow.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 508,
                     height = 338,
                     shift = util.by_pixel(43.5, 6.5),

@@ -27,7 +27,7 @@ local tier_map = {
 -- Create light layer for working visualisation
 local refinery_lights = reskins.lib.make_4way_animation_from_spritesheet({
     filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-light.png",
-    priority = "high",
+    priority = "extra-high",
     width = 232,
     height = 330,
     shift = util.by_pixel(0, -41),
@@ -35,7 +35,7 @@ local refinery_lights = reskins.lib.make_4way_animation_from_spritesheet({
     draw_as_glow = true,
     hr_version = {
         filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-light.png",
-        priority = "high",
+        priority = "extra-high",
         width = 462,
         height = 657,
         shift = util.by_pixel(0, -42),
@@ -70,13 +70,13 @@ for name, map in pairs(tier_map) do
             -- Base
             {
                 filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-base.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 232,
                 height = 330,
                 shift = util.by_pixel(0, -41),
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-base.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 462,
                     height = 657,
                     shift = util.by_pixel(0, -42),
@@ -86,14 +86,14 @@ for name, map in pairs(tier_map) do
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-mask.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 232,
                 height = 330,
                 shift = util.by_pixel(0, -41),
                 tint = inputs.tint,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-mask.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 462,
                     height = 657,
                     shift = util.by_pixel(0, -42),
@@ -104,14 +104,14 @@ for name, map in pairs(tier_map) do
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-highlights.png",
-                priority = "high",
+                priority = "extra-high",
                 width = 232,
                 height = 330,
                 shift = util.by_pixel(0, -41),
                 blend_mode = reskins.lib.blend_mode,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-highlights.png",
-                    priority = "high",
+                    priority = "extra-high",
                     width = 462,
                     height = 657,
                     shift = util.by_pixel(0, -42),
@@ -124,7 +124,7 @@ for name, map in pairs(tier_map) do
             -- the make_4way_animation_from_spritesheet function as done in reskins-library to process vertically oriented spritesheets.
             {
                 filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
-                priority = "high",
+                priority = "extra-high",
                 vertically_oriented = true, -- This is a custom parameter used by function reskins.lib.make_4way_animation_from_spritesheet
                 width = 328,
                 height = 229,
@@ -132,7 +132,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 hr_version = {
                     filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-shadow.png",
-                    priority = "high",
+                    priority = "extra-high",
                     vertically_oriented = true, -- This is a custom parameter used by function reskins.lib.make_4way_animation_from_spritesheet
                     width = 655,
                     height = 454,
