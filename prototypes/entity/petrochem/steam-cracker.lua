@@ -78,6 +78,49 @@ for name, map in pairs(tier_map) do
         }
     }
 
+    entity.working_visualisations = {
+        -- Flame
+        {
+            fadeout = true,
+            constant_speed = true,
+            animation = {
+                filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
+                line_length = 10,
+                width = 20,
+                height = 40,
+                frame_count = 60,
+                animation_speed = 0.75,
+                shift = util.by_pixel(-66, -110),
+                draw_as_glow = true,
+                hr_version = {
+                    filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
+                    line_length = 10,
+                    width = 40,
+                    height = 81,
+                    frame_count = 60,
+                    animation_speed = 0.75,
+                    shift = util.by_pixel(-66, -110),
+                    draw_as_glow = true,
+                    scale = 0.5,
+                },
+            },
+        },
+
+        -- Light
+        {
+            animation = {
+                filename = reskins.angels.directory.."/graphics/entity/petrochem/steam-cracker/hr-steam-cracker-light.png",
+                priority = "extra-high",
+                width = 512,
+                height = 512,
+                scale = 0.5,
+                shift = {0.5, -0.5},
+                blend_mode = "additive-soft",
+                draw_as_glow = true,
+            }
+        }
+    }
+
     -- Label to skip to next iteration
     ::continue::
 end
