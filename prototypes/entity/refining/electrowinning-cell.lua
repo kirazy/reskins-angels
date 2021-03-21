@@ -9,7 +9,7 @@ if not (reskins.angels and reskins.angels.triggers.refining.entities) then retur
 -- Set input parameters
 local inputs = {
     type = "assembling-machine",
-    icon_name = "electro-whinning-cell",
+    icon_name = "electrowinning-cell",
     base_entity = "assembling-machine-1",
     mod = "angels",
     particles = {["big"] = 1, ["medium"] = 2},
@@ -58,7 +58,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/electro-whinning-cell/electro-whinning-cell-mask.png",
+                filename = reskins.angels.directory.."/graphics/entity/refining/electrowinning-cell/electrowinning-cell-mask.png",
                 priority = "extra-high",
                 width = 224,
                 height = 224,
@@ -69,7 +69,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/electro-whinning-cell/electro-whinning-cell-highlights.png",
+                filename = reskins.angels.directory.."/graphics/entity/refining/electrowinning-cell/electrowinning-cell-highlights.png",
                 priority = "extra-high",
                 width = 224,
                 height = 224,
