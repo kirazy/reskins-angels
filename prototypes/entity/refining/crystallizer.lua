@@ -33,12 +33,6 @@ for name, map in pairs(tier_map) do
     -- Check if entity exists, if not, skip this iteration
     if not entity then goto continue end
 
-    -- Fix order shenanigans
-    if name == "crystallizer-3" then
-        data.raw["item"][name].order = "c[crystallizer]-c[mk3]"
-        entity.order = "z-c[crystallizer]-c[mk3]"
-    end
-
     -- Handle tier
     local tier = map.tier
     if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
