@@ -4,11 +4,11 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Core mods
-reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelsbioprocessing")
+-- reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelsbioprocessing")
 reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelsexploration")
 -- reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelsindustries")
 -- reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelspetrochem")
-reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelsrefining")
+-- reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelsrefining")
 -- reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelssmelting")
 
 -- Addons
