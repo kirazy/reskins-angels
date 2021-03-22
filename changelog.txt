@@ -6,6 +6,8 @@ Date: 2021-03-22
     - Implemented the crystallizer, electrowinning cell, filtration unit, hydro plant, liquifier, ore crusher, ore floatation cell, ore leaching plant, ore powderizer, ore refinery, ore sorting facility, salination plant and the washing plant from Angel's Refining
     - Implemented the advanced chemical plant, air filter, chemical plant, electric boiler, electrolyser, oil & gas separator, and the steam cracker from Angel's Petrochemical Processing; note, Artisanal Reskins: Compatibility must be version 1.1.2 or higher if present
     - Implemented the algae farm from Angel's Bioprocessing
+  Changes:
+    - Dropped "beta" from thumbnail as all structures now have color masks; re-rendering is ongoing and will continue until complete
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2021-03-13
