@@ -9,7 +9,7 @@
 -- ENTITIES
 ----------------------------------------------------------------------------------------------------
 -- Angel's Bio-Processing
--- require("prototypes.entity.bioprocessing.algae-farm")
+require("prototypes.entity.bioprocessing.algae-farm")
 -- require("prototypes.entity.bioprocessing.butchery")
 -- require("prototypes.entity.bioprocessing.composter")
 -- require("prototypes.entity.bioprocessing.crop-farm")
