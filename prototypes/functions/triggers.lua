@@ -59,6 +59,7 @@ triggers.mobility = {
     equipment = reskins.lib.check_scope("equipment", "angels", "angelsaddons-mobility"),
     items = reskins.lib.check_scope("items-and-fluids", "angels", "angelsaddons-mobility"),
     technologies = reskins.lib.check_scope("technologies", "angels", "angelsaddons-mobility"),
+    pipes_material_colors = false,
 }
 
 -- Angel's Addons - Storage
