@@ -24,7 +24,7 @@ local tier_map = {
     ["ore-crusher-3"] = {tier = 3},
 
     -- Extended Angels
-    ["ore-crusher-4"] = {tier = 4},
+    ["ore-crusher-4"] = {tier = 4, defer_to_data_updates = true},
 }
 
 -- Reskin entities, create and assign extra details
@@ -42,6 +42,7 @@ for name, map in pairs(tier_map) do
     end
 
     -- Determine what tint we're using
+    inputs.defer_to_data_updates = map.defer_to_data_updates
     inputs.tint = map.tint or reskins.lib.tint_index[tier]
 
     reskins.lib.setup_standard_entity(name, tier, inputs)
