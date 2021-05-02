@@ -20,10 +20,10 @@ local inputs = {
 local tier_map = {
     ["algae-farm"] = {tier = 1},
     ["algae-farm-2"] = {tier = 2},
-    ["algae-farm-3"] = {tier = 3},
+    ["algae-farm-3"] = {tier = 3, prog_tier = 4},
 
     -- Extended Angels
-    ["algae-farm-4"] = {tier = 4},
+    ["algae-farm-4"] = {tier = 4, prog_tier = 5},
 }
 
 -- Reskin entities, create and assign extra details
