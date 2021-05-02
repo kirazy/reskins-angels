@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ????
+Date: 2021-05-02
   Changes:
     - Adjusted how ore icon variations are generated in line with changes in Artisanal Reskins: Library
     - Adjusted the progression tier of the algae farms
