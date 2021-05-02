@@ -2,6 +2,7 @@
 Version: 1.1.6
 Date: ????
   Changes:
+    - Adjusted how ore icon variations are generated in line with changes in Artisanal Reskins: Library
   Bugfixes:
     - Fixed that pipes did not respect the setting "Use Angel's material colors for pipes"
     - Fixed that icon assignment for Ore crusher 4 with Extended Angels was being overwritten

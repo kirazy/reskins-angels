@@ -51,6 +51,7 @@ triggers.smelting = {
     equipment = reskins.lib.check_scope("equipment", "angels", "angelssmelting"),
     items = reskins.lib.check_scope("items-and-fluids", "angels", "angelssmelting"),
     technologies = reskins.lib.check_scope("technologies", "angels", "angelssmelting"),
+    pipes_use_material_colors = false,
 }
 
 -- Angel's Addons - Mobility

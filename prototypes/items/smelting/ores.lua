@@ -65,7 +65,7 @@ for name, params in pairs(ores) do
 
     -- Setup icons
     inputs.icon = reskins[mod].directory.."/graphics/icons/"..group.."/ores/"..name.."/"..name..".png"
-    inputs.icon_picture = reskins.lib.ore_icon_pictures(mod, group, name, params.variations or 4)
+    inputs.icon_picture = reskins.lib.create_icon_variations({mod = mod, group = group, subgroup = "ores", icon = name, variations = params.variations or 4, glows = params.make_glow})
 
     reskins.lib.assign_icons(name, inputs)
 

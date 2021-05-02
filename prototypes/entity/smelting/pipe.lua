@@ -8,8 +8,8 @@ if reskins.lib.setting("reskins-angels-use-angels-material-colors-pipes") == fal
 if not (reskins.angels and reskins.angels.triggers.smelting.entities) then return end
 if not (reskins.bobs and reskins.bobs.triggers.logistics.entities) then return end
 
--- Set tri
-reskins.angels.triggers.smelting.pipes_material_colors = true
+-- Set trigger
+reskins.angels.triggers.smelting.pipes_use_material_colors = true
 
 -- Set input parameters
 local inputs = {
