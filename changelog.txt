@@ -8,6 +8,7 @@ Date: ????
   Bugfixes:
     - Fixed that pipes did not respect the setting "Use Angel's material colors for pipes"
     - Fixed that icon assignment for Ore crusher 4 with Extended Angels was being overwritten
+    - Fixed that pipe to ground icons had black transparent pixels
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 2021-03-22
