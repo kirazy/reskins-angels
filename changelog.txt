@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
-Date: ????
+Date: 2021-06-02
   Bugfixes:
     - Adjusted function `num_tier` to validate tint fetching, correcting crashes related to trying to fetch a tint from `angelsmods[mod]` where `mod` is not enabled.
 ---------------------------------------------------------------------------------------------------
