@@ -2,6 +2,7 @@
 Version: 1.1.8
 Date: ????
   Changes:
+    - Adjusted progression tiering for Chemical Plants and Oil & Gas Separators in line with changes from Angel's Petrochem
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 2021-06-02
