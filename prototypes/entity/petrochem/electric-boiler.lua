@@ -18,9 +18,9 @@ local inputs = {
 }
 
 local tier_map = {
-    ["angels-electric-boiler"] = {tier = 1},
-    ["angels-electric-boiler-2"] = {tier = 2},
-    ["angels-electric-boiler-3"] = {tier = 3},
+    ["angels-electric-boiler"] = {tier = 1, prog_tier = 2},
+    ["angels-electric-boiler-2"] = {tier = 2, prog_tier = 3},
+    ["angels-electric-boiler-3"] = {tier = 3, prog_tier = 5},
 }
 
 local working_lights = reskins.lib.make_4way_animation_from_spritesheet({
