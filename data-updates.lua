@@ -15,11 +15,13 @@ require("prototypes.entity.refining.liquifier")
 ----------------------------------------------------------------------------------------------------
 -- ITEMS
 ----------------------------------------------------------------------------------------------------
+require("prototypes.items.bioprocessing-modules")
 require("prototypes.items.smelting.ores")
 
 ----------------------------------------------------------------------------------------------------
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------
+require("prototypes.technology.bioprocessing-modules")
 require("prototypes.technology.smelting-updates")
 
 -- Assign deferred icons
