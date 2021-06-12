@@ -2,7 +2,7 @@
 Version: 1.1.8
 Date: ????
   Changes:
-    - Adjusted progression tiering for Chemical Plants and Oil & Gas Separators in line with changes from Angel's Petrochem
+    - Adjusted progression tiering for electric boilers, chemical plants and oil & gas separators in line with changes from Angel's Petrochem
     - Dropped support for ShinyBobGFX, ShinyAngelGFX
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
