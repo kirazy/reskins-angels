@@ -49,3 +49,20 @@ for class, map in pairs(modules_map) do
         ::continue::
     end
 end
+
+-- Setup inputs
+local inputs = {
+    mod = "angels",
+    group = "bioprocessing",
+    type = "technology",
+    technology_icon_size = 256,
+    technology_icon_mipmaps = 4,
+    flat_icon = true,
+}
+
+local technologies = {
+    ["modules-2"] = {},
+    ["modules-3"] = {},
+}
+
+reskins.lib.create_icons_from_list(technologies, inputs)
