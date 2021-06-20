@@ -25,6 +25,11 @@ local tier_map = {
     ["crystallizer-3"] = {tier = 3, prog_tier = 5},
 }
 
+-- Sea Block compatibility
+if mods["SeaBlock"] then
+    tier_map["crystallizer"].prog_tier = 1
+end
+
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
     -- Fetch entity

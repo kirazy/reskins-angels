@@ -3,6 +3,7 @@ Version: 1.1.8
 Date: ????
   Features:
     - Implemented support for Bob's modules style agriculture modules and related technologies
+    - Added progression tier adjustments when used with Sea Block for the algae farm 3, crystallizer, and filtration unit
   Changes:
     - Adjusted progression tiering for electric boilers, chemical plants and oil & gas separators in line with changes from Angel's Petrochem
     - Dropped support for ShinyBobGFX, ShinyAngelGFX

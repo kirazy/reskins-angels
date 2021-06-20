@@ -26,6 +26,11 @@ local tier_map = {
     ["algae-farm-4"] = {tier = 4, prog_tier = 5},
 }
 
+-- Sea Block compatibility
+if mods["SeaBlock"] then
+    tier_map["algae-farm-3"].prog_tier = 3
+end
+
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
     -- Fetch entity
