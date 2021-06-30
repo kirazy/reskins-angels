@@ -22,6 +22,9 @@ local tier_map = {
     ["ore-sorting-facility-2"] = {tier = 2},
     ["ore-sorting-facility-3"] = {tier = 3},
     ["ore-sorting-facility-4"] = {tier = 4},
+
+    -- Sea Block
+    ["sb-ore-sorting-facility-5"] = {tier = 5},
 }
 
 -- Reskin entities, create and assign extra details

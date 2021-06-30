@@ -4,6 +4,7 @@ Date: ????
   Features:
     - Implemented support for Bob's modules style agriculture modules and related technologies
     - Added progression tier adjustments when used with Sea Block for the algae farm 3, crystallizer, and filtration unit
+    - Added support for Sea Block's 5th tier ore sorting facility
   Changes:
     - Adjusted progression tiering for electric boilers, chemical plants and oil & gas separators in line with changes from Angel's Petrochem
     - Dropped support for ShinyBobGFX, ShinyAngelGFX
