@@ -108,7 +108,7 @@ require("prototypes.items.industries")
 ----------------------------------------------------------------------------------------------------
 -- require("prototypes.technology.bioprocessing")
 -- require("prototypes.technology.exploration")
--- require("prototypes.technology.industries")
+require("prototypes.technology.industries")
 require("prototypes.technology.petrochem")
 -- require("prototypes.technology.refining")
 require("prototypes.technology.smelting")
