@@ -6,6 +6,7 @@ Date: ????
     - Added progression tier adjustments when used with Sea Block for the algae farm 3, crystallizer, and filtration unit
     - Added support for Sea Block's 5th tier ore sorting facility
     - Added thorium power technology icon with Angel's Industries
+    - When Angel's Industries and Bob's Power are present, startup setting "Deuterium is Blue!" is set `true` to align reactor colors with the deuterium fuel color
   Changes:
     - Adjusted progression tiering for electric boilers, chemical plants and oil & gas separators in line with changes from Angel's Petrochem
     - Dropped support for ShinyBobGFX, ShinyAngelGFX
