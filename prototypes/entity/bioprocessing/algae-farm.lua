@@ -20,14 +20,19 @@ local inputs = {
 local tier_map = {
     ["algae-farm"] = {tier = 1},
     ["algae-farm-2"] = {tier = 2},
-    ["algae-farm-3"] = {tier = 3, prog_tier = 4},
+    ["algae-farm-3"] = {tier = 3},
 
     -- Extended Angels
     ["algae-farm-4"] = {tier = 4, prog_tier = 5},
 }
 
--- Sea Block compatibility
-if mods["SeaBlock"] then
+-- Algae farm recipes revised in Angel's Bioprocessing 0.7.18
+if reskins.lib.migration.is_version_or_newer(mods["angelsbioprocessing"], "0.7.18") then
+    tier_map["algae-farm-3"].prog_tier = 4
+end
+
+-- Sea Block 0.5.5 revises algae farm 3 recipe for earlier access
+if reskins.lib.migration.is_version_or_newer(mods["SeaBlock"], "0.5.5") then
     tier_map["algae-farm-3"].prog_tier = 3
 end
 
