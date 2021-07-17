@@ -20,13 +20,13 @@ require("prototypes.items.refining")
 require("prototypes.items.smelting.ores")
 
 -- angelspetrochem at this version or earlier do icon work in data-final-fixes
-if reskins.lib.migration.is_newer_version("0.9.19", mods["angelspetrochem"]) then
+if reskins.lib.migration.is_newer_version(mods["angelspetrochem"], "0.9.19") then
     require("prototypes.items.petrochem")
     require("prototypes.items.petrochem.sulfur")
 end
 
 -- angelssmelting at this version or earlier does icon work in data-final-fixes
-if reskins.lib.migration.is_newer_version("0.6.16", mods["angelssmelting"]) then
+if reskins.lib.migration.is_newer_version(mods["angelssmelting"], "0.6.16") then
     require("prototypes.items.smelting")
 end
 
