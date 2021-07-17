@@ -17,9 +17,6 @@ local inputs = {
 local shift = reskins.angels.constants.recipe_corner_shift
 local scale = reskins.angels.constants.recipe_corner_scale
 
--- Check to see if reskinning needs to be done.
-if not mods["angelssmelting"] then return end
-
 local intermediates = {
     ----------------------------------------------------------------------------------------------------
     -- Intermediates
