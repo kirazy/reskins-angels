@@ -12,11 +12,6 @@ local inputs = {
     icon = "__base__/graphics/icons/sulfur.png",
 }
 
--- angelspetrochem at this version or earlier do icon work in data-final-fixes
-if reskins.lib.migration.is_version_or_older(mods["angelspetrochem"], "0.9.19") then
-    return
-end
-
 reskins.lib.parse_inputs(inputs)
 reskins.lib.assign_icons("sulfur", inputs)
 
