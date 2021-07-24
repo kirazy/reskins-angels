@@ -7,6 +7,7 @@ Date: ????
     - Added progression tier adjustments when used with Sea Block for the chemical plants
   Changes:
     - Added backwards compatibility for older versions of Angel's Petrochem and Angel's Bioprocessing for progression tiering for electric boilers, chemical plants and algae farms
+    - Revised icons for bronze, brass and gunmetal plates to improve visual separation
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.8
 Date: 2021-07-01
