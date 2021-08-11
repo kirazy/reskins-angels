@@ -34,8 +34,10 @@ if reskins.lib.migration.is_version_or_newer(mods["SeaBlock"], "0.5.5") then
     tier_map["algae-farm-3"].prog_tier = nil
 end
 
--- Extended Angels has tier 5 ingredients prior to version 0.4.9
-if reskins.lib.migration.is_version_or_older(mods["ExtendedAngels"], "0.4.8") then
+-- Extended Angel's adds a 5th tier of Algae farm in version 0.5.0, prior to that Algae farm 4 had tier 5 ingredients
+if reskins.lib.migration.is_version_or_newer(mods["extendedangels"], "0.5.0") then
+    tier_map["algae-farm-5"] = {tier = 5}
+elseif reskins.lib.migration.is_older_version(mods["angelsbioprocessing"], "0.7.20") then
     tier_map["algae-farm-4"].prog_tier = 5
 end
 
