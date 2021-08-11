@@ -5,6 +5,7 @@ Date: ????
     - Major revisions to all color masks for all entities, items, and icons
     - Perceived brightness and contrast have been improved and oversaturation and color blowouts have been reduced
     - Added progression tier adjustments when used with Sea Block for the chemical plants
+    - Added numeral icons to the mud washing process recipes
   Changes:
     - Added backwards compatibility for older versions of Angel's Petrochem and Angel's Bioprocessing for progression tiering for electric boilers, chemical plants and algae farms
     - Revised icons for bronze, brass and gunmetal plates to improve visual separation

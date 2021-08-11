@@ -28,8 +28,15 @@ local intermediates = {
 
 reskins.lib.create_icons_from_list(intermediates, inputs)
 
--- local composite_recipes = {}
+local composite_recipes = {
+    -- Mud water progression
+    ["washing-1"] = {["water-heavy-mud"] = {type = "fluid"}, ["numeral"] = {icons = reskins.angels.num_tier(1, "refining")}},
+    ["washing-2"] = {["water-concentrated-mud"] = {type = "fluid"}, ["numeral"] = {icons = reskins.angels.num_tier(2, "refining")}},
+    ["washing-3"] = {["water-light-mud"] = {type = "fluid"}, ["numeral"] = {icons = reskins.angels.num_tier(3, "refining")}},
+    ["washing-4"] = {["water-thin-mud"] = {type = "fluid"}, ["numeral"] = {icons = reskins.angels.num_tier(4, "refining")}},
+    ["washing-5"] = {["water-saline"] = {type = "fluid"}, ["numeral"] = {icons = reskins.angels.num_tier(5, "refining")}},
+}
 
--- for name, sources in pairs(composite_recipes) do
---     reskins.lib.composite_existing_icons(name, "recipe", sources)
--- end
+for name, sources in pairs(composite_recipes) do
+    reskins.lib.composite_existing_icons(name, "recipe", sources)
+end
