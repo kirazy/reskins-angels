@@ -2,8 +2,8 @@
 Version: 2.0.0
 Date: ????
   Features:
-    - Major revisions to all color masks for all entities, items, and icons
-    - Perceived brightness and contrast have been improved and oversaturation and color blowouts have been reduced
+    - Revisions to all color masks for all entities, items, and icons are ongoing
+    - Perceived brightness and contrast have been improved and oversaturation and color blowouts have been reduced for revised entities
     - Added progression tier adjustments when used with Sea Block for the chemical plants
     - Added numeral icons to the mud washing process recipes
   Changes:
