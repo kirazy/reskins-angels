@@ -31,7 +31,10 @@ end
 
 -- Sea Block 0.5.5 revises algae farm 3 recipe for earlier access
 if reskins.lib.migration.is_version_or_newer(mods["SeaBlock"], "0.5.5") then
-    tier_map["algae-farm-3"].prog_tier = nil
+    tier_map["algae-farm"].prog_tier = 0
+    tier_map["algae-farm-2"].prog_tier = 1
+    tier_map["algae-farm-3"].prog_tier = 2
+    tier_map["algae-farm-4"].prog_tier = 3
 end
 
 -- Extended Angel's adds a 5th tier of Algae farm in version 0.5.0, prior to that Algae farm 4 had tier 5 ingredients
