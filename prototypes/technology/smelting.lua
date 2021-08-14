@@ -119,7 +119,7 @@ local technologies = {
 }
 
 -- For Angel's Smelting with new seprated casting/smelting technology rework
-if reskins.lib.migration.is_newer_version("0.6.14", mods["angelssmelting"]) then
+if reskins.lib.migration.is_newer_version(mods["angelssmelting"], "0.6.14") then
     technologies["angels-copper-smelting-2"] = {subgroup = "smelting", flat_icon = true, technology_icon_mipmaps = 4, image = "smelting-copper-technology-icon"}
     technologies["angels-copper-casting-2"] = {subgroup = "casting", flat_icon = true, technology_icon_mipmaps = 4, image = "casting-copper-technology-icon"}
     technologies["angels-copper-smelting-3"] = {subgroup = "smelting", flat_icon = true, technology_icon_mipmaps = 4, image = "smelting-copper-technology-icon"}

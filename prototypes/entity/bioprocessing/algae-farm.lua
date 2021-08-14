@@ -20,15 +20,25 @@ local inputs = {
 local tier_map = {
     ["algae-farm"] = {tier = 1},
     ["algae-farm-2"] = {tier = 2},
-    ["algae-farm-3"] = {tier = 3, prog_tier = 4},
-
-    -- Extended Angels
-    ["algae-farm-4"] = {tier = 4, prog_tier = 5},
+    ["algae-farm-3"] = {tier = 3},
+    ["algae-farm-4"] = {tier = 4},
 }
 
--- Sea Block compatibility
-if mods["SeaBlock"] then
-    tier_map["algae-farm-3"].prog_tier = 3
+-- Algae farm recipes revised in Angel's Bioprocessing 0.7.18, and again in 0.7.20 with addition of Algae farm 4
+if reskins.lib.migration.is_version_or_newer(mods["angelsbioprocessing"], "0.7.18") and reskins.lib.migration.is_older_version(mods["angelsbioprocessing"], "0.7.20") then
+    tier_map["algae-farm-3"].prog_tier = 4
+end
+
+-- Sea Block 0.5.5 revises algae farm 3 recipe for earlier access
+if reskins.lib.migration.is_version_or_newer(mods["SeaBlock"], "0.5.5") then
+    tier_map["algae-farm-3"].prog_tier = nil
+end
+
+-- Extended Angel's adds a 5th tier of Algae farm in version 0.5.0, prior to that Algae farm 4 had tier 5 ingredients
+if reskins.lib.migration.is_version_or_newer(mods["extendedangels"], "0.5.0") then
+    tier_map["algae-farm-5"] = {tier = 5}
+elseif mods["extendedangels"] and reskins.lib.migration.is_older_version(mods["angelsbioprocessing"], "0.7.20") then
+    tier_map["algae-farm-4"].prog_tier = 5
 end
 
 -- Reskin entities, create and assign extra details
