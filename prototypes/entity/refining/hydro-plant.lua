@@ -240,6 +240,18 @@ for name, map in pairs(tier_map) do
             south_animation = connections.south,
             west_animation = connections.west,
         },
+
+        -- Vertical Pipe Shadow Patch
+        {
+            always_draw = true,
+            north_animation = reskins.lib.vertical_pipe_shadow({-2, -3}),
+            south_animation = {
+                layers = {
+                    reskins.lib.vertical_pipe_shadow({-2, -3}),
+                    reskins.lib.vertical_pipe_shadow({2, -3}),
+                }
+            }
+        },
     }
 
     -- Label to skip to next iteration
