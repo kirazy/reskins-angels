@@ -49,36 +49,91 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant.png",
+                filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/salination-plant-base.png",
                 priority = "extra-high",
-                width = 288,
-                height = 320,
+                width = 244,
+                height = 270,
                 frame_count = 36,
                 line_length = 6,
-                shift = {0, -0.5},
+                shift = util.by_pixel(-2, -12),
                 animation_speed = 0.5,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/hr-salination-plant-base.png",
+                    priority = "extra-high",
+                    width = 484,
+                    height = 540,
+                    frame_count = 36,
+                    line_length = 6,
+                    shift = util.by_pixel(-2.5, -12),
+                    animation_speed = 0.5,
+                    scale = 0.5,
+                }
             },
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/salination-plant-mask.png",
                 priority = "extra-high",
-                width = 288,
-                height = 320,
+                width = 244,
+                height = 270,
                 repeat_count = 36,
-                shift = {0, -0.5},
-                animation_speed = 0.5,
+                shift = util.by_pixel(-2, -12),
                 tint = inputs.tint,
+                animation_speed = 0.5,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/hr-salination-plant-mask.png",
+                    priority = "extra-high",
+                    width = 484,
+                    height = 540,
+                    repeat_count = 36,
+                    shift = util.by_pixel(-2.5, -12),
+                    tint = inputs.tint,
+                    animation_speed = 0.5,
+                    scale = 0.5,
+                }
             },
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/salination-plant-highlights.png",
                 priority = "extra-high",
-                width = 288,
-                height = 320,
+                width = 244,
+                height = 270,
                 repeat_count = 36,
-                shift = {0, -0.5},
-                animation_speed = 0.5,
+                shift = util.by_pixel(-2, -12),
                 blend_mode = reskins.lib.blend_mode,
+                animation_speed = 0.5,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/hr-salination-plant-highlights.png",
+                    priority = "extra-high",
+                    width = 484,
+                    height = 540,
+                    repeat_count = 36,
+                    shift = util.by_pixel(-2.5, -12),
+                    blend_mode = reskins.lib.blend_mode,
+                    animation_speed = 0.5,
+                    scale = 0.5,
+                }
+            },
+            -- Shadow
+            {
+                filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/salination-plant-shadow.png",
+                priority = "extra-high",
+                width = 255,
+                height = 235,
+                repeat_count = 36,
+                shift = util.by_pixel(11, 6),
+                draw_as_shadow = true,
+                animation_speed = 0.5,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/hr-salination-plant-shadow.png",
+                    priority = "extra-high",
+                    width = 509,
+                    height = 467,
+                    repeat_count = 36,
+                    shift = util.by_pixel(10, 6.5),
+                    draw_as_shadow = true,
+                    animation_speed = 0.5,
+                    scale = 0.5,
+                }
             },
         }
     }

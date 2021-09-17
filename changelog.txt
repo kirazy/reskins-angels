@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
   Features:
-    - Updated ore sorting facility with high resolution sprites
+    - Updated ore sorting facility, salination plant with high resolution sprites
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2021-09-12
