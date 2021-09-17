@@ -20,6 +20,13 @@ local technologies = {
     ["advanced-ore-refining-1"] = {tier = 2, icon_name = "advanced-ore-refining"},
     ["advanced-ore-refining-2"] = {tier = 3, icon_name = "advanced-ore-refining"},
     ["advanced-ore-refining-3"] = {tier = 4, icon_name = "advanced-ore-refining"},
+
+    -- Water treatment (Hydro Plant)
+    ["water-treatment"] = {tier = 1, icon_name = "water-treatment"},
+    ["water-treatment-2"] = {tier = 2, icon_name = "water-treatment"},
+    ["water-treatment-3"] = {tier = 3, icon_name = "water-treatment"},
+    ["water-treatment-4"] = {tier = 4, icon_name = "water-treatment"},
+    ["water-treatment-5"] = {tier = 5, icon_name = "water-treatment"},
 }
 
 reskins.lib.create_icons_from_list(technologies, inputs)
