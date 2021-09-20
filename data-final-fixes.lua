@@ -25,3 +25,6 @@ end
 
 -- Assign deferred icons
 reskins.lib.assign_deferred_icons("angels", "data-final-fixes")
+
+-- Adjust recipes, tints for use with re-rendered clarifier
+require("prototypes.functions.clarifier-recipe-adjustments")

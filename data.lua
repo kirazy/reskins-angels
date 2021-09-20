@@ -59,7 +59,7 @@ require("prototypes.entity.petrochem.valve")
 
 -- Angel's Refining
 -- require("prototypes.entity.refining.barreling-pump")
--- require("prototypes.entity.refining.clarifier")
+require("prototypes.entity.refining.clarifier")
 require("prototypes.entity.refining.crystallizer")
 require("prototypes.entity.refining.electrowinning-cell")
 require("prototypes.entity.refining.filtration-unit")
