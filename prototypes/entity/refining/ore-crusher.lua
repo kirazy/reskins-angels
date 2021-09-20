@@ -52,36 +52,91 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelsrefining__/graphics/entity/ore-crusher/1ore-crusher.png",
+                filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/ore-crusher-base.png",
                 priority = "extra-high",
-                width = 128,
-                height = 128,
+                width = 94,
+                height = 108,
                 frame_count = 16,
                 line_length = 4,
-                shift = {0.45, -0.25},
+                shift = util.by_pixel(0, -5),
                 animation_speed = 0.5,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/hr-ore-crusher-base.png",
+                    priority = "extra-high",
+                    width = 189,
+                    height = 214,
+                    frame_count = 16,
+                    line_length = 4,
+                    shift = util.by_pixel(-0.5, -5),
+                    animation_speed = 0.5,
+                    scale = 0.5,
+                }
             },
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/ore-crusher-mask.png",
                 priority = "extra-high",
-                width = 128,
-                height = 128,
+                width = 94,
+                height = 108,
                 repeat_count = 16,
-                shift = {0.45, -0.25},
-                animation_speed = 0.5,
+                shift = util.by_pixel(0, -5),
                 tint = inputs.tint,
+                animation_speed = 0.5,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/hr-ore-crusher-mask.png",
+                    priority = "extra-high",
+                    width = 189,
+                    height = 214,
+                    repeat_count = 16,
+                    shift = util.by_pixel(-0.5, -5),
+                    tint = inputs.tint,
+                    animation_speed = 0.5,
+                    scale = 0.5,
+                }
             },
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/ore-crusher-highlights.png",
                 priority = "extra-high",
-                width = 128,
-                height = 128,
+                width = 94,
+                height = 108,
                 repeat_count = 16,
-                shift = {0.45, -0.25},
-                animation_speed = 0.5,
+                shift = util.by_pixel(0, -5),
                 blend_mode = reskins.lib.blend_mode,
+                animation_speed = 0.5,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/hr-ore-crusher-highlights.png",
+                    priority = "extra-high",
+                    width = 189,
+                    height = 214,
+                    repeat_count = 16,
+                    shift = util.by_pixel(-0.5, -5),
+                    blend_mode = reskins.lib.blend_mode,
+                    animation_speed = 0.5,
+                    scale = 0.5,
+                }
+            },
+            -- Shadow
+            {
+                filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/ore-crusher-shadow.png",
+                priority = "extra-high",
+                width = 141,
+                height = 72,
+                repeat_count = 16,
+                shift = util.by_pixel(25, 17),
+                draw_as_shadow = true,
+                animation_speed = 0.5,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/hr-ore-crusher-shadow.png",
+                    priority = "extra-high",
+                    width = 282,
+                    height = 140,
+                    repeat_count = 16,
+                    shift = util.by_pixel(24, 17.5),
+                    draw_as_shadow = true,
+                    animation_speed = 0.5,
+                    scale = 0.5,
+                }
             },
         }
     }

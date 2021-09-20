@@ -28,6 +28,11 @@ local technologies = {
     ["water-treatment-3"] = {tier = 3, icon_name = "water-treatment"},
     ["water-treatment-4"] = {tier = 4, icon_name = "water-treatment"},
     ["water-treatment-5"] = {tier = 5, icon_name = "water-treatment"},
+
+    -- Mechanical Refining (Ore Crusher)
+    ["ore-crushing"] = {tier = 1, icon_name = "ore-crushing"},
+    ["clowns-ore-crushing"] = {tier = 0, icon_name = "ore-crushing", technology_icon_layers = 1},
+
 }
 
 reskins.lib.create_icons_from_list(technologies, inputs)
