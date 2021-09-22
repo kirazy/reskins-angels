@@ -34,7 +34,7 @@ end
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------
 require("prototypes.technology.bioprocessing-modules")
-require("prototypes.technology.refining-updates")
+-- require("prototypes.technology.refining-updates")
 require("prototypes.technology.smelting-updates")
 
 ----------------------------------------------------------------------------------------------------
