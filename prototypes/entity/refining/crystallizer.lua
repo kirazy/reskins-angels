@@ -54,31 +54,138 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer.png",
+                filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/crystallizer.png",
                 priority = "extra-high",
-                width = 192,
-                height = 192,
-                shift = {0.5, -0.5},
+                width = 195,
+                height = 163,
+                shift = util.by_pixel(15.5, -0.5),
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/hr-crystallizer.png",
+                    priority = "extra-high",
+                    width = 390,
+                    height = 326,
+                    shift = util.by_pixel(16, 0),
+                    scale = 0.5,
+                },
             },
             -- Mask
             {
                 filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/crystallizer-mask.png",
                 priority = "extra-high",
-                width = 192,
-                height = 192,
-                shift = {0.5, -0.5},
+                width = 195,
+                height = 163,
+                shift = util.by_pixel(15.5, -0.5),
                 tint = inputs.tint,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/hr-crystallizer-mask.png",
+                    priority = "extra-high",
+                    width = 390,
+                    height = 326,
+                    shift = util.by_pixel(16, 0),
+                    tint = inputs.tint,
+                    scale = 0.5,
+                },
             },
             -- Highlights
             {
                 filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/crystallizer-highlights.png",
                 priority = "extra-high",
-                width = 192,
-                height = 192,
-                shift = {0.5, -0.5},
+                width = 195,
+                height = 163,
+                shift = util.by_pixel(15.5, -0.5),
                 blend_mode = reskins.lib.blend_mode,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/hr-crystallizer-highlights.png",
+                    priority = "extra-high",
+                    width = 390,
+                    height = 326,
+                    shift = util.by_pixel(16, 0),
+                    blend_mode = reskins.lib.blend_mode,
+                    scale = 0.5,
+                },
+            },
+            -- Shadow
+            {
+                filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/crystallizer-shadow.png",
+                priority = "extra-high",
+                width = 195,
+                height = 163,
+                shift = util.by_pixel(15.5, -0.5),
+                draw_as_shadow = true,
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/hr-crystallizer-shadow.png",
+                    priority = "extra-high",
+                    width = 390,
+                    height = 326,
+                    shift = util.by_pixel(16, 0),
+                    draw_as_shadow = true,
+                    scale = 0.5,
+                },
             },
         }
+    }
+
+    entity.fluid_boxes[1].pipe_picture = {
+        north = {
+            filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/crystallizer-pipe-connection.png",
+            priority = "extra-high",
+            size = 64,
+            x = 0,
+            shift = {0, 1},
+            hr_version = {
+                filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/hr-crystallizer-pipe-connection.png",
+                priority = "extra-high",
+                size = 128,
+                x = 0,
+                shift = {0, 1},
+                scale = 0.5,
+            },
+        },
+        east = {
+            filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/crystallizer-pipe-connection.png",
+            priority = "extra-high",
+            size = 64,
+            x = 64,
+            shift = {-1, 0},
+            hr_version = {
+                filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/hr-crystallizer-pipe-connection.png",
+                priority = "extra-high",
+                size = 128,
+                x = 128,
+                shift = {-1, 0},
+                scale = 0.5,
+            },
+        },
+        south = {
+            filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/crystallizer-pipe-connection.png",
+            priority = "extra-high",
+            size = 64,
+            x = 128,
+            shift = {0, -1},
+            hr_version = {
+                filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/hr-crystallizer-pipe-connection.png",
+                priority = "extra-high",
+                size = 128,
+                x = 256,
+                shift = {0, -1},
+                scale = 0.5,
+            },
+        },
+        west = {
+            filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/crystallizer-pipe-connection.png",
+            priority = "extra-high",
+            size = 64,
+            x = 192,
+            shift = {1, 0},
+            hr_version = {
+                filename = reskins.angels.directory.."/graphics/entity/refining/crystallizer/hr-crystallizer-pipe-connection.png",
+                priority = "extra-high",
+                size = 128,
+                x = 384,
+                shift = {1, 0},
+                scale = 0.5,
+            },
+        },
     }
 
     -- Label to skip to next iteration
