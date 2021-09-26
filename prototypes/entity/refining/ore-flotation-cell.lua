@@ -176,7 +176,6 @@ for name, map in pairs(tier_map) do
 
 
         -- Froth recipe mask
-        -- I honestly don't suggest using this, but you can play with it if you want
         {
             always_draw = true,
             apply_recipe_tint = "secondary",
