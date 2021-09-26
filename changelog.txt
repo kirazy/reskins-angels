@@ -1,7 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
   Features:
-    - Updated crystallizer, ore crusher, ore sorting facility, ore refinery, hydro plant, salination plant, and clarifier with high resolution sprites
+    - Updated crystallizer, ore crusher, ore flotation cell, ore sorting facility, ore refinery, hydro plant, salination plant, and clarifier with high resolution sprites
+  Locale:
+    - Corrected references to improper spelling "floatation", relating to the ore flotation cell
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2021-09-12
@@ -51,7 +53,7 @@ Version: 1.1.5
 Date: 2021-03-22
   Features:
     - The following entity implementations are preliminary fast-passes that will be gradually be replaced in the future with upgraded models re-rendered in high resolution, and are intended merely to complete the color tiering
-    - Implemented the crystallizer, electrowinning cell, filtration unit, hydro plant, liquifier, ore crusher, ore floatation cell, ore leaching plant, ore powderizer, ore refinery, ore sorting facility, salination plant and the washing plant from Angel's Refining
+    - Implemented the crystallizer, electrowinning cell, filtration unit, hydro plant, liquifier, ore crusher, ore flotation cell, ore leaching plant, ore powderizer, ore refinery, ore sorting facility, salination plant and the washing plant from Angel's Refining
     - Implemented the advanced chemical plant, air filter, chemical plant, electric boiler, electrolyser, oil & gas separator, and the steam cracker from Angel's Petrochemical Processing; note, Artisanal Reskins: Compatibility must be version 1.1.2 or higher if present
     - Implemented the algae farm from Angel's Bioprocessing
   Changes:

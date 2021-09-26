@@ -18,6 +18,13 @@ if reskins.lib.migration.is_version_or_older("0.6.16", mods["angelssmelting"]) t
 end
 
 ----------------------------------------------------------------------------------------------------
+-- RECIPE ADJUSTMENTS
+----------------------------------------------------------------------------------------------------
+-- Recipe adjustments
+require("prototypes.recipe-adjustments.refining.clarifier")
+require("prototypes.recipe-adjustments.refining.ore-flotation-cell")
+
+----------------------------------------------------------------------------------------------------
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------
 -- require("prototypes.technology.smelting-final-fixes")
@@ -25,6 +32,3 @@ end
 
 -- Assign deferred icons
 reskins.lib.assign_deferred_icons("angels", "data-final-fixes")
-
--- Adjust recipes, tints for use with re-rendered clarifier
-require("prototypes.functions.clarifier-recipe-adjustments")
