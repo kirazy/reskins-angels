@@ -273,7 +273,14 @@ for name, map in pairs(tier_map) do
             east_animation = return_pipe_overlay(1),
             south_animation = return_pipe_overlay(0),
             west_animation = return_pipe_overlay(1),
-        }
+        },
+
+        -- Vertical Pipe Shadow Patch
+        {
+            always_draw = true,
+            north_animation = reskins.lib.vertical_pipe_shadow({0, -2}),
+            south_animation = reskins.lib.vertical_pipe_shadow({0, -2}),
+        },
     }
 
     -- Clear out pipe_pictures
