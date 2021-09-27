@@ -122,12 +122,11 @@ for name, map in pairs(tier_map) do
     }
 
     entity.working_visualisations = {
-        -- Animation
+        -- Idle animation
         {
             always_draw = true,
-            -- constant_speed = true,
             animation = {
-                filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-animation-base.png",
+                filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-animation-idle.png",
                 priority = "extra-high",
                 width = 82,
                 height = 58,
@@ -135,11 +134,35 @@ for name, map in pairs(tier_map) do
                 line_length = 8,
                 shift = util.by_pixel(31, 3),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-animation-base.png",
+                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-animation-idle.png",
                     priority = "extra-high",
                     width = 166,
                     height = 117,
                     frame_count = 32,
+                    line_length = 8,
+                    shift = util.by_pixel_hr(62, 5),
+                    scale = 0.5,
+                }
+            },
+        },
+
+        -- Animation
+        {
+            fadeout = true,
+            animation = {
+                filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-animation-base.png",
+                priority = "extra-high",
+                width = 82,
+                height = 58,
+                frame_count = 64,
+                line_length = 8,
+                shift = util.by_pixel(31, 3),
+                hr_version = {
+                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-animation-base.png",
+                    priority = "extra-high",
+                    width = 166,
+                    height = 117,
+                    frame_count = 64,
                     line_length = 8,
                     shift = util.by_pixel_hr(62, 5),
                     scale = 0.5,
@@ -149,15 +172,14 @@ for name, map in pairs(tier_map) do
 
         -- Water recipe mask
         {
-            always_draw = true,
+            fadeout = true,
             apply_recipe_tint = "primary",
-            -- constant_speed = true,
             animation = {
                 filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-animation-water-tintable.png",
                 priority = "extra-high",
                 width = 82,
                 height = 58,
-                frame_count = 32,
+                frame_count = 64,
                 line_length = 8,
                 shift = util.by_pixel(31, 3),
                 hr_version = {
@@ -165,7 +187,7 @@ for name, map in pairs(tier_map) do
                     priority = "extra-high",
                     width = 166,
                     height = 117,
-                    frame_count = 32,
+                    frame_count = 64,
                     line_length = 8,
                     shift = util.by_pixel_hr(62, 5),
                     scale = 0.5,
@@ -173,19 +195,16 @@ for name, map in pairs(tier_map) do
             },
         },
 
-
-
         -- Froth recipe mask
         {
-            always_draw = true,
+            fadeout = true,
             apply_recipe_tint = "secondary",
-            -- constant_speed = true,
             animation = {
                 filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-animation-froth-tintable.png",
                 priority = "extra-high",
                 width = 82,
                 height = 58,
-                frame_count = 32,
+                frame_count = 64,
                 line_length = 8,
                 shift = util.by_pixel(31, 3),
                 hr_version = {
@@ -193,7 +212,7 @@ for name, map in pairs(tier_map) do
                     priority = "extra-high",
                     width = 166,
                     height = 117,
-                    frame_count = 32,
+                    frame_count = 64,
                     line_length = 8,
                     shift = util.by_pixel_hr(62, 5),
                     scale = 0.5,
@@ -260,6 +279,9 @@ for name, map in pairs(tier_map) do
     -- Clear out pipe_pictures
     entity.fluid_boxes[1].pipe_picture = nil
     entity.fluid_boxes[2].pipe_picture = nil
+
+    -- Maybe fix animation speed shenanigans?
+    entity.match_animation_speed_to_activity = false
 
     -- Label to skip to next iteration
     ::continue::
