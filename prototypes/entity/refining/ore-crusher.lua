@@ -18,7 +18,7 @@ local inputs = {
 }
 
 local tier_map = {
-    ["burner-ore-crusher"] = {tier = 0, tint = util.color("262626")},
+    ["burner-ore-crusher"] = {tier = 0, tint = util.color("262626"), is_burner = true},
     ["ore-crusher"] = {tier = 1},
     ["ore-crusher-2"] = {tier = 2},
     ["ore-crusher-3"] = {tier = 3},
@@ -140,6 +140,11 @@ for name, map in pairs(tier_map) do
             },
         }
     }
+
+    -- Adjust smoke location
+    if map.is_burner then
+        entity.energy_source.smoke[1].position = util.by_pixel_hr(48, -108)
+    end
 
     -- Label to skip to next iteration
     ::continue::
