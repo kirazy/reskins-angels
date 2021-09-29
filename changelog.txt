@@ -1,5 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
+Date: 2021-09-29
   Features:
     - Updated crystallizer, ore crusher, ore flotation cell, ore sorting facility, ore refinery, hydro plant, salination plant, and clarifier with high resolution sprites
   Locale:
