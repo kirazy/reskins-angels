@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: ????
-  Changes:
+  Bugfixes:
+    - Fixed that several ore refining icons were improperly reskinned when materials added by Bob's Metal's, Chemicals and Intermediates or alternatively Angel's Industries were not present
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2021-09-29
