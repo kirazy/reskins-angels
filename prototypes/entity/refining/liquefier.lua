@@ -9,7 +9,7 @@ if not (reskins.angels and reskins.angels.triggers.refining.entities) then retur
 -- Set input parameters
 local inputs = {
     type = "assembling-machine",
-    icon_name = "liquifier",
+    icon_name = "liquefier",
     base_entity = "assembling-machine-1",
     mod = "angels",
     particles = {["big"] = 1, ["medium"] = 2},
@@ -52,13 +52,14 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 160,
                 height = 160,
-                repeat_count = 30,
+                frame_count = 30,
+                line_length = 10,
                 shift = {0, 0},
                 animation_speed = 0.5,
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/liquifier/liquifier-mask.png",
+                filename = reskins.angels.directory.."/graphics/entity/refining/liquefier/liquefier-mask.png",
                 priority = "extra-high",
                 width = 160,
                 height = 160,
@@ -69,7 +70,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/liquifier/liquifier-highlights.png",
+                filename = reskins.angels.directory.."/graphics/entity/refining/liquefier/liquefier-highlights.png",
                 priority = "extra-high",
                 width = 160,
                 height = 160,

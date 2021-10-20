@@ -10,7 +10,7 @@
 require("prototypes.entity.smelting.pipe")
 
 -- Angel's Refining
-require("prototypes.entity.refining.liquifier")
+require("prototypes.entity.refining.liquefier")
 
 ----------------------------------------------------------------------------------------------------
 -- ITEMS
