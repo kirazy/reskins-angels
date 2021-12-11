@@ -4,6 +4,7 @@ Date: ????
   Bugfixes:
     - Fixed that several ore refining icons were improperly reskinned when materials added by Bob's Metal's, Chemicals and Intermediates or alternatively Angel's Industries were not present
     - Fixed that the liquefier animation was not playing
+    - Fixed startup error when playing with Omni Compression related to the ore flotation cell recipes
   Locale:
     - Corrected all references to improper spelling "liquifier", relating to the liquefier
 ---------------------------------------------------------------------------------------------------
