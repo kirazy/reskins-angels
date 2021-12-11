@@ -35,7 +35,22 @@ local composite_recipes = {
     ["washing-3"] = {["water-light-mud"] = {type = "fluid"}, ["numeral"] = {icons = reskins.angels.num_tier(3, "refining")}},
     ["washing-4"] = {["water-thin-mud"] = {type = "fluid"}, ["numeral"] = {icons = reskins.angels.num_tier(4, "refining")}},
     ["washing-5"] = {["water-saline"] = {type = "fluid"}, ["numeral"] = {icons = reskins.angels.num_tier(5, "refining")}},
+
+    -- Lead plates
+    ["angelsore5-crushed-smelting"] = {["lead-plate"] = {}, ["angels-ore5-crushed"] = {scale = scale, shift = shift}}, -- Crushed rubyte
+
+    -- Tin plates
+    ["angelsore6-crushed-smelting"] = {["tin-plate"] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}}, -- Crushed bobmonium
 }
+
+-- Handle the Pure Angels case
+if not mods["bobplates"] then
+    -- Lead plates
+    composite_recipes["angelsore5-crushed-smelting"] = {["angels-plate-lead"] = {}, ["angels-ore5-crushed"] = {scale = scale, shift = shift}} -- Crushed rubyte
+
+    -- Tin plates
+    composite_recipes["angelsore6-crushed-smelting"] = {["angels-plate-tin"] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}} -- Crushed bobmonium
+end
 
 for name, sources in pairs(composite_recipes) do
     reskins.lib.composite_existing_icons(name, "recipe", sources)
