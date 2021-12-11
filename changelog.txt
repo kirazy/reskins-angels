@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: ????
+  Changes:
+    - Unified filtering furnaces to use the same set of sprites, and updated settings referring to metal mixing furnances to refer to filtering furnaces
   Bugfixes:
     - Fixed that several ore refining icons were improperly reskinned when materials added by Bob's Metal's, Chemicals and Intermediates or alternatively Angel's Industries were not present
     - Fixed that the liquefier animation was not playing
