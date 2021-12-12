@@ -544,7 +544,6 @@ local composite_recipes = {
     ["angels-roll-iron-converting"] = {["iron-plate"] = {}, ["angels-roll-iron"] = {scale = scale, shift = shift}}, -- Iron sheet coil
 
     -- Lead
-    ["angelsore5-crushed-smelting"] = {["lead-plate"] = {}, ["angels-ore5-crushed"] = {scale = scale, shift = shift}}, -- Crushed rubyte
     ["lead-plate"] = {["lead-plate"] = {}, ["lead-ore"] = {scale = scale, shift = shift}}, -- Lead ore
     ["angels-plate-lead"] = {["lead-plate"] = {}, ["liquid-molten-lead"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten lead
     ["angels-roll-lead-converting"] = {["lead-plate"] = {}, ["angels-roll-lead"] = {scale = scale, shift = shift}}, -- Lead sheet coil
@@ -577,7 +576,6 @@ local composite_recipes = {
     ["angels-roll-steel-converting"] = {["steel-plate"] = {}, ["angels-roll-steel"] = {scale = scale, shift = shift}}, -- Steel sheet coil
 
     -- Tin
-    ["angelsore6-crushed-smelting"] = {["tin-plate"] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}}, -- Crushed bobmonium
     ["tin-plate"] = {["tin-plate"] = {}, ["tin-ore"] = {scale = scale, shift = shift}}, -- Tin ore
     ["angels-plate-tin"] = {["tin-plate"] = {}, ["liquid-molten-tin"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten tin
     ["angels-roll-tin-converting"] = {["tin-plate"] = {}, ["angels-roll-tin"] = {scale = scale, shift = shift}}, -- Tin sheet coil
@@ -636,7 +634,6 @@ if not mods["bobplates"] then
     composite_recipes["angels-roll-cobalt-converting"] = {["angels-plate-cobalt"] = {}, ["angels-roll-cobalt"] = {scale = scale, shift = shift}} -- Cobalt sheet coil
 
     -- Lead
-    composite_recipes["angelsore5-crushed-smelting"] = {["angels-plate-lead"] = {}, ["angels-ore5-crushed"] = {scale = scale, shift = shift}} -- Crushed rubyte
     composite_recipes["angels-plate-lead"] = {["angels-plate-lead"] = {}, ["liquid-molten-lead"] = {type = "fluid", scale = scale, shift = shift}} -- Molten lead
     composite_recipes["angels-roll-lead-converting"] = {["angels-plate-lead"] = {}, ["angels-roll-lead"] = {scale = scale, shift = shift}} -- Lead sheet coil
 
@@ -656,7 +653,6 @@ if not mods["bobplates"] then
     composite_recipes["basic-silvered-copper-wire"] = {["angels-wire-silver"] = {}, ["angels-plate-silver"] = {scale = scale, shift = shift}} -- Silver plate
 
     -- Tin
-    composite_recipes["angelsore6-crushed-smelting"] = {["angels-plate-tin"] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}} -- Crushed bobmonium
     composite_recipes["angels-plate-tin"] = {["angels-plate-tin"] = {}, ["liquid-molten-tin"] = {type = "fluid", scale = scale, shift = shift}} -- Molten tin
     composite_recipes["angels-roll-tin-converting"] = {["angels-plate-tin"] = {}, ["angels-roll-tin"] = {scale = scale, shift = shift}} -- Tin sheet coil
     composite_recipes["basic-tinned-copper-wire"] = {["angels-wire-tin"] = {}, ["angels-plate-tin"] = {scale = scale, shift = shift}} -- Tin plate

@@ -2,6 +2,14 @@
 Version: 2.0.3
 Date: ????
   Changes:
+    - Unified filtering furnaces to use the same set of sprites, and updated settings referring to metal mixing furnances to refer to filtering furnaces
+  Bugfixes:
+    - Fixed that several ore refining icons were improperly reskinned when materials added by Bob's Metal's, Chemicals and Intermediates or alternatively Angel's Industries were not present
+    - Fixed that the liquefier animation was not playing
+    - Fixed startup error when playing with Omni Compression related to the ore flotation cell recipes
+    - Fixed that lead and tin plate recipe icons for direct smelting were not reskinned when Angel's Smelting was not enabled
+  Locale:
+    - Corrected all references to improper spelling "liquifier", relating to the liquefier
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2021-09-29
@@ -58,7 +66,7 @@ Version: 1.1.5
 Date: 2021-03-22
   Features:
     - The following entity implementations are preliminary fast-passes that will be gradually be replaced in the future with upgraded models re-rendered in high resolution, and are intended merely to complete the color tiering
-    - Implemented the crystallizer, electrowinning cell, filtration unit, hydro plant, liquifier, ore crusher, ore flotation cell, ore leaching plant, ore powderizer, ore refinery, ore sorting facility, salination plant and the washing plant from Angel's Refining
+    - Implemented the crystallizer, electrowinning cell, filtration unit, hydro plant, liquefier, ore crusher, ore flotation cell, ore leaching plant, ore powderizer, ore refinery, ore sorting facility, salination plant and the washing plant from Angel's Refining
     - Implemented the advanced chemical plant, air filter, chemical plant, electric boiler, electrolyser, oil & gas separator, and the steam cracker from Angel's Petrochemical Processing; note, Artisanal Reskins: Compatibility must be version 1.1.2 or higher if present
     - Implemented the algae farm from Angel's Bioprocessing
   Changes:
