@@ -243,7 +243,7 @@ local intermediates = {
     ["processed-zinc"] = {subgroup = "processed-ores"},
 
     -- Rods
-    -- ["angels-rod-iron"]
+    -- ["iron-stick"]
     -- ["angels-rod-steel"]
 
     ----------------------------------------------------------------------------------------------------
@@ -617,8 +617,8 @@ local composite_recipes = {
     ["angels-roll-solder-converting"] = {["solder"] = {}, ["angels-roll-solder"] = {scale = scale, shift = shift}},
 
     -- Rods
-    ["angels-rod-iron-plate"] = {["angels-rod-iron"] = {}, ["iron-plate"] = {scale = scale, shift = shift}},
-    -- ["angels-rod-stack-iron-converting"] = {["angels-rod-iron"] = {}, ["angels-rod-stack-iron"] = {scale = scale, shift = shift}},
+    ["angels-rod-iron-plate"] = {["iron-stick"] = {}, ["iron-plate"] = {scale = scale, shift = shift}},
+    -- ["angels-rod-stack-iron-converting"] = {["iron-stick"] = {}, ["angels-rod-stack-iron"] = {scale = scale, shift = shift}},
     ["angels-rod-steel-plate"] = {["angels-rod-steel"] = {}, ["steel-plate"] = {scale = scale, shift = shift}},
     -- ["angels-rod-stack-steel-converting"] = {["angels-rod-steel"] = {}, ["angels-rod-stack-steel"] = {scale = scale, shift = shift}},
 }
