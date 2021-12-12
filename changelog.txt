@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
-Date: ????
+Date: 2021-12-12
   Changes:
     - Unified filtering furnaces to use the same set of sprites, and updated settings referring to metal mixing furnances to refer to filtering furnaces
   Bugfixes:
