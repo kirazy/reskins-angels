@@ -50,7 +50,7 @@ require("prototypes.entity.petrochem.electrolyser")
 -- require("prototypes.entity.petrochem.fluid-splitter")
 require("prototypes.entity.petrochem.gas-refinery")
 -- require("prototypes.entity.petrochem.petrochem-gas-tank") -- fully implemented in Angel's Petrochem
-require("prototypes.entity.petrochem.petrochem-inline-tank")
+-- require("prototypes.entity.petrochem.petrochem-inline-tank") -- fully implemented in Angel's Petrochem
 -- require("prototypes.entity.petrochem.petrochem-oil-tank") -- fully implemented in Angel's Petrochem
 -- require("prototypes.entity.petrochem.polymerization-chamber")
 require("prototypes.entity.petrochem.separator")
