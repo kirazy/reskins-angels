@@ -51,7 +51,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/ore-sorting-facility/ore-sorting-facility-base.png",
+                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
                 priority = "extra-high",
                 width = 224,
                 height = 230,
@@ -60,7 +60,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(0, -2),
                 animation_speed = 0.5,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-sorting-facility/hr-ore-sorting-facility-base.png",
+                    filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
                     priority = "extra-high",
                     width = 449,
                     height = 458,
@@ -121,7 +121,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/ore-sorting-facility/ore-sorting-facility-shadow.png",
+                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
                 priority = "extra-high",
                 width = 265,
                 height = 179,
@@ -130,7 +130,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 draw_as_shadow = true,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
+                    filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
                     priority = "extra-high",
                     width = 528,
                     height = 356,
