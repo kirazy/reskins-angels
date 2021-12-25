@@ -2,6 +2,8 @@
 Version: 2.0.4
 Date: ????
   Changes:
+    - Changed to refer to Angel's Refining graphics where possible to reduce mod size; now dependent on Angel's Refining version 0.12.1+
+    - Changed to refer to Angel's Petrochem graphics where possible to reduce mod size; now dependent on Angel's Petrochem version 0.9.21+
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2021-12-12
