@@ -52,7 +52,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/ore-crusher-base.png",
+                filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-base.png",
                 priority = "extra-high",
                 width = 94,
                 height = 108,
@@ -61,7 +61,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(0, -5),
                 animation_speed = 0.5,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/hr-ore-crusher-base.png",
+                    filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-base.png",
                     priority = "extra-high",
                     width = 189,
                     height = 214,
@@ -118,7 +118,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/ore-crusher-shadow.png",
+                filename = "__angelsrefining__/graphics/entity/ore-crusher/ore-crusher-shadow.png",
                 priority = "extra-high",
                 width = 141,
                 height = 72,
@@ -127,7 +127,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 animation_speed = 0.5,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/hr-ore-crusher-shadow.png",
+                    filename = "__angelsrefining__/graphics/entity/ore-crusher/hr-ore-crusher-shadow.png",
                     priority = "extra-high",
                     width = 282,
                     height = 140,
@@ -140,11 +140,6 @@ for name, map in pairs(tier_map) do
             },
         }
     }
-
-    -- Adjust smoke location
-    if map.is_burner then
-        entity.energy_source.smoke[1].position = util.by_pixel_hr(48, -108)
-    end
 
     -- Label to skip to next iteration
     ::continue::
