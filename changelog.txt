@@ -2,6 +2,7 @@
 Version: 2.0.4
 Date: ????
   Changes:
+    - Reskinning of the standard Factorio pipe has been moved into Artisanal Reskins: Library to support adjustments to pipe sprites and shadows in the entire suite
   Bugfixes:
     - Fixed that the iron plate to iron rod recipe referred to a deprecated `angels-rod-iron` icon instead of the current `iron-stick` icon
 ---------------------------------------------------------------------------------------------------
