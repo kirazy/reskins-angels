@@ -196,4 +196,11 @@ if reskins.lib.migration.is_newer_version(mods["angelssmelting"], "0.6.14") then
     technologies["angels-titanium-casting-3"] = {subgroup = "casting", flat_icon = true, technology_icon_mipmaps = 4, image = "casting-titanium-technology-icon"}
 end
 
+-- Check if we're using Angel's material colors
+if reskins.lib.setting("reskins-angels-use-angels-material-colors") then
+    technologies["bob-armor-making-4"] = {subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4}
+    technologies["bob-power-armor-4"] = {subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4}
+    technologies["bob-power-armor-5"] = {subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4}
+end
+
 reskins.lib.create_icons_from_list(technologies, inputs)

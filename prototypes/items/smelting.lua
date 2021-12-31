@@ -500,6 +500,11 @@ if reskins.lib.setting("reskins-angels-use-angels-material-colors") then
     intermediates["cobalt-steel-bearing"] = {subgroup = "bearings"}
     intermediates["nitinol-bearing"] = {subgroup = "bearings"}
     intermediates["titanium-bearing"] = {subgroup = "bearings"}
+
+    -- Bob Warefare Armor
+    intermediates["heavy-armor-3"] = {type = "armor", subgroup = "armor"}
+    intermediates["bob-power-armor-mk4"] = {type = "armor", subgroup = "armor"}
+    intermediates["bob-power-armor-mk5"] = {type = "armor", subgroup = "armor"}
 end
 
 reskins.lib.create_icons_from_list(intermediates, inputs)

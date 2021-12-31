@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: ????
+  Features:
+    - Setting "Use Angel's material colors for intermediates" now includes support for player armor
   Changes:
     - Reskinning of the standard Factorio pipe has been moved into Artisanal Reskins: Library to support adjustments to pipe sprites and shadows in the entire suite
   Bugfixes:

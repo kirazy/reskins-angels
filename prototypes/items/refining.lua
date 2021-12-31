@@ -26,6 +26,11 @@ local intermediates = {
     ["slag"] = {subgroup = "intermediates"},
 }
 
+-- Check if we're using Angel's material colors
+if (mods["bobwarfare"] and mods["bobplates"] and reskins.lib.setting("reskins-angels-use-angels-material-colors")) then
+    intermediates["heavy-armor-2"] = {type = "armor", group = "smelting", subgroup = "armor"}
+end
+
 reskins.lib.create_icons_from_list(intermediates, inputs)
 
 local composite_recipes = {

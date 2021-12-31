@@ -43,4 +43,9 @@ local technologies = {
     ["clowns-ore-floatation"] = {tier = 0, icon_name = "ore-flotation", technology_icon_layers = 1},
 }
 
+-- Check if we're using Angel's material colors
+if mods["bobwarfare"] and mods["bobplates"] and reskins.lib.setting("reskins-angels-use-angels-material-colors") then
+    technologies["bob-armor-making-3"] = {group = "smelting", subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4}
+end
+
 reskins.lib.create_icons_from_list(technologies, inputs)
