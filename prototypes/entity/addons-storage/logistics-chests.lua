@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -38,7 +38,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
         -- Setup icon details
         inputs.icon_name = "warehouse"
         inputs.icon_base = "logistic-warehouse-"..chest
-        inputs.base_entity = "oil-refinery"
+        inputs.base_entity_name = "oil-refinery"
         inputs.particles = {["big-tint"] = 5, ["medium"] = 2}
 
         reskins.lib.setup_standard_entity(name, 0, inputs)
@@ -205,7 +205,7 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
         -- Setup icon details
         inputs.icon_name = "big-chest"
         inputs.icon_base = "logistic-big-chest-"..chest
-        inputs.base_entity = "storage-tank"
+        inputs.base_entity_name = "storage-tank"
         inputs.particles = {["big"] = 1}
 
         reskins.lib.setup_standard_entity(name, 0, inputs)

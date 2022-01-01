@@ -1,10 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.4
+Version: 2.1.0
 Date: ????
   Features:
     - Setting "Use Angel's material colors for intermediates" now includes support for player armor
+    - Added setting "Use Vanilla-style chemical plants", (default off) to use vanilla chemical plant sprites and animations when Angel's setting "Disable Bob's chemical plants" is enabled
+    - Additions of EmmyLua-style documentation is ongoing
   Changes:
     - Reskinning of the standard Factorio pipe has been moved into Artisanal Reskins: Library to support adjustments to pipe sprites and shadows in the entire suite
+    - Internal restructuring to make entity reskinning through functions globally available under `reskins.lib.apply_skin` is ongoing
   Bugfixes:
     - Fixed that the iron plate to iron rod recipe referred to a deprecated `angels-rod-iron` icon instead of the current `iron-stick` icon
 ---------------------------------------------------------------------------------------------------

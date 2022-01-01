@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -10,7 +10,7 @@ if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then retu
 local inputs = {
     type = "storage-tank",
     icon_name = "petrochem-gas-tank",
-    base_entity = "oil-refinery",
+    base_entity_name = "oil-refinery",
     mod = "angels",
     group = "petrochem",
     icon_layers = 1,
