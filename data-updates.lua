@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -6,6 +6,8 @@
 ----------------------------------------------------------------------------------------------------
 -- ENTITIES
 ----------------------------------------------------------------------------------------------------
+require("prototypes.entity.petrochem-updates")
+
 -- Angel's Smelting
 require("prototypes.entity.smelting.pipe")
 

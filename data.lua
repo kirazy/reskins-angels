@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -9,6 +9,8 @@ require("prototypes.functions.functions")
 ----------------------------------------------------------------------------------------------------
 -- ENTITIES
 ----------------------------------------------------------------------------------------------------
+require("prototypes.entity.petrochem")
+
 -- Angel's Bio-Processing
 require("prototypes.entity.bioprocessing.algae-farm")
 -- require("prototypes.entity.bioprocessing.butchery")
@@ -43,7 +45,7 @@ require("prototypes.entity.bioprocessing.algae-farm")
 require("prototypes.entity.petrochem.advanced-chemical-plant")
 require("prototypes.entity.petrochem.advanced-gas-refinery")
 require("prototypes.entity.petrochem.air-filter")
-require("prototypes.entity.petrochem.chemical-plant")
+-- require("prototypes.entity.petrochem.chemical-plant")
 require("prototypes.entity.petrochem.electric-boiler")
 require("prototypes.entity.petrochem.electrolyser")
 require("prototypes.entity.petrochem.flare-stack")
