@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
-Date: ????
+Date: 2022-01-03
   Bugfixes:
     - Fixed that the effect of the setting "Use Vanilla-style chemical plants" was inverted
     - Fixed that the function `angels_chemical_plant` was not actually available to be called when "Use Vanilla-style chemical plants" was enabled (and thus inverted)
