@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: ????
-  Changes:
+  Bugfixes:
+    - Fixed that the effect of the setting "Use Vanilla-style chemical plants" was inverted
+    - Fixed that the function `angels_chemical_plant` was not actually available to be called when "Use Vanilla-style chemical plants" was enabled (and thus inverted)
+    - Fixed that tints were not applied to angel-style chemical plants, and tier labels couldn't be adjusted
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 2022-01-03

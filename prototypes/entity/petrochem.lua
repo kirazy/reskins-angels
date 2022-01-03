@@ -32,8 +32,8 @@ end
 
 for name, map in pairs(chemical_plants) do
     if (reskins.lib.setting("reskins-angels-use-vanilla-chemical-plant-sprites") and reskins.lib.setting("angels-disable-vanilla-chemical-plants")) then
-        reskins.lib.apply_skin.angels_chemical_plant(name, (reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map") and map.prog_tier or map.tier)
-    else
         reskins.lib.apply_skin.chemical_plant(name, (reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map") and map.prog_tier or map.tier)
+    else
+        reskins.lib.apply_skin.angels_chemical_plant(name, (reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map") and map.prog_tier or map.tier)
     end
 end

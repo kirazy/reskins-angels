@@ -1,4 +1,7 @@
-
+-- Copyright (c) 2022 Kirazy
+-- Part of Artisanal Reskins: Angel's Mods
+--
+-- See LICENSE.md in the project directory for license information.
 
 ---Provides angel-style sprite definition for chemical plant `animation` field. See [Prototype/AssemblingMachine](https://wiki.factorio.com/Prototype/AssemblingMachine).
 ---@param tint table # [Types/Color](https://wiki.factorio.com/Types/Color)
@@ -40,15 +43,19 @@ end
 ---Reskins the named assembling machine with angel-style chemical plant sprites and color masking, and sets up appropriate corpse, explosion, and particle prototypes
 ---@param name string # [Prototype name](https://wiki.factorio.com/PrototypeBase#name)
 ---@param tier integer # 1-6 are supported, 0 to disable
-function reskins.lib.apply_skin.angels_chemical_plant(name, tier)
+---@param tint? table # [Types/Color](https://wiki.factorio.com/Types/Color)
+---@param make_tier_labels? boolean
+function reskins.lib.apply_skin.angels_chemical_plant(name, tier, tint, make_tier_labels)
     ---@type inputs.setup_standard_entity
     local inputs = {
         type = "assembling-machine",
         icon_name = "chemical-plant",
         base_entity_name = "assembling-machine-1",
         mod = "angels",
-        particles = {["big"] = 1, ["medium"] = 2},
         group = "petrochem",
+        particles = {["big"] = 1, ["medium"] = 2},
+        tier_labels = make_tier_labels,
+        tint = tint and tint or reskins.lib.tint_index[tier],
         make_remnants = false,
     }
 

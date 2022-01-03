@@ -5,6 +5,7 @@
 
 -- Core functions
 require("prototypes.functions.functions")
+require("prototypes.functions.entity-functions")
 
 ----------------------------------------------------------------------------------------------------
 -- ENTITIES
