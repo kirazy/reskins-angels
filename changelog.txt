@@ -16,6 +16,8 @@ Date: ????
     - Fixed that the iron rod was not properly reverted to the base Factorio sprite
     - Fixed that when playing Angel's Special Vanilla mode, technology icons for powder metallurgy would be inconsistent with base Angel's
     - Fixed that several calls to the `angelsmods` global function were not properly validated
+  Locale:
+    - Updated German, Russian localizations
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2021-12-12
