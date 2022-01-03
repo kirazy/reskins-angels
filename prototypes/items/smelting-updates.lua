@@ -17,15 +17,19 @@ local inputs = {
 local shift = reskins.angels.constants.recipe_corner_shift
 local scale = reskins.angels.constants.recipe_corner_scale
 
+local function check_for_preferred_item(primary, secondary)
+    if data.raw.item[primary] then return primary else return secondary end
+end
+
 -- Check to see if reskinning needs to be done.
 if not mods["angelssmelting"] then
     -- Handle the few composite recipes that fall through the cracks
     local composite_recipes = {
-        -- Lead
-        ["angelsore5-crushed-smelting"] = {["lead-plate"] = {}, ["angels-ore5-crushed"] = {scale = scale, shift = shift}}, -- Crushed rubyte
+        -- Lead plates
+        ["angelsore5-crushed-smelting"] = {[check_for_preferred_item("lead-plate", "angels-plate-lead")] = {}, ["angels-ore5-crushed"] = {scale = scale, shift = shift}}, -- Crushed rubyte
 
-        -- Tin
-        ["angelsore6-crushed-smelting"] = {["tin-plate"] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}}, -- Crushed bobmonium
+        -- Tin plates
+        ["angelsore6-crushed-smelting"] = {[check_for_preferred_item("tin-plate", "angels-plate-tim")] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}}, -- Crushed bobmonium
     }
 
     for name, sources in pairs(composite_recipes) do
@@ -514,53 +518,57 @@ local composite_recipes = {
     -- PLATES
     ----------------------------------------------------------------------------------------------------
     -- Aluminium
-    ["angels-plate-aluminium"] = {["aluminium-plate"] = {}, ["liquid-molten-aluminium"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten aluminium
-    ["angels-roll-aluminium-converting"] = {["aluminium-plate"] = {}, ["angels-roll-aluminium"] = {scale = scale, shift = shift}}, -- Aluminium sheet coil
+    ["angels-plate-aluminium"] = {[check_for_preferred_item("aluminium-plate", "angels-plate-aluminium")] = {}, ["liquid-molten-aluminium"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten aluminium
+    ["angels-roll-aluminium-converting"] = {[check_for_preferred_item("aluminium-plate", "angels-plate-aluminium")] = {}, ["angels-roll-aluminium"] = {scale = scale, shift = shift}}, -- Aluminium sheet coil
 
     -- Chrome
     ["angels-plate-chrome"] = {["angels-plate-chrome"] = {}, ["liquid-molten-chrome"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten chrome
     ["angels-roll-chrome-converting"] = {["angels-plate-chrome"] = {}, ["angels-roll-chrome"] = {scale = scale, shift = shift}}, -- Chrome sheet coil
 
     -- Cobalt
-    ["angels-plate-cobalt"] = {["cobalt-plate"] = {}, ["liquid-molten-cobalt"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten cobalt
-    ["angels-roll-cobalt-converting"] = {["cobalt-plate"] = {}, ["angels-roll-cobalt"] = {scale = scale, shift = shift}}, -- Cobalt sheet coil
+    ["angels-plate-cobalt"] = {[check_for_preferred_item("cobalt-plate", "angels-plate-cobalt")] = {}, ["liquid-molten-cobalt"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten cobalt
+    ["angels-roll-cobalt-converting"] = {[check_for_preferred_item("cobalt-plate", "angels-plate-cobalt")] = {}, ["angels-roll-cobalt"] = {scale = scale, shift = shift}}, -- Cobalt sheet coil
 
     -- Copper
     ["angelsore3-crushed-smelting"] = {["copper-plate"] = {}, ["angels-ore3-crushed"] = {scale = scale, shift = shift}}, -- Crushed stiratite
     ["copper-plate"] = {["copper-plate"] = {}, ["copper-ore"] = {scale = scale, shift = shift}}, -- Copper ore
     ["angels-plate-copper"] = {["copper-plate"] = {}, ["liquid-molten-copper"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten copper
     ["angels-roll-copper-converting"] = {["copper-plate"] = {}, ["angels-roll-copper"] = {scale = scale, shift = shift}}, -- Copper sheet coil
+    ["angels-copper-pebbles-smelting"] = {["copper-plate"] = {}, ["angels-copper-pebbles"] = {scale = scale, shift = shift}}, -- Copper pebbles
+    ["angels-copper-nugget-smelting"] = {["copper-plate"] = {}, ["angels-copper-nugget"] = {scale = scale, shift = shift}}, -- Copper nuggets
 
     -- Glass
     ["quartz-glass"] = {["glass"] = {}, ["quartz"] = {scale = scale, shift = shift}}, -- Silicon ore
 
     -- Gold
-    ["angels-plate-gold"] = {["gold-plate"] = {}, ["liquid-molten-gold"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten gold
-    ["angels-roll-gold-converting"] = {["gold-plate"] = {}, ["angels-roll-gold"] = {scale = scale, shift = shift}}, -- Gold sheet coil
+    ["angels-plate-gold"] = {[check_for_preferred_item("gold-plate", "angels-plate-gold")] = {}, ["liquid-molten-gold"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten gold
+    ["angels-roll-gold-converting"] = {[check_for_preferred_item("gold-plate", "angels-plate-gold")] = {}, ["angels-roll-gold"] = {scale = scale, shift = shift}}, -- Gold sheet coil
 
     -- Invar
     ["angels-plate-invar"] = {["invar-alloy"] = {}, ["liquid-molten-invar"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten invar
-    ["invar-alloy"] = {["invar-alloy"] = {}, ["nickel-plate"] = {scale = scale, shift = {-6, -10}}, ["iron-plate"] = {scale = scale, shift = shift}}, -- Nickel/Iron plates
+    ["invar-alloy"] = {["invar-alloy"] = {}, [check_for_preferred_item("nickel-plate", "angels-plate-nickel")] = {scale = scale, shift = {-6, -10}}, ["iron-plate"] = {scale = scale, shift = shift}}, -- Nickel/Iron plates
 
     -- Iron
     ["angelsore1-crushed-smelting"] = {["iron-plate"] = {}, ["angels-ore1-crushed"] = {scale = scale, shift = shift}}, -- Crushed saphirite
     ["iron-plate"] = {["iron-plate"] = {}, ["iron-ore"] = {scale = scale, shift = shift}}, -- Iron ore
     ["angels-plate-iron"] = {["iron-plate"] = {}, ["liquid-molten-iron"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten iron
     ["angels-roll-iron-converting"] = {["iron-plate"] = {}, ["angels-roll-iron"] = {scale = scale, shift = shift}}, -- Iron sheet coil
+    ["angels-iron-pebbles-smelting"] = {["iron-plate"] = {}, ["angels-iron-pebbles"] = {scale = scale, shift = shift}}, -- Iron pebbles
+    ["angels-iron-nugget-smelting"] = {["iron-plate"] = {}, ["angels-iron-nugget"] = {scale = scale, shift = shift}}, -- Iron nuggets
 
     -- Lead
-    ["lead-plate"] = {["lead-plate"] = {}, ["lead-ore"] = {scale = scale, shift = shift}}, -- Lead ore
-    ["angels-plate-lead"] = {["lead-plate"] = {}, ["liquid-molten-lead"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten lead
-    ["angels-roll-lead-converting"] = {["lead-plate"] = {}, ["angels-roll-lead"] = {scale = scale, shift = shift}}, -- Lead sheet coil
-    ["silver-from-lead"] = {["lead-plate"] = {}, ["silver-ore"] = {scale = scale, shift = shift}},
+    ["lead-plate"] = {[check_for_preferred_item("lead-plate", "angels-plate-lead")] = {}, ["lead-ore"] = {scale = scale, shift = shift}}, -- Lead ore
+    ["angels-plate-lead"] = {[check_for_preferred_item("lead-plate", "angels-plate-lead")] = {}, ["liquid-molten-lead"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten lead
+    ["angels-roll-lead-converting"] = {[check_for_preferred_item("lead-plate", "angels-plate-lead")] = {}, ["angels-roll-lead"] = {scale = scale, shift = shift}}, -- Lead sheet coil
+    ["silver-from-lead"] = {[check_for_preferred_item("lead-plate", "angels-plate-lead")] = {}, ["silver-ore"] = {scale = scale, shift = shift}},
 
     -- Manganese
     ["angels-plate-manganese"] = {["angels-plate-manganese"] = {}, ["liquid-molten-manganese"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten manganese
     ["angels-roll-manganese-converting"] = {["angels-plate-manganese"] = {}, ["angels-roll-manganese"] = {scale = scale, shift = shift}}, -- Manganese sheet coil
 
     -- Nickel
-    ["angels-plate-nickel"] = {["nickel-plate"] = {}, ["liquid-molten-nickel"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten nickel
-    ["angels-roll-nickel-converting"] = {["nickel-plate"] = {}, ["angels-roll-nickel"] = {scale = scale, shift = shift}}, -- Nickel sheet roll
+    ["angels-plate-nickel"] = {[check_for_preferred_item("nickel-plate", "angels-plate-nickel")] = {}, ["liquid-molten-nickel"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten nickel
+    ["angels-roll-nickel-converting"] = {[check_for_preferred_item("nickel-plate", "angels-plate-nickel")] = {}, ["angels-roll-nickel"] = {scale = scale, shift = shift}}, -- Nickel sheet roll
 
     -- Nitinol
     ["angels-plate-nitinol"] = {["nitinol-alloy"] = {}, ["liquid-molten-nitinol"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten nitinol
@@ -570,9 +578,9 @@ local composite_recipes = {
     ["angels-roll-platinum-converting"] = {["angels-plate-platinum"] = {}, ["angels-roll-platinum"] = {scale = scale, shift = shift}}, -- Platinum sheet coil
 
     -- Silver
-    ["silver-plate"] = {["silver-plate"] = {}, ["silver-ore"] = {scale = scale, shift = shift}}, -- Silver ore
-    ["angels-plate-silver"] = {["silver-plate"] = {}, ["liquid-molten-silver"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten silver
-    ["angels-roll-silver-converting"] = {["silver-plate"] = {}, ["angels-roll-silver"] = {scale = scale, shift = shift}}, -- Silver sheet coil
+    ["silver-plate"] = {[check_for_preferred_item("silver-plate", "angels-plate-silver")] = {}, ["silver-ore"] = {scale = scale, shift = shift}}, -- Silver ore
+    ["angels-plate-silver"] = {[check_for_preferred_item("silver-plate", "angels-plate-silver")] = {}, ["liquid-molten-silver"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten silver
+    ["angels-roll-silver-converting"] = {[check_for_preferred_item("silver-plate", "angels-plate-silver")] = {}, ["angels-roll-silver"] = {scale = scale, shift = shift}}, -- Silver sheet coil
 
     -- Steel plate
     ["steel-plate"] = {["angels-plate-hot-iron"] = {}, ["iron-plate"] = {scale = scale, shift = shift}}, -- Hot-Iron plate
@@ -581,17 +589,17 @@ local composite_recipes = {
     ["angels-roll-steel-converting"] = {["steel-plate"] = {}, ["angels-roll-steel"] = {scale = scale, shift = shift}}, -- Steel sheet coil
 
     -- Tin
-    ["tin-plate"] = {["tin-plate"] = {}, ["tin-ore"] = {scale = scale, shift = shift}}, -- Tin ore
-    ["angels-plate-tin"] = {["tin-plate"] = {}, ["liquid-molten-tin"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten tin
-    ["angels-roll-tin-converting"] = {["tin-plate"] = {}, ["angels-roll-tin"] = {scale = scale, shift = shift}}, -- Tin sheet coil
+    ["tin-plate"] = {[check_for_preferred_item("tin-plate", "angels-plate-tin")] = {}, ["tin-ore"] = {scale = scale, shift = shift}}, -- Tin ore
+    ["angels-plate-tin"] = {[check_for_preferred_item("tin-plate", "angels-plate-tin")] = {}, ["liquid-molten-tin"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten tin
+    ["angels-roll-tin-converting"] = {[check_for_preferred_item("tin-plate", "angels-plate-tin")] = {}, ["angels-roll-tin"] = {scale = scale, shift = shift}}, -- Tin sheet coil
 
     -- Titanium
-    ["angels-plate-titanium"] = {["titanium-plate"] = {}, ["liquid-molten-titanium"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten titanium
-    ["angels-roll-titanium-converting"] = {["titanium-plate"] = {}, ["angels-roll-titanium"] = {scale = scale, shift = shift}}, -- Titanium sheet coil
+    ["angels-plate-titanium"] = {[check_for_preferred_item("titanium-plate", "angels-plate-titanium")] = {}, ["liquid-molten-titanium"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten titanium
+    ["angels-roll-titanium-converting"] = {[check_for_preferred_item("titanium-plate", "angels-plate-titanium")] = {}, ["angels-roll-titanium"] = {scale = scale, shift = shift}}, -- Titanium sheet coil
 
     -- Zinc
-    ["angels-plate-zinc"] = {["zinc-plate"] = {}, ["liquid-molten-zinc"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten Zinc
-    ["angels-roll-zinc-converting"] = {["zinc-plate"] = {}, ["angels-roll-zinc"] = {scale = scale, shift = shift}}, -- Zinc sheet coil
+    ["angels-plate-zinc"] = {[check_for_preferred_item("zinc-plate", "angels-plate-zinc")] = {}, ["liquid-molten-zinc"] = {type = "fluid", scale = scale, shift = shift}}, -- Molten Zinc
+    ["angels-roll-zinc-converting"] = {[check_for_preferred_item("zinc-plate", "angels-plate-zinc")] = {}, ["angels-roll-zinc"] = {scale = scale, shift = shift}}, -- Zinc sheet coil
 
     ----------------------------------------------------------------------------------------------------
     -- Intermediates
@@ -601,11 +609,11 @@ local composite_recipes = {
     ["angels-wire-coil-copper-converting"] = {["copper-cable"] = {}, ["angels-wire-coil-copper"] = {scale = scale, shift = shift}}, -- Copper wire coil
 
     -- Gold cable
-    ["angels-wire-gold"] = {["gilded-copper-cable"] = {}, ["gold-plate"] = {scale = scale, shift = shift}}, -- Gold plate
-    ["angels-wire-coil-gold-converting"] = {["gilded-copper-cable"] = {}, ["angels-wire-coil-gold"] = {scale = scale, shift = shift}}, -- Gold wire coil
+    ["angels-wire-gold"] = {[check_for_preferred_item("gilded-copper-cable", "angels-wire-gold")] = {}, [check_for_preferred_item("gold-plate", "angels-plate-gold")] = {scale = scale, shift = shift}}, -- Gold plate
+    ["angels-wire-coil-gold-converting"] = {[check_for_preferred_item("gilded-copper-cable", "angels-wire-gold")] = {}, ["angels-wire-coil-gold"] = {scale = scale, shift = shift}}, -- Gold wire coil
 
     -- Silver cable
-    ["basic-silvered-copper-wire"] = {["angels-wire-silver"] = {}, ["silver-plate"] = {scale = scale, shift = shift}}, -- Silver plate
+    ["basic-silvered-copper-wire"] = {["angels-wire-silver"] = {}, [check_for_preferred_item("silver-plate", "angels-plate-silver")] = {scale = scale, shift = shift}}, -- Silver plate
     ["angels-wire-coil-silver-converting"] = {["angels-wire-silver"] = {}, ["angels-wire-coil-silver"] = {scale = scale, shift = shift}}, -- Silver wire coil
 
     -- Platinum cable
@@ -613,13 +621,13 @@ local composite_recipes = {
     ["angels-wire-coil-platinum-converting"] = {["angels-wire-platinum"] = {}, ["angels-wire-coil-platinum"] = {scale = scale, shift = shift}}, -- Platinum wire coil
 
     -- Tin cable
-    ["basic-tinned-copper-wire"] = {["tinned-copper-cable"] = {}, ["tin-plate"] = {scale = scale, shift = shift}}, -- Tin plate
-    ["angels-wire-coil-tin-converting"] = {["tinned-copper-cable"] = {}, ["angels-wire-coil-tin"] = {scale = scale, shift = shift}}, -- Tin wire coil
+    ["basic-tinned-copper-wire"] = {[check_for_preferred_item("tinned-copper-cable", "angels-wire-tin")] = {}, [check_for_preferred_item("tin-plate", "angels-plate-tin")] = {scale = scale, shift = shift}}, -- Tin plate
+    ["angels-wire-coil-tin-converting"] = {[check_for_preferred_item("tinned-copper-cable", "angels-wire-tin")] = {}, ["angels-wire-coil-tin"] = {scale = scale, shift = shift}}, -- Tin wire coil
 
     -- Solder
-    ["angels-solder-mixture-smelting"] = {["solder"] = {}, ["angels-solder-mixture"] = {scale = scale, shift = shift}},
-    ["angels-solder"] = {["solder"] = {}, ["liquid-molten-solder"] = {type = "fluid", scale = scale, shift = shift}},
-    ["angels-roll-solder-converting"] = {["solder"] = {}, ["angels-roll-solder"] = {scale = scale, shift = shift}},
+    ["angels-solder-mixture-smelting"] = {[check_for_preferred_item("solder", "angels-solder")] = {}, ["angels-solder-mixture"] = {scale = scale, shift = shift}},
+    ["angels-solder"] = {[check_for_preferred_item("solder", "angels-solder")] = {}, ["liquid-molten-solder"] = {type = "fluid", scale = scale, shift = shift}},
+    ["angels-roll-solder-converting"] = {[check_for_preferred_item("solder", "angels-solder")] = {}, ["angels-roll-solder"] = {scale = scale, shift = shift}},
 
     -- Rods
     ["angels-rod-iron-plate"] = {["iron-stick"] = {}, ["iron-plate"] = {scale = scale, shift = shift}},
@@ -627,57 +635,6 @@ local composite_recipes = {
     ["angels-rod-steel-plate"] = {["angels-rod-steel"] = {}, ["steel-plate"] = {scale = scale, shift = shift}},
     -- ["angels-rod-stack-steel-converting"] = {["angels-rod-steel"] = {}, ["angels-rod-stack-steel"] = {scale = scale, shift = shift}},
 }
-
--- Handle the Pure Angels case
-if reskins.angels.triggers.use_angels_components then
-    -- Aluminum
-    composite_recipes["angels-plate-aluminium"] = {["angels-plate-aluminium"] = {}, ["liquid-molten-aluminium"] = {type = "fluid", scale = scale, shift = shift}} -- Molten aluminium
-    composite_recipes["angels-roll-aluminium-converting"] = {["angels-plate-aluminium"] = {}, ["angels-roll-aluminium"] = {scale = scale, shift = shift}} -- Aluminium sheet coil
-
-    -- Cobalt
-    composite_recipes["angels-plate-cobalt"] = {["angels-plate-cobalt"] = {}, ["liquid-molten-cobalt"] = {type = "fluid", scale = scale, shift = shift}} -- Molten cobalt
-    composite_recipes["angels-roll-cobalt-converting"] = {["angels-plate-cobalt"] = {}, ["angels-roll-cobalt"] = {scale = scale, shift = shift}} -- Cobalt sheet coil
-
-    -- Lead
-    composite_recipes["angels-plate-lead"] = {["angels-plate-lead"] = {}, ["liquid-molten-lead"] = {type = "fluid", scale = scale, shift = shift}} -- Molten lead
-    composite_recipes["angels-roll-lead-converting"] = {["angels-plate-lead"] = {}, ["angels-roll-lead"] = {scale = scale, shift = shift}} -- Lead sheet coil
-
-    -- Gold
-    composite_recipes["angels-plate-gold"] = {["angels-plate-gold"] = {}, ["liquid-molten-gold"] = {type = "fluid", scale = scale, shift = shift}} -- Molten gold
-    composite_recipes["angels-roll-gold-converting"] = {["angels-plate-gold"] = {}, ["angels-roll-gold"] = {scale = scale, shift = shift}} -- Gold sheet coil
-    composite_recipes["angels-wire-coil-gold-converting"] = {["angels-wire-gold"] = {}, ["angels-wire-coil-gold"] = {scale = scale, shift = shift}} -- Gold wire coil
-    composite_recipes["angels-wire-gold"] = {["angels-wire-gold"] = {}, ["angels-plate-gold"] = {scale = scale, shift = shift}} -- Gold plate
-
-    -- Nickel
-    composite_recipes["angels-plate-nickel"] = {["angels-plate-nickel"] = {}, ["liquid-molten-nickel"] = {type = "fluid", scale = scale, shift = shift}} -- Molten nickel
-    composite_recipes["angels-roll-nickel-converting"] = {["angels-plate-nickel"] = {}, ["angels-roll-nickel"] = {scale = scale, shift = shift}} -- Nickel sheet roll
-
-    -- Silver
-    composite_recipes["angels-plate-silver"] = {["angels-plate-silver"] = {}, ["liquid-molten-silver"] = {type = "fluid", scale = scale, shift = shift}} -- Molten silver
-    composite_recipes["angels-roll-silver-converting"] = {["angels-plate-silver"] = {}, ["angels-roll-silver"] = {scale = scale, shift = shift}} -- Silver sheet coil
-    composite_recipes["basic-silvered-copper-wire"] = {["angels-wire-silver"] = {}, ["angels-plate-silver"] = {scale = scale, shift = shift}} -- Silver plate
-
-    -- Tin
-    composite_recipes["angels-plate-tin"] = {["angels-plate-tin"] = {}, ["liquid-molten-tin"] = {type = "fluid", scale = scale, shift = shift}} -- Molten tin
-    composite_recipes["angels-roll-tin-converting"] = {["angels-plate-tin"] = {}, ["angels-roll-tin"] = {scale = scale, shift = shift}} -- Tin sheet coil
-    composite_recipes["basic-tinned-copper-wire"] = {["angels-wire-tin"] = {}, ["angels-plate-tin"] = {scale = scale, shift = shift}} -- Tin plate
-    composite_recipes["angels-wire-coil-tin-converting"] = {["angels-wire-tin"] = {}, ["angels-wire-coil-tin"] = {scale = scale, shift = shift}} -- Tin wire coil
-
-    -- Titanium
-    composite_recipes["angels-plate-titanium"] = {["angels-plate-titanium"] = {}, ["liquid-molten-titanium"] = {type = "fluid", scale = scale, shift = shift}} -- Molten titanium
-    composite_recipes["angels-roll-titanium-converting"] = {["angels-plate-titanium"] = {}, ["angels-roll-titanium"] = {scale = scale, shift = shift}} -- Titanium sheet coil
-
-    -- Zinc
-    composite_recipes["angels-plate-zinc"] = {["angels-plate-zinc"] = {}, ["liquid-molten-zinc"] = {type = "fluid", scale = scale, shift = shift}} -- Molten Zinc
-    composite_recipes["angels-roll-zinc-converting"] = {["angels-plate-zinc"] = {}, ["angels-roll-zinc"] = {scale = scale, shift = shift}} -- Zinc sheet coil
-end
-
-if not mods["bobelectronics"] then
-    -- Solder
-    composite_recipes["angels-solder-mixture-smelting"] = {["angels-solder"] = {}, ["angels-solder-mixture"] = {scale = scale, shift = shift}}
-    composite_recipes["angels-solder"] = {["angels-solder"] = {}, ["liquid-molten-solder"] = {type = "fluid", scale = scale, shift = shift}}
-    composite_recipes["angels-roll-solder-converting"] = {["angels-solder"] = {}, ["angels-roll-solder"] = {scale = scale, shift = shift}}
-end
 
 for name, sources in pairs(composite_recipes) do
     reskins.lib.composite_existing_icons(name, "recipe", sources)
