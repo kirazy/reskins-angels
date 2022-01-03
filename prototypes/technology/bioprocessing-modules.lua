@@ -1,5 +1,5 @@
--- Copyright (c) 2021 Kirazy
--- Part of Artisanal Reskins: Bob's Mods
+-- Copyright (c) 2022 Kirazy
+-- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE in the project directory for license information.
 

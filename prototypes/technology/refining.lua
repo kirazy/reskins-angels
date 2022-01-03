@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -42,5 +42,10 @@ local technologies = {
     ["ore-floatation"] = {tier = 1, prog_tier = 2, icon_name = "ore-flotation"},
     ["clowns-ore-floatation"] = {tier = 0, icon_name = "ore-flotation", technology_icon_layers = 1},
 }
+
+-- Check if we're using Angel's material colors
+if mods["bobwarfare"] and mods["bobplates"] and reskins.lib.setting("reskins-angels-use-angels-material-colors") then
+    technologies["bob-armor-making-3"] = {group = "smelting", subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4}
+end
 
 reskins.lib.create_icons_from_list(technologies, inputs)

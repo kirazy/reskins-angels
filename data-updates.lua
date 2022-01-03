@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -6,6 +6,8 @@
 ----------------------------------------------------------------------------------------------------
 -- ENTITIES
 ----------------------------------------------------------------------------------------------------
+require("prototypes.entity.petrochem-updates")
+
 -- Angel's Smelting
 require("prototypes.entity.smelting.pipe")
 
@@ -16,7 +18,7 @@ require("prototypes.entity.refining.liquefier")
 -- ITEMS
 ----------------------------------------------------------------------------------------------------
 require("prototypes.items.bioprocessing-modules")
-require("prototypes.items.refining")
+require("prototypes.items.refining-updates")
 require("prototypes.items.smelting.ores")
 
 -- angelspetrochem at this version or earlier do icon work in data-final-fixes
@@ -27,8 +29,11 @@ end
 
 -- angelssmelting at this version or earlier does icon work in data-final-fixes
 if reskins.lib.migration.is_newer_version(mods["angelssmelting"], "0.6.16") then
-    require("prototypes.items.smelting")
+    require("prototypes.items.smelting-updates")
 end
+
+-- Second pass
+require("prototypes.items.refining-secondary-updates")
 
 ----------------------------------------------------------------------------------------------------
 -- TECHNOLOGY

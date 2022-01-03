@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -10,7 +10,7 @@ if not (reskins.angels and reskins.angels.triggers.bioprocessing.entities) then 
 local inputs = {
     type = "assembling-machine",
     icon_name = "algae-farm",
-    base_entity = "assembling-machine-1",
+    base_entity_name = "assembling-machine-1",
     mod = "angels",
     particles = {["big"] = 1, ["medium"] = 2},
     group = "bioprocessing",

@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -75,5 +75,9 @@ triggers.storage = {
 triggers.mad_clowns = {
     is_active = mods["Clowns-AngelBob-Nuclear"] and true or mods["Clowns-Extended-Minerals"] and true or mods["Clowns-Nuclear"] and true or mods["Clowns-Processing"] and true or mods["Clowns-Science"] and true or false
 }
+
+-- Angel components
+triggers.use_angels_components = (angelsmods and angelsmods.industries and angelsmods.industries.components)
+triggers.use_angels_plates = (not mods["bobplates"])
 
 return triggers

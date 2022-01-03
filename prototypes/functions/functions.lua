@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -41,7 +41,7 @@ local number_tints = {
 }
 
 local function check_validity()
-    return angelsmods.functions.add_number_icon_layer({}, 1, reskins.lib.adjust_alpha(util.color("000000"), 1))
+    return angelsmods and angelsmods.functions.add_number_icon_layer({}, 1, reskins.lib.adjust_alpha(util.color("000000"), 1))
 end
 
 local number_function_is_valid = pcall(check_validity)
@@ -49,11 +49,11 @@ local number_function_is_valid = pcall(check_validity)
 -- Check to see if the new angels numbering function is available
 function reskins.angels.num_tier(tier, mod)
     -- Validate tint, fallback to black if necessary
-    local tint = angelsmods[mod] and angelsmods[mod].number_tint or util.color("000000")
+    local tint = angelsmods and angelsmods[mod] and angelsmods[mod].number_tint or util.color("000000")
 
     -- Go fetch an icons table
     if number_function_is_valid then
-        local icons = angelsmods.functions.add_number_icon_layer({}, tier, reskins.lib.adjust_alpha(tint, 1))
+        local icons = angelsmods and angelsmods.functions.add_number_icon_layer({}, tier, reskins.lib.adjust_alpha(tint, 1))
 
         -- Strip out the scaling and shifting
         for _, icon_data in pairs(icons) do
