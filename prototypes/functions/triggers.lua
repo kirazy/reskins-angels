@@ -77,7 +77,7 @@ triggers.mad_clowns = {
 }
 
 -- Angel components
-triggers.use_angels_components = angelsmods.industries.components
+triggers.use_angels_components = (angelsmods and angelsmods.industries and angelsmods.industries.components)
 triggers.use_angels_plates = (not mods["bobplates"])
 
 return triggers

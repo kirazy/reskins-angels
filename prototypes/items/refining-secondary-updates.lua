@@ -17,6 +17,8 @@ local inputs = {
 local shift = reskins.angels.constants.recipe_corner_shift
 local scale = reskins.angels.constants.recipe_corner_scale
 
+-- TODO: https://github.com/kirazy/reskins-angels/issues/16 Improve handling of refining->smelting->refining icon processing
+
 local intermediates = {}
 
 reskins.lib.create_icons_from_list(intermediates, inputs)
