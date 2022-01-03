@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
-Date: ????
+Date: 2022-01-03
   Features:
     - Setting "Use Angel's material colors for intermediates" now includes support for player armor
     - Added setting "Use Vanilla-style chemical plants", (default off) to use vanilla chemical plant sprites and animations when Angel's setting "Disable Bob's chemical plants" is enabled
