@@ -196,6 +196,14 @@ if reskins.lib.migration.is_newer_version(mods["angelssmelting"], "0.6.14") then
     technologies["angels-titanium-casting-3"] = {subgroup = "casting", flat_icon = true, technology_icon_mipmaps = 4, image = "casting-titanium-technology-icon"}
 end
 
+-- Check for special vanilla and override the powder metallurgy technology icons
+if angelsmods and angelsmods.functions.is_special_vanilla() then
+    technologies["powder-metallurgy-1"] = {tier = 1, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+    technologies["powder-metallurgy-2"] = {tier = 2, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+    technologies["powder-metallurgy-3"] = {tier = 3, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+    technologies["powder-metallurgy-4"] = {tier = 4, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+end
+
 -- Check if we're using Angel's material colors
 if reskins.lib.setting("reskins-angels-use-angels-material-colors") then
     technologies["bob-armor-making-4"] = {subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4}
