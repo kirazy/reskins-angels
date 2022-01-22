@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.2
 Date: ????
-  Changes:
+  Bugfixes:
+    - "My name is... Tim." Fix recipe for tin plate from crushed bobmonium under some circumstances
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2022-01-03
