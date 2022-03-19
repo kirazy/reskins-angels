@@ -1,8 +1,15 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.1.2
+Version: 2.1.3
 Date: ????
   Bugfixes:
     - "My name is... Tim." Fix recipe for tin plate from crushed bobmonium under some circumstances
+---------------------------------------------------------------------------------------------------
+Version: 2.1.2
+Date: 2022-03-19
+  Locale:
+    - Updated Korean, Russian localizations
+    - Added localization for Ukrainian
+    - Cleaned up empty localization files
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2022-01-03
