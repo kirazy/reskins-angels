@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.2
-Date: ????
+Date: 2022-03-19
   Locale:
     - Updated Korean, Russian localizations
     - Added localization for Ukrainian
