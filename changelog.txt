@@ -2,7 +2,8 @@
 Version: 2.1.3
 Date: ????
   Bugfixes:
-    - "My name is... Tim." Fix recipe for tin plate from crushed bobmonium under some circumstances
+    - "My name is... Tim." Fixed that the recipe for tin plate from crushed bobmonium was broken when using Angel's tin plate
+    - Fixed that the recipe for resin was broken when using Angel's solid resin
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.2
 Date: 2022-03-19
