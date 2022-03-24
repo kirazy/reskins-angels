@@ -32,7 +32,7 @@ local composite_recipes = {
     ["angelsore5-crushed-smelting"] = {[check_for_preferred_item("lead-plate", "angels-plate-lead")] = {}, ["angels-ore5-crushed"] = {scale = scale, shift = shift}}, -- Crushed rubyte
 
     -- Tin plates
-    ["angelsore6-crushed-smelting"] = {[check_for_preferred_item("tin-plate", "angels-plate-tim")] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}}, -- Crushed bobmonium
+    ["angelsore6-crushed-smelting"] = {[check_for_preferred_item("tin-plate", "angels-plate-tin")] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}}, -- Crushed bobmonium
 }
 
 for name, sources in pairs(composite_recipes) do
