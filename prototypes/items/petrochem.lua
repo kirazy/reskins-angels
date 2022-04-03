@@ -41,11 +41,15 @@ end
 
 reskins.lib.create_icons_from_list(intermediates, inputs)
 
+local function check_for_preferred_item(primary, secondary)
+    if data.raw.item[primary] then return primary else return secondary end
+end
+
 local shift = reskins.angels.constants.recipe_corner_shift
 local scale = reskins.angels.constants.recipe_corner_scale
 
 local composite_recipes = {
-    ["bio-resin-wood-reprocessing"] = {["resin"] = {}, ["wood"] = {scale = 0.5, shift = {-8, -8}}},
+    ["bio-resin-wood-reprocessing"] = {[check_for_preferred_item("resin", "solid-resin")] = {}, ["wood"] = {scale = 0.5, shift = {-8, -8}}},
 }
 
 for name, sources in pairs(composite_recipes) do
