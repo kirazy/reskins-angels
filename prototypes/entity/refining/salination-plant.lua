@@ -49,7 +49,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/salination-plant-base.png",
+                filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-base.png",
                 priority = "extra-high",
                 width = 244,
                 height = 270,
@@ -58,7 +58,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(-2, -12),
                 animation_speed = 0.5,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/hr-salination-plant-base.png",
+                    filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-base.png",
                     priority = "extra-high",
                     width = 484,
                     height = 540,
@@ -115,7 +115,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/salination-plant-shadow.png",
+                filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-shadow.png",
                 priority = "extra-high",
                 width = 255,
                 height = 235,
@@ -124,7 +124,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 animation_speed = 0.5,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/refining/salination-plant/hr-salination-plant-shadow.png",
+                    filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-shadow.png",
                     priority = "extra-high",
                     width = 509,
                     height = 467,

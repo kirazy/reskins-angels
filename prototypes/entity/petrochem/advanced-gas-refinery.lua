@@ -24,27 +24,6 @@ local tier_map = {
     ["gas-refinery-4"] = {tier = 4, prog_tier = 6},
 }
 
--- Create light layer for working visualisation
-local refinery_lights = reskins.lib.make_4way_animation_from_spritesheet({
-    filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-light.png",
-    priority = "extra-high",
-    width = 232,
-    height = 330,
-    shift = util.by_pixel(0, -41),
-    blend_mode = "additive-soft",
-    draw_as_glow = true,
-    hr_version = {
-        filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-light.png",
-        priority = "extra-high",
-        width = 462,
-        height = 657,
-        shift = util.by_pixel(0, -42),
-        blend_mode = "additive-soft",
-        draw_as_glow = true,
-        scale = 0.5,
-    }
-})
-
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
     -- Fetch entity
@@ -69,13 +48,13 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-base.png",
+                filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
                 priority = "extra-high",
                 width = 232,
                 height = 330,
                 shift = util.by_pixel(0, -41),
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-base.png",
+                    filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-base.png",
                     priority = "extra-high",
                     width = 462,
                     height = 657,
@@ -123,7 +102,7 @@ for name, map in pairs(tier_map) do
             -- ATTN Lovely Santa: These sprites are vertically oriented, so you'll need to either hard-code the vertical offsets, or adapt
             -- the make_4way_animation_from_spritesheet function as done in reskins-library to process vertically oriented spritesheets.
             {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+                filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
                 priority = "extra-high",
                 vertically_oriented = true, -- This is a custom parameter used by function reskins.lib.make_4way_animation_from_spritesheet
                 width = 328,
@@ -131,7 +110,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(48, 9),
                 draw_as_shadow = true,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-shadow.png",
+                    filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-shadow.png",
                     priority = "extra-high",
                     vertically_oriented = true, -- This is a custom parameter used by function reskins.lib.make_4way_animation_from_spritesheet
                     width = 655,
@@ -143,67 +122,6 @@ for name, map in pairs(tier_map) do
             },
         }
     })
-
-    entity.working_visualisations = {
-        -- Flame
-        {
-            fadeout = true,
-            constant_speed = true,
-            north_position = util.by_pixel(-89, -136.5),
-            east_position = util.by_pixel(34.5, -207.5),
-            south_position = util.by_pixel(90.5, -94),
-            west_position = util.by_pixel(-16, -35),
-            animation = {
-                filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
-                line_length = 10,
-                width = 20,
-                height = 40,
-                frame_count = 60,
-                animation_speed = 0.75,
-                draw_as_glow = true,
-                hr_version = {
-                    filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
-                    line_length = 10,
-                    width = 40,
-                    height = 81,
-                    frame_count = 60,
-                    animation_speed = 0.75,
-                    draw_as_glow = true,
-                    scale = 0.5,
-                },
-            },
-        },
-
-        -- Light
-        {
-            fadeout = true,
-            north_animation = refinery_lights.north,
-            east_animation = refinery_lights.east,
-            south_animation = refinery_lights.south,
-            west_animation = refinery_lights.west,
-        },
-
-        -- Vertical Pipe Shadow Patch
-        {
-            always_draw = true,
-            north_animation = {
-                layers = {
-                    reskins.lib.vertical_pipe_shadow({-1, -3}),
-                    reskins.lib.vertical_pipe_shadow({3, -3}),
-                }
-            },
-            south_animation = {
-                layers = {
-                    reskins.lib.vertical_pipe_shadow({-3, 3}),
-                    reskins.lib.vertical_pipe_shadow({-1, 3}),
-                    reskins.lib.vertical_pipe_shadow({1, 3})
-                }
-            }
-        },
-    }
-
-    -- Fix drawing box
-    entity.drawing_box = {{-3.5, -6.5}, {3.5, 3.5}}
 
     -- Label to skip to next iteration
     ::continue::

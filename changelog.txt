@@ -2,6 +2,8 @@
 Version: 2.1.4
 Date: ????
   Changes:
+    - Removed internal sprites native to Angel's Refining and Angel's Petrochemical Processing
+    - Minimum versions are now Angel's Refining 0.12.1, and Angel's Petrochemical Processing 0.9.21
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.3
 Date: 2022-04-03
