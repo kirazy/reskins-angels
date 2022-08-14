@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -13,7 +13,7 @@ if reskins.lib.migration.is_version_or_older(mods["angelspetrochem"], "0.9.19") 
 end
 
 -- angelssmelting at this version or earlier does icon work in data-final-fixes
-if reskins.lib.migration.is_version_or_older("0.6.16", mods["angelssmelting"]) then
+if reskins.lib.migration.is_version_or_older(mods["angelssmelting"], "0.6.16") then
     require("prototypes.items.smelting")
 end
 

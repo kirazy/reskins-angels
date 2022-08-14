@@ -1,14 +1,17 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
 
 -- Core functions
 require("prototypes.functions.functions")
+require("prototypes.functions.entity-functions")
 
 ----------------------------------------------------------------------------------------------------
 -- ENTITIES
 ----------------------------------------------------------------------------------------------------
+require("prototypes.entity.petrochem")
+
 -- Angel's Bio-Processing
 require("prototypes.entity.bioprocessing.algae-farm")
 -- require("prototypes.entity.bioprocessing.butchery")
@@ -43,7 +46,7 @@ require("prototypes.entity.bioprocessing.algae-farm")
 require("prototypes.entity.petrochem.advanced-chemical-plant")
 require("prototypes.entity.petrochem.advanced-gas-refinery")
 require("prototypes.entity.petrochem.air-filter")
-require("prototypes.entity.petrochem.chemical-plant")
+-- require("prototypes.entity.petrochem.chemical-plant")
 require("prototypes.entity.petrochem.electric-boiler")
 require("prototypes.entity.petrochem.electrolyser")
 -- require("prototypes.entity.petrochem.flare-stack") -- fully implemented in Angel's Petrochem
@@ -70,7 +73,6 @@ require("prototypes.entity.refining.ore-leaching-plant")
 require("prototypes.entity.refining.ore-powderizer")
 require("prototypes.entity.refining.ore-refinery")
 require("prototypes.entity.refining.ore-sorting-facility")
-require("prototypes.entity.refining.pipe")
 require("prototypes.entity.refining.salination-plant")
 -- require("prototypes.entity.refining.seafloor-pump")
 -- require("prototypes.entity.refining.thermal-extractor")

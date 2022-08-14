@@ -1,4 +1,4 @@
--- Copyright (c) 2021 Kirazy
+-- Copyright (c) 2022 Kirazy
 -- Part of Artisanal Reskins: Angel's Mods
 --
 -- See LICENSE.md in the project directory for license information.
@@ -10,7 +10,7 @@ if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then retu
 local inputs = {
     type = "storage-tank",
     icon_name = "valve",
-    base_entity = "pipe",
+    base_entity_name = "pipe",
     mod = "angels",
     group = "petrochem",
     particles = {["small"] = 2},
