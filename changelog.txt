@@ -2,9 +2,13 @@
 Version: 2.1.4
 Date: ????
   Changes:
-    - Removed internal sprites native to Angel's Refining and Angel's Petrochemical Processing
-    - Minimum versions are now Angel's Refining 0.12.1, and Angel's Petrochemical Processing 0.9.21
-    - Changed tech icon for Mechanical refining to Ore sorting facility 1 when playing with Sea Block
+    - Removed internal building sprites native to Angel's Refining, minimum version is now 0.12.1
+    - Removed internal building sprites native to Angel's Petrochemical Processing, minimum version is now 0.9.21
+    - Removed internal item and recipe icons native to Angel's Smelting, minimum version is now 0.6.15
+    - Added support for adjusted progression tiers for ore processing machines, pellet presses, and powder mixers to reflect changes to ingredients in Angel's Smelting version 0.6.20
+    - Added support for adjusted progression tiers for chemical plants to reflect changes to ingredients in Angel's Petrochemical Processing version 0.9.23
+    - Added support for adjusted progression tiers for algae farms to reflect changes to ingredients in Angel's Bioprocessing version 0.7.23
+    - Changed tech icon for Mechanical Refining to Ore Sorting Facility 1 when playing with Sea Block
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.3
 Date: 2022-04-03

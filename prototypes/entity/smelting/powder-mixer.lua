@@ -24,6 +24,14 @@ local tier_map = {
     ["powder-mixer-4"] = {tier = 4},
 }
 
+-- Support rework of Angel's Smelting ingredient tiers
+if reskins.lib.migration.is_version_or_newer(mods["angelssmelting"], "0.6.20") then
+    tier_map["powder-mixer"].prog_tier = 2
+    tier_map["powder-mixer-2"].prog_tier = 3
+    tier_map["powder-mixer-3"].prog_tier = 4
+    tier_map["powder-mixer-4"].prog_tier = 5
+end
+
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
     -- Fetch entity

@@ -24,6 +24,14 @@ local tier_map = {
     ["algae-farm-4"] = {tier = 4},
 }
 
+-- Algae farm recipes revised in Angel's Bioprocessing 0.7.23
+if reskins.lib.migration.is_version_or_newer(mods["angelsbioprocessing"], "0.7.23") then
+    tier_map["algae-farm"].prog_tier = 0
+    tier_map["algae-farm-2"].prog_tier = 1
+    tier_map["algae-farm-3"].prog_tier = 2
+    tier_map["algae-farm-4"].prog_tier = 3
+end
+
 -- Algae farm recipes revised in Angel's Bioprocessing 0.7.18, and again in 0.7.20 with addition of Algae farm 4
 if reskins.lib.migration.is_version_or_newer(mods["angelsbioprocessing"], "0.7.18") and reskins.lib.migration.is_older_version(mods["angelsbioprocessing"], "0.7.20") then
     tier_map["algae-farm-3"].prog_tier = 4

@@ -17,16 +17,16 @@ local chemical_plants = {
     ["angels-chemical-plant-4"] = {tier = 4},
 }
 
--- Chemical plant recipes revised in Angel's Petrochem 0.9.18
-if reskins.lib.migration.is_version_or_newer(mods["angelspetrochem"], "0.9.18") then
+-- Chemical plant recipes revised in Angel's Petrochem 0.9.18, and then "reverted" in Angel's Petrochem 0.9.23
+if reskins.lib.migration.is_version_or_newer(mods["angelspetrochem"], "0.9.18") and reskins.lib.migration.is_older_version(mods["angelspetrochem"], "0.9.23") then
     chemical_plants["angels-chemical-plant"].prog_tier = 2
     chemical_plants["angels-chemical-plant-2"].prog_tier = 3
     chemical_plants["angels-chemical-plant-3"].prog_tier = 4
     chemical_plants["angels-chemical-plant-4"].prog_tier = 5
 end
 
--- Sea Block 0.5.5 revises chemical plant recipe for earlier access
-if reskins.lib.migration.is_version_or_newer(mods["SeaBlock"], "0.5.5") then
+-- Sea Block 0.5.5 revises chemical plant recipe for earlier access, but obviated with Angel's Petrochem 0.9.23
+if reskins.lib.migration.is_version_or_newer(mods["SeaBlock"], "0.5.5") and reskins.lib.migration.is_older_version(mods["angelspetrochem"], "0.9.23") then
     chemical_plants["angels-chemical-plant"].prog_tier = 1
 end
 
