@@ -36,11 +36,11 @@ local technologies = {
     ["powder-metallurgy-4"] = {tier = 4, prog_tier = 5, icon_name = "powder-metallurgy"},
 
     -- Ore Processing
-    ["ore-processing-1"] = {tier = 1, icon_name = "ore-processing-machine"},
-    ["ore-processing-2"] = {tier = 1, prog_tier = 2, icon_name = "pellet-press"},
-    ["ore-processing-3"] = {tier = 2, prog_tier = 3, icon_name = "pellet-press"},
-    ["ore-processing-4"] = {tier = 3, prog_tier = 4, icon_name = "pellet-press"},
-    ["ore-processing-5"] = {tier = 4, prog_tier = 5, icon_name = "pellet-press"},
+    ["ore-processing-1"] = {tier = 1, prog_tier = 2,icon_name = "ore-processing-machine"},
+    ["ore-processing-2"] = {tier = 1, prog_tier = 3, icon_name = "pellet-press"},
+    ["ore-processing-3"] = {tier = 2, prog_tier = 4, icon_name = "pellet-press"},
+    ["ore-processing-4"] = {tier = 3, prog_tier = 5, icon_name = "pellet-press"},
+    ["ore-processing-5"] = {tier = 4, prog_tier = 6, icon_name = "pellet-press"},
 
     -- Smelting
     ["angels-solder-smelting-basic"] = {subgroup = "casting", flat_icon = true, technology_icon_mipmaps = 4, image = "casting-solder-technology-icon"},
