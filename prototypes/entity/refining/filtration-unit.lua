@@ -19,10 +19,11 @@ local inputs = {
 
 local tier_map = {
     ["filtration-unit"] = {tier = 1, prog_tier = 2},
-    ["filtration-unit-2"] = {tier = 2, prog_tier = 4},
+    ["filtration-unit-2"] = {tier = 2, prog_tier = 3},
+    ["filtration-unit-3"] = {tier = 3, prog_tier = 4},
 
     -- Extended Angels
-    ["filtration-unit-3"] = {tier = 3, prog_tier = 5},
+    ["filtration-unit-4"] = {tier = 4, prog_tier = 5},
 }
 
 -- Sea Block compatibility
