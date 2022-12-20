@@ -29,12 +29,6 @@ local technologies = {
     ["strand-casting-3"] = {tier = 3, prog_tier = 4, icon_name = "strand-casting"},
     ["strand-casting-4"] = {tier = 4, prog_tier = 5, icon_name = "strand-casting"},
 
-    -- Powder Metallurgy
-    ["powder-metallurgy-1"] = {tier = 1, prog_tier = 2, icon_name = "powder-metallurgy"},
-    ["powder-metallurgy-2"] = {tier = 2, prog_tier = 3, icon_name = "powder-metallurgy"},
-    ["powder-metallurgy-3"] = {tier = 3, prog_tier = 4, icon_name = "powder-metallurgy"},
-    ["powder-metallurgy-4"] = {tier = 4, prog_tier = 5, icon_name = "powder-metallurgy"},
-
     -- Ore Processing
     ["ore-processing-1"] = {tier = 1, prog_tier = 2, icon_name = "ore-processing-machine"},
     ["ore-processing-2"] = {tier = 1, prog_tier = 3, icon_name = "pellet-press"},
@@ -118,6 +112,20 @@ local technologies = {
     ["angels-titanium-smelting-3"] = {subgroup = "casting", flat_icon = true, technology_icon_mipmaps = 4, image = "casting-titanium-technology-icon"},
 }
 
+-- Powder Metallurgy
+if angelsmods.trigger.early_sintering_oven then
+  technologies["powder-metallurgy-1"] = {tier = 1, prog_tier = 1, icon_name = "powder-metallurgy"}
+  technologies["powder-metallurgy-2"] = {tier = 2, prog_tier = 2, icon_name = "powder-metallurgy"}
+  technologies["powder-metallurgy-3"] = {tier = 3, prog_tier = 3, icon_name = "powder-metallurgy"}
+  technologies["powder-metallurgy-4"] = {tier = 4, prog_tier = 4, icon_name = "powder-metallurgy"}
+  technologies["powder-metallurgy-5"] = {tier = 5, prog_tier = 5, icon_name = "powder-metallurgy"}
+else
+  technologies["powder-metallurgy-2"] = {tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+  technologies["powder-metallurgy-3"] = {tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+  technologies["powder-metallurgy-4"] = {tier = 3, prog_tier = 4, icon_name = "powder-metallurgy"}
+  technologies["powder-metallurgy-5"] = {tier = 4, prog_tier = 5, icon_name = "powder-metallurgy"}
+end
+
 -- For Angel's Smelting with new seprated casting/smelting technology rework
 if reskins.lib.migration.is_newer_version(mods["angelssmelting"], "0.6.14") then
     technologies["angels-copper-smelting-2"] = {subgroup = "smelting", flat_icon = true, technology_icon_mipmaps = 4, image = "smelting-copper-technology-icon"}
@@ -198,10 +206,10 @@ end
 
 -- Check for special vanilla and override the powder metallurgy technology icons
 if angelsmods and angelsmods.functions.is_special_vanilla() then
-    technologies["powder-metallurgy-1"] = {tier = 1, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
-    technologies["powder-metallurgy-2"] = {tier = 2, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
-    technologies["powder-metallurgy-3"] = {tier = 3, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
-    technologies["powder-metallurgy-4"] = {tier = 4, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+    technologies["powder-metallurgy-2"] = {tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+    technologies["powder-metallurgy-3"] = {tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+    technologies["powder-metallurgy-4"] = {tier = 3, prog_tier = 4, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
+    technologies["powder-metallurgy-5"] = {tier = 4, prog_tier = 5, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4}
 end
 
 -- Check if we're using Angel's material colors
