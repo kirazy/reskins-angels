@@ -3,6 +3,7 @@ Version: 2.1.6
 Date: ????
   Changes:
     - Updated ore processing tech tiers
+    - Added support for new tiers of Crystallizer and Filtration Unit
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.5
 Date: 2022-10-06

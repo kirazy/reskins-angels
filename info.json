@@ -14,7 +14,7 @@
         "? angelsexploration",
         "? angelsindustries",
         "? angelspetrochem >= 0.9.21",
-        "? angelsrefining >= 0.12.1",
+        "? angelsrefining >= 0.12.3",
         "? angelssmelting >= 0.6.20",
         "(?) angelsaddons-cab",
         "(?) angelsaddons-mobility",
