@@ -13,7 +13,7 @@
         "? angelsbioprocessing",
         "? angelsexploration",
         "? angelsindustries",
-        "? angelspetrochem >= 0.9.21",
+        "? angelspetrochem >= 0.9.23",
         "? angelsrefining >= 0.12.3",
         "? angelssmelting >= 0.6.20",
         "(?) angelsaddons-cab",

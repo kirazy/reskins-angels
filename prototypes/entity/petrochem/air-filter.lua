@@ -20,9 +20,9 @@ local inputs = {
 local tier_map = {
     ["angels-air-filter"] = {tier = 1},
     ["angels-air-filter-2"] = {tier = 2},
+    ["angels-air-filter-3"] = {tier = 3},
 
     -- Extended Angels
-    ["angels-air-filter-3"] = {tier = 3},
     ["angels-air-filter-4"] = {tier = 4},
 }
 
