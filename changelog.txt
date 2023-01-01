@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.2.0
+Version: 2.1.6
 Date: ????
   Changes:
     - Added support for adjusted tiers of Ore Processing techs
