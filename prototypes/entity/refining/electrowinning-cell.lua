@@ -23,6 +23,11 @@ local tier_map = {
     ["electro-whinning-cell-3"] = {tier = 3, prog_tier = 5},
 }
 
+if reskins.lib.migration.is_version_or_newer(mods["angelsrefining"], "0.12.5") then
+  tier_map["electro-whinning-cell"].prog_tier = 4
+  tier_map["electro-whinning-cell-2"].prog_tier = 5
+end
+
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
     -- Fetch entity
