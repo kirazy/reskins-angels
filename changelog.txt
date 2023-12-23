@@ -2,6 +2,8 @@
 Version: 2.1.7
 Date: ????
   Changes:
+    - Internal updates to reflect changes to Artisanal Reskins: Library, now depends on version 2.1.6
+    - Revised tiers of hydro plants, electrowinning cells, and algae farms to reflect changes to Angel's mods and Extended Angels
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.6
 Date: 2023-01-01
