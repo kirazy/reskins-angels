@@ -5,7 +5,8 @@
 
 -- Check to see if reskinning needs to be done.
 if not mods["bobelectronics"] then return end
-if reskins.lib.setting("reskins-bobs-do-bobelectronics-circuit-style") == "off" then return end
+if reskins.lib.setting("reskins-bobs-do-bobelectronics-circuit-style") == "off" and
+    reskins.lib.setting("reskins-compatibility-do-circuitprocessing-circuit-style") == "off" then return end
 local shift, scale = reskins.angels.constants.recipe_corner_shift, reskins.angels.constants.recipe_corner_scale
 
 -- Fix fibreglass board

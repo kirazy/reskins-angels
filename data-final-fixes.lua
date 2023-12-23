@@ -29,6 +29,11 @@ require("prototypes.recipe-adjustments.refining.ore-flotation-cell")
 ----------------------------------------------------------------------------------------------------
 -- require("prototypes.technology.smelting-final-fixes")
 
+----------------------------------------------------------------------------------------------------
+-- COMPATIBILITY
+----------------------------------------------------------------------------------------------------
+require("prototypes.compatibility.bobselectronics")
+
 
 -- Assign deferred icons
 reskins.lib.assign_deferred_icons("angels", "data-final-fixes")

@@ -42,10 +42,5 @@ require("prototypes.technology.bioprocessing-modules")
 -- require("prototypes.technology.refining-updates")
 require("prototypes.technology.smelting-updates")
 
-----------------------------------------------------------------------------------------------------
--- COMPATIBILITY
-----------------------------------------------------------------------------------------------------
-require("prototypes.compatibility.bobselectronics")
-
 -- Assign deferred icons
 reskins.lib.assign_deferred_icons("angels", "data-updates")
