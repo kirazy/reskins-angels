@@ -18,10 +18,10 @@ local inputs = {
 }
 
 local material_map = {
-    ["angels-titanium"] = { tier = 4, tint = util.color("995f92") },
-    ["angels-ceramic"] = { tier = 4, tint = util.color("ffffff") },
-    ["angels-tungsten"] = { tier = 4, tint = util.color("7e5f45") },
-    ["angels-nitinol"] = { tier = 5, tint = util.color("7664a9") },
+    ["titanium"] = { tier = 4, tint = util.color("995f92") },
+    ["ceramic"] = { tier = 4, tint = util.color("ffffff") },
+    ["tungsten"] = { tier = 4, tint = util.color("7e5f45") },
+    ["nitinol"] = { tier = 5, tint = util.color("7664a9") },
 }
 
 -- Reskin pipes, create and assign extra details
@@ -93,15 +93,15 @@ for material, map in pairs(material_map) do
     }
 
     -- Reskin entities
-    pipe_entity.pictures = reskins.lib.get_pipe_pictures(material)
-    pipe_to_ground_entity.pictures = reskins.lib.get_pipe_to_ground_pictures(material)
+    pipe_entity.pictures = reskins.lib.get_pipe_pictures("angels-"..material)
+    pipe_to_ground_entity.pictures = reskins.lib.get_pipe_to_ground_pictures("angels-"..material)
 
     -- Fix fluid window
     pipe_entity.horizontal_window_bounding_box = { { -0.25, -0.28125 }, { 0.25, 0.15625 } }
     pipe_entity.vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } }
 
     -- Handle pipe covers for underground pipes
-    pipe_to_ground_entity.fluid_box.pipe_covers = reskins.lib.get_pipe_covers(material)
+    pipe_to_ground_entity.fluid_box.pipe_covers = reskins.lib.get_pipe_covers("angels-"..material)
 
     ---@type data.IconData[]
     local pipe_icons = { {
