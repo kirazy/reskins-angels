@@ -19,12 +19,12 @@ local ores = {
     -- ["angels-ore2"] = {}, -- Jivolite
     -- ["angels-ore4"] = {}, -- Crotinnium
     -- ["chrome-ore"] = {},
-    ["lead-ore"] = {},
+    ["lead-ore"]    = {},
     -- ["manganese-ore"] = {},
     -- ["platinum-ore"] = {},
-    ["rutile-ore"] = {}, -- Titanium (dark purple)
-    ["thorium-ore"] = {make_glow = true}, -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
-    ["tin-ore"] = {variations = 8}, -- (green)
+    ["rutile-ore"]  = {},                     -- Titanium (dark purple)
+    ["thorium-ore"] = { is_light = true },    -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
+    ["tin-ore"]     = { num_variations = 8 }, -- (green)
 }
 
 if reskins.lib.setting("reskins-angels-use-vanilla-style-ores") then
@@ -38,19 +38,19 @@ end
 
 -- Check if we're using Angel's material colors
 if reskins.lib.setting("reskins-angels-use-angels-material-colors") == false then
-    ores["lead-ore"] = {mod = "lib", group = "shared"}
-    ores["tin-ore"] = {mod = "lib", group = "shared", variations = 8}
+    ores["lead-ore"] = { mod = "lib", group = "shared" }
+    ores["tin-ore"]  = { mod = "lib", group = "shared", variations = 8 }
 end
 
 if not mods["bobores"] or not mods["reskins-bobs"] then
-    ores["bauxite-ore"] = {mod = "lib", group = "shared", variations = 8}
-    ores["cobalt-ore"] = {mod = "lib", group = "shared"}
-    ores["gold-ore"] = {mod = "lib", group = "shared"}
-    ores["nickel-ore"] = {mod = "lib", group = "shared"} -- 408073
-    ores["quartz"] = {mod = "lib", group = "shared"} -- 999999
-    ores["silver-ore"] = {mod = "lib", group = "shared"}
-    ores["tungsten-ore"] = {mod = "lib", group = "shared", variations = 8}
-    ores["zinc-ore"] = {mod = "lib", group = "shared"}
+    ores["bauxite-ore"]  = { mod = "lib", group = "shared", variations = 8 }
+    ores["cobalt-ore"]   = { mod = "lib", group = "shared" }
+    ores["gold-ore"]     = { mod = "lib", group = "shared" }
+    ores["nickel-ore"]   = { mod = "lib", group = "shared" } -- 408073
+    ores["quartz"]       = { mod = "lib", group = "shared" } -- 999999
+    ores["silver-ore"]   = { mod = "lib", group = "shared" }
+    ores["tungsten-ore"] = { mod = "lib", group = "shared", variations = 8 }
+    ores["zinc-ore"]     = { mod = "lib", group = "shared" }
 end
 
 for name, params in pairs(ores) do
@@ -105,33 +105,34 @@ local sludge_icons = {
         icon_size = 600,
         icon_mipmaps = 1,
         tint = util.color("613414"),
-    }
+    },
 }
 
-local shift = {10, 10}
+local shift = { 10, 10 }
 local scale = 0.5
 
 local composite_recipes = {
     -- Ore Sorting Machine Recipes
-    ["angelsore-crushed-mix3-processing"] = {["base"] = {icon = sorting_icon}, ["lead-ore"] = {shift = shift, scale = scale}}, -- Lead
-    ["angelsore-crushed-mix4-processing"] = {["base"] = {icon = sorting_icon}, ["tin-ore"] = {shift = shift, scale = scale}}, -- Tin
-    ["angelsore-chunk-mix1-processing"] = {["base"] = {icon = sorting_icon}, ["quartz"] = {shift = shift, scale = scale}}, -- Silicon
-    ["angelsore-chunk-mix2-processing"] = {["base"] = {icon = sorting_icon}, ["nickel-ore"] = {shift = shift, scale = scale}}, -- Nickel
-    ["angelsore-chunk-mix3-processing"] = {["base"] = {icon = sorting_icon}, ["bauxite-ore"] = {shift = shift, scale = scale}}, -- Aluminium
-    ["angelsore-chunk-mix4-processing"] = {["base"] = {icon = sorting_icon}, ["zinc-ore"] = {shift = shift, scale = scale}}, -- Zinc
-    -- ["angelsore-chunk-mix5-processing"] = {["base"] = {icon = sorting_icon}, ["fluorite-ore"] = {shift = shift, scale = scale}}, -- Fluorite
-    -- ["angelsore-chunk-mix6-processing"] = {["base"] = {icon = sorting_icon}, ["manganese-ore"] = {shift = shift, scale = scale}}, -- Manganese?
+    ["angelsore-crushed-mix3-processing"] = { ["base"] = { icon = sorting_icon }, ["lead-ore"] = { shift = shift, scale = scale } },    -- Lead
+    ["angelsore-crushed-mix4-processing"] = { ["base"] = { icon = sorting_icon }, ["tin-ore"] = { shift = shift, scale = scale } },     -- Tin
 
-    ["angelsore-crystal-mix1-processing"] = {["base"] = {icon = sorting_icon}, ["rutile-ore"] = {shift = shift, scale = scale}}, -- Titanium
-    ["angelsore-crystal-mix2-processing"] = {["base"] = {icon = sorting_icon}, ["gold-ore"] = {shift = shift, scale = scale}}, -- Gold
-    ["angelsore-crystal-mix3-processing"] = {["base"] = {icon = sorting_icon}, ["cobalt-ore"] = {shift = shift, scale = scale}}, -- Cobalt
-    ["angelsore-crystal-mix4-processing"] = {["base"] = {icon = sorting_icon}, ["silver-ore"] = {shift = shift, scale = scale}}, -- Silver
-    ["angelsore-crystal-mix5-processing"] = {["base"] = {icon = sorting_icon}, ["uranium-ore"] = {shift = shift, scale = scale}}, -- Uranium
-    ["angelsore-crystal-mix6-processing"] = {["base"] = {icon = sorting_icon}, ["thorium-ore"] = {shift = shift, scale = scale}}, -- Thorium
+    ["angelsore-chunk-mix1-processing"]   = { ["base"] = { icon = sorting_icon }, ["quartz"] = { shift = shift, scale = scale } },      -- Silicon
+    ["angelsore-chunk-mix2-processing"]   = { ["base"] = { icon = sorting_icon }, ["nickel-ore"] = { shift = shift, scale = scale } },  -- Nickel
+    ["angelsore-chunk-mix3-processing"]   = { ["base"] = { icon = sorting_icon }, ["bauxite-ore"] = { shift = shift, scale = scale } }, -- Aluminium
+    ["angelsore-chunk-mix4-processing"]   = { ["base"] = { icon = sorting_icon }, ["zinc-ore"] = { shift = shift, scale = scale } },    -- Zinc
+    --["angelsore-chunk-mix5-processing"]   = { ["base"] = { icon = sorting_icon }, ["fluorite-ore"] = { shift = shift, scale = scale } },  -- Fluorite
+    --["angelsore-chunk-mix6-processing"]   = { ["base"] = { icon = sorting_icon }, ["manganese-ore"] = { shift = shift, scale = scale } }, -- Manganese?
 
-    ["angelsore-pure-mix1-processing"] = {["base"] = {icon = sorting_icon}, ["tungsten-ore"] = {shift = shift, scale = scale}}, -- Tungsten
-    -- ["angelsore-pure-mix2-processing"] = {["base"] = {icon = sorting_icon}, ["platinum-ore"] = {shift = shift, scale = scale}}, -- Platinum
-    -- ["angelsore-pure-mix3-processing"] = {["base"] = {icon = sorting_icon}, ["chrome-ore"] = {shift = shift, scale = scale}}, -- Chrome?
+    ["angelsore-crystal-mix1-processing"] = { ["base"] = { icon = sorting_icon }, ["rutile-ore"] = { shift = shift, scale = scale } },   -- Titanium
+    ["angelsore-crystal-mix2-processing"] = { ["base"] = { icon = sorting_icon }, ["gold-ore"] = { shift = shift, scale = scale } },     -- Gold
+    ["angelsore-crystal-mix3-processing"] = { ["base"] = { icon = sorting_icon }, ["cobalt-ore"] = { shift = shift, scale = scale } },   -- Cobalt
+    ["angelsore-crystal-mix4-processing"] = { ["base"] = { icon = sorting_icon }, ["silver-ore"] = { shift = shift, scale = scale } },   -- Silver
+    ["angelsore-crystal-mix5-processing"] = { ["base"] = { icon = sorting_icon }, ["uranium-ore"] = { shift = shift, scale = scale } },  -- Uranium
+    ["angelsore-crystal-mix6-processing"] = { ["base"] = { icon = sorting_icon }, ["thorium-ore"] = { shift = shift, scale = scale } },  -- Thorium
+
+    ["angelsore-pure-mix1-processing"]    = { ["base"] = { icon = sorting_icon }, ["tungsten-ore"] = { shift = shift, scale = scale } }, -- Tungsten
+    --["angelsore-pure-mix2-processing"]    = { ["base"] = { icon = sorting_icon }, ["platinum-ore"] = { shift = shift, scale = scale } },  -- Platinum
+    --["angelsore-pure-mix3-processing"]    = { ["base"] = { icon = sorting_icon }, ["chrome-ore"] = { shift = shift, scale = scale } },    -- Chrome?
 }
 
 -- Build Crystalizer slag processing recipes
@@ -147,9 +148,9 @@ local slag_processing_list = {
 }
 
 local slag_recipe_shifts = {
-    {-11.5, 12},
-    {11.5, 12},
-    {0, 12}
+    { -11.5, 12 },
+    { 11.5,  12 },
+    { 0,     12 },
 }
 
 for _, name in pairs(slag_processing_list) do
@@ -164,11 +165,11 @@ for _, name in pairs(slag_processing_list) do
         local shift_index = 1
 
         -- Setup base layer
-        composite_recipes[name] = {["base"] = {icons = sludge_icons}}
+        composite_recipes[name] = { ["base"] = { icons = sludge_icons } }
 
         -- Build icon overlays based on recipe products
         for _, product in pairs(recipe_results) do
-            composite_recipes[name][product.name] = {shift = slag_recipe_shifts[shift_index], scale = 0.32}
+            composite_recipes[name][product.name] = { shift = slag_recipe_shifts[shift_index], scale = 0.32 }
             shift_index = shift_index + 1
         end
     end
