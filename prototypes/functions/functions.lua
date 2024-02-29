@@ -41,7 +41,7 @@ local number_tints = {
 }
 
 local function check_validity()
-    return angelsmods and angelsmods.functions.add_number_icon_layer({}, 1, reskins.lib.adjust_alpha(util.color("000000"), 1))
+    return angelsmods and angelsmods.functions.add_number_icon_layer({}, 1, util.get_color_with_alpha(util.color("000000"), 1))
 end
 
 local number_function_is_valid = pcall(check_validity)
@@ -53,7 +53,7 @@ function reskins.angels.num_tier(tier, mod)
 
     -- Go fetch an icons table
     if number_function_is_valid then
-        local icons = angelsmods and angelsmods.functions.add_number_icon_layer({}, tier, reskins.lib.adjust_alpha(tint, 1))
+        local icons = angelsmods and angelsmods.functions.add_number_icon_layer({}, tier, util.get_color_with_alpha(tint, 1))
 
         -- Strip out the scaling and shifting
         for _, icon_data in pairs(icons) do
@@ -69,7 +69,7 @@ function reskins.angels.num_tier(tier, mod)
                 icon = reskins.angels.directory.."/graphics/icons/refining/numbers/num-"..tier..".png",
                 icon_size = 64,
                 icon_mipmaps = 2,
-                tint = reskins.lib.adjust_alpha(tint, 1),
+                tint = util.get_color_with_alpha(tint, 1),
                 shift = {-13, 0},
             }
         }
