@@ -40,15 +40,15 @@ local intermediates = {
     -- Intermediates
     ----------------------------------------------------------------------------------------------------
     -- Nuclear fuel cells
-    ["angels-deuterium-fuel-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.lit_icon_pictures_layer("lib", "fuel-cell") } },
-    ["AMOX-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.lit_icon_pictures_layer("lib", "fuel-cell") } },
-    ["angels-thorium-fuel-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.lit_icon_pictures_layer("lib", "fuel-cell") } },
-    ["angels-uranium-fuel-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.lit_icon_pictures_layer("lib", "fuel-cell") } },
-    ["uranium-fuel-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.lit_icon_pictures_layer("lib", "fuel-cell") } },
+    ["angels-deuterium-fuel-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.get_lit_sprite_layer("fuel-cell") } },
+    ["AMOX-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.get_lit_sprite_layer("fuel-cell") } },
+    ["angels-thorium-fuel-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.get_lit_sprite_layer("fuel-cell") } },
+    ["angels-uranium-fuel-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.get_lit_sprite_layer("fuel-cell") } },
+    ["uranium-fuel-cell"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.get_lit_sprite_layer("fuel-cell") } },
 
     -- Nuclear fuel
-    ["angels-nuclear-fuel"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.lit_icon_pictures_layer("lib", "fuel") } },
-    ["angels-nuclear-fuel-2"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.lit_icon_pictures_layer("lib", "fuel") } },
+    ["angels-nuclear-fuel"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.get_lit_sprite_layer("fuel") } },
+    ["angels-nuclear-fuel-2"] = { subgroup = "nuclear", make_icon_pictures = true, icon_picture_extras = { reskins.lib.get_lit_sprite_layer("fuel") } },
 
 
     -- Nuclear isotopes
