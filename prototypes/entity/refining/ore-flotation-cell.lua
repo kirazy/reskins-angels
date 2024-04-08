@@ -57,12 +57,12 @@ for name, map in pairs(tier_map) do
 
     -- Handle tier
     local tier = map.tier
-    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
         tier = map.prog_tier or map.tier
     end
 
     -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tint_index[tier]
+    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
@@ -172,14 +172,14 @@ for name, map in pairs(tier_map) do
                 layers = {
                     -- Mask
                     {
-                        filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-mask.png",
+                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-mask.png",
                         priority = "extra-high",
                         width = 168,
                         height = 182,
                         shift = util.by_pixel(0, 0),
                         tint = inputs.tint,
                         hr_version = {
-                            filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-mask.png",
+                            filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-mask.png",
                             priority = "extra-high",
                             width = 333,
                             height = 363,
@@ -190,19 +190,19 @@ for name, map in pairs(tier_map) do
                     },
                     -- Highlights
                     {
-                        filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-highlights.png",
+                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-highlights.png",
                         priority = "extra-high",
                         width = 168,
                         height = 182,
                         shift = util.by_pixel(0, 0),
-                        blend_mode = reskins.lib.blend_mode,
+                        blend_mode = reskins.lib.settings.blend_mode,
                         hr_version = {
-                            filename = reskins.angels.directory.."/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-highlights.png",
+                            filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-highlights.png",
                             priority = "extra-high",
                             width = 333,
                             height = 363,
                             shift = util.by_pixel_hr(-1, -1),
-                            blend_mode = reskins.lib.blend_mode,
+                            blend_mode = reskins.lib.settings.blend_mode,
                             scale = 0.5,
                         }
                     },
@@ -223,8 +223,8 @@ for name, map in pairs(tier_map) do
         -- Vertical Pipe Shadow Patch
         {
             always_draw = true,
-            north_animation = reskins.lib.vertical_pipe_shadow({0, -2}),
-            south_animation = reskins.lib.vertical_pipe_shadow({0, -2}),
+            north_animation = reskins.lib.sprites.pipes.get_vertical_pipe_shadow({0, -2}),
+            south_animation = reskins.lib.sprites.pipes.get_vertical_pipe_shadow({0, -2}),
         },
     }
 

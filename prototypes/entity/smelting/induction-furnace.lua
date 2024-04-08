@@ -34,12 +34,12 @@ for name, map in pairs(tier_map) do
 
     -- Handle tier
     local tier = map.tier
-    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
         tier = map.prog_tier or map.tier
     end
 
     -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tint_index[tier]
+    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
@@ -80,7 +80,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/induction-furnace-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/induction-furnace-mask.png",
                 priority = "extra-high",
                 width = 170,
                 height = 192,
@@ -96,12 +96,12 @@ for name, map in pairs(tier_map) do
                     frame_count = 36,
                     stripes = {
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-mask_01.png",
+                            filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/hr-induction-furnace-mask_01.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-mask_02.png",
+                            filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/hr-induction-furnace-mask_02.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
@@ -114,14 +114,14 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/induction-furnace-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/induction-furnace-highlights.png",
                 priority = "extra-high",
                 width = 170,
                 height = 192,
                 line_length = 6,
                 frame_count = 36,
                 animation_speed = 0.5,
-                blend_mode = reskins.lib.blend_mode,
+                blend_mode = reskins.lib.settings.blend_mode,
                 shift = util.by_pixel(0.5, -5.5),
                 hr_version = {
                     priority = "extra-high",
@@ -130,18 +130,18 @@ for name, map in pairs(tier_map) do
                     frame_count = 36,
                     stripes = {
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-highlights_01.png",
+                            filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/hr-induction-furnace-highlights_01.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
                         {
-                            filename = reskins.angels.directory.."/graphics/entity/smelting/induction-furnace/hr-induction-furnace-highlights_02.png",
+                            filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/hr-induction-furnace-highlights_02.png",
                             width_in_frames = 6,
                             height_in_frames = 3,
                         },
                     },
                     animation_speed = 0.5,
-                    blend_mode = reskins.lib.blend_mode,
+                    blend_mode = reskins.lib.settings.blend_mode,
                     shift = util.by_pixel(0, -5),
                     scale = 0.5,
                 }

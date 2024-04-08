@@ -25,7 +25,7 @@ local tier_map = {
 }
 
 -- Algae farm recipes revised in Angel's Bioprocessing 0.7.23
-if reskins.lib.migration.is_version_or_newer(mods["angelsbioprocessing"], "0.7.23") then
+if reskins.lib.version.is_same_or_newer(mods["angelsbioprocessing"], "0.7.23") then
     tier_map["algae-farm"].prog_tier = 0
     tier_map["algae-farm-2"].prog_tier = 1
     tier_map["algae-farm-3"].prog_tier = 2
@@ -33,12 +33,12 @@ if reskins.lib.migration.is_version_or_newer(mods["angelsbioprocessing"], "0.7.2
 end
 
 -- Algae farm recipes revised in Angel's Bioprocessing 0.7.18, and again in 0.7.20 with addition of Algae farm 4
-if reskins.lib.migration.is_version_or_newer(mods["angelsbioprocessing"], "0.7.18") and reskins.lib.migration.is_older_version(mods["angelsbioprocessing"], "0.7.20") then
+if reskins.lib.version.is_same_or_newer(mods["angelsbioprocessing"], "0.7.18") and reskins.lib.version.is_older(mods["angelsbioprocessing"], "0.7.20") then
     tier_map["algae-farm-3"].prog_tier = 4
 end
 
 -- Sea Block 0.5.5 revises algae farm 3 recipe for earlier access
-if reskins.lib.migration.is_version_or_newer(mods["SeaBlock"], "0.5.5") then
+if reskins.lib.version.is_same_or_newer(mods["SeaBlock"], "0.5.5") then
     tier_map["algae-farm"].prog_tier = 0
     tier_map["algae-farm-2"].prog_tier = 1
     tier_map["algae-farm-3"].prog_tier = 2
@@ -46,11 +46,11 @@ if reskins.lib.migration.is_version_or_newer(mods["SeaBlock"], "0.5.5") then
 end
 
 -- Extended Angel's adds a 5th tier of Algae farm in version 0.5.0, prior to that Algae farm 4 had tier 5 ingredients
-if reskins.lib.migration.is_version_or_newer(mods["extendedangels"], "0.5.10") then
+if reskins.lib.version.is_same_or_newer(mods["extendedangels"], "0.5.10") then
     tier_map["algae-farm-5"] = {tier = 5, prog_tier = 4}
-elseif reskins.lib.migration.is_version_or_newer(mods["extendedangels"], "0.5.0") then
+elseif reskins.lib.version.is_same_or_newer(mods["extendedangels"], "0.5.0") then
     tier_map["algae-farm-5"] = {tier = 5}
-elseif mods["extendedangels"] and reskins.lib.migration.is_older_version(mods["angelsbioprocessing"], "0.7.20") then
+elseif mods["extendedangels"] and reskins.lib.version.is_older(mods["angelsbioprocessing"], "0.7.20") then
     tier_map["algae-farm-4"].prog_tier = 5
 end
 
@@ -64,12 +64,12 @@ for name, map in pairs(tier_map) do
 
     -- Handle tier
     local tier = map.tier
-    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
         tier = map.prog_tier or map.tier
     end
 
     -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tint_index[tier]
+    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
@@ -89,7 +89,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/bioprocessing/algae-farm/algae-farm-mask.png",
+                filename = "__reskins-angels__/graphics/entity/bioprocessing/algae-farm/algae-farm-mask.png",
                 priority = "extra-high",
                 width = 288,
                 height = 288,
@@ -100,14 +100,14 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = reskins.angels.directory.."/graphics/entity/bioprocessing/algae-farm/algae-farm-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/bioprocessing/algae-farm/algae-farm-highlights.png",
                 priority = "extra-high",
                 width = 288,
                 height = 288,
                 repeat_count = 36,
                 shift = {0, 0},
                 animation_speed = 0.4,
-                blend_mode = reskins.lib.blend_mode,
+                blend_mode = reskins.lib.settings.blend_mode,
             },
         }
     }

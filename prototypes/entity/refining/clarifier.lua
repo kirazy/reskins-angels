@@ -19,15 +19,15 @@ local inputs = {
 local entity = data.raw[inputs.type]["clarifier"]
 if not entity then return end
 
-local shadows = reskins.lib.make_4way_animation_from_spritesheet({
-    filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/clarifier-shadow.png",
+local shadows = reskins.lib.sprites.make_4way_animation_from_spritesheet({
+    filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-shadow.png",
     priority = "extra-high",
     width = 189,
     height = 184,
     shift = util.by_pixel(9.5, 1),
     draw_as_shadow = true,
     hr_version = {
-        filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/hr-clarifier-shadow.png",
+        filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-shadow.png",
         priority = "extra-high",
         width = 374,
         height = 365,
@@ -51,7 +51,7 @@ local pipe_properties = {
 local function get_pipe_connections(direction, is_animated)
     if is_animated then
         return {
-            filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/clarifier-pipe-connections.png",
+            filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-pipe-connections.png",
             priority = "extra-high",
             width = 189,
             height = 184,
@@ -61,7 +61,7 @@ local function get_pipe_connections(direction, is_animated)
             frame_sequence = pipe_properties[direction],
             shift = util.by_pixel(9.5, 1),
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
+                filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
                 priority = "extra-high",
                 width = 374,
                 height = 365,
@@ -75,14 +75,14 @@ local function get_pipe_connections(direction, is_animated)
         }
     else
         return {
-            filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/clarifier-pipe-connections.png",
+            filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-pipe-connections.png",
             priority = "extra-high",
             width = 189,
             height = 184,
             x = pipe_properties[direction].normal,
             shift = util.by_pixel(9.5, 1),
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
+                filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
                 priority = "extra-high",
                 width = 374,
                 height = 365,
@@ -97,7 +97,7 @@ end
 reskins.lib.setup_standard_entity("clarifier", 0, inputs)
 
 entity.animation = {
-    filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/clarifier-base.png",
+    filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-base.png",
     priority = "extra-high",
     frame_count = 64,
     line_length = 8,
@@ -106,7 +106,7 @@ entity.animation = {
     height = 184,
     shift = util.by_pixel(9.5, 1),
     hr_version = {
-        filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/hr-clarifier-base.png",
+        filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-base.png",
         priority = "extra-high",
         frame_count = 64,
         line_length = 8,
@@ -148,7 +148,7 @@ entity.working_visualisations = {
         apply_recipe_tint = "primary",
         fadeout = true,
         animation = {
-            filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/clarifier-recipe-mask.png",
+            filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-recipe-mask.png",
             priority = "extra-high",
             frame_count = 64,
             line_length = 8,
@@ -157,7 +157,7 @@ entity.working_visualisations = {
             height = 184,
             shift = util.by_pixel(9.5, 1),
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/refining/clarifier/hr-clarifier-recipe-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-recipe-mask.png",
                 priority = "extra-high",
                 frame_count = 64,
                 line_length = 8,
@@ -173,6 +173,6 @@ entity.working_visualisations = {
     -- Vertical Pipe Shadow
     {
         always_draw = true,
-        south_animation = reskins.lib.vertical_pipe_shadow({0, -2}),
+        south_animation = reskins.lib.sprites.pipes.get_vertical_pipe_shadow({0, -2}),
     }
 }

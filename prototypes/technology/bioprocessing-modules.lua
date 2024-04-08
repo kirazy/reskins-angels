@@ -4,16 +4,17 @@
 -- See LICENSE in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if reskins.lib.setting("cp-override-modules") == false then --[[ Do nothing ]] elseif mods["CircuitProcessing"] then return end
+if reskins.lib.settings.get_value("cp-override-modules") == false then --[[ Do nothing ]] elseif mods["CircuitProcessing"] then return end
 if not (reskins.bobs and reskins.bobs.triggers.modules.technologies) then return end
 if not (reskins.angels and reskins.angels.triggers.bioprocessing.technologies) then return end
 
 -- Modules
 local modules_map = {
-    ["angels-bio-yield"] = {color = "orange", is_exception = true},
+    ["angels-bio-yield"] = { color = "orange", is_exception = true },
 }
 
 for class, map in pairs(modules_map) do
+    ---@type ConstructTechnologyIconInputsOld
     local inputs = {
         directory = reskins.bobs.directory,
         mod = "bobs",
@@ -29,9 +30,9 @@ for class, map in pairs(modules_map) do
     -- Do all tiers
     for tier = 1, 8 do
         -- Naming convention exception handling
-        local name = class.."-module-"..tier
+        local name = class .. "-module-" .. tier
         if tier == 1 and map.is_exception then
-            name = class.."-module"
+            name = class .. "-module"
         end
 
         -- Fetch technology
@@ -41,7 +42,7 @@ for class, map in pairs(modules_map) do
         if not technology then goto continue end
 
         -- Setup icon path
-        inputs.technology_icon_filename = reskins.bobs.directory.."/graphics/technology/modules/module/"..map.color.."/"..map.color.."_"..tier..".png"
+        inputs.technology_icon_filename = "__reskins-bobs__/graphics/technology/modules/module/" .. map.color .. "/" .. map.color .. "_" .. tier .. ".png"
 
         reskins.lib.construct_technology_icon(name, inputs)
 
@@ -50,7 +51,7 @@ for class, map in pairs(modules_map) do
     end
 end
 
--- Setup inputs
+---@type CreateIconsFromListInputs
 local inputs = {
     mod = "angels",
     group = "bioprocessing",
@@ -60,9 +61,10 @@ local inputs = {
     flat_icon = true,
 }
 
+---@type CreateIconsFromListTable
 local technologies = {
     ["modules-2"] = {},
     ["modules-3"] = {},
 }
 
-reskins.lib.create_icons_from_list(technologies, inputs)
+reskins.internal.create_icons_from_list(technologies, inputs)

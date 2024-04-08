@@ -6,7 +6,7 @@
 -- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.smelting.technologies) then return end
 
--- Setup standard inputs
+---@type CreateIconsFromListInputs
 local inputs = {
     mod = "angels",
     group = "smelting",
@@ -16,6 +16,7 @@ local inputs = {
     flat_icon = true,
 }
 
+---@type CreateIconsFromListTable
 local technologies = {}
 
-reskins.lib.create_icons_from_list(technologies, inputs)
+reskins.internal.create_icons_from_list(technologies, inputs)

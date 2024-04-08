@@ -34,12 +34,12 @@ for name, map in pairs(tier_map) do
 
     -- Handle tier
     local tier = map.tier
-    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
         tier = map.prog_tier or map.tier
     end
 
     -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tint_index[tier]
+    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
@@ -54,14 +54,14 @@ for name, map in pairs(tier_map) do
             layers = {
                 -- Mask
                 {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-mask.png",
+                    filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-mask.png",
                     priority = "extra-high",
                     width = 167,
                     height = 197,
                     shift = util.by_pixel(0, -16.5),
                     tint = inputs.tint,
                     hr_version = {
-                        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
+                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
                         priority = "extra-high",
                         width = 329,
                         height = 392,
@@ -72,19 +72,19 @@ for name, map in pairs(tier_map) do
                 },
                 -- Highlights
                 {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-highlights.png",
+                    filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-highlights.png",
                     priority = "extra-high",
                     width = 167,
                     height = 197,
                     shift = util.by_pixel(0, -16.5),
-                    blend_mode = reskins.lib.blend_mode,
+                    blend_mode = reskins.lib.settings.blend_mode,
                     hr_version = {
-                        filename = reskins.angels.directory.."/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
+                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
                         priority = "extra-high",
                         width = 329,
                         height = 392,
                         shift = util.by_pixel(0, -16.5),
-                        blend_mode = reskins.lib.blend_mode,
+                        blend_mode = reskins.lib.settings.blend_mode,
                         scale = 0.5,
                     }
                 }

@@ -34,13 +34,13 @@ local function cardinal_pictures(x, tint)
         layers = {
             -- Base
             {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/valve/valve-base.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-base.png",
                 priority = "extra-high",
                 x = x_lr,
                 width = 64,
                 height = 64,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/petrochem/valve/hr-valve-base.png",
+                    filename = "__reskins-angels__/graphics/entity/petrochem/valve/hr-valve-base.png",
                     priority = "extra-high",
                     x = x_hr,
                     width = 128,
@@ -50,14 +50,14 @@ local function cardinal_pictures(x, tint)
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/valve/valve-mask.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-mask.png",
                 priority = "extra-high",
                 x = x_lr,
                 width = 64,
                 height = 64,
                 tint = tint,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/petrochem/valve/hr-valve-mask.png",
+                    filename = "__reskins-angels__/graphics/entity/petrochem/valve/hr-valve-mask.png",
                     priority = "extra-high",
                     x = x_hr,
                     width = 128,
@@ -108,16 +108,16 @@ if not entity then return end
 
 reskins.lib.setup_standard_entity(name, 0, inputs)
 
-entity.animation = reskins.lib.make_4way_animation_from_spritesheet({
+entity.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
     layers = {
         -- Base
         {
-            filename = reskins.angels.directory.."/graphics/entity/petrochem/valve/valve-base.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-base.png",
             priority = "extra-high",
             width = 64,
             height = 64,
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/valve/hr-valve-base.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/valve/hr-valve-base.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,
@@ -126,13 +126,13 @@ entity.animation = reskins.lib.make_4way_animation_from_spritesheet({
         },
         -- Mask
         {
-            filename = reskins.angels.directory.."/graphics/entity/petrochem/valve/valve-mask.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-mask.png",
             priority = "extra-high",
             width = 64,
             height = 64,
             tint = inputs.tint,
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/valve/hr-valve-mask.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/valve/hr-valve-mask.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,

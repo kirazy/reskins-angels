@@ -20,7 +20,7 @@ local function entity_animation(tint)
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/chemical-plant/chemical-plant-mask.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/chemical-plant/chemical-plant-mask.png",
                 priority = "extra-high",
                 width = 160,
                 height = 160,
@@ -29,12 +29,12 @@ local function entity_animation(tint)
             },
             -- Highlights
             {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/chemical-plant/chemical-plant-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/chemical-plant/chemical-plant-highlights.png",
                 priority = "extra-high",
                 width = 160,
                 height = 160,
                 shift = {0, 0},
-                blend_mode = reskins.lib.blend_mode,
+                blend_mode = reskins.lib.settings.blend_mode,
             },
         }
     }
@@ -46,7 +46,7 @@ end
 ---@param tint? table # [Types/Color](https://wiki.factorio.com/Types/Color)
 ---@param make_tier_labels? boolean
 function reskins.lib.apply_skin.angels_chemical_plant(name, tier, tint, make_tier_labels)
-    ---@type inputs.setup_standard_entity
+    ---@type SetupStandardEntityInputs
     local inputs = {
         type = "assembling-machine",
         icon_name = "chemical-plant",
@@ -55,7 +55,7 @@ function reskins.lib.apply_skin.angels_chemical_plant(name, tier, tint, make_tie
         group = "petrochem",
         particles = {["big"] = 1, ["medium"] = 2},
         tier_labels = make_tier_labels,
-        tint = tint and tint or reskins.lib.tint_index[tier],
+        tint = tint and tint or reskins.lib.tiers.get_tint(tier),
         make_remnants = false,
     }
 
@@ -63,7 +63,7 @@ function reskins.lib.apply_skin.angels_chemical_plant(name, tier, tint, make_tie
     if not entity then return end
 
     -- angelspetrochem at this version or earlier does icon work in data-final-fixes
-    if reskins.lib.migration.is_version_or_older(mods["angelspetrochem"], "0.9.19") and (name == "chemical-plant") then
+    if reskins.lib.version.is_same_or_older(mods["angelspetrochem"], "0.9.19") and (name == "chemical-plant") then
         inputs.defer_to_data_final_fixes = true
     end
 

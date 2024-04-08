@@ -23,7 +23,7 @@ local tier_map = {
     ["electro-whinning-cell-3"] = {tier = 3, prog_tier = 5},
 }
 
-if reskins.lib.migration.is_version_or_newer(mods["angelsrefining"], "0.12.5") then
+if reskins.lib.version.is_same_or_newer(mods["angelsrefining"], "0.12.5") then
   tier_map["electro-whinning-cell"].prog_tier = 4
   tier_map["electro-whinning-cell-2"].prog_tier = 5
 end
@@ -38,12 +38,12 @@ for name, map in pairs(tier_map) do
 
     -- Handle tier
     local tier = map.tier
-    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
         tier = map.prog_tier or map.tier
     end
 
     -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tint_index[tier]
+    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
@@ -63,7 +63,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/electrowinning-cell/electrowinning-cell-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/electrowinning-cell/electrowinning-cell-mask.png",
                 priority = "extra-high",
                 width = 224,
                 height = 224,
@@ -74,14 +74,14 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/electrowinning-cell/electrowinning-cell-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/refining/electrowinning-cell/electrowinning-cell-highlights.png",
                 priority = "extra-high",
                 width = 224,
                 height = 224,
                 repeat_count = 36,
                 shift = {0, 0},
                 animation_speed = 0.5,
-                blend_mode = reskins.lib.blend_mode,
+                blend_mode = reskins.lib.settings.blend_mode,
             },
         }
     }

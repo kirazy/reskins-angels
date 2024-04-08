@@ -25,7 +25,7 @@ local tier_map = {
 }
 
 -- Support rework of Angel's Smelting ingredient tiers
-if reskins.lib.migration.is_version_or_newer(mods["angelssmelting"], "0.6.20") then
+if reskins.lib.version.is_same_or_newer(mods["angelssmelting"], "0.6.20") then
     tier_map["powder-mixer"].prog_tier = 2
     tier_map["powder-mixer-2"].prog_tier = 3
     tier_map["powder-mixer-3"].prog_tier = 4
@@ -42,12 +42,12 @@ for name, map in pairs(tier_map) do
 
     -- Handle tier
     local tier = map.tier
-    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
         tier = map.prog_tier or map.tier
     end
 
     -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tint_index[tier]
+    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
@@ -78,7 +78,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/powder-mixer-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/powder-mixer-mask.png",
                 priority = "extra-high",
                 width = 71,
                 height = 87,
@@ -88,7 +88,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(0, -10),
                 tint = inputs.tint,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/hr-powder-mixer-mask.png",
+                    filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/hr-powder-mixer-mask.png",
                     priority = "extra-high",
                     width = 138,
                     height = 170,
@@ -102,7 +102,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/powder-mixer-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/powder-mixer-highlights.png",
                 priority = "extra-high",
                 width = 71,
                 height = 87,
@@ -110,9 +110,9 @@ for name, map in pairs(tier_map) do
                 frame_count = 4,
                 animation_speed = 0.5,
                 shift = util.by_pixel(0, -10),
-                blend_mode = reskins.lib.blend_mode,
+                blend_mode = reskins.lib.settings.blend_mode,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/powder-mixer/hr-powder-mixer-highlights.png",
+                    filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/hr-powder-mixer-highlights.png",
                     priority = "extra-high",
                     width = 138,
                     height = 170,
@@ -120,7 +120,7 @@ for name, map in pairs(tier_map) do
                     frame_count = 4,
                     animation_speed = 0.5,
                     shift = util.by_pixel(0.5, -9.5),
-                    blend_mode = reskins.lib.blend_mode,
+                    blend_mode = reskins.lib.settings.blend_mode,
                     scale = 0.5,
                 }
             },

@@ -37,13 +37,13 @@ for name, map in pairs(tier_map) do
 
     -- Handle tier
     local tier = map.tier
-    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
         tier = map.prog_tier or map.tier
     end
 
     -- Determine what tint we're using
     inputs.defer_to_data_updates = map.defer_to_data_updates
-    inputs.tint = map.tint or reskins.lib.tint_index[tier]
+    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
@@ -74,7 +74,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/ore-crusher-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-crusher/ore-crusher-mask.png",
                 priority = "extra-high",
                 width = 94,
                 height = 108,
@@ -83,7 +83,7 @@ for name, map in pairs(tier_map) do
                 tint = inputs.tint,
                 animation_speed = 0.5,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/hr-ore-crusher-mask.png",
+                    filename = "__reskins-angels__/graphics/entity/refining/ore-crusher/hr-ore-crusher-mask.png",
                     priority = "extra-high",
                     width = 189,
                     height = 214,
@@ -96,22 +96,22 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/ore-crusher-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-crusher/ore-crusher-highlights.png",
                 priority = "extra-high",
                 width = 94,
                 height = 108,
                 repeat_count = 16,
                 shift = util.by_pixel(0, -5),
-                blend_mode = reskins.lib.blend_mode,
+                blend_mode = reskins.lib.settings.blend_mode,
                 animation_speed = 0.5,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/refining/ore-crusher/hr-ore-crusher-highlights.png",
+                    filename = "__reskins-angels__/graphics/entity/refining/ore-crusher/hr-ore-crusher-highlights.png",
                     priority = "extra-high",
                     width = 189,
                     height = 214,
                     repeat_count = 16,
                     shift = util.by_pixel(-0.5, -5),
-                    blend_mode = reskins.lib.blend_mode,
+                    blend_mode = reskins.lib.settings.blend_mode,
                     animation_speed = 0.5,
                     scale = 0.5,
                 }

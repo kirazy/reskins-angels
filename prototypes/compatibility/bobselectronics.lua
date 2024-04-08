@@ -5,15 +5,22 @@
 
 -- Check to see if reskinning needs to be done.
 if not mods["bobelectronics"] then return end
-if reskins.lib.setting("reskins-bobs-do-bobelectronics-circuit-style") == "off" and
-    reskins.lib.setting("reskins-compatibility-do-circuitprocessing-circuit-style") == "off" then return end
+if reskins.lib.settings.get_value("reskins-bobs-do-bobelectronics-circuit-style") == "off" and
+    reskins.lib.settings.get_value("reskins-compatibility-do-circuitprocessing-circuit-style") == "off" then
+    return
+end
+
 local shift, scale = reskins.angels.constants.recipe_corner_shift, reskins.angels.constants.recipe_corner_scale
 
--- Fix fibreglass board
-local composite_recipes = {
-    ["angels-glass-fiber-board"] = {["fibreglass-board"] = {}, ["angels-coil-glass-fiber"] = {shift = shift, scale = scale}},
+-- A map of recipe names to the icon sources used to create a combined icon. 
+-- The first entry in each IconSources is the first layer of the created icon.
+---@type { [string]: IconSources }
+local recipe_icon_source_map = {
+    -- Fix fibreglass board
+    ["angels-glass-fiber-board"] = {
+        { name = "fibreglass-board", type_name = "item" },
+        { name = "angels-coil-glass-fiber", type_name = "item", scale = scale, shift = shift },
+    },
 }
 
-for name, sources in pairs(composite_recipes) do
-    reskins.lib.composite_existing_icons(name, "recipe", sources)
-end
+reskins.lib.icons.create_and_assign_combined_icons_from_sources_to_recipe(recipe_icon_source_map)

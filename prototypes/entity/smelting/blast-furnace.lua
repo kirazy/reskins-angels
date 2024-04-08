@@ -34,12 +34,12 @@ for name, map in pairs(tier_map) do
 
     -- Handle tier
     local tier = map.tier
-    if reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map" then
+    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
         tier = map.prog_tier or map.tier
     end
 
     -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tint_index[tier]
+    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
@@ -64,14 +64,14 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/blast-furnace-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/blast-furnace/blast-furnace-mask.png",
                 priority = "extra-high",
                 width = 164,
                 height = 189,
                 shift = util.by_pixel(0, -14),
                 tint = inputs.tint,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/hr-blast-furnace-mask.png",
+                    filename = "__reskins-angels__/graphics/entity/smelting/blast-furnace/hr-blast-furnace-mask.png",
                     priority = "extra-high",
                     width = 328,
                     height = 376,
@@ -82,19 +82,19 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/blast-furnace-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/blast-furnace/blast-furnace-highlights.png",
                 priority = "extra-high",
                 width = 164,
                 height = 189,
                 shift = util.by_pixel(0, -14),
-                blend_mode = reskins.lib.blend_mode,
+                blend_mode = reskins.lib.settings.blend_mode,
                 hr_version = {
-                    filename = reskins.angels.directory.."/graphics/entity/smelting/blast-furnace/hr-blast-furnace-highlights.png",
+                    filename = "__reskins-angels__/graphics/entity/smelting/blast-furnace/hr-blast-furnace-highlights.png",
                     priority = "extra-high",
                     width = 328,
                     height = 376,
                     shift = util.by_pixel(0, -13.5),
-                    blend_mode = reskins.lib.blend_mode,
+                    blend_mode = reskins.lib.settings.blend_mode,
                     scale = 0.5,
                 }
             },

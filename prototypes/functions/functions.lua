@@ -34,39 +34,34 @@ local function copy_icon(destination_name, destination_type, source_name, source
     destination.icon_mipmaps = source.icon_mipmaps
 end
 
--- Fetch angels numerical tier icons, return an icon_extras table
-local number_tints = {
-    ["petrochem"] = util.color("ffffff1a"),
-    ["smelting"] = util.color("ffcc0080"),
-}
-
-local function check_validity()
+-- Check to see if the new angels numbering function is available.
+local function check_add_number_icon_layer_is_available()
     return angelsmods and angelsmods.functions.add_number_icon_layer({}, 1, util.get_color_with_alpha(util.color("000000"), 1))
 end
 
-local number_function_is_valid = pcall(check_validity)
+local number_function_is_valid = pcall(check_add_number_icon_layer_is_available)
 
--- Check to see if the new angels numbering function is available
+---comment
+---@param tier integer
+---@param mod string # The key to a specific Angel's mod subtable in the `angelsmods` global, e.g. `"smelting"`.
+---@return data.IconData[]
 function reskins.angels.num_tier(tier, mod)
-    -- Validate tint, fallback to black if necessary
+    -- Get the tint for the given mod; fallback to black if necessary
     local tint = angelsmods and angelsmods[mod] and angelsmods[mod].number_tint or util.color("000000")
 
-    -- Go fetch an icons table
+    local icons
     if number_function_is_valid then
-        local icons = angelsmods and angelsmods.functions.add_number_icon_layer({}, tier, util.get_color_with_alpha(tint, 1))
+        icons = angelsmods and angelsmods.functions.add_number_icon_layer({}, tier, util.get_color_with_alpha(tint, 1))
 
         -- Strip out the scaling and shifting
         for _, icon_data in pairs(icons) do
             icon_data.scale = nil
             icon_data.shift = nil
         end
-
-        return icons
     else
-        return
-        {
+        icons = {
             {
-                icon = reskins.angels.directory.."/graphics/icons/refining/numbers/num-"..tier..".png",
+                icon = "__reskins-angels__/graphics/icons/refining/numbers/num-"..tier..".png",
                 icon_size = 64,
                 icon_mipmaps = 2,
                 tint = util.get_color_with_alpha(tint, 1),
@@ -74,5 +69,7 @@ function reskins.angels.num_tier(tier, mod)
             }
         }
     end
+
+    return icons
 end
 

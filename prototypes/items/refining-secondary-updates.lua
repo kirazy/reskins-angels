@@ -6,7 +6,7 @@
 -- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.refining.items) then return end
 
--- Setup inputs and constants
+---@type CreateIconsFromListInputs
 local inputs = {
     mod = "angels",
     group = "refining",
@@ -19,22 +19,26 @@ local scale = reskins.angels.constants.recipe_corner_scale
 
 -- TODO: https://github.com/kirazy/reskins-angels/issues/16 Improve handling of refining->smelting->refining icon processing
 
+---@type CreateIconsFromListTable
 local intermediates = {}
 
-reskins.lib.create_icons_from_list(intermediates, inputs)
+reskins.internal.create_icons_from_list(intermediates, inputs)
 
-local function check_for_preferred_item(primary, secondary)
-    if data.raw.item[primary] then return primary else return secondary end
-end
-
-local composite_recipes = {
+-- A map of recipe names to the icon sources used to create a combined icon. 
+-- The first entry in each IconSources is the first layer of the created icon.
+---@type { [string]: IconSources }
+local recipe_icon_source_map = {
     -- Lead plates
-    ["angelsore5-crushed-smelting"] = {[check_for_preferred_item("lead-plate", "angels-plate-lead")] = {}, ["angels-ore5-crushed"] = {scale = scale, shift = shift}}, -- Crushed rubyte
+    ["angelsore5-crushed-smelting"] = {
+        { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("lead-plate", "angels-plate-lead"), type_name = "item" },
+        { name = "angels-ore5-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed rubyte
+    },
 
     -- Tin plates
-    ["angelsore6-crushed-smelting"] = {[check_for_preferred_item("tin-plate", "angels-plate-tin")] = {}, ["angels-ore6-crushed"] = {scale = scale, shift = shift}}, -- Crushed bobmonium
+    ["angelsore6-crushed-smelting"] = {
+        { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tin-plate", "angels-plate-tin"), type_name = "item" },
+        { name = "angels-ore6-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed bobmonium
+    },
 }
 
-for name, sources in pairs(composite_recipes) do
-    reskins.lib.composite_existing_icons(name, "recipe", sources)
-end
+reskins.lib.icons.create_and_assign_combined_icons_from_sources_to_recipe(recipe_icon_source_map)

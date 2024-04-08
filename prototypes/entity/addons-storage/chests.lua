@@ -32,13 +32,13 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
             layers = {
                 -- Base
                 {
-                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/warehouse.png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse.png",
                     priority = "extra-high",
                     width = 197,
                     height = 223,
                     shift = util.by_pixel(0, -15),
                     hr_version = {
-                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/hr-warehouse.png",
+                        filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse.png",
                         priority = "extra-high",
                         width = 391,
                         height = 446,
@@ -48,14 +48,14 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
                 },
                 -- Shadow
                 {
-                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/warehouse-shadow.png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse-shadow.png",
                     priority = "extra-high",
                     width = 297,
                     height = 140,
                     shift = util.by_pixel(51, 30),
                     draw_as_shadow = true,
                     hr_version = {
-                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/hr-warehouse-shadow.png",
+                        filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-shadow.png",
                         priority = "extra-high",
                         width = 592,
                         height = 276,
@@ -89,13 +89,13 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
     --         layers = {
     --             -- Base
     --             {
-    --                 filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/warehouse.png",
+    --                 filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse.png",
     --                 priority = "extra-high",
     --                 width = 197,
     --                 height = 223,
     --                 shift = util.by_pixel(0, -15),
     --                 hr_version = {
-    --                     filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/hr-warehouse.png",
+    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse.png",
     --                     priority = "extra-high",
     --                     width = 391,
     --                     height = 446,
@@ -105,14 +105,14 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
     --             },
     --             -- Shadow
     --             {
-    --                 filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/warehouse-shadow.png",
+    --                 filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse-shadow.png",
     --                 priority = "extra-high",
     --                 width = 297,
     --                 height = 140,
     --                 shift = util.by_pixel(51, 30),
     --                 draw_as_shadow = true,
     --                 hr_version = {
-    --                     filename = reskins.angels.directory.."/graphics/entity/addons-storage/warehouse/hr-warehouse-shadow.png",
+    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-shadow.png",
     --                     priority = "extra-high",
     --                     width = 592,
     --                     height = 276,
@@ -148,13 +148,13 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
             layers = {
                 -- Base
                 {
-                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/big-chest.png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/big-chest.png",
                     priority = "extra-high",
                     width = 68,
                     height = 85,
                     shift = util.by_pixel(0, -10),
                     hr_version = {
-                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/hr-big-chest.png",
+                        filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/hr-big-chest.png",
                         priority = "extra-high",
                         width = 135,
                         height = 169,
@@ -164,14 +164,14 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
                 },
                 -- Shadow
                 {
-                    filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/big-chest-shadow.png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/big-chest-shadow.png",
                     priority = "extra-high",
                     width = 107,
                     height = 50,
                     shift = util.by_pixel(19, 9),
                     draw_as_shadow = true,
                     hr_version = {
-                        filename = reskins.angels.directory.."/graphics/entity/addons-storage/big-chest/hr-big-chest-shadow.png",
+                        filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/hr-big-chest-shadow.png",
                         priority = "extra-high",
                         width = 209,
                         height = 97,

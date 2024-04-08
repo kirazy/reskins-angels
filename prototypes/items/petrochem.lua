@@ -6,7 +6,7 @@
 -- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.petrochem.items) then return end
 
--- Setup inputs
+---@type CreateIconsFromListInputs
 local inputs = {
     mod = "angels",
     group = "petrochem",
@@ -14,24 +14,25 @@ local inputs = {
     flat_icon = true,
 }
 
+---@type CreateIconsFromListTable
 local intermediates = {
     ----------------------------------------------------------------------------------------------------
     -- Intermediates
     ----------------------------------------------------------------------------------------------------
     -- Miscellaneous
-    ["pellet-coke"] = {subgroup = "intermediates"},
+    ["pellet-coke"] = { subgroup = "intermediates" },
 
     ----------------------------------------------------------------------------------------------------
     -- Recipes
     ----------------------------------------------------------------------------------------------------
     -- Miscellaneous
-    ["bob-rubber"] = {type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(1, inputs.group)}, -- "1"
-    ["solid-rubber"] = {type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(2, inputs.group)}, -- "2"
+    ["bob-rubber"] = { type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(1, inputs.group) }, -- "1"
+    ["solid-rubber"] = { type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(2, inputs.group) }, -- "2"
 }
 
 if mods["reskins-bobs"] then
-    intermediates["bob-resin-wood"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin", icon_extras = reskins.angels.num_tier(1, inputs.group)}
-    intermediates["solid-resin"] = {type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin"}
+    intermediates["bob-resin-wood"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin", icon_extras = reskins.angels.num_tier(1, inputs.group) }
+    intermediates["solid-resin"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin" }
 end
 
 if not data.raw.recipe["bob-rubber"] then
@@ -39,19 +40,16 @@ if not data.raw.recipe["bob-rubber"] then
     intermediates["solid-rubber"].type = nil
 end
 
-reskins.lib.create_icons_from_list(intermediates, inputs)
+reskins.internal.create_icons_from_list(intermediates, inputs)
 
-local function check_for_preferred_item(primary, secondary)
-    if data.raw.item[primary] then return primary else return secondary end
-end
-
-local shift = reskins.angels.constants.recipe_corner_shift
-local scale = reskins.angels.constants.recipe_corner_scale
-
-local composite_recipes = {
-    ["bio-resin-wood-reprocessing"] = {[check_for_preferred_item("resin", "solid-resin")] = {}, ["wood"] = {scale = 0.5, shift = {-8, -8}}},
+-- A map of recipe names to the icon sources used to create a combined icon. 
+-- The first entry in each IconSources is the first layer of the created icon.
+---@type { [string]: IconSources }
+local recipe_icon_source_map = {
+    ["bio-resin-wood-reprocessing"] = {
+        { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("resin", "solid-resin"), type_name = "item" },
+        { name = "wood", type_name = "item", scale = 0.5, shift = { -8, -8 } },
+    },
 }
 
-for name, sources in pairs(composite_recipes) do
-    reskins.lib.composite_existing_icons(name, "recipe", sources)
-end
+reskins.lib.icons.create_and_assign_combined_icons_from_sources_to_recipe(recipe_icon_source_map)

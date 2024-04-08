@@ -18,7 +18,7 @@ local chemical_plants = {
 }
 
 -- Chemical plant recipes revised in Angel's Petrochem 0.9.18, and then "reverted" in Angel's Petrochem 0.9.23
-if reskins.lib.migration.is_version_or_newer(mods["angelspetrochem"], "0.9.18") and reskins.lib.migration.is_older_version(mods["angelspetrochem"], "0.9.23") then
+if reskins.lib.version.is_same_or_newer(mods["angelspetrochem"], "0.9.18") and reskins.lib.version.is_older(mods["angelspetrochem"], "0.9.23") then
     chemical_plants["angels-chemical-plant"].prog_tier = 2
     chemical_plants["angels-chemical-plant-2"].prog_tier = 3
     chemical_plants["angels-chemical-plant-3"].prog_tier = 4
@@ -26,14 +26,14 @@ if reskins.lib.migration.is_version_or_newer(mods["angelspetrochem"], "0.9.18") 
 end
 
 -- Sea Block 0.5.5 revises chemical plant recipe for earlier access, but obviated with Angel's Petrochem 0.9.23
-if reskins.lib.migration.is_version_or_newer(mods["SeaBlock"], "0.5.5") and reskins.lib.migration.is_older_version(mods["angelspetrochem"], "0.9.23") then
+if reskins.lib.version.is_same_or_newer(mods["SeaBlock"], "0.5.5") and reskins.lib.version.is_older(mods["angelspetrochem"], "0.9.23") then
     chemical_plants["angels-chemical-plant"].prog_tier = 1
 end
 
 for name, map in pairs(chemical_plants) do
-    if (reskins.lib.setting("reskins-angels-use-vanilla-chemical-plant-sprites") and reskins.lib.setting("angels-disable-vanilla-chemical-plants")) then
-        reskins.lib.apply_skin.chemical_plant(name, (reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map") and map.prog_tier or map.tier)
+    if (reskins.lib.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites") and reskins.lib.settings.get_value("angels-disable-vanilla-chemical-plants")) then
+        reskins.lib.apply_skin.chemical_plant(name, (reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map") and map.prog_tier or map.tier)
     else
-        reskins.lib.apply_skin.angels_chemical_plant(name, (reskins.lib.setting("reskins-lib-tier-mapping") == "progression-map") and map.prog_tier or map.tier)
+        reskins.lib.apply_skin.angels_chemical_plant(name, (reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map") and map.prog_tier or map.tier)
     end
 end

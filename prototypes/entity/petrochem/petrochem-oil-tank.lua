@@ -30,14 +30,14 @@ reskins.lib.setup_standard_entity(name, 0, inputs)
 entity.pictures.picture = {
     sheets = {
         {
-            filename = reskins.angels.directory.."/graphics/entity/petrochem/petrochem-oil-tank/petrochem-oil-tank.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-oil-tank/petrochem-oil-tank.png",
             priority = "extra-high",
             frames = 2,
             width = 135,
             height = 154,
             shift = util.by_pixel(-1, -1),
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/petrochem-oil-tank/hr-petrochem-oil-tank.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-oil-tank/hr-petrochem-oil-tank.png",
                 priority = "extra-high",
                 frames = 2,
                 width = 273,
@@ -47,7 +47,7 @@ entity.pictures.picture = {
             }
         },
         {
-            filename = reskins.angels.directory.."/graphics/entity/petrochem/petrochem-oil-tank/petrochem-oil-tank-shadow.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-oil-tank/petrochem-oil-tank-shadow.png",
             priority = "extra-high",
             frames = 2,
             width = 167,
@@ -55,7 +55,7 @@ entity.pictures.picture = {
             shift = util.by_pixel(15, 8.5),
             draw_as_shadow = true,
             hr_version = {
-                filename = reskins.angels.directory.."/graphics/entity/petrochem/petrochem-oil-tank/hr-petrochem-oil-tank-shadow.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-oil-tank/hr-petrochem-oil-tank-shadow.png",
                 priority = "extra-high",
                 frames = 2,
                 width = 335,
