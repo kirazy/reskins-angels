@@ -592,9 +592,6 @@ local powder_variations = {
 }
 
 for powder, material in pairs(powder_variations) do
-    local item = data.raw.item[powder]
-    if not item then goto continue end
-
     -- Create the variations.
     ---@type data.Sprite[]
     local sprite_variations = {}
@@ -626,8 +623,6 @@ for powder, material in pairs(powder_variations) do
     }
 
     reskins.lib.icons.assign_deferrable_icon(deferrable_icon)
-
-    ::continue::
 end
 
 -- Clear recipe icons
