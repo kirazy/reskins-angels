@@ -201,7 +201,7 @@ local recipe_icon_source_map = {
     -- Aluminium
     ["angels-plate-aluminium"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("aluminium-plate", "angels-plate-aluminium"), type_name = "item" },
-        ["liquid-molten-aluminium"] = { type = "fluid", scale = scale, shift = shift }, -- Molten aluminium
+        { name = "liquid-molten-aluminium", type_name = "fluid", scale = scale, shift = shift }, -- Molten aluminium
     },
     ["angels-roll-aluminium-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("aluminium-plate", "angels-plate-aluminium"), type_name = "item" },
@@ -211,7 +211,7 @@ local recipe_icon_source_map = {
     -- Chrome
     ["angels-plate-chrome"] = {
         { name = "angels-plate-chrome", type_name = "item" },
-        ["liquid-molten-chrome"] = { type = "fluid", scale = scale, shift = shift }, -- Molten chrome
+        { name = "liquid-molten-chrome", type_name = "fluid", scale = scale, shift = shift }, -- Molten chrome
     },
     ["angels-roll-chrome-converting"] = {
         { name = "angels-plate-chrome", type_name = "item" },
@@ -221,7 +221,7 @@ local recipe_icon_source_map = {
     -- Cobalt
     ["angels-plate-cobalt"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("cobalt-plate", "angels-plate-cobalt"), type_name = "item" },
-        ["liquid-molten-cobalt"] = { type = "fluid", scale = scale, shift = shift }, -- Molten cobalt
+        { name = "liquid-molten-cobalt", type_name = "fluid", scale = scale, shift = shift }, -- Molten cobalt
     },
     ["angels-roll-cobalt-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("cobalt-plate", "angels-plate-cobalt"), type_name = "item" },
@@ -239,7 +239,7 @@ local recipe_icon_source_map = {
     },
     ["angels-plate-copper"] = {
         { name = "copper-plate", type_name = "item" },
-        ["liquid-molten-copper"] = { type = "fluid", scale = scale, shift = shift }, -- Molten copper
+        { name = "liquid-molten-copper", type_name = "fluid", scale = scale, shift = shift }, -- Molten copper
     },
     ["angels-roll-copper-converting"] = {
         { name = "copper-plate", type_name = "item" },
@@ -263,7 +263,7 @@ local recipe_icon_source_map = {
     -- Gold
     ["angels-plate-gold"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("gold-plate", "angels-plate-gold"), type_name = "item" },
-        ["liquid-molten-gold"] = { type = "fluid", scale = scale, shift = shift }, -- Molten gold
+        { name = "liquid-molten-gold", type_name = "fluid", scale = scale, shift = shift }, -- Molten gold
     },
     ["angels-roll-gold-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("gold-plate", "angels-plate-gold"), type_name = "item" },
@@ -273,7 +273,7 @@ local recipe_icon_source_map = {
     -- Invar
     ["angels-plate-invar"] = {
         { name = "invar-alloy", type_name = "item" },
-        ["liquid-molten-invar"] = { type = "fluid", scale = scale, shift = shift }, -- Molten invar
+        { name = "liquid-molten-invar", type_name = "fluid", scale = scale, shift = shift }, -- Molten invar
     },
     ["invar-alloy"] = {
         { name = "invar-alloy", type_name = "item" },
@@ -292,7 +292,7 @@ local recipe_icon_source_map = {
     },
     ["angels-plate-iron"] = {
         { name = "iron-plate", type_name = "item" },
-        ["liquid-molten-iron"] = { type = "fluid", scale = scale, shift = shift }, -- Molten iron
+        { name = "liquid-molten-iron", type_name = "fluid", scale = scale, shift = shift }, -- Molten iron
     },
     ["angels-roll-iron-converting"] = {
         { name = "iron-plate", type_name = "item" },
@@ -314,7 +314,7 @@ local recipe_icon_source_map = {
     },
     ["angels-plate-lead"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("lead-plate", "angels-plate-lead"), type_name = "item" },
-        ["liquid-molten-lead"] = { type = "fluid", scale = scale, shift = shift }, -- Molten lead
+        { name = "liquid-molten-lead", type_name = "fluid", scale = scale, shift = shift }, -- Molten lead
     },
     ["angels-roll-lead-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("lead-plate", "angels-plate-lead"), type_name = "item" },
@@ -328,7 +328,7 @@ local recipe_icon_source_map = {
     -- Manganese
     ["angels-plate-manganese"] = {
         { name = "angels-plate-manganese", type_name = "item" },
-        ["liquid-molten-manganese"] = { type = "fluid", scale = scale, shift = shift }, -- Molten manganese
+        { name = "liquid-molten-manganese", type_name = "fluid", scale = scale, shift = shift }, -- Molten manganese
     },
     ["angels-roll-manganese-converting"] = {
         { name = "angels-plate-manganese", type_name = "item" },
@@ -338,7 +338,7 @@ local recipe_icon_source_map = {
     -- Nickel
     ["angels-plate-nickel"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("nickel-plate", "angels-plate-nickel"), type_name = "item" },
-        ["liquid-molten-nickel"] = { type = "fluid", scale = scale, shift = shift }, -- Molten nickel
+        { name = "liquid-molten-nickel", type_name = "fluid", scale = scale, shift = shift }, -- Molten nickel
     },
     ["angels-roll-nickel-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("nickel-plate", "angels-plate-nickel"), type_name = "item" },
@@ -348,13 +348,13 @@ local recipe_icon_source_map = {
     -- Nitinol
     ["angels-plate-nitinol"] = {
         { name = "nitinol-alloy", type_name = "item" },
-        ["liquid-molten-nitinol"] = { type = "fluid", scale = scale, shift = shift }, -- Molten nitinol
+        { name = "liquid-molten-nitinol", type_name = "fluid", scale = scale, shift = shift }, -- Molten nitinol
     },
 
     -- Platinum
     ["angels-plate-platinum"] = {
         { name = "angels-plate-platinum", type_name = "item" },
-        ["liquid-molten-platinum"] = { type = "fluid", scale = scale, shift = shift }, -- Molten platinum
+        { name = "liquid-molten-platinum", type_name = "fluid", scale = scale, shift = shift }, -- Molten platinum
     },
     ["angels-roll-platinum-converting"] = {
         { name = "angels-plate-platinum", type_name = "item" },
@@ -368,7 +368,7 @@ local recipe_icon_source_map = {
     },
     ["angels-plate-silver"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("silver-plate", "angels-plate-silver"), type_name = "item" },
-        ["liquid-molten-silver"] = { type = "fluid", scale = scale, shift = shift }, -- Molten silver
+        { name = "liquid-molten-silver", type_name = "fluid", scale = scale, shift = shift }, -- Molten silver
     },
     ["angels-roll-silver-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("silver-plate", "angels-plate-silver"), type_name = "item" },
@@ -386,7 +386,7 @@ local recipe_icon_source_map = {
     },
     ["angels-plate-steel"] = {
         { name = "steel-plate", type_name = "item" },
-        ["liquid-molten-steel"] = { type = "fluid", scale = scale, shift = shift }, -- Molten steel
+        { name = "liquid-molten-steel", type_name = "fluid", scale = scale, shift = shift }, -- Molten steel
     },
     ["angels-roll-steel-converting"] = {
         { name = "steel-plate", type_name = "item" },
@@ -400,7 +400,7 @@ local recipe_icon_source_map = {
     },
     ["angels-plate-tin"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tin-plate", "angels-plate-tin"), type_name = "item" },
-        ["liquid-molten-tin"] = { type = "fluid", scale = scale, shift = shift }, -- Molten tin
+        { name = "liquid-molten-tin", type_name = "fluid", scale = scale, shift = shift }, -- Molten tin
     },
     ["angels-roll-tin-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tin-plate", "angels-plate-tin"), type_name = "item" },
@@ -410,7 +410,7 @@ local recipe_icon_source_map = {
     -- Titanium
     ["angels-plate-titanium"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("titanium-plate", "angels-plate-titanium"), type_name = "item" },
-        ["liquid-molten-titanium"] = { type = "fluid", scale = scale, shift = shift }, -- Molten titanium
+        { name = "liquid-molten-titanium", type_name = "fluid", scale = scale, shift = shift }, -- Molten titanium
     },
     ["angels-roll-titanium-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("titanium-plate", "angels-plate-titanium"), type_name = "item" },
@@ -420,7 +420,7 @@ local recipe_icon_source_map = {
     -- Zinc
     ["angels-plate-zinc"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("zinc-plate", "angels-plate-zinc"), type_name = "item" },
-        ["liquid-molten-zinc"] = { type = "fluid", scale = scale, shift = shift }, -- Molten Zinc
+        { name = "liquid-molten-zinc", type_name = "fluid", scale = scale, shift = shift }, -- Molten Zinc
     },
     ["angels-roll-zinc-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("zinc-plate", "angels-plate-zinc"), type_name = "item" },
@@ -493,7 +493,7 @@ local recipe_icon_source_map = {
     },
     ["angels-solder"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("solder", "angels-solder"), type_name = "item" },
-        ["liquid-molten-solder"] = { type = "fluid", scale = scale, shift = shift },
+        { name = "liquid-molten-solder", type_name = "fluid", scale = scale, shift = shift },
     },
     ["angels-roll-solder-converting"] = {
         { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("solder", "angels-solder"), type_name = "item" },
