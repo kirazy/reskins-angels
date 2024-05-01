@@ -595,17 +595,37 @@ for powder, material in pairs(powder_variations) do
     local item = data.raw.item[powder]
     if not item then goto continue end
 
-    -- Setup initial pictures table
-    item.pictures = {}
+    -- Create the variations.
+    ---@type data.Sprite[]
+    local sprite_variations = {}
 
     for i = 1, 6, 1 do
-        table.insert(item.pictures, {
+        ---@type data.Sprite
+        local sprite_variation = {
             filename = "__reskins-angels__/graphics/icons/smelting/powders/" .. material .. "/powder-" .. material .. "-" .. i .. ".png",
             size = 64,
             mipmap_count = 4,
             scale = 0.25,
-        })
+        }
+
+        table.insert(sprite_variations, sprite_variation)
     end
+
+    -- Ensure that the item icon uses the same as the variations.
+    ---@type DeferrableIconData
+    local deferrable_icon = {
+        icon_data = { {
+            icon = "__reskins-angels__/graphics/icons/smelting/powders/" .. material .. "/powder-" .. material .. ".png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            scale = 0.5,
+        } },
+        pictures = sprite_variations,
+        name = powder,
+        type_name = "item",
+    }
+
+    reskins.lib.icons.assign_deferrable_icon(deferrable_icon)
 
     ::continue::
 end
