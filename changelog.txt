@@ -1,8 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.0
 Date: ????
+  Features:
+    - Added colored tier icons for the thermal water extractors.
   Changes:
     - Internal updates to reflect changes to Artisanal Reskins: Library, now depends on version 2.2.0
+  Bugfixes:
+    - Fixed several item icons using Bob's mods icons instead of Angel's mods icons (#34).
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.8
 Date: 2023-12-24
