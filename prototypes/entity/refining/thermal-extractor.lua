@@ -8,7 +8,7 @@ if not (reskins.angels and reskins.angels.triggers.refining.entities) then retur
 
 ---@type ConstructIconInputsOld
 local inputs = {
-    type = mods["seablock"] and "assembling-machine" or "mining-drill",
+    type = "mining-drill",
     icon_name = "thermal-extractor",
     mod = "angels",
     group = "refining",
