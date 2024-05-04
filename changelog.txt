@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.0
-Date: ????
+Date: 2024-05-04
   Features:
     - Added colored tier icons for the thermal water extractors.
   Changes:
