@@ -140,7 +140,8 @@ local recipe_icon_source_map = {
     -- Silicon
     ["angelsore-chunk-mix1-processing"]   = {
         { icon_datum = make_sorting_icon_base() },
-        ["quartz"] = { shift = shift, scale = scale },
+        { name = "quartz", type_name = "item", shift = shift, scale = scale },
+        { name = "quartz", type_name = "item", shift = shift, scale = scale },
     },
     -- Nickel
     ["angelsore-chunk-mix2-processing"]   = {
