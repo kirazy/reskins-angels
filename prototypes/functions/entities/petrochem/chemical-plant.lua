@@ -12,7 +12,7 @@ local function entity_animation(tint)
         layers = {
             -- Base
             {
-                filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
+                filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
                 priority = "extra-high",
                 width = 160,
                 height = 160,

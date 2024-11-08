@@ -48,7 +48,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-base.png",
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-base.png",
                 priority = "extra-high",
                 width = 462,
                 height = 657,
@@ -77,7 +77,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-shadow.png",
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-shadow.png",
                 priority = "extra-high",
                 vertically_oriented = true,
                 width = 655,

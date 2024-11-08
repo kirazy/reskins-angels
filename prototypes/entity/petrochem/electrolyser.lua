@@ -69,7 +69,7 @@ for name, map in pairs(tier_map) do
     }
 
     local entity_horizontal_base = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -79,7 +79,7 @@ for name, map in pairs(tier_map) do
     }
 
     local entity_vertical_base = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         priority = "extra-high",
         width = 224,
         height = 224,

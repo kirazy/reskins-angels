@@ -58,7 +58,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
                 priority = "extra-high",
                 width = 326,
                 height = 350,
@@ -87,7 +87,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
                 priority = "extra-high",
                 width = 424,
                 height = 227,

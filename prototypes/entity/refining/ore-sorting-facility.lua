@@ -52,7 +52,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
                 priority = "extra-high",
                 width = 449,
                 height = 458,
@@ -90,7 +90,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
                 priority = "extra-high",
                 width = 528,
                 height = 356,

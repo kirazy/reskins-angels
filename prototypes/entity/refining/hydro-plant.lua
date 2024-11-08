@@ -54,7 +54,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelsrefining__/graphics/entity/hydro-plant/hr-hydro-plant-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hr-hydro-plant-base.png",
                 priority = "extra-high",
                 width = 459,
                 height = 491,

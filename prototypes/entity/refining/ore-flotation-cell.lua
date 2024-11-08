@@ -28,7 +28,7 @@ local tier_map = {
 
 local function return_pipe_overlay(direction)
     local animation = {
-        filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
         priority = "extra-high",
         width = 333,
         height = 363,
@@ -63,7 +63,7 @@ for name, map in pairs(tier_map) do
         {
             always_draw = true,
             animation = {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -78,7 +78,7 @@ for name, map in pairs(tier_map) do
         {
             fadeout = true,
             animation = {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -94,7 +94,7 @@ for name, map in pairs(tier_map) do
             fadeout = true,
             apply_recipe_tint = "primary",
             animation = {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -110,7 +110,7 @@ for name, map in pairs(tier_map) do
             fadeout = true,
             apply_recipe_tint = "secondary",
             animation = {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,

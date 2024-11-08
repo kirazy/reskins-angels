@@ -56,7 +56,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-base.png",
                 priority = "extra-high",
                 width = 200,
                 height = 199,
@@ -94,7 +94,7 @@ for name, map in pairs(tier_map) do
             },
             -- Shadow
             {
-                filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
                 priority = "extra-high",
                 width = 246,
                 height = 132,
