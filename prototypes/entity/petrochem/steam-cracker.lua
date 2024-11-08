@@ -84,7 +84,7 @@ for name, map in pairs(tier_map) do
             fadeout = true,
             constant_speed = true,
             animation = {
-                filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
+                filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
                 line_length = 10,
                 width = 40,
                 height = 81,
