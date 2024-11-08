@@ -31,7 +31,6 @@ local function copy_icon(destination_name, destination_type, source_name, source
 
     -- Copy root-level properties
     destination.icon_size = source.icon_size
-    destination.icon_mipmaps = source.icon_mipmaps
 end
 
 -- Check to see if the new angels numbering function is available.
@@ -63,7 +62,6 @@ function reskins.angels.num_tier(tier, mod)
             {
                 icon = "__reskins-angels__/graphics/icons/refining/numbers/num-"..tier..".png",
                 icon_size = 64,
-                icon_mipmaps = 2,
                 tint = util.get_color_with_alpha(tint, 1),
                 shift = {-13, 0},
             }

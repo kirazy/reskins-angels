@@ -13,7 +13,6 @@ local deferrable_icon = {
     icon_datum = {
         icon = "__base__/graphics/icons/sulfur.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
     },
 }
@@ -26,7 +25,6 @@ if data.raw.recipe["solid-sulfur"] and data.raw.recipe["solid-sulfur"].icons and
     data.raw.recipe["solid-sulfur"].icons[5] = {
         icon = deferrable_icon.icon_datum.icon,
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.16,
         shift = { -11.5, 12 },
     }
@@ -36,7 +34,6 @@ if data.raw.recipe["yellow-waste-water-purification"] and data.raw.recipe["yello
     data.raw.recipe["yellow-waste-water-purification"].icons[12] = {
         icon = deferrable_icon.icon_datum.icon,
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.16,
         shift = { 0, 12 },
     }

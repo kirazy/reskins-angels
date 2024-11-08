@@ -12,7 +12,6 @@ local inputs = {
     group = "refining",
     type = "technology",
     technology_icon_size = 256,
-    technology_icon_mipmaps = 4,
 }
 
 ---@type CreateIconsFromListTable
@@ -51,7 +50,7 @@ end
 
 -- Check if we're using Angel's material colors
 if mods["bobwarfare"] and mods["bobplates"] and reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") then
-    technologies["bob-armor-making-3"] = { group = "smelting", subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4 }
+    technologies["bob-armor-making-3"] = { group = "smelting", subgroup = "armor", flat_icon = true }
 end
 
 reskins.internal.create_icons_from_list(technologies, inputs)

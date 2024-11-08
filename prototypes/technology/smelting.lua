@@ -12,7 +12,6 @@ local inputs = {
     group = "smelting",
     type = "technology",
     technology_icon_size = 256,
-    technology_icon_mipmaps = 2,
 }
 
 ---@param material string
@@ -22,7 +21,6 @@ local function get_casting_overrides(material)
     local override = {
         subgroup = "casting",
         flat_icon = true,
-        technology_icon_mipmaps = 4,
         image = "casting-" .. material .. "-technology-icon",
     }
 
@@ -36,7 +34,6 @@ local function get_smelting_overrides(material)
     local override = {
         subgroup = "smelting",
         flat_icon = true,
-        technology_icon_mipmaps = 4,
         image = "smelting-" .. material .. "-technology-icon",
     }
 
@@ -149,8 +146,8 @@ if angelsmods.trigger.early_sintering_oven then
     technologies["powder-metallurgy-4"] = { tier = 4, prog_tier = 4, icon_name = "powder-metallurgy" }
     technologies["powder-metallurgy-5"] = { tier = 5, prog_tier = 5, icon_name = "powder-metallurgy" }
 else
-    technologies["powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4 }
-    technologies["powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4 }
+    technologies["powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla" }
+    technologies["powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla" }
     technologies["powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy" }
     technologies["powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy" }
 end
@@ -235,17 +232,17 @@ end
 
 -- Check for special vanilla and override the powder metallurgy technology icons
 if angelsmods and angelsmods.functions.is_special_vanilla() then
-    technologies["powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4 }
-    technologies["powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4 }
-    technologies["powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4 }
-    technologies["powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy-special-vanilla", technology_icon_mipmaps = 4 }
+    technologies["powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla" }
+    technologies["powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla" }
+    technologies["powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy-special-vanilla" }
+    technologies["powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy-special-vanilla" }
 end
 
 -- Check if we're using Angel's material colors
 if reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") then
-    technologies["bob-armor-making-4"] = { subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4 }
-    technologies["bob-power-armor-4"] = { subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4 }
-    technologies["bob-power-armor-5"] = { subgroup = "armor", flat_icon = true, technology_icon_mipmaps = 4 }
+    technologies["bob-armor-making-4"] = { subgroup = "armor", flat_icon = true }
+    technologies["bob-power-armor-4"] = { subgroup = "armor", flat_icon = true }
+    technologies["bob-power-armor-5"] = { subgroup = "armor", flat_icon = true }
 end
 
 reskins.internal.create_icons_from_list(technologies, inputs)

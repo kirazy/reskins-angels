@@ -21,7 +21,6 @@ for class, map in pairs(modules_map) do
         group = "modules",
         type = "technology",
         technology_icon_size = 256,
-        technology_icon_mipmaps = 4,
     }
 
     -- Setup input defaults
@@ -57,7 +56,6 @@ local inputs = {
     group = "bioprocessing",
     type = "technology",
     technology_icon_size = 256,
-    technology_icon_mipmaps = 4,
     flat_icon = true,
 }
 

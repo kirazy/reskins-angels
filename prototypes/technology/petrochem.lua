@@ -12,13 +12,12 @@ local inputs = {
     group = "petrochem",
     type = "technology",
     technology_icon_size = 256,
-    technology_icon_mipmaps = 2,
 }
 
 ---@type CreateIconsFromListTable
 local technologies = {
     -- Gas Processing (Gas Refinery)
-    ["gas-processing"] = { tier = 1, prog_tier = 2, icon_name = "gas-processing", technology_icon_mipmaps = 4 },
+    ["gas-processing"] = { tier = 1, prog_tier = 2, icon_name = "gas-processing" },
 
     -- Advanced Chemistry
     -- ["angels-advanced-chemistry-1"] = { tier = 1, prog_tier = 2, icon_name = "advanced-chemistry" },
@@ -27,7 +26,7 @@ local technologies = {
     -- ["angels-advanced-chemistry-4"] = { tier = 4, prog_tier = 5, icon_name = "advanced-chemistry" },
 
     -- Flare stack
-    ["angels-flare-stack"] = { icon_name = "flare-stack", technology_icon_layers = 1, technology_icon_mipmaps = 4 },
+    ["angels-flare-stack"] = { icon_name = "flare-stack", technology_icon_layers = 1 },
 
     -- Advanced Gas Processing
     ["angels-advanced-gas-processing"] = { tier = 1, prog_tier = 3, icon_name = "advanced-gas-processing" },

@@ -51,9 +51,9 @@ local intermediates = {
     -- Intermediates
     ----------------------------------------------------------------------------------------------------
     -- Vanilla Plates
-    ["copper-plate"] = { icon_filename = "__base__/graphics/icons/copper-plate.png", icon_size = 64, icon_mipmaps = 4 },
+    ["copper-plate"] = { icon_filename = "__base__/graphics/icons/copper-plate.png", icon_size = 64 },
     ["iron-plate"] = { subgroup = "plates", image = "angels-plate-iron" },
-    ["steel-plate"] = { icon_filename = "__base__/graphics/icons/steel-plate.png", icon_size = 64, icon_mipmaps = 4 },
+    ["steel-plate"] = { icon_filename = "__base__/graphics/icons/steel-plate.png", icon_size = 64 },
 
     -- Pure Angels Plates
     ["angels-plate-aluminium"] = { subgroup = "plates" },
@@ -68,7 +68,7 @@ local intermediates = {
     ["angels-plate-nickel"] = { subgroup = "plates" },
     ["angels-plate-platinum"] = { subgroup = "plates" },
     ["angels-plate-silver"] = { subgroup = "plates" },
-    ["angels-plate-steel"] = { icon_filename = "__base__/graphics/icons/steel-plate.png", icon_size = 64, icon_mipmaps = 4 },
+    ["angels-plate-steel"] = { icon_filename = "__base__/graphics/icons/steel-plate.png", icon_size = 64 },
     ["angels-plate-tin"] = { subgroup = "plates" },
     ["angels-plate-titanium"] = { subgroup = "plates" },
     ["angels-plate-tungsten"] = { subgroup = "plates" },
@@ -101,7 +101,7 @@ local intermediates = {
     ["angels-wire-tin"] = { subgroup = "intermediates" },
 
     -- Wires
-    ["copper-cable"] = { icon_filename = "__base__/graphics/icons/copper-cable.png", icon_size = 64, icon_mipmaps = 4 },
+    ["copper-cable"] = { icon_filename = "__base__/graphics/icons/copper-cable.png", icon_size = 64 },
     ["gilded-copper-cable"] = { mod = "lib", group = "shared", subgroup = "items" },
     ["tinned-copper-cable"] = { subgroup = "intermediates", image = "angels-wire-tin" },
 
@@ -121,7 +121,7 @@ local intermediates = {
     ["angels-roll-gunmetal"] = { subgroup = "rolls" },
 
     -- Rods
-    ["iron-stick"] = { icon_filename = "__base__/graphics/icons/iron-stick.png", icon_size = 64, icon_mipmaps = 4, -- Put the icon back
+    ["iron-stick"] = { icon_filename = "__base__/graphics/icons/iron-stick.png", icon_size = 64, -- Put the icon back
     },
     -- ["angels-rod-steel"]
 
@@ -614,7 +614,6 @@ for powder, material in pairs(powder_variations) do
         icon_data = { {
             icon = "__reskins-angels__/graphics/icons/smelting/powders/" .. material .. "/powder-" .. material .. ".png",
             icon_size = 64,
-            icon_mipmaps = 4,
             scale = 0.5,
         } },
         pictures = sprite_variations,

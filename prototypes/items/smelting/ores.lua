@@ -83,7 +83,6 @@ local function make_sorting_icon_base()
     return {
         icon = "__angelsrefining__/graphics/icons/sort-icon.png",
         icon_size = 32,
-        icon_mipmaps = 0,
     }
 end
 
@@ -94,25 +93,21 @@ local function make_slag_processing_icon_base()
         {
             icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-base.png",
             icon_size = 600,
-            icon_mipmaps = 0,
             tint = util.color("404040b2"),
         },
         {
             icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-top.png",
             icon_size = 600,
-            icon_mipmaps = 0,
             tint = util.color("ca6311"),
         },
         {
             icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-mid.png",
             icon_size = 600,
-            icon_mipmaps = 0,
             tint = util.color("613414"),
         },
         {
             icon = "__angelsrefining__/graphics/icons/angels-liquid/liquid-recipe-bot.png",
             icon_size = 600,
-            icon_mipmaps = 0,
             tint = util.color("613414"),
         },
     }
