@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "liquefier",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "refining",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["liquifier"] = {tier = 1},
-    ["liquifier-2"] = {tier = 2},
-    ["liquifier-3"] = {tier = 3},
-    ["liquifier-4"] = {tier = 4},
+    ["liquifier"] = { tier = 1 },
+    ["liquifier-2"] = { tier = 2 },
+    ["liquifier-3"] = { tier = 3 },
+    ["liquifier-4"] = { tier = 4 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -54,7 +54,7 @@ for name, map in pairs(tier_map) do
                 height = 160,
                 frame_count = 30,
                 line_length = 10,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 animation_speed = 0.5,
             },
             -- Mask
@@ -64,7 +64,7 @@ for name, map in pairs(tier_map) do
                 width = 160,
                 height = 160,
                 repeat_count = 30,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 animation_speed = 0.5,
                 tint = inputs.tint,
             },
@@ -75,11 +75,11 @@ for name, map in pairs(tier_map) do
                 width = 160,
                 height = 160,
                 repeat_count = 30,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 animation_speed = 0.5,
                 blend_mode = reskins.lib.settings.blend_mode,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

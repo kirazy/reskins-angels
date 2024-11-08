@@ -15,7 +15,7 @@ local inputs = {
     group = "petrochem",
     tint = util.color("c20600"), -- Red
     icon_layers = 1,
-    particles = {["big"] = 1},
+    particles = { ["big"] = 1 },
     make_remnants = false,
 }
 
@@ -37,7 +37,7 @@ entity.pictures.picture = {
             width = 142,
             height = 199,
             shift = util.by_pixel(0, -7.5),
-            scale = 0.5
+            scale = 0.5,
         },
         {
             filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
@@ -47,10 +47,10 @@ entity.pictures.picture = {
             height = 199,
             shift = util.by_pixel(16.5, 9),
             draw_as_shadow = true,
-            scale = 0.5
-        }
-    }
+            scale = 0.5,
+        },
+    },
 }
 
 -- Fix drawing box
-entity.drawing_box = {{-1, -1.75}, {1, 1}}
+entity.drawing_box = { { -1, -1.75 }, { 1, 1 } }

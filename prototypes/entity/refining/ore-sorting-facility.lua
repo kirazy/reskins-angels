@@ -12,19 +12,19 @@ local inputs = {
     icon_name = "ore-sorting-facility",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "refining",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["ore-sorting-facility"] = {tier = 1},
-    ["ore-sorting-facility-2"] = {tier = 2},
-    ["ore-sorting-facility-3"] = {tier = 3},
-    ["ore-sorting-facility-4"] = {tier = 4},
+    ["ore-sorting-facility"] = { tier = 1 },
+    ["ore-sorting-facility-2"] = { tier = 2 },
+    ["ore-sorting-facility-3"] = { tier = 3 },
+    ["ore-sorting-facility-4"] = { tier = 4 },
 
     -- Sea Block
-    ["sb-ore-sorting-facility-5"] = {tier = 5},
+    ["sb-ore-sorting-facility-5"] = { tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -99,7 +99,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

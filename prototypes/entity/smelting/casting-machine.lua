@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "casting-machine",
     base_entity_name = "chemical-plant",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "smelting",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["casting-machine"] = {tier = 1},
-    ["casting-machine-2"] = {tier = 2},
-    ["casting-machine-3"] = {tier = 3},
-    ["casting-machine-4"] = {tier = 4},
+    ["casting-machine"] = { tier = 1 },
+    ["casting-machine-2"] = { tier = 2 },
+    ["casting-machine-3"] = { tier = 3 },
+    ["casting-machine-4"] = { tier = 4 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -96,8 +96,8 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 shift = util.by_pixel(11.5, 8.5),
                 scale = 0.5,
-            }
-        }
+            },
+        },
     }
 
     -- Label to skip to next iteration

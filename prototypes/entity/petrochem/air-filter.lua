@@ -12,18 +12,18 @@ local inputs = {
     icon_name = "air-filter",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "petrochem",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["angels-air-filter"] = {tier = 1},
-    ["angels-air-filter-2"] = {tier = 2},
-    ["angels-air-filter-3"] = {tier = 3},
+    ["angels-air-filter"] = { tier = 1 },
+    ["angels-air-filter-2"] = { tier = 2 },
+    ["angels-air-filter-3"] = { tier = 3 },
 
     -- Extended Angels
-    ["angels-air-filter-4"] = {tier = 4},
+    ["angels-air-filter-4"] = { tier = 4 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -56,7 +56,7 @@ for name, map in pairs(tier_map) do
                 height = 256,
                 frame_count = 36,
                 line_length = 6,
-                shift = {0.5, -0.5},
+                shift = { 0.5, -0.5 },
                 animation_speed = 0.5,
             },
             -- Mask
@@ -67,7 +67,7 @@ for name, map in pairs(tier_map) do
                 height = 256,
                 frame_count = 36,
                 line_length = 6,
-                shift = {0.5, -0.5},
+                shift = { 0.5, -0.5 },
                 animation_speed = 0.5,
                 tint = inputs.tint,
             },
@@ -79,11 +79,11 @@ for name, map in pairs(tier_map) do
                 height = 256,
                 frame_count = 36,
                 line_length = 6,
-                shift = {0.5, -0.5},
+                shift = { 0.5, -0.5 },
                 animation_speed = 0.5,
                 blend_mode = reskins.lib.settings.blend_mode,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

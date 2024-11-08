@@ -12,17 +12,17 @@ local inputs = {
     icon_name = "advanced-chemical-plant",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "petrochem",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["advanced-chemical-plant"] = {tier = 1, prog_tier = 2},
-    ["advanced-chemical-plant-2"] = {tier = 2, prog_tier = 4},
+    ["advanced-chemical-plant"] = { tier = 1, prog_tier = 2 },
+    ["advanced-chemical-plant-2"] = { tier = 2, prog_tier = 4 },
 
     -- Extended Angels
-    ["advanced-chemical-plant-3"] = {tier = 3, prog_tier = 5},
+    ["advanced-chemical-plant-3"] = { tier = 3, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -56,7 +56,7 @@ for name, map in pairs(tier_map) do
                 frame_count = 16,
                 line_length = 4,
                 animation_speed = 0.5,
-                shift = {0, 0},
+                shift = { 0, 0 },
             },
             {
                 filename = "__reskins-angels__/graphics/entity/petrochem/advanced-chemical-plant/advanced-chemical-plant-base-patch.png",
@@ -65,7 +65,7 @@ for name, map in pairs(tier_map) do
                 height = 224,
                 repeat_count = 16,
                 animation_speed = 0.5,
-                shift = {0, 0},
+                shift = { 0, 0 },
             },
             -- Mask
             {
@@ -75,7 +75,7 @@ for name, map in pairs(tier_map) do
                 height = 224,
                 repeat_count = 16,
                 animation_speed = 0.5,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 tint = inputs.tint,
             },
             -- Highlights
@@ -86,10 +86,10 @@ for name, map in pairs(tier_map) do
                 height = 224,
                 repeat_count = 16,
                 animation_speed = 0.5,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 blend_mode = reskins.lib.settings.blend_mode,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

@@ -13,7 +13,7 @@ local inputs = {
     group = "refining",
     icon_layers = 1,
     make_remnants = false,
-    make_explosions = false
+    make_explosions = false,
 }
 
 local entity = data.raw[inputs.type]["clarifier"]
@@ -30,14 +30,14 @@ local shadows = reskins.lib.sprites.make_4way_animation_from_spritesheet({
 })
 
 local pipe_properties = {
-    north = {normal = 0, hr = 0},
+    north = { normal = 0, hr = 0 },
     -- East frame mapping: 2-All, 12-30, 13-31, 14-32, 15-33, 16-34, 15,35, 16-36
-    east = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 12, 13, 14,
-        15, 16, 17, 18, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
-    south = {normal = 189*2, hr = 374*2},
+    east = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 12, 13, 14,
+        15, 16, 17, 18, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },
+    south = { normal = 189 * 2, hr = 374 * 2 },
     -- West frame mapping: 4-All, 5-1, 6-2, 7-3, 8-61, 9-62, 10-63, 11-64
-    west = {5, 6, 7, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 8, 9.5, 10, 11}
+    west = { 5, 6, 7, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 8, 9.5, 10, 11 },
 }
 
 local function get_pipe_connections(direction, is_animated)
@@ -120,12 +120,12 @@ entity.working_visualisations = {
             height = 365,
             shift = util.by_pixel(10, 0),
             scale = 0.5,
-        }
+        },
     },
 
     -- Vertical Pipe Shadow
     {
         always_draw = true,
-        south_animation = reskins.lib.sprites.pipes.get_vertical_pipe_shadow({0, -2}),
-    }
+        south_animation = reskins.lib.sprites.pipes.get_vertical_pipe_shadow({ 0, -2 }),
+    },
 }

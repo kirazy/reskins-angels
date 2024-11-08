@@ -20,12 +20,12 @@ local ores = {
     -- ["angels-ore2"]   = { key = "angels", subfolder = "smelting/ores" }, -- Jivolite
     -- ["angels-ore4"]   = { key = "angels", subfolder = "smelting/ores" }, -- Crotinnium
     -- ["chrome-ore"]    = { key = "angels", subfolder = "smelting/ores" },
-    ["lead-ore"]      = { key = "angels", subfolder = "smelting/ores" },
+    ["lead-ore"]    = { key = "angels", subfolder = "smelting/ores" },
     -- ["manganese-ore"] = { key = "angels", subfolder = "smelting/ores" },
     -- ["platinum-ore"]  = { key = "angels", subfolder = "smelting/ores" },
-    ["rutile-ore"]    = { key = "angels", subfolder = "smelting/ores" },                -- Titanium (dark purple)
-    ["thorium-ore"]   = { key = "angels", subfolder = "smelting/ores", num_variations = 4, is_light = true }, -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
-    ["tin-ore"]       = { key = "angels", subfolder = "smelting/ores", num_variations = 8 },                -- (green)
+    ["rutile-ore"]  = { key = "angels", subfolder = "smelting/ores" },                                        -- Titanium (dark purple)
+    ["thorium-ore"] = { key = "angels", subfolder = "smelting/ores", num_variations = 4, is_light = true },   -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
+    ["tin-ore"]     = { key = "angels", subfolder = "smelting/ores", num_variations = 8 },                    -- (green)
 }
 
 -- TODO: Not implemented. Needs sprites.
@@ -116,7 +116,7 @@ end
 local shift = { 10, 10 }
 local scale = 0.5
 
--- A map of recipe names to the icon sources used to create a combined icon. 
+-- A map of recipe names to the icon sources used to create a combined icon.
 -- The first entry in each IconSources is the first layer of the created icon.
 ---@type { [string]: IconSources }
 local recipe_icon_source_map = {

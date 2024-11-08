@@ -24,7 +24,7 @@ local intermediates = {}
 
 reskins.internal.create_icons_from_list(intermediates, inputs)
 
--- A map of recipe names to the icon sources used to create a combined icon. 
+-- A map of recipe names to the icon sources used to create a combined icon.
 -- The first entry in each IconSources is the first layer of the created icon.
 ---@type { [string]: IconSources }
 local recipe_icon_source_map = {

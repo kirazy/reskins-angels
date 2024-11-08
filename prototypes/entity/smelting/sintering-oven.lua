@@ -12,7 +12,7 @@ local inputs = {
     icon_name = "sintering-oven",
     base_entity_name = "oil-refinery",
     mod = "angels",
-    particles = {["big-tint"] = 5, ["medium"] = 2},
+    particles = { ["big-tint"] = 5, ["medium"] = 2 },
     group = "smelting",
     make_remnants = false,
 }
@@ -20,16 +20,16 @@ local inputs = {
 local tier_map
 if angelsmods.trigger.early_sintering_oven then
     tier_map = {
-        ["sintering-oven"] = {tier = 1, prog_tier = 1},
-        ["sintering-oven-2"] = {tier = 2, prog_tier = 2},
-        ["sintering-oven-3"] = {tier = 3, prog_tier = 3},
-        ["sintering-oven-4"] = {tier = 4, prog_tier = 4},
-        ["sintering-oven-5"] = {tier = 5, prog_tier = 5},
+        ["sintering-oven"] = { tier = 1, prog_tier = 1 },
+        ["sintering-oven-2"] = { tier = 2, prog_tier = 2 },
+        ["sintering-oven-3"] = { tier = 3, prog_tier = 3 },
+        ["sintering-oven-4"] = { tier = 4, prog_tier = 4 },
+        ["sintering-oven-5"] = { tier = 5, prog_tier = 5 },
     }
 else
     tier_map = {
-        ["sintering-oven-4"] = {tier = 1, prog_tier = 4, defer_to_data_updates = true},
-        ["sintering-oven-5"] = {tier = 2, prog_tier = 5, defer_to_data_updates = true},
+        ["sintering-oven-4"] = { tier = 1, prog_tier = 4, defer_to_data_updates = true },
+        ["sintering-oven-5"] = { tier = 2, prog_tier = 5, defer_to_data_updates = true },
     }
 end
 
@@ -94,8 +94,8 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(23, 28),
                 draw_as_shadow = true,
                 scale = 0.5,
-            }
-        }
+            },
+        },
     }
 
     -- Label to skip to next iteration

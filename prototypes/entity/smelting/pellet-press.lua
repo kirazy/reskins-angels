@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "pellet-press",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "smelting",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["pellet-press"] = {tier = 1},
-    ["pellet-press-2"] = {tier = 2},
-    ["pellet-press-3"] = {tier = 3},
-    ["pellet-press-4"] = {tier = 4},
+    ["pellet-press"] = { tier = 1 },
+    ["pellet-press-2"] = { tier = 2 },
+    ["pellet-press-3"] = { tier = 3 },
+    ["pellet-press-4"] = { tier = 4 },
 }
 
 -- Support rework of Angel's Smelting ingredient tiers
@@ -105,7 +105,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(12, 17),
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

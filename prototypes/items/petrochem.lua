@@ -26,7 +26,7 @@ local intermediates = {
     -- Recipes
     ----------------------------------------------------------------------------------------------------
     -- Miscellaneous
-    ["bob-rubber"] = { type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(1, inputs.group) }, -- "1"
+    ["bob-rubber"] = { type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(1, inputs.group) },   -- "1"
     ["solid-rubber"] = { type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(2, inputs.group) }, -- "2"
 }
 
@@ -42,7 +42,7 @@ end
 
 reskins.internal.create_icons_from_list(intermediates, inputs)
 
--- A map of recipe names to the icon sources used to create a combined icon. 
+-- A map of recipe names to the icon sources used to create a combined icon.
 -- The first entry in each IconSources is the first layer of the created icon.
 ---@type { [string]: IconSources }
 local recipe_icon_source_map = {

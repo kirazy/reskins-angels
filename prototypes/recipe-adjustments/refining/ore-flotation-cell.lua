@@ -39,6 +39,6 @@ for _, recipe_data in pairs(data.raw.recipe) do
         ::finish::
 
         -- Assign colors
-        recipe_data.crafting_machine_tint = {primary = primary, secondary = secondary}
+        recipe_data.crafting_machine_tint = { primary = primary, secondary = secondary }
     end
 end

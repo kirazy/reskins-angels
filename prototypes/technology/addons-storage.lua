@@ -19,8 +19,8 @@ local inputs = {
 local technologies = {}
 
 -- Reskin warehouse technologies
-technologies["angels-logistic-warehouses"] = {subgroup = "warehouses"}
-technologies["angels-warehouses"] = {subgroup = "warehouses"}
+technologies["angels-logistic-warehouses"] = { subgroup = "warehouses" }
+technologies["angels-warehouses"] = { subgroup = "warehouses" }
 
 -- Reskin silo technologies
 -- technologies["logistic-silos"] = {subgroup = "silos"}

@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "powder-mixer",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "smelting",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["powder-mixer"] = {tier = 1},
-    ["powder-mixer-2"] = {tier = 2},
-    ["powder-mixer-3"] = {tier = 3},
-    ["powder-mixer-4"] = {tier = 4},
+    ["powder-mixer"] = { tier = 1 },
+    ["powder-mixer-2"] = { tier = 2 },
+    ["powder-mixer-3"] = { tier = 3 },
+    ["powder-mixer-4"] = { tier = 4 },
 }
 
 -- Support rework of Angel's Smelting ingredient tiers
@@ -104,7 +104,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(13, 9),
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

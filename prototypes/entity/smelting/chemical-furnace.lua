@@ -12,7 +12,7 @@ local inputs = {
     icon_name = "chemical-furnace",
     base_entity_name = "oil-refinery",
     mod = "angels",
-    particles = {["big-tint"] = 5, ["medium"] = 2},
+    particles = { ["big-tint"] = 5, ["medium"] = 2 },
     group = "smelting",
     make_remnants = false,
 }
@@ -20,16 +20,16 @@ local inputs = {
 local tier_map
 if angelsmods.trigger.early_chemical_furnace then
     tier_map = {
-        ["angels-chemical-furnace"] = {tier = 1, prog_tier = 2},
-        ["angels-chemical-furnace-2"] = {tier = 2, prog_tier = 3},
-        ["angels-chemical-furnace-3"] = {tier = 3, prog_tier = 4},
-        ["angels-chemical-furnace-4"] = {tier = 4, prog_tier = 5},
+        ["angels-chemical-furnace"] = { tier = 1, prog_tier = 2 },
+        ["angels-chemical-furnace-2"] = { tier = 2, prog_tier = 3 },
+        ["angels-chemical-furnace-3"] = { tier = 3, prog_tier = 4 },
+        ["angels-chemical-furnace-4"] = { tier = 4, prog_tier = 5 },
     }
 else
-   tier_map = {
-        ["angels-chemical-furnace-2"] = {tier = 1, prog_tier = 3, defer_to_data_updates = true},
-        ["angels-chemical-furnace-3"] = {tier = 2, prog_tier = 4, defer_to_data_updates = true},
-        ["angels-chemical-furnace-4"] = {tier = 3, prog_tier = 5, defer_to_data_updates = true},
+    tier_map = {
+        ["angels-chemical-furnace-2"] = { tier = 1, prog_tier = 3, defer_to_data_updates = true },
+        ["angels-chemical-furnace-3"] = { tier = 2, prog_tier = 4, defer_to_data_updates = true },
+        ["angels-chemical-furnace-4"] = { tier = 3, prog_tier = 5, defer_to_data_updates = true },
     }
 end
 
@@ -147,7 +147,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(28, 12.5),
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

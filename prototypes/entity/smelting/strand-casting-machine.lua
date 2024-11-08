@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "strand-casting-machine",
     base_entity_name = "oil-refinery",
     mod = "angels",
-    particles = {["big-tint"] = 5, ["medium"] = 2},
+    particles = { ["big-tint"] = 5, ["medium"] = 2 },
     group = "smelting",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["strand-casting-machine"] = {tier = 1, prog_tier = 2},
-    ["strand-casting-machine-2"] = {tier = 2, prog_tier = 3},
-    ["strand-casting-machine-3"] = {tier = 3, prog_tier = 4},
-    ["strand-casting-machine-4"] = {tier = 4, prog_tier = 5},
+    ["strand-casting-machine"] = { tier = 1, prog_tier = 2 },
+    ["strand-casting-machine-2"] = { tier = 2, prog_tier = 3 },
+    ["strand-casting-machine-3"] = { tier = 3, prog_tier = 4 },
+    ["strand-casting-machine-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -46,35 +46,35 @@ for name, map in pairs(tier_map) do
     -- Reskin entities
     entity.animation = nil
 
-    table.insert(entity.working_visualisations, #entity.working_visualisations-1,
-    -- Color Mask
-    {
-        always_draw = true,
-        animation = {
-            layers = {
-                -- Mask
-                {
-                    filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
-                    priority = "extra-high",
-                    width = 329,
-                    height = 392,
-                    shift = util.by_pixel(0, -16.5),
-                    tint = inputs.tint,
-                    scale = 0.5,
+    table.insert(entity.working_visualisations, #entity.working_visualisations - 1,
+        -- Color Mask
+        {
+            always_draw = true,
+            animation = {
+                layers = {
+                    -- Mask
+                    {
+                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
+                        priority = "extra-high",
+                        width = 329,
+                        height = 392,
+                        shift = util.by_pixel(0, -16.5),
+                        tint = inputs.tint,
+                        scale = 0.5,
+                    },
+                    -- Highlights
+                    {
+                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
+                        priority = "extra-high",
+                        width = 329,
+                        height = 392,
+                        shift = util.by_pixel(0, -16.5),
+                        blend_mode = reskins.lib.settings.blend_mode,
+                        scale = 0.5,
+                    },
                 },
-                -- Highlights
-                {
-                    filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
-                    priority = "extra-high",
-                    width = 329,
-                    height = 392,
-                    shift = util.by_pixel(0, -16.5),
-                    blend_mode = reskins.lib.settings.blend_mode,
-                    scale = 0.5,
-                }
-            }
-        }
-    })
+            },
+        })
 
     -- Label to skip to next iteration
     ::continue::

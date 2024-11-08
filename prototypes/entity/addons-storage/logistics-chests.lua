@@ -13,18 +13,18 @@ local inputs = {
 }
 
 local logistic_map = {
-    ["active-provider"] = {tint = util.color("760fd6")},
-    ["buffer"] = {tint = util.color("00bf13")},
-    ["passive-provider"] = {tint = util.color("ff0000")},
-    ["requester"] = {tint = util.color("227dae")},
-    ["storage"] = {tint = util.color("ba7713")},
+    ["active-provider"] = { tint = util.color("760fd6") },
+    ["buffer"] = { tint = util.color("00bf13") },
+    ["passive-provider"] = { tint = util.color("ff0000") },
+    ["requester"] = { tint = util.color("227dae") },
+    ["storage"] = { tint = util.color("ba7713") },
 }
 
 -- Reskin Warehouses
 if reskins.angels and reskins.angels.triggers.storage.entities then
     for chest, map in pairs(logistic_map) do
         -- Fetch entity
-        local name = "angels-warehouse-"..chest
+        local name = "angels-warehouse-" .. chest
         local entity = data.raw[inputs.type][name]
 
         -- Check if entity exists, if not, skip this iteration
@@ -37,9 +37,9 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 
         -- Setup icon details
         inputs.icon_name = "warehouse"
-        inputs.icon_base = "logistic-warehouse-"..chest
+        inputs.icon_base = "logistic-warehouse-" .. chest
         inputs.base_entity_name = "oil-refinery"
-        inputs.particles = {["big-tint"] = 5, ["medium"] = 2}
+        inputs.particles = { ["big-tint"] = 5, ["medium"] = 2 }
 
         reskins.lib.setup_standard_entity(name, 0, inputs)
 
@@ -47,7 +47,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
             layers = {
                 -- Base
                 {
-                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-logistic-warehouse-"..chest..".png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-logistic-warehouse-" .. chest .. ".png",
                     priority = "extra-high",
                     width = 391,
                     height = 446,
@@ -74,11 +74,11 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
                     draw_as_light = true,
                     scale = 0.5,
                 },
-            }
+            },
         }
 
         -- Fix drawing box
-        entity.drawing_box = {{-3, -3.5}, {3, 3}}
+        entity.drawing_box = { { -3, -3.5 }, { 3, 3 } }
 
         -- Label to skip to next iteration
         ::continue::
@@ -87,65 +87,65 @@ end
 
 -- Reskin Silos
 if reskins.angels and reskins.angels.triggers.storage.entities then
---     for chest, map in pairs(logistic_map) do
---         -- Fetch entity
---         local name = "angels-warehouse-"..chest
---         local entity = data.raw[inputs.type][name]
+    --     for chest, map in pairs(logistic_map) do
+    --         -- Fetch entity
+    --         local name = "angels-warehouse-"..chest
+    --         local entity = data.raw[inputs.type][name]
 
---         -- Check if entity exists, if not, skip this iteration
---         if not entity then goto continue end
+    --         -- Check if entity exists, if not, skip this iteration
+    --         if not entity then goto continue end
 
---         -- Determine what tint we're using
---         inputs.tint = map.tint
+    --         -- Determine what tint we're using
+    --         inputs.tint = map.tint
 
---         inputs.icon_name = "warehouse"
+    --         inputs.icon_name = "warehouse"
 
---         reskins.lib.setup_standard_entity(name, 0, inputs)
+    --         reskins.lib.setup_standard_entity(name, 0, inputs)
 
---         entity.picture = {
---             layers = {
---                 -- Base
---                 {
---                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-"..chest.."-base.png",
---                     priority = "extra-high",
---                     width = 328,
---                     height = 376,
---                     shift = util.by_pixel(0, 0),
---                     scale = 0.5,
---                 },
---                 -- Shadow
---                 {
---                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-"..chest.."-shadow.png",
---                     priority = "extra-high",
---                     width = 328,
---                     height = 376,
---                     shift = util.by_pixel(0, 0),
---                     draw_as_shadow = true,
---                     scale = 0.5,
---                 },
---                 -- Light
---                 {
---                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-"..chest.."-light.png",
---                     priority = "extra-high",
---                     width = 328,
---                     height = 376,
---                     shift = util.by_pixel(0, 0),
---                     draw_as_light = true,
---                     scale = 0.5,
---                 },
---             }
---         }
+    --         entity.picture = {
+    --             layers = {
+    --                 -- Base
+    --                 {
+    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-"..chest.."-base.png",
+    --                     priority = "extra-high",
+    --                     width = 328,
+    --                     height = 376,
+    --                     shift = util.by_pixel(0, 0),
+    --                     scale = 0.5,
+    --                 },
+    --                 -- Shadow
+    --                 {
+    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-"..chest.."-shadow.png",
+    --                     priority = "extra-high",
+    --                     width = 328,
+    --                     height = 376,
+    --                     shift = util.by_pixel(0, 0),
+    --                     draw_as_shadow = true,
+    --                     scale = 0.5,
+    --                 },
+    --                 -- Light
+    --                 {
+    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-"..chest.."-light.png",
+    --                     priority = "extra-high",
+    --                     width = 328,
+    --                     height = 376,
+    --                     shift = util.by_pixel(0, 0),
+    --                     draw_as_light = true,
+    --                     scale = 0.5,
+    --                 },
+    --             }
+    --         }
 
---         -- Label to skip to next iteration
---         ::continue::
---     end
+    --         -- Label to skip to next iteration
+    --         ::continue::
+    --     end
 end
 
 -- Reskin Big Chests from Angel's Industries
 if reskins.angels and reskins.angels.triggers.industries.entities then
     for chest, map in pairs(logistic_map) do
         -- Fetch entity
-        local name = "angels-logistic-chest-"..chest
+        local name = "angels-logistic-chest-" .. chest
         local entity = data.raw[inputs.type][name]
 
         -- Check if entity exists, if not, skip this iteration
@@ -158,9 +158,9 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
 
         -- Setup icon details
         inputs.icon_name = "big-chest"
-        inputs.icon_base = "logistic-big-chest-"..chest
+        inputs.icon_base = "logistic-big-chest-" .. chest
         inputs.base_entity_name = "storage-tank"
-        inputs.particles = {["big"] = 1}
+        inputs.particles = { ["big"] = 1 }
 
         reskins.lib.setup_standard_entity(name, 0, inputs)
 
@@ -168,7 +168,7 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
             layers = {
                 -- Base
                 {
-                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-"..chest..".png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-" .. chest .. ".png",
                     priority = "extra-high",
                     width = 135,
                     height = 169,
@@ -195,7 +195,7 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
                     draw_as_light = true,
                     scale = 0.5,
                 },
-            }
+            },
         }
 
         -- Label to skip to next iteration

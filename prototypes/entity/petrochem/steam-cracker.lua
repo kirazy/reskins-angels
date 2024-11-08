@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "steam-cracker",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "petrochem",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["steam-cracker"] = {tier = 1, prog_tier = 2},
-    ["steam-cracker-2"] = {tier = 2, prog_tier = 3},
-    ["steam-cracker-3"] = {tier = 3, prog_tier = 4},
-    ["steam-cracker-4"] = {tier = 4, prog_tier = 5},
+    ["steam-cracker"] = { tier = 1, prog_tier = 2 },
+    ["steam-cracker-2"] = { tier = 2, prog_tier = 3 },
+    ["steam-cracker-3"] = { tier = 3, prog_tier = 4 },
+    ["steam-cracker-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -53,7 +53,7 @@ for name, map in pairs(tier_map) do
                 width = 512,
                 height = 512,
                 scale = 0.5,
-                shift = {0.5, -0.5},
+                shift = { 0.5, -0.5 },
             },
             -- Mask
             {
@@ -62,7 +62,7 @@ for name, map in pairs(tier_map) do
                 width = 512,
                 height = 512,
                 scale = 0.5,
-                shift = {0.5, -0.5},
+                shift = { 0.5, -0.5 },
                 tint = inputs.tint,
             },
             -- Highlights
@@ -72,10 +72,10 @@ for name, map in pairs(tier_map) do
                 width = 512,
                 height = 512,
                 scale = 0.5,
-                shift = {0.5, -0.5},
+                shift = { 0.5, -0.5 },
                 blend_mode = reskins.lib.settings.blend_mode,
             },
-        }
+        },
     }
 
     entity.working_visualisations = {
@@ -104,11 +104,11 @@ for name, map in pairs(tier_map) do
                 width = 512,
                 height = 512,
                 scale = 0.5,
-                shift = {0.5, -0.5},
+                shift = { 0.5, -0.5 },
                 blend_mode = "additive-soft",
                 draw_as_glow = true,
-            }
-        }
+            },
+        },
     }
 
     -- Label to skip to next iteration

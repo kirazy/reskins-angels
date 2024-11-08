@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "blast-furnace",
     base_entity_name = "oil-refinery",
     mod = "angels",
-    particles = {["big-tint"] = 5, ["medium"] = 2},
+    particles = { ["big-tint"] = 5, ["medium"] = 2 },
     group = "smelting",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["blast-furnace"] = {tier = 1},
-    ["blast-furnace-2"] = {tier = 2},
-    ["blast-furnace-3"] = {tier = 3},
-    ["blast-furnace-4"] = {tier = 4},
+    ["blast-furnace"] = { tier = 1 },
+    ["blast-furnace-2"] = { tier = 2 },
+    ["blast-furnace-3"] = { tier = 3 },
+    ["blast-furnace-4"] = { tier = 4 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -85,12 +85,12 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Handle ambient-light
     entity.energy_source.light_flicker = {
-        color = {0, 0, 0},
+        color = { 0, 0, 0 },
         minimum_light_size = 0,
         light_intensity_to_size_coefficient = 0,
     }

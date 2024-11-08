@@ -9,7 +9,7 @@ if not (reskins.bobs and reskins.bobs.triggers.modules.items) then return end
 if not (reskins.angels and reskins.angels.triggers.bioprocessing.items) then return end
 
 local modules_map = {
-    ["angels-bio-yield"] = {"orange", true},
+    ["angels-bio-yield"] = { "orange", true },
 }
 
 for class, map in pairs(modules_map) do
@@ -30,9 +30,9 @@ for class, map in pairs(modules_map) do
     -- Do all tiers
     for tier = 1, 8 do
         -- Naming convention exception handling
-        local name = class.."-module-"..tier
+        local name = class .. "-module-" .. tier
         if tier == 1 and is_exception then
-            name = class.."-module"
+            name = class .. "-module"
         end
 
         -- Fetch entity
@@ -42,7 +42,7 @@ for class, map in pairs(modules_map) do
         if not entity then goto continue end
 
         -- Setup icon path
-        inputs.icon_filename = "__reskins-bobs__/graphics/icons/modules/module/"..color.."/"..color.."_"..tier..".png"
+        inputs.icon_filename = "__reskins-bobs__/graphics/icons/modules/module/" .. color .. "/" .. color .. "_" .. tier .. ".png"
 
         reskins.lib.construct_icon(name, 0, inputs)
 

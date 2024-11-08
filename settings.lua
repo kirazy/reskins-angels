@@ -27,8 +27,8 @@ data:extend({
         name = "reskins-angels-use-item-variations",
         setting_type = "startup",
         order = "c",
-        default_value = true
-    }
+        default_value = true,
+    },
 })
 
 -- Settings available based on mod loadout
@@ -39,7 +39,7 @@ if mods["angelsbioprocessing"] then
             name = "reskins-angels-do-angelsbioprocessing",
             setting_type = "startup",
             default_value = true,
-        }
+        },
     })
 end
 
@@ -50,7 +50,7 @@ if mods["angelsexploration"] then
             name = "reskins-angels-do-angelsexploration",
             setting_type = "startup",
             default_value = true,
-        }
+        },
     })
 end
 
@@ -61,7 +61,7 @@ if mods["angelsindustries"] then
             name = "reskins-angels-do-angelsindustries",
             setting_type = "startup",
             default_value = true,
-        }
+        },
     })
 end
 
@@ -78,7 +78,7 @@ if mods["angelspetrochem"] then
             name = "reskins-angels-use-vanilla-chemical-plant-sprites",
             setting_type = "startup",
             default_value = false,
-        }
+        },
     })
 end
 
@@ -122,7 +122,7 @@ if mods["angelssmelting"] then
             setting_type = "startup",
             default_value = true,
             order = "a",
-        }
+        },
     })
 end
 
@@ -133,7 +133,7 @@ if mods["angelsaddons-cab"] then
             name = "reskins-angels-do-angelsaddons-cab",
             setting_type = "startup",
             default_value = true,
-        }
+        },
     })
 end
 
@@ -144,7 +144,7 @@ if mods["angelsaddons-mobility"] then
             name = "reskins-angels-do-angelsaddons-mobility",
             setting_type = "startup",
             default_value = true,
-        }
+        },
     })
 end
 
@@ -155,6 +155,6 @@ if mods["angelsaddons-storage"] then
             name = "reskins-angels-do-angelsaddons-storage",
             setting_type = "startup",
             default_value = true,
-        }
+        },
     })
 end

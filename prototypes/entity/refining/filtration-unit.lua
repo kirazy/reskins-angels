@@ -12,18 +12,18 @@ local inputs = {
     icon_name = "filtration-unit",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "refining",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["filtration-unit"] = {tier = 1, prog_tier = 2},
-    ["filtration-unit-2"] = {tier = 2, prog_tier = 3},
-    ["filtration-unit-3"] = {tier = 3, prog_tier = 4},
+    ["filtration-unit"] = { tier = 1, prog_tier = 2 },
+    ["filtration-unit-2"] = { tier = 2, prog_tier = 3 },
+    ["filtration-unit-3"] = { tier = 3, prog_tier = 4 },
 
     -- Extended Angels
-    ["filtration-unit-4"] = {tier = 4, prog_tier = 5},
+    ["filtration-unit-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Sea Block compatibility
@@ -59,7 +59,7 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 224,
                 height = 224,
-                shift = {0, -0.2},
+                shift = { 0, -0.2 },
             },
             -- Mask
             {
@@ -67,7 +67,7 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 224,
                 height = 224,
-                shift = {0, -0.2},
+                shift = { 0, -0.2 },
                 tint = inputs.tint,
             },
             -- Highlights
@@ -76,10 +76,10 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 224,
                 height = 224,
-                shift = {0, -0.2},
+                shift = { 0, -0.2 },
                 blend_mode = reskins.lib.settings.blend_mode,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

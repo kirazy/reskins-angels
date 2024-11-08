@@ -12,19 +12,19 @@ local inputs = {
     icon_name = "ore-crusher",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "refining",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["burner-ore-crusher"] = {tier = 0, tint = util.color("262626"), is_burner = true},
-    ["ore-crusher"] = {tier = 1},
-    ["ore-crusher-2"] = {tier = 2},
-    ["ore-crusher-3"] = {tier = 3},
+    ["burner-ore-crusher"] = { tier = 0, tint = util.color("262626"), is_burner = true },
+    ["ore-crusher"] = { tier = 1 },
+    ["ore-crusher-2"] = { tier = 2 },
+    ["ore-crusher-3"] = { tier = 3 },
 
     -- Extended Angels
-    ["ore-crusher-4"] = {tier = 4, defer_to_data_updates = true},
+    ["ore-crusher-4"] = { tier = 4, defer_to_data_updates = true },
 }
 
 -- Reskin entities, create and assign extra details
@@ -98,7 +98,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

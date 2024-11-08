@@ -12,17 +12,17 @@ local inputs = {
     icon_name = "salination-plant",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "refining",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["salination-plant"] = {tier = 1, prog_tier = 3},
-    ["salination-plant-2"] = {tier = 2, prog_tier = 4},
+    ["salination-plant"] = { tier = 1, prog_tier = 3 },
+    ["salination-plant-2"] = { tier = 2, prog_tier = 4 },
 
     -- Extended Angels
-    ["salination-plant-3"] = {tier = 3, prog_tier = 5},
+    ["salination-plant-3"] = { tier = 3, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -95,7 +95,7 @@ for name, map in pairs(tier_map) do
                 animation_speed = 0.5,
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

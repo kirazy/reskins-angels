@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "ore-processing-machine",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "smelting",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["ore-processing-machine"] = {tier = 1},
-    ["ore-processing-machine-2"] = {tier = 2},
-    ["ore-processing-machine-3"] = {tier = 3},
-    ["ore-processing-machine-4"] = {tier = 4},
+    ["ore-processing-machine"] = { tier = 1 },
+    ["ore-processing-machine-2"] = { tier = 2 },
+    ["ore-processing-machine-3"] = { tier = 3 },
+    ["ore-processing-machine-4"] = { tier = 4 },
 }
 
 -- Support rework of Angel's Smelting ingredient tiers
@@ -63,7 +63,7 @@ for name, map in pairs(tier_map) do
                 line_length = 5,
                 frame_count = 25,
                 animation_speed = 0.5,
-                shift = util.by_pixel(-0.5, -2 ),
+                shift = util.by_pixel(-0.5, -2),
                 scale = 0.5,
             },
             -- Mask
@@ -75,7 +75,7 @@ for name, map in pairs(tier_map) do
                 line_length = 5,
                 frame_count = 25,
                 animation_speed = 0.5,
-                shift = util.by_pixel(-0.5, -2 ),
+                shift = util.by_pixel(-0.5, -2),
                 tint = inputs.tint,
                 scale = 0.5,
             },
@@ -88,7 +88,7 @@ for name, map in pairs(tier_map) do
                 line_length = 5,
                 frame_count = 25,
                 animation_speed = 0.5,
-                shift = util.by_pixel(-0.5, -2 ),
+                shift = util.by_pixel(-0.5, -2),
                 blend_mode = reskins.lib.settings.blend_mode,
                 scale = 0.5,
             },
@@ -104,7 +104,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(12.5, 16),
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

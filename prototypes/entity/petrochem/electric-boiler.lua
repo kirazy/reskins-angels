@@ -12,15 +12,15 @@ local inputs = {
     icon_name = "electric-boiler",
     base_entity_name = "boiler",
     mod = "angels",
-    particles = {["big"] = 3},
+    particles = { ["big"] = 3 },
     group = "petrochem",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["angels-electric-boiler"] = {tier = 1},
-    ["angels-electric-boiler-2"] = {tier = 2},
-    ["angels-electric-boiler-3"] = {tier = 3},
+    ["angels-electric-boiler"] = { tier = 1 },
+    ["angels-electric-boiler-2"] = { tier = 2 },
+    ["angels-electric-boiler-3"] = { tier = 3 },
 }
 
 -- Electric boiler recipes revised in Angel's Petrochem 0.9.18
@@ -35,7 +35,7 @@ local working_lights = reskins.lib.sprites.make_4way_animation_from_spritesheet(
     priority = "extra-high",
     width = 160,
     height = 160,
-    shift = {0, 0},
+    shift = { 0, 0 },
     blend_mode = "additive",
     draw_as_glow = true,
 })
@@ -68,7 +68,7 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 160,
                 height = 160,
-                shift = {0, 0},
+                shift = { 0, 0 },
             },
             -- Mask
             {
@@ -76,7 +76,7 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 160,
                 height = 160,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 tint = inputs.tint,
             },
             -- Highlights
@@ -85,10 +85,10 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 160,
                 height = 160,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 blend_mode = reskins.lib.settings.blend_mode,
             },
-        }
+        },
     })
 
     entity.idle_animation = nil

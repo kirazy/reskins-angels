@@ -14,7 +14,7 @@ local inputs = {
     mod = "angels",
     group = "petrochem",
     icon_layers = 1,
-    particles = {["medium"] = 2},
+    particles = { ["medium"] = 2 },
     make_remnants = false,
 }
 
@@ -36,7 +36,7 @@ entity.pictures.picture = {
             width = 273,
             height = 307,
             shift = util.by_pixel(0, -2),
-            scale = 0.5
+            scale = 0.5,
         },
         {
             filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-oil-tank/hr-petrochem-oil-tank-shadow.png",
@@ -46,10 +46,10 @@ entity.pictures.picture = {
             height = 328,
             shift = util.by_pixel(16.5, 9.5),
             draw_as_shadow = true,
-            scale = 0.5
-        }
-    }
+            scale = 0.5,
+        },
+    },
 }
 
 -- Fix drawing box
-entity.drawing_box = {{-2, -3}, {2, 2}}
+entity.drawing_box = { { -2, -3 }, { 2, 2 } }

@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "separator",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "petrochem",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["separator"] = {tier = 1, prog_tier = 2},
-    ["separator-2"] = {tier = 2, prog_tier = 3},
-    ["separator-3"] = {tier = 3, prog_tier = 4},
-    ["separator-4"] = {tier = 4, prog_tier = 5},
+    ["separator"] = { tier = 1, prog_tier = 2 },
+    ["separator-2"] = { tier = 2, prog_tier = 3 },
+    ["separator-3"] = { tier = 3, prog_tier = 4 },
+    ["separator-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -52,7 +52,7 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 224,
                 height = 224,
-                shift = {0, 0},
+                shift = { 0, 0 },
             },
             -- Mask
             {
@@ -60,7 +60,7 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 224,
                 height = 224,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 tint = inputs.tint,
             },
             -- Highlights
@@ -69,10 +69,10 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 224,
                 height = 224,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 blend_mode = reskins.lib.settings.blend_mode,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

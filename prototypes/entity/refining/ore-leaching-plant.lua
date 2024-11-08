@@ -12,18 +12,18 @@ local inputs = {
     icon_name = "ore-leaching-plant",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "refining",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["ore-leaching-plant"] = {tier = 1, prog_tier = 3},
-    ["ore-leaching-plant-2"] = {tier = 2, prog_tier = 4},
-    ["ore-leaching-plant-3"] = {tier = 3, prog_tier = 5},
+    ["ore-leaching-plant"] = { tier = 1, prog_tier = 3 },
+    ["ore-leaching-plant-2"] = { tier = 2, prog_tier = 4 },
+    ["ore-leaching-plant-3"] = { tier = 3, prog_tier = 5 },
 
     -- Extended Angels
-    ["ore-leaching-plant-4"] = {tier = 4, prog_tier = 6},
+    ["ore-leaching-plant-4"] = { tier = 4, prog_tier = 6 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -54,7 +54,7 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 192,
                 height = 192,
-                shift = {0.4, -0.14},
+                shift = { 0.4, -0.14 },
             },
             -- Mask
             {
@@ -62,7 +62,7 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 192,
                 height = 192,
-                shift = {0.4, -0.14},
+                shift = { 0.4, -0.14 },
                 tint = inputs.tint,
             },
             -- Highlights
@@ -71,10 +71,10 @@ for name, map in pairs(tier_map) do
                 priority = "extra-high",
                 width = 192,
                 height = 192,
-                shift = {0.4, -0.14},
+                shift = { 0.4, -0.14 },
                 blend_mode = reskins.lib.settings.blend_mode,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

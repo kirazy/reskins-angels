@@ -12,18 +12,18 @@ local inputs = {
     icon_name = "crystallizer",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "refining",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["crystallizer"] = {tier = 1, prog_tier = 2},
-    ["crystallizer-2"] = {tier = 2, prog_tier = 3},
-    ["crystallizer-3"] = {tier = 3, prog_tier = 4},
+    ["crystallizer"] = { tier = 1, prog_tier = 2 },
+    ["crystallizer-2"] = { tier = 2, prog_tier = 3 },
+    ["crystallizer-3"] = { tier = 3, prog_tier = 4 },
 
     -- Extended Angels
-    ["crystallizer-4"] = {tier = 4, prog_tier = 5},
+    ["crystallizer-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Sea Block compatibility
@@ -92,7 +92,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

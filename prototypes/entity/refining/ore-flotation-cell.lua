@@ -12,18 +12,18 @@ local inputs = {
     icon_name = "ore-flotation-cell",
     base_entity_name = "assembling-machine-1",
     mod = "angels",
-    particles = {["big"] = 1, ["medium"] = 2},
+    particles = { ["big"] = 1, ["medium"] = 2 },
     group = "refining",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["ore-floatation-cell"] = {tier = 1, prog_tier = 2},
-    ["ore-floatation-cell-2"] = {tier = 2, prog_tier = 3},
-    ["ore-floatation-cell-3"] = {tier = 3, prog_tier = 4},
+    ["ore-floatation-cell"] = { tier = 1, prog_tier = 2 },
+    ["ore-floatation-cell-2"] = { tier = 2, prog_tier = 3 },
+    ["ore-floatation-cell-3"] = { tier = 3, prog_tier = 4 },
 
     -- Extended Angels
-    ["ore-floatation-cell-4"] = {tier = 4, prog_tier = 5},
+    ["ore-floatation-cell-4"] = { tier = 4, prog_tier = 5 },
 }
 
 local function return_pipe_overlay(direction)
@@ -32,7 +32,7 @@ local function return_pipe_overlay(direction)
         priority = "extra-high",
         width = 333,
         height = 363,
-        x = direction*333,
+        x = direction * 333,
         shift = util.by_pixel_hr(-1, -1),
         scale = 0.5,
     }
@@ -146,8 +146,8 @@ for name, map in pairs(tier_map) do
                         blend_mode = reskins.lib.settings.blend_mode,
                         scale = 0.5,
                     },
-                }
-            }
+                },
+            },
         },
 
         -- Pipe cover overlays
@@ -163,8 +163,8 @@ for name, map in pairs(tier_map) do
         -- Vertical Pipe Shadow Patch
         {
             always_draw = true,
-            north_animation = reskins.lib.sprites.pipes.get_vertical_pipe_shadow({0, -2}),
-            south_animation = reskins.lib.sprites.pipes.get_vertical_pipe_shadow({0, -2}),
+            north_animation = reskins.lib.sprites.pipes.get_vertical_pipe_shadow({ 0, -2 }),
+            south_animation = reskins.lib.sprites.pipes.get_vertical_pipe_shadow({ 0, -2 }),
         },
     }
 

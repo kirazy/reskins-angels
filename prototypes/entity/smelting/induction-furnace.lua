@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "induction-furnace",
     base_entity_name = "oil-refinery",
     mod = "angels",
-    particles = {["big-tint"] = 5, ["medium"] = 2},
+    particles = { ["big-tint"] = 5, ["medium"] = 2 },
     group = "smelting",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["induction-furnace"] = {tier = 1},
-    ["induction-furnace-2"] = {tier = 2},
-    ["induction-furnace-3"] = {tier = 3},
-    ["induction-furnace-4"] = {tier = 4},
+    ["induction-furnace"] = { tier = 1 },
+    ["induction-furnace-2"] = { tier = 2 },
+    ["induction-furnace-3"] = { tier = 3 },
+    ["induction-furnace-4"] = { tier = 4 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -137,7 +137,7 @@ for name, map in pairs(tier_map) do
                 shift = util.by_pixel(23, 8.5),
                 scale = 0.5,
             },
-        }
+        },
     }
 
     -- Label to skip to next iteration

@@ -12,16 +12,16 @@ local inputs = {
     icon_name = "gas-refinery",
     base_entity_name = "oil-refinery",
     mod = "angels",
-    particles = {["big-tint"] = 5, ["medium"] = 2},
+    particles = { ["big-tint"] = 5, ["medium"] = 2 },
     group = "petrochem",
     make_remnants = false,
 }
 
 local tier_map = {
-    ["gas-refinery-small"] = {tier = 1, prog_tier = 2},
-    ["gas-refinery-small-2"] = {tier = 2, prog_tier = 3},
-    ["gas-refinery-small-3"] = {tier = 3, prog_tier = 4},
-    ["gas-refinery-small-4"] = {tier = 4, prog_tier = 5},
+    ["gas-refinery-small"] = { tier = 1, prog_tier = 2 },
+    ["gas-refinery-small-2"] = { tier = 2, prog_tier = 3 },
+    ["gas-refinery-small-3"] = { tier = 3, prog_tier = 4 },
+    ["gas-refinery-small-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details
@@ -85,7 +85,7 @@ for name, map in pairs(tier_map) do
                 draw_as_shadow = true,
                 scale = 0.5,
             },
-        }
+        },
     })
 
     -- Label to skip to next iteration

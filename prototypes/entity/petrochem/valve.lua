@@ -13,21 +13,21 @@ local inputs = {
     base_entity_name = "pipe",
     mod = "angels",
     group = "petrochem",
-    particles = {["small"] = 2},
+    particles = { ["small"] = 2 },
     icon_layers = 2,
     make_remnants = false,
 }
 
 local valves = {
-    ["valve-inspector"] = {tint = util.color("8dd24e")},
-    ["valve-overflow"] = {tint = util.color("689ed3")},
-    ["valve-return"] = {tint = util.color("d4933f")},
-    ["valve-underflow"] = {tint = util.color("fcfcfc")},
+    ["valve-inspector"] = { tint = util.color("8dd24e") },
+    ["valve-overflow"] = { tint = util.color("689ed3") },
+    ["valve-return"] = { tint = util.color("d4933f") },
+    ["valve-underflow"] = { tint = util.color("fcfcfc") },
 }
 
 local function cardinal_pictures(x, tint)
-    local x_lr = 64*x
-    local x_hr = 128*x
+    local x_lr = 64 * x
+    local x_hr = 128 * x
 
     return
     {
@@ -39,7 +39,7 @@ local function cardinal_pictures(x, tint)
                 x = x_hr,
                 width = 128,
                 height = 128,
-                scale = 0.5
+                scale = 0.5,
             },
             -- Mask
             {
@@ -49,9 +49,9 @@ local function cardinal_pictures(x, tint)
                 width = 128,
                 height = 128,
                 tint = tint,
-                scale = 0.5
-            }
-        }
+                scale = 0.5,
+            },
+        },
     }
 end
 
@@ -101,7 +101,7 @@ entity.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
             priority = "extra-high",
             width = 128,
             height = 128,
-            scale = 0.5
+            scale = 0.5,
         },
         -- Mask
         {
@@ -110,7 +110,7 @@ entity.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
             width = 128,
             height = 128,
             tint = inputs.tint,
-            scale = 0.5
-        }
-    }
+            scale = 0.5,
+        },
+    },
 })

@@ -24,7 +24,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
         inputs.group = "addons-storage"
         inputs.icon_name = "warehouse"
         inputs.base_entity_name = "oil-refinery"
-        inputs.particles = {["big-tint"] = 5, ["medium"] = 2}
+        inputs.particles = { ["big-tint"] = 5, ["medium"] = 2 }
 
         reskins.lib.setup_standard_entity(name, 0, inputs)
 
@@ -49,11 +49,11 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
                     draw_as_shadow = true,
                     scale = 0.5,
                 },
-            }
+            },
         }
 
         -- Fix drawing box
-        entity.drawing_box = {{-3, -3.5}, {3, 3}}
+        entity.drawing_box = { { -3, -3.5 }, { 3, 3 } }
     end
 end
 
@@ -110,7 +110,7 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
         inputs.group = "addons-storage"
         inputs.icon_name = "big-chest"
         inputs.base_entity_name = "storage-tank"
-        inputs.particles = {["big"] = 1}
+        inputs.particles = { ["big"] = 1 }
 
         reskins.lib.setup_standard_entity(name, 0, inputs)
 
@@ -135,7 +135,7 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
                     draw_as_shadow = true,
                     scale = 0.5,
                 },
-            }
+            },
         }
     end
 end

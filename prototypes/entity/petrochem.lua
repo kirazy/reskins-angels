@@ -11,10 +11,10 @@ if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then retu
 if reskins.compatibility then reskins.compatibility.triggers.minimachines.chemplants.angels = true end
 
 local chemical_plants = {
-    ["angels-chemical-plant"] = {tier = 1},
-    ["angels-chemical-plant-2"] = {tier = 2},
-    ["angels-chemical-plant-3"] = {tier = 3},
-    ["angels-chemical-plant-4"] = {tier = 4},
+    ["angels-chemical-plant"] = { tier = 1 },
+    ["angels-chemical-plant-2"] = { tier = 2 },
+    ["angels-chemical-plant-3"] = { tier = 3 },
+    ["angels-chemical-plant-4"] = { tier = 4 },
 }
 
 -- Chemical plant recipes revised in Angel's Petrochem 0.9.18, and then "reverted" in Angel's Petrochem 0.9.23

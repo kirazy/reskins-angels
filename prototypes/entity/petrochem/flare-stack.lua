@@ -14,7 +14,7 @@ local inputs = {
     mod = "angels",
     group = "petrochem",
     icon_layers = 1,
-    particles = {["big"] = 1},
+    particles = { ["big"] = 1 },
     make_remnants = false,
 }
 
@@ -57,8 +57,8 @@ entity.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
             shift = util.by_pixel(61, 10),
             draw_as_shadow = true,
             scale = 0.5,
-        }
-    }
+        },
+    },
 })
 
 entity.working_visualisations = {
@@ -93,4 +93,4 @@ entity.working_visualisations = {
 }
 
 -- Fix drawing box
-entity.drawing_box = {{-1, -5.25}, {1, 1}}
+entity.drawing_box = { { -1, -5.25 }, { 1, 1 } }

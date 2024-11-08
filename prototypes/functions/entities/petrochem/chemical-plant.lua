@@ -16,7 +16,7 @@ local function entity_animation(tint)
                 priority = "extra-high",
                 width = 160,
                 height = 160,
-                shift = {0, 0}
+                shift = { 0, 0 },
             },
             -- Mask
             {
@@ -24,7 +24,7 @@ local function entity_animation(tint)
                 priority = "extra-high",
                 width = 160,
                 height = 160,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 tint = tint,
             },
             -- Highlights
@@ -33,10 +33,10 @@ local function entity_animation(tint)
                 priority = "extra-high",
                 width = 160,
                 height = 160,
-                shift = {0, 0},
+                shift = { 0, 0 },
                 blend_mode = reskins.lib.settings.blend_mode,
             },
-        }
+        },
     }
 end
 
@@ -53,7 +53,7 @@ function reskins.lib.apply_skin.angels_chemical_plant(name, tier, tint, make_tie
         base_entity_name = "assembling-machine-1",
         mod = "angels",
         group = "petrochem",
-        particles = {["big"] = 1, ["medium"] = 2},
+        particles = { ["big"] = 1, ["medium"] = 2 },
         tier_labels = make_tier_labels,
         tint = tint and tint or reskins.lib.tiers.get_tint(tier),
         make_remnants = false,

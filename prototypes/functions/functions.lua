@@ -7,7 +7,7 @@
 if not reskins.angels then reskins.angels = {} end
 reskins.angels.directory = "__reskins-angels__"
 reskins.angels.constants = {
-    recipe_corner_shift = {-10, -10},
+    recipe_corner_shift = { -10, -10 },
     recipe_corner_scale = 0.4375,
 }
 
@@ -60,14 +60,13 @@ function reskins.angels.num_tier(tier, mod)
     else
         icons = {
             {
-                icon = "__reskins-angels__/graphics/icons/refining/numbers/num-"..tier..".png",
+                icon = "__reskins-angels__/graphics/icons/refining/numbers/num-" .. tier .. ".png",
                 icon_size = 64,
                 tint = util.get_color_with_alpha(tint, 1),
-                shift = {-13, 0},
-            }
+                shift = { -13, 0 },
+            },
         }
     end
 
     return icons
 end
-
