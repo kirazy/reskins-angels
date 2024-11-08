@@ -31,40 +31,23 @@ reskins.lib.setup_standard_entity(name, 0, inputs)
 entity.pictures.picture = {
     sheets = {
         {
-            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/petrochem-inline-tank.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/hr-petrochem-inline-tank.png",
             priority = "extra-high",
             frames = 4,
-            width = 71,
-            height = 102,
-            shift = util.by_pixel(-0.5, -8),
-            hr_version = {
-                filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/hr-petrochem-inline-tank.png",
-                priority = "extra-high",
-                frames = 4,
-                width = 142,
-                height = 199,
-                shift = util.by_pixel(0, -7.5),
-                scale = 0.5
-            }
+            width = 142,
+            height = 199,
+            shift = util.by_pixel(0, -7.5),
+            scale = 0.5
         },
         {
-            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
             priority = "extra-high",
             frames = 4,
-            width = 106,
-            height = 101,
-            shift = util.by_pixel(17, 8),
+            width = 207,
+            height = 199,
+            shift = util.by_pixel(16.5, 9),
             draw_as_shadow = true,
-            hr_version = {
-                filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
-                priority = "extra-high",
-                frames = 4,
-                width = 207,
-                height = 199,
-                shift = util.by_pixel(16.5, 9),
-                draw_as_shadow = true,
-                scale = 0.5
-            }
+            scale = 0.5
         }
     }
 }

@@ -54,55 +54,32 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelsrefining__/graphics/entity/hydro-plant/hydro-plant-base.png",
+                filename = "__angelsrefining__/graphics/entity/hydro-plant/hr-hydro-plant-base.png",
                 priority = "extra-high",
-                width = 231,
-                height = 247,
+                width = 459,
+                height = 491,
                 shift = util.by_pixel(0, 0),
-                hr_version = {
-                    filename = "__angelsrefining__/graphics/entity/hydro-plant/hr-hydro-plant-base.png",
-                    priority = "extra-high",
-                    width = 459,
-                    height = 491,
-                    shift = util.by_pixel(0, 0),
-                    scale = 0.5,
-                },
+                scale = 0.5,
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/refining/hydro-plant/hydro-plant-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/hydro-plant/hr-hydro-plant-mask.png",
                 priority = "extra-high",
-                width = 231,
-                height = 247,
+                width = 459,
+                height = 491,
                 shift = util.by_pixel(0, 0),
                 tint = inputs.tint,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/refining/hydro-plant/hr-hydro-plant-mask.png",
-                    priority = "extra-high",
-                    width = 459,
-                    height = 491,
-                    shift = util.by_pixel(0, 0),
-                    tint = inputs.tint,
-                    scale = 0.5,
-                },
+                scale = 0.5,
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/refining/hydro-plant/hydro-plant-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/refining/hydro-plant/hr-hydro-plant-highlights.png",
                 priority = "extra-high",
-                width = 231,
-                height = 247,
+                width = 459,
+                height = 491,
                 shift = util.by_pixel(0, 0),
                 blend_mode = reskins.lib.settings.blend_mode,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/refining/hydro-plant/hr-hydro-plant-highlights.png",
-                    priority = "extra-high",
-                    width = 459,
-                    height = 491,
-                    shift = util.by_pixel(0, 0),
-                    blend_mode = reskins.lib.settings.blend_mode,
-                    scale = 0.5,
-                },
+                scale = 0.5,
             },
         }
     }

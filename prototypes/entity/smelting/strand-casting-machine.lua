@@ -54,39 +54,23 @@ for name, map in pairs(tier_map) do
             layers = {
                 -- Mask
                 {
-                    filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-mask.png",
+                    filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
                     priority = "extra-high",
-                    width = 167,
-                    height = 197,
+                    width = 329,
+                    height = 392,
                     shift = util.by_pixel(0, -16.5),
                     tint = inputs.tint,
-                    hr_version = {
-                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
-                        priority = "extra-high",
-                        width = 329,
-                        height = 392,
-                        shift = util.by_pixel(0, -16.5),
-                        tint = inputs.tint,
-                        scale = 0.5,
-                    }
+                    scale = 0.5,
                 },
                 -- Highlights
                 {
-                    filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-highlights.png",
+                    filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
                     priority = "extra-high",
-                    width = 167,
-                    height = 197,
+                    width = 329,
+                    height = 392,
                     shift = util.by_pixel(0, -16.5),
                     blend_mode = reskins.lib.settings.blend_mode,
-                    hr_version = {
-                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
-                        priority = "extra-high",
-                        width = 329,
-                        height = 392,
-                        shift = util.by_pixel(0, -16.5),
-                        blend_mode = reskins.lib.settings.blend_mode,
-                        scale = 0.5,
-                    }
+                    scale = 0.5,
                 }
             }
         }

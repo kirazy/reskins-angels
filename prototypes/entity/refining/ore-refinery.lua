@@ -49,74 +49,43 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-base.png",
+                filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-base.png",
                 priority = "extra-high",
-                width = 221,
-                height = 256,
-                shift = util.by_pixel(0, -16),
-                hr_version = {
-                    filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-base.png",
-                    priority = "extra-high",
-                    width = 440,
-                    height = 509,
-                    shift = util.by_pixel(0.5, -16),
-                    scale = 0.5,
-                }
+                width = 440,
+                height = 509,
+                shift = util.by_pixel(0.5, -16),
+                scale = 0.5,
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/refining/ore-refinery/ore-refinery-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-refinery/hr-ore-refinery-mask.png",
                 priority = "extra-high",
-                width = 221,
-                height = 256,
-                shift = util.by_pixel(0, -16),
+                width = 440,
+                height = 509,
+                shift = util.by_pixel(0.5, -16),
                 tint = inputs.tint,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/refining/ore-refinery/hr-ore-refinery-mask.png",
-                    priority = "extra-high",
-                    width = 440,
-                    height = 509,
-                    shift = util.by_pixel(0.5, -16),
-                    tint = inputs.tint,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/refining/ore-refinery/ore-refinery-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-refinery/hr-ore-refinery-highlights.png",
                 priority = "extra-high",
-                width = 221,
-                height = 256,
-                shift = util.by_pixel(0, -16),
+                width = 440,
+                height = 509,
+                shift = util.by_pixel(0.5, -16),
                 blend_mode = reskins.lib.settings.blend_mode,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/refining/ore-refinery/hr-ore-refinery-highlights.png",
-                    priority = "extra-high",
-                    width = 440,
-                    height = 509,
-                    shift = util.by_pixel(0.5, -16),
-                    blend_mode = reskins.lib.settings.blend_mode,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
             -- Shadow
 
             {
-                filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-shadow.png",
+                filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-shadow.png",
                 priority = "extra-high",
-                width = 261,
-                height = 170,
-                shift = util.by_pixel(22, 30),
+                width = 522,
+                height = 340,
+                shift = util.by_pixel(21.5, 29),
                 draw_as_shadow = true,
-                hr_version = {
-                    filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-shadow.png",
-                    priority = "extra-high",
-                    width = 522,
-                    height = 340,
-                    shift = util.by_pixel(21.5, 29),
-                    draw_as_shadow = true,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
         }
     }

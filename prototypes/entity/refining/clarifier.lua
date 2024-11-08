@@ -20,21 +20,13 @@ local entity = data.raw[inputs.type]["clarifier"]
 if not entity then return end
 
 local shadows = reskins.lib.sprites.make_4way_animation_from_spritesheet({
-    filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-shadow.png",
+    filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-shadow.png",
     priority = "extra-high",
-    width = 189,
-    height = 184,
-    shift = util.by_pixel(9.5, 1),
+    width = 374,
+    height = 365,
+    shift = util.by_pixel(10, 0),
     draw_as_shadow = true,
-    hr_version = {
-        filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-shadow.png",
-        priority = "extra-high",
-        width = 374,
-        height = 365,
-        shift = util.by_pixel(10, 0),
-        draw_as_shadow = true,
-        scale = 0.5,
-    },
+    scale = 0.5,
 })
 
 local pipe_properties = {
@@ -51,45 +43,26 @@ local pipe_properties = {
 local function get_pipe_connections(direction, is_animated)
     if is_animated then
         return {
-            filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-pipe-connections.png",
+            filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
             priority = "extra-high",
-            width = 189,
-            height = 184,
+            width = 374,
+            height = 365,
             frame_count = 18,
             line_length = 6,
             animation_speed = 0.5,
             frame_sequence = pipe_properties[direction],
-            shift = util.by_pixel(9.5, 1),
-            hr_version = {
-                filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
-                priority = "extra-high",
-                width = 374,
-                height = 365,
-                frame_count = 18,
-                line_length = 6,
-                animation_speed = 0.5,
-                frame_sequence = pipe_properties[direction],
-                shift = util.by_pixel(10, 0),
-                scale = 0.5,
-            }
+            shift = util.by_pixel(10, 0),
+            scale = 0.5,
         }
     else
         return {
-            filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-pipe-connections.png",
+            filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
             priority = "extra-high",
-            width = 189,
-            height = 184,
-            x = pipe_properties[direction].normal,
-            shift = util.by_pixel(9.5, 1),
-            hr_version = {
-                filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
-                priority = "extra-high",
-                width = 374,
-                height = 365,
-                x = pipe_properties[direction].hr,
-                shift = util.by_pixel(10, 0),
-                scale = 0.5,
-            }
+            width = 374,
+            height = 365,
+            x = pipe_properties[direction].hr,
+            shift = util.by_pixel(10, 0),
+            scale = 0.5,
         }
     end
 end
@@ -97,25 +70,15 @@ end
 reskins.lib.setup_standard_entity("clarifier", 0, inputs)
 
 entity.animation = {
-    filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-base.png",
+    filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-base.png",
     priority = "extra-high",
     frame_count = 64,
     line_length = 8,
     animation_speed = 0.5,
-    width = 189,
-    height = 184,
-    shift = util.by_pixel(9.5, 1),
-    hr_version = {
-        filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-base.png",
-        priority = "extra-high",
-        frame_count = 64,
-        line_length = 8,
-        animation_speed = 0.5,
-        width = 374,
-        height = 365,
-        shift = util.by_pixel(10, 0),
-        scale = 0.5,
-    },
+    width = 374,
+    height = 365,
+    shift = util.by_pixel(10, 0),
+    scale = 0.5,
 }
 
 entity.working_visualisations = {
@@ -148,25 +111,15 @@ entity.working_visualisations = {
         apply_recipe_tint = "primary",
         fadeout = true,
         animation = {
-            filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-recipe-mask.png",
+            filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-recipe-mask.png",
             priority = "extra-high",
             frame_count = 64,
             line_length = 8,
             animation_speed = 0.5,
-            width = 189,
-            height = 184,
-            shift = util.by_pixel(9.5, 1),
-            hr_version = {
-                filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-recipe-mask.png",
-                priority = "extra-high",
-                frame_count = 64,
-                line_length = 8,
-                animation_speed = 0.5,
-                width = 374,
-                height = 365,
-                shift = util.by_pixel(10, 0),
-                scale = 0.5,
-            },
+            width = 374,
+            height = 365,
+            shift = util.by_pixel(10, 0),
+            scale = 0.5,
         }
     },
 

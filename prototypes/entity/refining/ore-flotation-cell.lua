@@ -28,21 +28,13 @@ local tier_map = {
 
 local function return_pipe_overlay(direction)
     local animation = {
-        filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+        filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
         priority = "extra-high",
-        width = 168,
-        height = 182,
-        x = direction*168,
-        shift = util.by_pixel(0, 0),
-        hr_version = {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
-            priority = "extra-high",
-            width = 333,
-            height = 363,
-            x = direction*333,
-            shift = util.by_pixel_hr(-1, -1),
-            scale = 0.5,
-        }
+        width = 333,
+        height = 363,
+        x = direction*333,
+        shift = util.by_pixel_hr(-1, -1),
+        scale = 0.5,
     }
     return animation
 end
@@ -71,23 +63,14 @@ for name, map in pairs(tier_map) do
         {
             always_draw = true,
             animation = {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-idle.png",
+                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
                 priority = "extra-high",
-                width = 82,
-                height = 58,
+                width = 166,
+                height = 117,
                 frame_count = 32,
                 line_length = 8,
-                shift = util.by_pixel(31, 3),
-                hr_version = {
-                    filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
-                    priority = "extra-high",
-                    width = 166,
-                    height = 117,
-                    frame_count = 32,
-                    line_length = 8,
-                    shift = util.by_pixel_hr(62, 5),
-                    scale = 0.5,
-                }
+                shift = util.by_pixel_hr(62, 5),
+                scale = 0.5,
             },
         },
 
@@ -95,23 +78,14 @@ for name, map in pairs(tier_map) do
         {
             fadeout = true,
             animation = {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-base.png",
+                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
                 priority = "extra-high",
-                width = 82,
-                height = 58,
+                width = 166,
+                height = 117,
                 frame_count = 64,
                 line_length = 8,
-                shift = util.by_pixel(31, 3),
-                hr_version = {
-                    filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
-                    priority = "extra-high",
-                    width = 166,
-                    height = 117,
-                    frame_count = 64,
-                    line_length = 8,
-                    shift = util.by_pixel_hr(62, 5),
-                    scale = 0.5,
-                }
+                shift = util.by_pixel_hr(62, 5),
+                scale = 0.5,
             },
         },
 
@@ -120,23 +94,14 @@ for name, map in pairs(tier_map) do
             fadeout = true,
             apply_recipe_tint = "primary",
             animation = {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-water-tintable.png",
+                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
                 priority = "extra-high",
-                width = 82,
-                height = 58,
+                width = 166,
+                height = 117,
                 frame_count = 64,
                 line_length = 8,
-                shift = util.by_pixel(31, 3),
-                hr_version = {
-                    filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
-                    priority = "extra-high",
-                    width = 166,
-                    height = 117,
-                    frame_count = 64,
-                    line_length = 8,
-                    shift = util.by_pixel_hr(62, 5),
-                    scale = 0.5,
-                }
+                shift = util.by_pixel_hr(62, 5),
+                scale = 0.5,
             },
         },
 
@@ -145,23 +110,14 @@ for name, map in pairs(tier_map) do
             fadeout = true,
             apply_recipe_tint = "secondary",
             animation = {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-froth-tintable.png",
+                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
                 priority = "extra-high",
-                width = 82,
-                height = 58,
+                width = 166,
+                height = 117,
                 frame_count = 64,
                 line_length = 8,
-                shift = util.by_pixel(31, 3),
-                hr_version = {
-                    filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
-                    priority = "extra-high",
-                    width = 166,
-                    height = 117,
-                    frame_count = 64,
-                    line_length = 8,
-                    shift = util.by_pixel_hr(62, 5),
-                    scale = 0.5,
-                }
+                shift = util.by_pixel_hr(62, 5),
+                scale = 0.5,
             },
         },
 
@@ -172,39 +128,23 @@ for name, map in pairs(tier_map) do
                 layers = {
                     -- Mask
                     {
-                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-mask.png",
+                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-mask.png",
                         priority = "extra-high",
-                        width = 168,
-                        height = 182,
-                        shift = util.by_pixel(0, 0),
+                        width = 333,
+                        height = 363,
+                        shift = util.by_pixel_hr(-1, -1),
                         tint = inputs.tint,
-                        hr_version = {
-                            filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-mask.png",
-                            priority = "extra-high",
-                            width = 333,
-                            height = 363,
-                            shift = util.by_pixel_hr(-1, -1),
-                            tint = inputs.tint,
-                            scale = 0.5,
-                        }
+                        scale = 0.5,
                     },
                     -- Highlights
                     {
-                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-highlights.png",
+                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-highlights.png",
                         priority = "extra-high",
-                        width = 168,
-                        height = 182,
-                        shift = util.by_pixel(0, 0),
+                        width = 333,
+                        height = 363,
+                        shift = util.by_pixel_hr(-1, -1),
                         blend_mode = reskins.lib.settings.blend_mode,
-                        hr_version = {
-                            filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-highlights.png",
-                            priority = "extra-high",
-                            width = 333,
-                            height = 363,
-                            shift = util.by_pixel_hr(-1, -1),
-                            blend_mode = reskins.lib.settings.blend_mode,
-                            scale = 0.5,
-                        }
+                        scale = 0.5,
                     },
                 }
             }

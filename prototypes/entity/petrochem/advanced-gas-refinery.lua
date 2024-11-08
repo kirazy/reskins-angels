@@ -49,75 +49,43 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+                filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-base.png",
                 priority = "extra-high",
-                width = 232,
-                height = 330,
-                shift = util.by_pixel(0, -41),
-                hr_version = {
-                    filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-base.png",
-                    priority = "extra-high",
-                    width = 462,
-                    height = 657,
-                    shift = util.by_pixel(0, -42),
-                    scale = 0.5,
-                }
+                width = 462,
+                height = 657,
+                shift = util.by_pixel(0, -42),
+                scale = 0.5,
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-mask.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-mask.png",
                 priority = "extra-high",
-                width = 232,
-                height = 330,
-                shift = util.by_pixel(0, -41),
+                width = 462,
+                height = 657,
+                shift = util.by_pixel(0, -42),
                 tint = inputs.tint,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-mask.png",
-                    priority = "extra-high",
-                    width = 462,
-                    height = 657,
-                    shift = util.by_pixel(0, -42),
-                    tint = inputs.tint,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-highlights.png",
                 priority = "extra-high",
-                width = 232,
-                height = 330,
-                shift = util.by_pixel(0, -41),
+                width = 462,
+                height = 657,
+                shift = util.by_pixel(0, -42),
                 blend_mode = reskins.lib.settings.blend_mode,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-highlights.png",
-                    priority = "extra-high",
-                    width = 462,
-                    height = 657,
-                    shift = util.by_pixel(0, -42),
-                    blend_mode = reskins.lib.settings.blend_mode,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
             -- Shadow
             {
-                filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+                filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-shadow.png",
                 priority = "extra-high",
                 vertically_oriented = true,
-                width = 328,
-                height = 229,
-                shift = util.by_pixel(48, 9),
+                width = 655,
+                height = 454,
+                shift = util.by_pixel(48.5, 9.5),
                 draw_as_shadow = true,
-                hr_version = {
-                    filename = "__angelspetrochem__/graphics/entity/advanced-gas-refinery/hr-advanced-gas-refinery-shadow.png",
-                    priority = "extra-high",
-                    vertically_oriented = true,
-                    width = 655,
-                    height = 454,
-                    shift = util.by_pixel(48.5, 9.5),
-                    draw_as_shadow = true,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
         }
     })

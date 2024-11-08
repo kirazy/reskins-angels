@@ -58,73 +58,42 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
                 priority = "extra-high",
-                width = 165,
-                height = 177,
-                shift = util.by_pixel(-1, -7),
-                hr_version = {
-                    filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
-                    priority = "extra-high",
-                    width = 326,
-                    height = 350,
-                    shift = util.by_pixel(-1, -6.5),
-                    scale = 0.5,
-                }
+                width = 326,
+                height = 350,
+                shift = util.by_pixel(-1, -6.5),
+                scale = 0.5,
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/sintering-oven-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/hr-sintering-oven-mask.png",
                 priority = "extra-high",
-                width = 165,
-                height = 177,
-                shift = util.by_pixel(-1, -7),
+                width = 326,
+                height = 350,
+                shift = util.by_pixel(-1, -6.5),
                 tint = inputs.tint,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/hr-sintering-oven-mask.png",
-                    priority = "extra-high",
-                    width = 326,
-                    height = 350,
-                    shift = util.by_pixel(-1, -6.5),
-                    tint = inputs.tint,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/sintering-oven-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/hr-sintering-oven-highlights.png",
                 priority = "extra-high",
-                width = 165,
-                height = 177,
-                shift = util.by_pixel(-1, -7),
+                width = 326,
+                height = 350,
+                shift = util.by_pixel(-1, -6.5),
                 blend_mode = reskins.lib.settings.blend_mode,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/hr-sintering-oven-highlights.png",
-                    priority = "extra-high",
-                    width = 326,
-                    height = 350,
-                    shift = util.by_pixel(-1, -6.5),
-                    blend_mode = reskins.lib.settings.blend_mode,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
             -- Shadow
             {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
                 priority = "extra-high",
-                width = 213,
-                height = 115,
-                shift = util.by_pixel(24, 29),
+                width = 424,
+                height = 227,
+                shift = util.by_pixel(23, 28),
                 draw_as_shadow = true,
-                hr_version = {
-                    filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
-                    priority = "extra-high",
-                    width = 424,
-                    height = 227,
-                    shift = util.by_pixel(23, 28),
-                    draw_as_shadow = true,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             }
         }
     }

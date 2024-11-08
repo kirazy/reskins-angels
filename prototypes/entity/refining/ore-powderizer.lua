@@ -47,69 +47,39 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-lr.png",
+                filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-hr.png",
                 priority = "extra-high",
-                width = 128,
-                height = 128,
+                width = 256,
+                height = 256,
                 frame_count = 36,
                 line_length = 6,
                 shift = {0, 0},
                 animation_speed = 0.5,
-                hr_version = {
-                    filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-hr.png",
-                    priority = "extra-high",
-                    width = 256,
-                    height = 256,
-                    frame_count = 36,
-                    line_length = 6,
-                    shift = {0, 0},
-                    animation_speed = 0.5,
-                    scale = 0.5
-                }
+                scale = 0.5
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/ore-powderizer-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/hr-ore-powderizer-mask.png",
                 priority = "extra-high",
-                width = 128,
-                height = 128,
+                width = 256,
+                height = 256,
                 repeat_count = 36,
                 shift = {0, 0},
                 animation_speed = 0.5,
                 tint = inputs.tint,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/hr-ore-powderizer-mask.png",
-                    priority = "extra-high",
-                    width = 256,
-                    height = 256,
-                    repeat_count = 36,
-                    shift = {0, 0},
-                    animation_speed = 0.5,
-                    tint = inputs.tint,
-                    scale = 0.5
-                }
+                scale = 0.5
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/ore-powderizer-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/hr-ore-powderizer-highlights.png",
                 priority = "extra-high",
-                width = 128,
-                height = 128,
+                width = 256,
+                height = 256,
                 repeat_count = 36,
                 shift = {0, 0},
                 animation_speed = 0.5,
                 blend_mode = reskins.lib.settings.blend_mode,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/hr-ore-powderizer-highlights.png",
-                    priority = "extra-high",
-                    width = 256,
-                    height = 256,
-                    repeat_count = 36,
-                    shift = {0, 0},
-                    animation_speed = 0.5,
-                    blend_mode = reskins.lib.settings.blend_mode,
-                    scale = 0.5
-                }
+                scale = 0.5
             },
         }
     }

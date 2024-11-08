@@ -48,73 +48,42 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-base.png",
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
                 priority = "extra-high",
-                width = 167,
-                height = 278,
-                shift = util.by_pixel(-0.5, -47),
-                hr_version = {
-                    filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-base.png",
-                    priority = "extra-high",
-                    width = 334,
-                    height = 553,
-                    shift = util.by_pixel(0, -48),
-                    scale = 0.5,
-                }
+                width = 334,
+                height = 553,
+                shift = util.by_pixel(0, -48),
+                scale = 0.5,
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/gas-refinery/gas-refinery-mask.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/gas-refinery/hr-gas-refinery-mask.png",
                 priority = "extra-high",
-                width = 167,
-                height = 278,
-                shift = util.by_pixel(-0.5, -47),
+                width = 334,
+                height = 553,
+                shift = util.by_pixel(0, -48),
                 tint = inputs.tint,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/petrochem/gas-refinery/hr-gas-refinery-mask.png",
-                    priority = "extra-high",
-                    width = 334,
-                    height = 553,
-                    shift = util.by_pixel(0, -48),
-                    tint = inputs.tint,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/gas-refinery/gas-refinery-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/gas-refinery/hr-gas-refinery-highlights.png",
                 priority = "extra-high",
-                width = 167,
-                height = 278,
-                shift = util.by_pixel(-0.5, -47),
+                width = 334,
+                height = 553,
+                shift = util.by_pixel(0, -48),
                 blend_mode = reskins.lib.settings.blend_mode,
-                hr_version = {
-                    filename = "__reskins-angels__/graphics/entity/petrochem/gas-refinery/hr-gas-refinery-highlights.png",
-                    priority = "extra-high",
-                    width = 334,
-                    height = 553,
-                    shift = util.by_pixel(0, -48),
-                    blend_mode = reskins.lib.settings.blend_mode,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
             -- Shadow
             {
-                filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery-shadow.png",
+                filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
                 priority = "extra-high",
-                width = 255,
-                height = 171,
-                shift = util.by_pixel(44, 7),
+                width = 508,
+                height = 338,
+                shift = util.by_pixel(43.5, 6.5),
                 draw_as_shadow = true,
-                hr_version = {
-                    filename = "__angelspetrochem__/graphics/entity/gas-refinery/hr-gas-refinery-shadow.png",
-                    priority = "extra-high",
-                    width = 508,
-                    height = 338,
-                    shift = util.by_pixel(43.5, 6.5),
-                    draw_as_shadow = true,
-                    scale = 0.5,
-                }
+                scale = 0.5,
             },
         }
     })
