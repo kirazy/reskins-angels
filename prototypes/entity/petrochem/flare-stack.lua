@@ -32,6 +32,8 @@ local refinery_lights = reskins.lib.sprites.make_4way_animation_from_spritesheet
 
 -- Fetch entity
 local name = "angels-flare-stack"
+
+---@type data.FurnacePrototype
 local entity = data.raw[inputs.type][name]
 
 -- Check if entity exists, if not, skip this iteration
@@ -39,7 +41,7 @@ if not entity then return end
 
 reskins.lib.setup_standard_entity(name, 0, inputs)
 
-entity.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
+entity.graphics_set.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
     layers = {
         {
             filename = "__reskins-angels__/graphics/entity/petrochem/flare-stack/hr-flare-stack.png",
@@ -61,7 +63,7 @@ entity.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
     },
 })
 
-entity.working_visualisations = {
+entity.graphics_set.working_visualisations = {
     -- Flame
     {
         fadeout = true,

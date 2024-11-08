@@ -26,7 +26,7 @@ local tier_map = {
 
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
-    -- Fetch entity
+    ---@type data.AssemblingMachinePrototype
     local entity = data.raw[inputs.type][name]
 
     -- Check if entity exists, if not, skip this iteration
@@ -44,9 +44,9 @@ for name, map in pairs(tier_map) do
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
     -- Reskin entities
-    entity.animation = nil
+    entity.graphics_set.animation = nil
 
-    table.insert(entity.working_visualisations, #entity.working_visualisations - 1,
+    table.insert(entity.graphics_set.working_visualisations, #entity.graphics_set.working_visualisations - 1,
         -- Color Mask
         {
             always_draw = true,

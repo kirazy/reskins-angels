@@ -4,8 +4,8 @@
 -- See LICENSE.md in the project directory for license information.
 
 ---Provides angel-style sprite definition for chemical plant `animation` field. See [Prototype/AssemblingMachine](https://wiki.factorio.com/Prototype/AssemblingMachine).
----@param tint table # [Types/Color](https://wiki.factorio.com/Types/Color)
----@return table animation # [Types/Animation4Way](https://wiki.factorio.com/Types/Animation4Way)
+---@param tint data.Color
+---@return data.Animation4Way
 local function entity_animation(tint)
     return
     {
@@ -41,9 +41,9 @@ local function entity_animation(tint)
 end
 
 ---Reskins the named assembling machine with angel-style chemical plant sprites and color masking, and sets up appropriate corpse, explosion, and particle prototypes
----@param name string # [Prototype name](https://wiki.factorio.com/PrototypeBase#name)
+---@param name data.EntityID
 ---@param tier integer # 1-6 are supported, 0 to disable
----@param tint? table # [Types/Color](https://wiki.factorio.com/Types/Color)
+---@param tint? data.Color
 ---@param make_tier_labels? boolean
 function reskins.lib.apply_skin.angels_chemical_plant(name, tier, tint, make_tier_labels)
     ---@type SetupStandardEntityInputs
@@ -59,6 +59,7 @@ function reskins.lib.apply_skin.angels_chemical_plant(name, tier, tint, make_tie
         make_remnants = false,
     }
 
+    ---@type data.AssemblingMachinePrototype
     local entity = data.raw[inputs.type][name]
     if not entity then return end
 
@@ -70,5 +71,5 @@ function reskins.lib.apply_skin.angels_chemical_plant(name, tier, tint, make_tie
     reskins.lib.setup_standard_entity(name, tier, inputs)
 
     -- Reskin entity
-    entity.animation = entity_animation(inputs.tint)
+    entity.graphics_set.animation = entity_animation(inputs.tint)
 end

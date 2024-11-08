@@ -16,6 +16,7 @@ local inputs = {
     make_explosions = false,
 }
 
+---@type data.FurnacePrototype
 local entity = data.raw[inputs.type]["clarifier"]
 if not entity then return end
 
@@ -69,7 +70,7 @@ end
 
 reskins.lib.setup_standard_entity("clarifier", 0, inputs)
 
-entity.animation = {
+entity.graphics_set.animation = {
     filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-base.png",
     priority = "extra-high",
     frame_count = 64,
@@ -81,7 +82,7 @@ entity.animation = {
     scale = 0.5,
 }
 
-entity.working_visualisations = {
+entity.graphics_set.working_visualisations = {
     -- Shadows
     {
         always_draw = true,

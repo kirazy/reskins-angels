@@ -56,7 +56,7 @@ local function cardinal_pictures(x, tint)
 end
 
 for name, map in pairs(valves) do
-    -- Fetch entity
+    ---@type data.FurnacePrototype|data.StorageTankPrototype
     local entity = data.raw[inputs.type][name]
 
     -- Check if entity exists, if not, skip this iteration
@@ -81,19 +81,17 @@ for name, map in pairs(valves) do
 end
 
 -- Setup for one-off converter valve
+local name = "valve-converter"
 inputs.type = "furnace"
 inputs.tint = util.color("fdec2b")
 
--- Fetch entity
-local name = "valve-converter"
+---@type data.FurnacePrototype
 local entity = data.raw[inputs.type][name]
-
--- Check if entity exists, if not, skip this iteration
 if not entity then return end
 
 reskins.lib.setup_standard_entity(name, 0, inputs)
 
-entity.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
+entity.graphics_set.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
     layers = {
         -- Base
         {
