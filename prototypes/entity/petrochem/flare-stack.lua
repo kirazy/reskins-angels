@@ -93,6 +93,3 @@ entity.graphics_set.working_visualisations = {
         west_animation = refinery_lights.west,
     },
 }
-
--- Fix drawing box
-entity.drawing_box = { { -1, -5.25 }, { 1, 1 } }

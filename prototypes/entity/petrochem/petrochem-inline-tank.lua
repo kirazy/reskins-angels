@@ -19,11 +19,10 @@ local inputs = {
     make_remnants = false,
 }
 
--- Fetch entity
 local name = "angels-storage-tank-3"
-local entity = data.raw[inputs.type][name]
 
--- Check if entity exists, if not, skip this iteration
+---@type data.StorageTankPrototype
+local entity = data.raw[inputs.type][name]
 if not entity then return end
 
 reskins.lib.setup_standard_entity(name, 0, inputs)
@@ -51,6 +50,3 @@ entity.pictures.picture = {
         },
     },
 }
-
--- Fix drawing box
-entity.drawing_box = { { -1, -1.75 }, { 1, 1 } }

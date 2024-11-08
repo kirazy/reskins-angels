@@ -6,7 +6,7 @@
 -- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then return end
 
--- Set input parameters
+---@type SetupStandardEntityInputs
 local inputs = {
     type = "storage-tank",
     icon_name = "petrochem-oil-tank",
@@ -18,11 +18,10 @@ local inputs = {
     make_remnants = false,
 }
 
--- Fetch entity
 local name = "angels-storage-tank-2"
-local entity = data.raw[inputs.type][name]
 
--- Check if entity exists, if not, skip this iteration
+---@type data.StorageTankPrototype
+local entity = data.raw[inputs.type][name]
 if not entity then return end
 
 reskins.lib.setup_standard_entity(name, 0, inputs)
@@ -50,6 +49,3 @@ entity.pictures.picture = {
         },
     },
 }
-
--- Fix drawing box
-entity.drawing_box = { { -2, -3 }, { 2, 2 } }

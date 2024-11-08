@@ -15,8 +15,9 @@ local inputs = {
 
 -- Reskin Warehouses
 if reskins.angels and reskins.angels.triggers.storage.entities then
-    -- Fetch entity
     local name = "angels-warehouse"
+
+    ---@type data.ContainerPrototype
     local entity = data.raw[inputs.type][name]
 
     -- Check if entity exists, if not, skip this iteration
@@ -51,16 +52,14 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
                 },
             },
         }
-
-        -- Fix drawing box
-        entity.drawing_box = { { -3, -3.5 }, { 3, 3 } }
     end
 end
 
 -- Reskin Silos
 if reskins.angels and reskins.angels.triggers.storage.entities then
-    -- -- Fetch entity
     -- local name = "angels-warehouse"
+
+    -- ---@type data.ContainerPrototype
     -- local entity = data.raw[inputs.type][name]
 
     -- -- Check if entity exists, if not, skip this iteration
@@ -93,16 +92,14 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
     --             },
     --         }
     --     }
-
-    --     -- Fix drawing box
-    --     entity.drawing_box = {{-3, -3.5}, {3, 3}}
     -- end
 end
 
 -- Reskin Big Chests
 if reskins.angels and reskins.angels.triggers.industries.entities then
-    -- Fetch entity
     local name = "angels-big-chest"
+
+    ---@type data.ContainerPrototype
     local entity = data.raw[inputs.type][name]
 
     -- Check if entity exists, if not, skip this iteration

@@ -20,6 +20,8 @@ local inputs = {
 
 -- Fetch entity
 local name = "angels-storage-tank-1"
+
+---@type data.StorageTankPrototype
 local entity = data.raw[inputs.type][name]
 
 -- Check if entity exists, if not, skip this iteration
@@ -50,6 +52,3 @@ entity.pictures.picture = {
         },
     },
 }
-
--- Fix drawing box
-entity.drawing_box = { { -2.5, -3.75 }, { 2.5, 2.5 } }

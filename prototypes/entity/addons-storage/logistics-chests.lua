@@ -23,8 +23,9 @@ local logistic_map = {
 -- Reskin Warehouses
 if reskins.angels and reskins.angels.triggers.storage.entities then
     for chest, map in pairs(logistic_map) do
-        -- Fetch entity
         local name = "angels-warehouse-" .. chest
+
+        ---@type data.LogisticContainerPrototype
         local entity = data.raw[inputs.type][name]
 
         -- Check if entity exists, if not, skip this iteration
@@ -77,9 +78,6 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
             },
         }
 
-        -- Fix drawing box
-        entity.drawing_box = { { -3, -3.5 }, { 3, 3 } }
-
         -- Label to skip to next iteration
         ::continue::
     end
@@ -88,8 +86,9 @@ end
 -- Reskin Silos
 if reskins.angels and reskins.angels.triggers.storage.entities then
     --     for chest, map in pairs(logistic_map) do
-    --         -- Fetch entity
     --         local name = "angels-warehouse-"..chest
+
+    --         ---@type data.LogisticContainerPrototype
     --         local entity = data.raw[inputs.type][name]
 
     --         -- Check if entity exists, if not, skip this iteration
@@ -144,8 +143,9 @@ end
 -- Reskin Big Chests from Angel's Industries
 if reskins.angels and reskins.angels.triggers.industries.entities then
     for chest, map in pairs(logistic_map) do
-        -- Fetch entity
         local name = "angels-logistic-chest-" .. chest
+
+        ---@type data.LogisticContainerPrototype
         local entity = data.raw[inputs.type][name]
 
         -- Check if entity exists, if not, skip this iteration
