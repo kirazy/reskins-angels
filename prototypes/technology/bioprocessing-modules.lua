@@ -24,7 +24,7 @@ for class, map in pairs(modules_map) do
     }
 
     -- Setup input defaults
-    reskins.lib.parse_inputs(inputs)
+    reskins.lib.set_inputs_defaults(inputs)
 
     -- Do all tiers
     for tier = 1, 8 do

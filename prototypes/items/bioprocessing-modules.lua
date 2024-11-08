@@ -21,7 +21,7 @@ for class, map in pairs(modules_map) do
     }
 
     -- Setup input defaults
-    reskins.lib.parse_inputs(inputs)
+    reskins.lib.set_inputs_defaults(inputs)
 
     -- Parse map
     local color = map[1]
@@ -35,7 +35,6 @@ for class, map in pairs(modules_map) do
             name = class .. "-module"
         end
 
-        -- Fetch entity
         local entity = data.raw[inputs.type][name]
 
         -- Check if entity exists, if not, skip this iteration

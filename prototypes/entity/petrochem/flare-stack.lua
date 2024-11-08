@@ -30,7 +30,6 @@ local refinery_lights = reskins.lib.sprites.make_4way_animation_from_spritesheet
     scale = 0.5,
 })
 
--- Fetch entity
 local name = "angels-flare-stack"
 
 ---@type data.FurnacePrototype

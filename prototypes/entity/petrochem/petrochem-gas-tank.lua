@@ -18,7 +18,6 @@ local inputs = {
     make_remnants = false,
 }
 
--- Fetch entity
 local name = "angels-storage-tank-1"
 
 ---@type data.StorageTankPrototype
