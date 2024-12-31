@@ -45,7 +45,7 @@ local function get_isotope_overrides(name)
                 blend_mode = "additive",
                 size = 64,
                 filename = "__reskins-angels__/graphics/icons/industries/nuclear/" .. name .. ".png",
-                scale = 0.25,
+                scale = 0.5,
                 tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
                 mipmap_count = 4,
             },
