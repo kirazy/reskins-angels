@@ -61,7 +61,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/refining/salination-plant/hr-salination-plant-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/salination-plant/salination-plant-mask.png",
                 priority = "extra-high",
                 width = 484,
                 height = 540,
@@ -73,7 +73,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/refining/salination-plant/hr-salination-plant-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/refining/salination-plant/salination-plant-highlights.png",
                 priority = "extra-high",
                 width = 484,
                 height = 540,

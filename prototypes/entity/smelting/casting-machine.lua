@@ -60,7 +60,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/casting-machine/hr-casting-machine-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-mask.png",
                 priority = "extra-high",
                 width = 205,
                 height = 244,
@@ -73,7 +73,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/casting-machine/hr-casting-machine-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-highlights.png",
                 priority = "extra-high",
                 width = 205,
                 height = 244,

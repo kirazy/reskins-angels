@@ -48,7 +48,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
             layers = {
                 -- Base
                 {
-                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-logistic-warehouse-" .. chest .. ".png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/logistic-warehouse-" .. chest .. ".png",
                     priority = "extra-high",
                     width = 391,
                     height = 446,
@@ -57,7 +57,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
                 },
                 -- Shadow
                 {
-                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-logistic-warehouse-shadow.png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/logistic-warehouse-shadow.png",
                     priority = "extra-high",
                     width = 592,
                     height = 276,
@@ -67,7 +67,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
                 },
                 -- Light
                 {
-                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-logistic-warehouse-light.png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/logistic-warehouse-light.png",
                     priority = "extra-high",
                     width = 9,
                     height = 28,
@@ -105,7 +105,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
     --             layers = {
     --                 -- Base
     --                 {
-    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-"..chest.."-base.png",
+    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse-"..chest.."-base.png",
     --                     priority = "extra-high",
     --                     width = 328,
     --                     height = 376,
@@ -114,7 +114,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
     --                 },
     --                 -- Shadow
     --                 {
-    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-"..chest.."-shadow.png",
+    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse-"..chest.."-shadow.png",
     --                     priority = "extra-high",
     --                     width = 328,
     --                     height = 376,
@@ -124,7 +124,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
     --                 },
     --                 -- Light
     --                 {
-    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/hr-warehouse-"..chest.."-light.png",
+    --                     filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse-"..chest.."-light.png",
     --                     priority = "extra-high",
     --                     width = 328,
     --                     height = 376,
@@ -168,7 +168,7 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
             layers = {
                 -- Base
                 {
-                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-" .. chest .. ".png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/logistic-big-chest-" .. chest .. ".png",
                     priority = "extra-high",
                     width = 135,
                     height = 169,
@@ -177,7 +177,7 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
                 },
                 -- Shadow
                 {
-                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-shadow.png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/logistic-big-chest-shadow.png",
                     priority = "extra-high",
                     width = 209,
                     height = 97,
@@ -187,7 +187,7 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
                 },
                 -- Light
                 {
-                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/hr-logistic-big-chest-light.png",
+                    filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/logistic-big-chest-light.png",
                     priority = "extra-high",
                     width = 5,
                     height = 15,

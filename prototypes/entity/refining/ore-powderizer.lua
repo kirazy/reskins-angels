@@ -59,7 +59,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/hr-ore-powderizer-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/ore-powderizer-mask.png",
                 priority = "extra-high",
                 width = 256,
                 height = 256,
@@ -71,7 +71,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/hr-ore-powderizer-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-powderizer/ore-powderizer-highlights.png",
                 priority = "extra-high",
                 width = 256,
                 height = 256,

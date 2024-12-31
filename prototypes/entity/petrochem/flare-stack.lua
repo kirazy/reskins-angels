@@ -20,7 +20,7 @@ local inputs = {
 
 -- Create light layer for working visualisation
 local refinery_lights = reskins.lib.sprites.make_4way_animation_from_spritesheet({
-    filename = "__reskins-angels__/graphics/entity/petrochem/flare-stack/hr-flare-stack-light.png",
+    filename = "__reskins-angels__/graphics/entity/petrochem/flare-stack/flare-stack-light.png",
     priority = "extra-high",
     width = 142,
     height = 429,
@@ -43,7 +43,7 @@ reskins.lib.setup_standard_entity(name, 0, inputs)
 entity.graphics_set.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
     layers = {
         {
-            filename = "__reskins-angels__/graphics/entity/petrochem/flare-stack/hr-flare-stack.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/flare-stack/flare-stack.png",
             priority = "extra-high",
             width = 142,
             height = 429,
@@ -51,7 +51,7 @@ entity.graphics_set.animation = reskins.lib.sprites.make_4way_animation_from_spr
             scale = 0.5,
         },
         {
-            filename = "__reskins-angels__/graphics/entity/petrochem/flare-stack/hr-flare-stack-shadow.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/flare-stack/flare-stack-shadow.png",
             priority = "extra-high",
             width = 382,
             height = 135,

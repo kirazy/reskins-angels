@@ -128,7 +128,7 @@ for name, map in pairs(tier_map) do
                 layers = {
                     -- Mask
                     {
-                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-mask.png",
+                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-mask.png",
                         priority = "extra-high",
                         width = 333,
                         height = 363,
@@ -138,7 +138,7 @@ for name, map in pairs(tier_map) do
                     },
                     -- Highlights
                     {
-                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/hr-ore-flotation-cell-highlights.png",
+                        filename = "__reskins-angels__/graphics/entity/refining/ore-flotation-cell/ore-flotation-cell-highlights.png",
                         priority = "extra-high",
                         width = 333,
                         height = 363,

@@ -86,12 +86,12 @@ for name, map in pairs(tier_map) do
                 frame_count = 36,
                 stripes = {
                     {
-                        filename = "__reskins-angels__/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-mask_01.png",
+                        filename = "__reskins-angels__/graphics/entity/smelting/chemical-furnace/chemical-furnace-mask_01.png",
                         width_in_frames = 6,
                         height_in_frames = 3,
                     },
                     {
-                        filename = "__reskins-angels__/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-mask_02.png",
+                        filename = "__reskins-angels__/graphics/entity/smelting/chemical-furnace/chemical-furnace-mask_02.png",
                         width_in_frames = 6,
                         height_in_frames = 3,
                     },
@@ -109,12 +109,12 @@ for name, map in pairs(tier_map) do
                 frame_count = 36,
                 stripes = {
                     {
-                        filename = "__reskins-angels__/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-highlights_01.png",
+                        filename = "__reskins-angels__/graphics/entity/smelting/chemical-furnace/chemical-furnace-highlights_01.png",
                         width_in_frames = 6,
                         height_in_frames = 3,
                     },
                     {
-                        filename = "__reskins-angels__/graphics/entity/smelting/chemical-furnace/hr-chemical-furnace-highlights_02.png",
+                        filename = "__reskins-angels__/graphics/entity/smelting/chemical-furnace/chemical-furnace-highlights_02.png",
                         width_in_frames = 6,
                         height_in_frames = 3,
                     },

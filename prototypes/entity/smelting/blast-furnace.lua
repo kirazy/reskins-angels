@@ -57,7 +57,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/blast-furnace/hr-blast-furnace-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/blast-furnace/blast-furnace-mask.png",
                 priority = "extra-high",
                 width = 328,
                 height = 376,
@@ -67,7 +67,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/blast-furnace/hr-blast-furnace-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/blast-furnace/blast-furnace-highlights.png",
                 priority = "extra-high",
                 width = 328,
                 height = 376,

@@ -64,7 +64,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/refining/ore-crusher/hr-ore-crusher-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-crusher/ore-crusher-mask.png",
                 priority = "extra-high",
                 width = 189,
                 height = 214,
@@ -76,7 +76,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/refining/ore-crusher/hr-ore-crusher-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/refining/ore-crusher/ore-crusher-highlights.png",
                 priority = "extra-high",
                 width = 189,
                 height = 214,

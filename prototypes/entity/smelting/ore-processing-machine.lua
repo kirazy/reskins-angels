@@ -68,7 +68,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-mask.png",
                 priority = "extra-high",
                 width = 196,
                 height = 206,
@@ -81,7 +81,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/ore-processing-machine/hr-ore-processing-machine-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/ore-processing-machine/ore-processing-machine-highlights.png",
                 priority = "extra-high",
                 width = 196,
                 height = 206,

@@ -21,7 +21,7 @@ local entity = data.raw[inputs.type]["clarifier"]
 if not entity then return end
 
 local shadows = reskins.lib.sprites.make_4way_animation_from_spritesheet({
-    filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-shadow.png",
+    filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-shadow.png",
     priority = "extra-high",
     width = 374,
     height = 365,
@@ -44,7 +44,7 @@ local pipe_properties = {
 local function get_pipe_connections(direction, is_animated)
     if is_animated then
         return {
-            filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
+            filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-pipe-connections.png",
             priority = "extra-high",
             width = 374,
             height = 365,
@@ -57,7 +57,7 @@ local function get_pipe_connections(direction, is_animated)
         }
     else
         return {
-            filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-pipe-connections.png",
+            filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-pipe-connections.png",
             priority = "extra-high",
             width = 374,
             height = 365,
@@ -71,7 +71,7 @@ end
 reskins.lib.setup_standard_entity("clarifier", 0, inputs)
 
 entity.graphics_set.animation = {
-    filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-base.png",
+    filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-base.png",
     priority = "extra-high",
     frame_count = 64,
     line_length = 8,
@@ -112,7 +112,7 @@ entity.graphics_set.working_visualisations = {
         apply_recipe_tint = "primary",
         fadeout = true,
         animation = {
-            filename = "__reskins-angels__/graphics/entity/refining/clarifier/hr-clarifier-recipe-mask.png",
+            filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-recipe-mask.png",
             priority = "extra-high",
             frame_count = 64,
             line_length = 8,

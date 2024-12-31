@@ -54,7 +54,7 @@ for name, map in pairs(tier_map) do
                 layers = {
                     -- Mask
                     {
-                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-mask.png",
+                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-mask.png",
                         priority = "extra-high",
                         width = 329,
                         height = 392,
@@ -64,7 +64,7 @@ for name, map in pairs(tier_map) do
                     },
                     -- Highlights
                     {
-                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/hr-strand-casting-machine-highlights.png",
+                        filename = "__reskins-angels__/graphics/entity/smelting/strand-casting-machine/strand-casting-machine-highlights.png",
                         priority = "extra-high",
                         width = 329,
                         height = 392,

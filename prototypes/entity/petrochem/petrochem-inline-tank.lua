@@ -30,7 +30,7 @@ reskins.lib.setup_standard_entity(name, 0, inputs)
 entity.pictures.picture = {
     sheets = {
         {
-            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/petrochem-inline-tank.png",
             priority = "extra-high",
             frames = 4,
             width = 142,
@@ -39,7 +39,7 @@ entity.pictures.picture = {
             scale = 0.5,
         },
         {
-            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
             priority = "extra-high",
             frames = 4,
             width = 207,

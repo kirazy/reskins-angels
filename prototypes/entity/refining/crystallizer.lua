@@ -62,7 +62,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/refining/crystallizer/hr-crystallizer-mask.png",
+                filename = "__reskins-angels__/graphics/entity/refining/crystallizer/crystallizer-mask.png",
                 priority = "extra-high",
                 width = 390,
                 height = 326,
@@ -72,7 +72,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/refining/crystallizer/hr-crystallizer-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/refining/crystallizer/crystallizer-highlights.png",
                 priority = "extra-high",
                 width = 390,
                 height = 326,

@@ -57,7 +57,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-mask.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-mask.png",
                 priority = "extra-high",
                 width = 462,
                 height = 657,
@@ -67,7 +67,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/hr-advanced-gas-refinery-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/advanced-gas-refinery/advanced-gas-refinery-highlights.png",
                 priority = "extra-high",
                 width = 462,
                 height = 657,

@@ -34,7 +34,7 @@ local function cardinal_pictures(x, tint)
         layers = {
             -- Base
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/valve/hr-valve-base.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-base.png",
                 priority = "extra-high",
                 x = x_hr,
                 width = 128,
@@ -43,7 +43,7 @@ local function cardinal_pictures(x, tint)
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/valve/hr-valve-mask.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-mask.png",
                 priority = "extra-high",
                 x = x_hr,
                 width = 128,
@@ -95,7 +95,7 @@ entity.graphics_set.animation = reskins.lib.sprites.make_4way_animation_from_spr
     layers = {
         -- Base
         {
-            filename = "__reskins-angels__/graphics/entity/petrochem/valve/hr-valve-base.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-base.png",
             priority = "extra-high",
             width = 128,
             height = 128,
@@ -103,7 +103,7 @@ entity.graphics_set.animation = reskins.lib.sprites.make_4way_animation_from_spr
         },
         -- Mask
         {
-            filename = "__reskins-angels__/graphics/entity/petrochem/valve/hr-valve-mask.png",
+            filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-mask.png",
             priority = "extra-high",
             width = 128,
             height = 128,

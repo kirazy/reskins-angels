@@ -67,7 +67,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/hr-sintering-oven-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/sintering-oven-mask.png",
                 priority = "extra-high",
                 width = 326,
                 height = 350,
@@ -77,7 +77,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/hr-sintering-oven-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/sintering-oven/sintering-oven-highlights.png",
                 priority = "extra-high",
                 width = 326,
                 height = 350,

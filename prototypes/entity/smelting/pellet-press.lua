@@ -68,7 +68,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/pellet-press/hr-pellet-press-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/pellet-press/pellet-press-mask.png",
                 priority = "extra-high",
                 width = 200,
                 height = 199,
@@ -81,7 +81,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/pellet-press/hr-pellet-press-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/pellet-press/pellet-press-highlights.png",
                 priority = "extra-high",
                 width = 200,
                 height = 199,

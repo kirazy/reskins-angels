@@ -57,7 +57,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/steam-cracker/hr-steam-cracker-mask.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/steam-cracker/steam-cracker-mask.png",
                 priority = "extra-high",
                 width = 512,
                 height = 512,
@@ -67,7 +67,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/petrochem/steam-cracker/hr-steam-cracker-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/steam-cracker/steam-cracker-highlights.png",
                 priority = "extra-high",
                 width = 512,
                 height = 512,
@@ -99,7 +99,7 @@ for name, map in pairs(tier_map) do
         -- Light
         {
             animation = {
-                filename = "__reskins-angels__/graphics/entity/petrochem/steam-cracker/hr-steam-cracker-light.png",
+                filename = "__reskins-angels__/graphics/entity/petrochem/steam-cracker/steam-cracker-light.png",
                 priority = "extra-high",
                 width = 512,
                 height = 512,

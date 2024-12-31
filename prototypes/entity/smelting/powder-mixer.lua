@@ -68,7 +68,7 @@ for name, map in pairs(tier_map) do
             },
             -- Mask
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/hr-powder-mixer-mask.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/powder-mixer-mask.png",
                 priority = "extra-high",
                 width = 138,
                 height = 170,
@@ -81,7 +81,7 @@ for name, map in pairs(tier_map) do
             },
             -- Highlights
             {
-                filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/hr-powder-mixer-highlights.png",
+                filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/powder-mixer-highlights.png",
                 priority = "extra-high",
                 width = 138,
                 height = 170,
