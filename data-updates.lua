@@ -41,3 +41,8 @@ require("prototypes.items.refining-secondary-updates")
 require("prototypes.technology.bioprocessing-modules")
 -- require("prototypes.technology.refining-updates")
 require("prototypes.technology.smelting-updates")
+
+----------------------------------------------------------------------------------------------------
+-- GUI Modifications
+----------------------------------------------------------------------------------------------------
+require("prototypes.item-group.item-group")
