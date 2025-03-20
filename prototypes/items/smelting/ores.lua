@@ -20,12 +20,12 @@ local ores = {
     -- ["angels-ore2"]   = { key = "angels", subfolder = "smelting/ores" }, -- Jivolite
     -- ["angels-ore4"]   = { key = "angels", subfolder = "smelting/ores" }, -- Crotinnium
     -- ["chrome-ore"]    = { key = "angels", subfolder = "smelting/ores" },
-    ["lead-ore"]    = { key = "angels", subfolder = "smelting/ores" },
+    ["bob-lead-ore"]    = { key = "angels", subfolder = "smelting/ores" },
     -- ["manganese-ore"] = { key = "angels", subfolder = "smelting/ores" },
     -- ["platinum-ore"]  = { key = "angels", subfolder = "smelting/ores" },
-    ["rutile-ore"]  = { key = "angels", subfolder = "smelting/ores" },                                        -- Titanium (dark purple)
-    ["thorium-ore"] = { key = "angels", subfolder = "smelting/ores", num_variations = 4, is_light = true },   -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
-    ["tin-ore"]     = { key = "angels", subfolder = "smelting/ores", num_variations = 8 },                    -- (green)
+    ["bob-rutile-ore"]  = { key = "angels", subfolder = "smelting/ores" },                                        -- Titanium (dark purple)
+    ["bob-thorium-ore"] = { key = "angels", subfolder = "smelting/ores", num_variations = 4, is_light = true },   -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
+    ["bob-tin-ore"]     = { key = "angels", subfolder = "smelting/ores", num_variations = 8 },                    -- (green)
 }
 
 -- TODO: Not implemented. Needs sprites.
@@ -40,19 +40,19 @@ end
 
 -- Check if we're using Angel's material colors
 if reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") == false then
-    ores["lead-ore"] = { key = "lib", subfolder = "shared/ores" }
-    ores["tin-ore"]  = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
+    ores["bob-lead-ore"] = { key = "lib", subfolder = "shared/ores" }
+    ores["bob-tin-ore"]  = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
 end
 
 if not mods["bobores"] or not mods["reskins-bobs"] then
-    ores["bauxite-ore"]  = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
-    ores["cobalt-ore"]   = { key = "lib", subfolder = "shared/ores" }
-    ores["gold-ore"]     = { key = "lib", subfolder = "shared/ores" }
-    ores["nickel-ore"]   = { key = "lib", subfolder = "shared/ores" } -- 408073
-    ores["quartz"]       = { key = "lib", subfolder = "shared/ores" } -- 999999
-    ores["silver-ore"]   = { key = "lib", subfolder = "shared/ores" }
-    ores["tungsten-ore"] = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
-    ores["zinc-ore"]     = { key = "lib", subfolder = "shared/ores" }
+    ores["bob-bauxite-ore"]  = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
+    ores["bob-cobalt-ore"]   = { key = "lib", subfolder = "shared/ores" }
+    ores["bob-gold-ore"]     = { key = "lib", subfolder = "shared/ores" }
+    ores["bob-nickel-ore"]   = { key = "lib", subfolder = "shared/ores" } -- 408073
+    ores["bob-quartz"]       = { key = "lib", subfolder = "shared/ores" } -- 999999
+    ores["bob-silver-ore"]   = { key = "lib", subfolder = "shared/ores" }
+    ores["bob-tungsten-ore"] = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
+    ores["bob-zinc-ore"]     = { key = "lib", subfolder = "shared/ores" }
 end
 
 for ore_name, parameters in pairs(ores) do
@@ -125,33 +125,33 @@ local recipe_icon_source_map = {
     -- Lead
     ["angelsore-crushed-mix3-processing"] = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "lead-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-lead-ore", type_name = "item", shift = shift, scale = scale },
     },
     -- Tin
     ["angelsore-crushed-mix4-processing"] = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "tin-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-tin-ore", type_name = "item", shift = shift, scale = scale },
     },
     -- Silicon
     ["angelsore-chunk-mix1-processing"]   = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "quartz", type_name = "item", shift = shift, scale = scale },
-        { name = "quartz", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-quartz", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-quartz", type_name = "item", shift = shift, scale = scale },
     },
     -- Nickel
     ["angelsore-chunk-mix2-processing"]   = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "nickel-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-nickel-ore", type_name = "item", shift = shift, scale = scale },
     },
     -- Aluminium
     ["angelsore-chunk-mix3-processing"]   = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "bauxite-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-bauxite-ore", type_name = "item", shift = shift, scale = scale },
     },
     -- Zinc
     ["angelsore-chunk-mix4-processing"]   = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "zinc-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-zinc-ore", type_name = "item", shift = shift, scale = scale },
     },
 
     -- -- Fluorite
@@ -168,25 +168,25 @@ local recipe_icon_source_map = {
     -- Titanium
     ["angelsore-crystal-mix1-processing"] = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "rutile-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-rutile-ore", type_name = "item", shift = shift, scale = scale },
     },
 
     -- Gold
     ["angelsore-crystal-mix2-processing"] = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "gold-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-gold-ore", type_name = "item", shift = shift, scale = scale },
     },
 
     -- Cobalt
     ["angelsore-crystal-mix3-processing"] = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "cobalt-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-cobalt-ore", type_name = "item", shift = shift, scale = scale },
     },
 
     -- Silver
     ["angelsore-crystal-mix4-processing"] = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "silver-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-silver-ore", type_name = "item", shift = shift, scale = scale },
     },
 
     -- Uranium
@@ -198,13 +198,13 @@ local recipe_icon_source_map = {
     -- Thorium
     ["angelsore-crystal-mix6-processing"] = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "thorium-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-thorium-ore", type_name = "item", shift = shift, scale = scale },
     },
 
     -- Tungsten
     ["angelsore-pure-mix1-processing"]    = {
         { icon_datum = make_sorting_icon_base() },
-        { name = "tungsten-ore", type_name = "item", shift = shift, scale = scale },
+        { name = "bob-tungsten-ore", type_name = "item", shift = shift, scale = scale },
     },
 
     -- -- Platinum

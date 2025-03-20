@@ -31,8 +31,8 @@ local intermediates = {
 }
 
 if mods["reskins-bobs"] then
-    intermediates["bob-resin-wood"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin", icon_extras = reskins.angels.num_tier(1, inputs.group) }
-    intermediates["solid-resin"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "resin" }
+    intermediates["bob-resin-wood"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "bob-resin", icon_extras = reskins.angels.num_tier(1, inputs.group) }
+    intermediates["solid-resin"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "bob-resin" }
 end
 
 if not data.raw.recipe["bob-rubber"] then
@@ -47,7 +47,7 @@ reskins.internal.create_icons_from_list(intermediates, inputs)
 ---@type { [string]: IconSources }
 local recipe_icon_source_map = {
     ["bio-resin-wood-reprocessing"] = {
-        { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("resin", "solid-resin"), type_name = "item" },
+        { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-resin", "solid-resin"), type_name = "item" },
         { name = "wood", type_name = "item", scale = 0.5, shift = { -8, -8 } },
     },
 }

@@ -49,7 +49,7 @@ for name, map in pairs(tier_map) do
         layers = {
             -- Base
             {
-                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-ore-refinery-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/ore-refinery-base.png",
                 priority = "extra-high",
                 width = 440,
                 height = 509,
@@ -79,7 +79,7 @@ for name, map in pairs(tier_map) do
             -- Shadow
 
             {
-                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-ore-refinery-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/ore-refinery-shadow.png",
                 priority = "extra-high",
                 width = 522,
                 height = 340,

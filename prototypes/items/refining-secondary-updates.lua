@@ -36,7 +36,7 @@ local recipe_icon_source_map = {
 
     -- Tin plates
     ["angelsore6-crushed-smelting"] = {
-        { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tin-plate", "angels-plate-tin"), type_name = "item" },
+        { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-tin-plate", "angels-plate-tin"), type_name = "item" },
         { name = "angels-ore6-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed bobmonium
     },
 }

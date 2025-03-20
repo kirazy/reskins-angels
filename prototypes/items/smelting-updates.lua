@@ -60,7 +60,7 @@ local intermediates = {
     ["angels-plate-chrome"] = { subgroup = "plates" },
     ["angels-plate-cobalt"] = { subgroup = "plates" },
     ["angels-plate-glass"] = { mod = "lib", group = "shared", subgroup = "items", image = "glass" },
-    ["angels-plate-gold"] = { mod = "lib", group = "shared", subgroup = "items", image = "bob-gold-plate" },
+    ["angels-plate-gold"] = { mod = "lib", group = "shared", subgroup = "items", image = "gold-plate" },
     ["angels-plate-hot-iron"] = { subgroup = "plates" },
     ["angels-plate-iron"] = { subgroup = "plates" },
     ["angels-plate-lead"] = { subgroup = "plates" },
@@ -80,8 +80,8 @@ local intermediates = {
     ["brass-alloy"] = { subgroup = "plates" },
     ["cobalt-plate"] = { subgroup = "plates", image = "angels-plate-cobalt" },
     ["cobalt-steel-alloy"] = { subgroup = "plates" },
-    ["bob-glass"] = { mod = "lib", group = "shared", subgroup = "items" },    -- Shared with Bobs
-    ["bob-gold-plate"] = { mod = "lib", group = "shared", subgroup = "items", -- Shared with Bobs
+    ["bob-glass"] = { mod = "lib", group = "shared", subgroup = "items", image = "glass" },    -- Shared with Bobs
+    ["bob-gold-plate"] = { mod = "lib", group = "shared", subgroup = "items", image="gold-plate" -- Shared with Bobs
     },
     ["gunmetal-alloy"] = { subgroup = "plates" },
     ["invar-alloy"] = { subgroup = "plates" },
