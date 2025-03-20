@@ -34,7 +34,7 @@ if not mods["angelssmelting"] then
 
         -- Tin plates
         ["angelsore6-crushed-smelting"] = {
-            { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tin-plate", "angels-plate-tin"), type_name = "item" },
+            { name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-tin-plate", "angels-plate-tin"), type_name = "item" },
             { name = "angels-ore6-crushed", type_name = "item", scale = scale, shift = shift, -- Crushed bobmonium
             },
         },
@@ -83,13 +83,13 @@ local intermediates = {
     ["bob-glass"] = { mod = "lib", group = "shared", subgroup = "items", image = "glass" },    -- Shared with Bobs
     ["bob-gold-plate"] = { mod = "lib", group = "shared", subgroup = "items", image="gold-plate" -- Shared with Bobs
     },
-    ["gunmetal-alloy"] = { subgroup = "plates" },
-    ["invar-alloy"] = { subgroup = "plates" },
+    ["bob-gunmetal-alloy"] = { subgroup = "plates" },
+    ["bob-invar-alloy"] = { subgroup = "plates" },
     ["bob-lead-plate"] = { subgroup = "plates", image = "angels-plate-lead" },
     ["bob-nickel-plate"] = { subgroup = "plates", image = "angels-plate-nickel" },
-    ["nitinol-alloy"] = { subgroup = "plates" },
-    ["silver-plate"] = { subgroup = "plates", image = "angels-plate-silver" },
-    ["tin-plate"] = { subgroup = "plates", image = "angels-plate-tin" },
+    ["bob-nitinol-alloy"] = { subgroup = "plates" },
+    ["bob-silver-plate"] = { subgroup = "plates", image = "angels-plate-silver" },
+    ["bob-tin-plate"] = { subgroup = "plates", image = "angels-plate-tin" },
     ["bob-titanium-plate"] = { subgroup = "plates", image = "angels-plate-titanium" },
     ["bob-tungsten-plate"] = { subgroup = "plates", image = "angels-plate-tungsten" },
     ["bob-zinc-plate"] = { subgroup = "plates", image = "angels-plate-zinc" },
@@ -102,11 +102,11 @@ local intermediates = {
 
     -- Wires
     ["copper-cable"] = { icon_filename = "__base__/graphics/icons/copper-cable.png", icon_size = 64 },
-    ["gilded-copper-cable"] = { mod = "lib", group = "shared", subgroup = "items" },
-    ["tinned-copper-cable"] = { subgroup = "intermediates", image = "angels-wire-tin" },
+    ["bob-gilded-copper-cable"] = { mod = "lib", group = "shared", subgroup = "items", image = "gilded-copper-cable" },
+    ["bob-tinned-copper-cable"] = { subgroup = "intermediates", image = "angels-wire-tin" },
 
     -- Miscellaneous
-    ["solder"] = { mod = "lib", group = "shared", subgroup = "items" },
+    ["bob-solder"] = { mod = "lib", group = "shared", subgroup = "items", image = "solder" },
     ["angels-solder"] = { mod = "lib", group = "shared", subgroup = "items", image = "solder" },
     ["angels-silicon-wafer"] = { mod = "lib", group = "shared", subgroup = "items", image = "silicon-wafer" },
     ["solid-lime"] = { subgroup = "intermediates" },
@@ -165,25 +165,24 @@ end
 -- Check if we're using Angel's material colors
 if reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") then
     -- Gears
-    intermediates["cobalt-steel-gear-wheel"] = { subgroup = "gears" }
-    intermediates["nitinol-gear-wheel"] = { subgroup = "gears" }
-    intermediates["titanium-gear-wheel"] = { subgroup = "gears" }
-    intermediates["tungsten-gear-wheel"] = { subgroup = "gears" }
+    intermediates["bob-cobalt-steel-gear-wheel"] = { subgroup = "gears" }
+    intermediates["bob-nitinol-gear-wheel"] = { subgroup = "gears" }
+    intermediates["bob-titanium-gear-wheel"] = { subgroup = "gears" }
+    intermediates["bob-tungsten-gear-wheel"] = { subgroup = "gears" }
 
     -- Bearing Balls
-    intermediates["ceramic-bearing-ball"] = { subgroup = "bearing-balls" }
-    intermediates["cobalt-steel-bearing-ball"] = { subgroup = "bearing-balls" }
-    intermediates["nitinol-bearing-ball"] = { subgroup = "bearing-balls" }
-    intermediates["titanium-bearing-ball"] = { subgroup = "bearing-balls" }
+    intermediates["bob-ceramic-bearing-ball"] = { subgroup = "bearing-balls" }
+    intermediates["bob-cobalt-steel-bearing-ball"] = { subgroup = "bearing-balls" }
+    intermediates["bob-nitinol-bearing-ball"] = { subgroup = "bearing-balls" }
+    intermediates["bob-titanium-bearing-ball"] = { subgroup = "bearing-balls" }
 
     -- Bearings
-    intermediates["ceramic-bearing"] = { subgroup = "bearings" }
-    intermediates["cobalt-steel-bearing"] = { subgroup = "bearings" }
-    intermediates["nitinol-bearing"] = { subgroup = "bearings" }
-    intermediates["titanium-bearing"] = { subgroup = "bearings" }
+    intermediates["bob-ceramic-bearing"] = { subgroup = "bearings" }
+    intermediates["bob-cobalt-steel-bearing"] = { subgroup = "bearings" }
+    intermediates["bob-nitinol-bearing"] = { subgroup = "bearings" }
+    intermediates["bob-titanium-bearing"] = { subgroup = "bearings" }
 
     -- Bob Warefare Armor
-    intermediates["heavy-armor-3"] = { type = "armor", subgroup = "armor" }
     intermediates["bob-power-armor-mk4"] = { type = "armor", subgroup = "armor" }
     intermediates["bob-power-armor-mk5"] = { type = "armor", subgroup = "armor" }
 end
