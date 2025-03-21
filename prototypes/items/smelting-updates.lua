@@ -551,7 +551,7 @@ if reskins.lib.settings.get_value("reskins-angels-use-item-variations") then
                 filename = "__reskins-angels__/graphics/icons/smelting/ingots/" .. ingot .. "/ingot-" .. ingot .. ".png",
                 size = 64,
                 mipmap_count = 4,
-                scale = 0.25,
+                scale = 0.5,
             },
         }
 
@@ -560,7 +560,7 @@ if reskins.lib.settings.get_value("reskins-angels-use-item-variations") then
                 filename = "__reskins-angels__/graphics/icons/smelting/ingots/" .. ingot .. "/ingot-" .. ingot .. "-" .. i .. ".png",
                 size = 64,
                 mipmap_count = 4,
-                scale = 0.25,
+                scale = 0.5,
             })
         end
 
@@ -601,7 +601,7 @@ for powder, material in pairs(powder_variations) do
             filename = "__reskins-angels__/graphics/icons/smelting/powders/" .. material .. "/powder-" .. material .. "-" .. i .. ".png",
             size = 64,
             mipmap_count = 4,
-            scale = 0.25,
+            scale = 0.5,
         }
 
         table.insert(sprite_variations, sprite_variation)
