@@ -8,105 +8,103 @@ if not (reskins.angels and reskins.angels.triggers.smelting.entities) then retur
 
 -- Set input parameters
 local inputs = {
-    type = "assembling-machine",
-    icon_name = "powder-mixer",
-    base_entity_name = "assembling-machine-1",
-    mod = "angels",
-    particles = { ["big"] = 1, ["medium"] = 2 },
-    group = "smelting",
-    make_remnants = false,
+	type = "assembling-machine",
+	icon_name = "powder-mixer",
+	base_entity_name = "assembling-machine-1",
+	mod = "angels",
+	particles = { ["big"] = 1, ["medium"] = 2 },
+	group = "smelting",
+	make_remnants = false,
 }
 
 local tier_map = {
-    ["powder-mixer"] = { tier = 1 },
-    ["powder-mixer-2"] = { tier = 2 },
-    ["powder-mixer-3"] = { tier = 3 },
-    ["powder-mixer-4"] = { tier = 4 },
+	["powder-mixer"] = { tier = 1 },
+	["powder-mixer-2"] = { tier = 2 },
+	["powder-mixer-3"] = { tier = 3 },
+	["powder-mixer-4"] = { tier = 4 },
 }
 
 -- Support rework of Angel's Smelting ingredient tiers
 if reskins.lib.version.is_same_or_newer(mods["angelssmelting"], "0.6.20") then
-    tier_map["powder-mixer"].prog_tier = 2
-    tier_map["powder-mixer-2"].prog_tier = 3
-    tier_map["powder-mixer-3"].prog_tier = 4
-    tier_map["powder-mixer-4"].prog_tier = 5
+	tier_map["powder-mixer"].prog_tier = 2
+	tier_map["powder-mixer-2"].prog_tier = 3
+	tier_map["powder-mixer-3"].prog_tier = 4
+	tier_map["powder-mixer-4"].prog_tier = 5
 end
 
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
-    ---@type data.AssemblingMachinePrototype
-    local entity = data.raw[inputs.type][name]
+	---@type data.AssemblingMachinePrototype
+	local entity = data.raw[inputs.type][name]
 
-    -- Check if entity exists, if not, skip this iteration
-    if not entity then goto continue end
+	-- Check if entity exists, if not, skip this iteration
+	if not entity then goto continue end
 
-    -- Handle tier
-    local tier = map.tier
-    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
-        tier = map.prog_tier or map.tier
-    end
+	-- Handle tier
+	local tier = map.tier
+	if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then tier = map.prog_tier or map.tier end
 
-    -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
+	-- Determine what tint we're using
+	inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
-    reskins.lib.setup_standard_entity(name, tier, inputs)
+	reskins.lib.setup_standard_entity(name, tier, inputs)
 
-    -- Reskin entities
-    entity.graphics_set.animation = {
-        layers = {
-            -- Base
-            {
-                filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-base.png",
-                priority = "extra-high",
-                width = 138,
-                height = 170,
-                line_length = 4,
-                frame_count = 4,
-                animation_speed = 0.5,
-                shift = util.by_pixel(0.5, -9.5),
-                scale = 0.5,
-            },
-            -- Mask
-            {
-                filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/powder-mixer-mask.png",
-                priority = "extra-high",
-                width = 138,
-                height = 170,
-                line_length = 4,
-                frame_count = 4,
-                animation_speed = 0.5,
-                shift = util.by_pixel(0.5, -9.5),
-                tint = inputs.tint,
-                scale = 0.5,
-            },
-            -- Highlights
-            {
-                filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/powder-mixer-highlights.png",
-                priority = "extra-high",
-                width = 138,
-                height = 170,
-                line_length = 4,
-                frame_count = 4,
-                animation_speed = 0.5,
-                shift = util.by_pixel(0.5, -9.5),
-                blend_mode = reskins.lib.settings.blend_mode,
-                scale = 0.5,
-            },
-            -- Shadow
-            {
-                filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
-                priority = "extra-high",
-                width = 183,
-                height = 99,
-                repeat_count = 4,
-                animation_speed = 0.5,
-                draw_as_shadow = true,
-                shift = util.by_pixel(13, 9),
-                scale = 0.5,
-            },
-        },
-    }
+	-- Reskin entities
+	entity.graphics_set.animation = {
+		layers = {
+			-- Base
+			{
+				filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-base.png",
+				priority = "extra-high",
+				width = 138,
+				height = 170,
+				line_length = 4,
+				frame_count = 4,
+				animation_speed = 0.5,
+				shift = util.by_pixel(0.5, -9.5),
+				scale = 0.5,
+			},
+			-- Mask
+			{
+				filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/powder-mixer-mask.png",
+				priority = "extra-high",
+				width = 138,
+				height = 170,
+				line_length = 4,
+				frame_count = 4,
+				animation_speed = 0.5,
+				shift = util.by_pixel(0.5, -9.5),
+				tint = inputs.tint,
+				scale = 0.5,
+			},
+			-- Highlights
+			{
+				filename = "__reskins-angels__/graphics/entity/smelting/powder-mixer/powder-mixer-highlights.png",
+				priority = "extra-high",
+				width = 138,
+				height = 170,
+				line_length = 4,
+				frame_count = 4,
+				animation_speed = 0.5,
+				shift = util.by_pixel(0.5, -9.5),
+				blend_mode = reskins.lib.settings.blend_mode,
+				scale = 0.5,
+			},
+			-- Shadow
+			{
+				filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
+				priority = "extra-high",
+				width = 183,
+				height = 99,
+				repeat_count = 4,
+				animation_speed = 0.5,
+				draw_as_shadow = true,
+				shift = util.by_pixel(13, 9),
+				scale = 0.5,
+			},
+		},
+	}
 
-    -- Label to skip to next iteration
-    ::continue::
+	-- Label to skip to next iteration
+	::continue::
 end

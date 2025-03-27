@@ -8,27 +8,25 @@ if not (reskins.angels and reskins.angels.triggers.refining.entities) then retur
 
 ---@type ConstructIconInputsOld
 local inputs = {
-    type = "mining-drill",
-    icon_name = "thermal-extractor",
-    mod = "angels",
-    group = "refining",
+	type = "mining-drill",
+	icon_name = "thermal-extractor",
+	mod = "angels",
+	group = "refining",
 }
 
 -- Setup defaults.
 reskins.lib.set_inputs_defaults(inputs)
 
 local tier_map = {
-    ["thermal-bore"] = { tier = 1, prog_tier = 2 },
-    ["thermal-extractor"] = { tier = 2, prog_tier = 3 },
+	["thermal-bore"] = { tier = 1, prog_tier = 2 },
+	["thermal-extractor"] = { tier = 2, prog_tier = 3 },
 }
 
 for name, map in pairs(tier_map) do
-    local tier = map.tier
-    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
-        tier = map.prog_tier or map.tier
-    end
+	local tier = map.tier
+	if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then tier = map.prog_tier or map.tier end
 
-    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
+	inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
-    reskins.lib.construct_icon(name, tier, inputs)
+	reskins.lib.construct_icon(name, tier, inputs)
 end

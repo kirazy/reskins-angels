@@ -17,62 +17,61 @@ if not (mods["bobplates"] or (angelsmods and angelsmods.industries and angelsmod
 ---Ore names are shared with the name of the icon subfolder and file.
 ---@type { [string]: OreSpriteVariationsParameters }
 local ores = {
-    -- ["angels-ore2"]   = { key = "angels", subfolder = "smelting/ores" }, -- Jivolite
-    -- ["angels-ore4"]   = { key = "angels", subfolder = "smelting/ores" }, -- Crotinnium
-    -- ["chrome-ore"]    = { key = "angels", subfolder = "smelting/ores" },
-    ["bob-lead-ore"]    = { key = "angels", subfolder = "smelting/ores" },
-    -- ["manganese-ore"] = { key = "angels", subfolder = "smelting/ores" },
-    -- ["platinum-ore"]  = { key = "angels", subfolder = "smelting/ores" },
-    ["bob-rutile-ore"]  = { key = "angels", subfolder = "smelting/ores" },                                        -- Titanium (dark purple)
-    ["bob-thorium-ore"] = { key = "angels", subfolder = "smelting/ores", num_variations = 4, is_light = true },   -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
-    ["bob-tin-ore"]     = { key = "angels", subfolder = "smelting/ores", num_variations = 8 },                    -- (green)
+	-- ["angels-ore2"]   = { key = "angels", subfolder = "smelting/ores" }, -- Jivolite
+	-- ["angels-ore4"]   = { key = "angels", subfolder = "smelting/ores" }, -- Crotinnium
+	-- ["chrome-ore"]    = { key = "angels", subfolder = "smelting/ores" },
+	["bob-lead-ore"] = { key = "angels", subfolder = "smelting/ores" },
+	-- ["manganese-ore"] = { key = "angels", subfolder = "smelting/ores" },
+	-- ["platinum-ore"]  = { key = "angels", subfolder = "smelting/ores" },
+	["bob-rutile-ore"] = { key = "angels", subfolder = "smelting/ores" }, -- Titanium (dark purple)
+	["bob-thorium-ore"] = { key = "angels", subfolder = "smelting/ores", num_variations = 4, is_light = true }, -- Even though Angel's now fixed the issue, we make it green in AR:BM and need to put it back
+	["bob-tin-ore"] = { key = "angels", subfolder = "smelting/ores", num_variations = 8 }, -- (green)
 }
 
 -- TODO: Not implemented. Needs sprites.
 if reskins.lib.settings.get_value("reskins-angels-use-vanilla-style-ores") then
-    table.insert(ores, {
-        -- ["angels-ore1"] = { key = "angels", subfolder = "smelting/ores" }, -- Saphirite
-        -- ["angels-ore3"] = { key = "angels", subfolder = "smelting/ores" }, -- Stiratite
-        -- ["angels-ore5"] = { key = "angels", subfolder = "smelting/ores" }, -- Rubyte
-        -- ["angels-ore6"] = { key = "angels", subfolder = "smelting/ores" }, -- Bobmonium
-    })
+	table.insert(ores, {
+		-- ["angels-ore1"] = { key = "angels", subfolder = "smelting/ores" }, -- Saphirite
+		-- ["angels-ore3"] = { key = "angels", subfolder = "smelting/ores" }, -- Stiratite
+		-- ["angels-ore5"] = { key = "angels", subfolder = "smelting/ores" }, -- Rubyte
+		-- ["angels-ore6"] = { key = "angels", subfolder = "smelting/ores" }, -- Bobmonium
+	})
 end
 
 -- Check if we're using Angel's material colors
 if reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") == false then
-    ores["bob-lead-ore"] = { key = "lib", subfolder = "shared/ores" }
-    ores["bob-tin-ore"]  = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
+	ores["bob-lead-ore"] = { key = "lib", subfolder = "shared/ores" }
+	ores["bob-tin-ore"] = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
 end
 
 if not mods["bobores"] or not mods["reskins-bobs"] then
-    ores["bob-bauxite-ore"]  = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
-    ores["bob-cobalt-ore"]   = { key = "lib", subfolder = "shared/ores" }
-    ores["bob-gold-ore"]     = { key = "lib", subfolder = "shared/ores" }
-    ores["bob-nickel-ore"]   = { key = "lib", subfolder = "shared/ores" } -- 408073
-    ores["bob-quartz"]       = { key = "lib", subfolder = "shared/ores" } -- 999999
-    ores["bob-silver-ore"]   = { key = "lib", subfolder = "shared/ores" }
-    ores["bob-tungsten-ore"] = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
-    ores["bob-zinc-ore"]     = { key = "lib", subfolder = "shared/ores" }
+	ores["bob-bauxite-ore"] = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
+	ores["bob-cobalt-ore"] = { key = "lib", subfolder = "shared/ores" }
+	ores["bob-gold-ore"] = { key = "lib", subfolder = "shared/ores" }
+	ores["bob-nickel-ore"] = { key = "lib", subfolder = "shared/ores" } -- 408073
+	ores["bob-quartz"] = { key = "lib", subfolder = "shared/ores" } -- 999999
+	ores["bob-silver-ore"] = { key = "lib", subfolder = "shared/ores" }
+	ores["bob-tungsten-ore"] = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
+	ores["bob-zinc-ore"] = { key = "lib", subfolder = "shared/ores" }
 end
 
 for ore_name, parameters in pairs(ores) do
-    local item = data.raw.item[ore_name]
-    if not item then goto continue end
+	local item = data.raw.item[ore_name]
+	if not item then goto continue end
 
-    ---@type data.IconData[]
-    local icon_data = { {
-        icon = reskins[parameters.key].directory .. "/graphics/icons/" .. parameters.subfolder .. "/" .. ore_name .. "/" .. ore_name .. ".png",
-        icon_size = 64,
-        icon_miumaps = 4,
-        scale = 0.5,
-    } }
+	---@type data.IconData[]
+	local icon_data = { {
+		icon = reskins[parameters.key].directory .. "/graphics/icons/" .. parameters.subfolder .. "/" .. ore_name .. "/" .. ore_name .. ".png",
+		icon_size = 64,
+		icon_miumaps = 4,
+		scale = 0.5,
+	} }
 
-    local pictures = reskins.internal.create_sprite_variations(parameters.key, parameters.subfolder,
-        ore_name, parameters.num_variations or 4, parameters.is_light)
+	local pictures = reskins.internal.create_sprite_variations(parameters.key, parameters.subfolder, ore_name, parameters.num_variations or 4, parameters.is_light)
 
-    reskins.lib.icons.assign_icons_to_prototype_and_related_prototypes(ore_name, "item", icon_data, pictures)
+	reskins.lib.icons.assign_icons_to_prototype_and_related_prototypes(ore_name, "item", icon_data, pictures)
 
-    ::continue::
+	::continue::
 end
 
 -- Setup recipe bases
@@ -80,37 +79,37 @@ end
 ---Creates the base icon layer for the Ore Sorting Machine ore recipes.
 ---@return data.IconData
 local function make_sorting_icon_base()
-    return {
-        icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
-        icon_size = 32,
-    }
+	return {
+		icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
+		icon_size = 32,
+	}
 end
 
 ---Creates the base icon layer for the Crystalizer slag processing recipes.
 ---@return data.IconData[]
 local function make_slag_processing_icon_base()
-    return {
-        {
-            icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-base.png",
-            icon_size = 600,
-            tint = util.color("404040b2"),
-        },
-        {
-            icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-top.png",
-            icon_size = 600,
-            tint = util.color("ca6311"),
-        },
-        {
-            icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-mid.png",
-            icon_size = 600,
-            tint = util.color("613414"),
-        },
-        {
-            icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-bot.png",
-            icon_size = 600,
-            tint = util.color("613414"),
-        },
-    }
+	return {
+		{
+			icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-base.png",
+			icon_size = 600,
+			tint = util.color("404040b2"),
+		},
+		{
+			icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-top.png",
+			icon_size = 600,
+			tint = util.color("ca6311"),
+		},
+		{
+			icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-mid.png",
+			icon_size = 600,
+			tint = util.color("613414"),
+		},
+		{
+			icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-bot.png",
+			icon_size = 600,
+			tint = util.color("613414"),
+		},
+	}
 end
 
 local shift = { 10, 10 }
@@ -120,156 +119,156 @@ local scale = 0.5
 -- The first entry in each IconSources is the first layer of the created icon.
 ---@type { [string]: IconSources }
 local recipe_icon_source_map = {
-    -- Ore Sorting Machine Recipes
+	-- Ore Sorting Machine Recipes
 
-    -- Lead
-    ["angelsore-crushed-mix3-processing"] = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-lead-ore", type_name = "item", shift = shift, scale = scale },
-    },
-    -- Tin
-    ["angelsore-crushed-mix4-processing"] = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-tin-ore", type_name = "item", shift = shift, scale = scale },
-    },
-    -- Silicon
-    ["angelsore-chunk-mix1-processing"]   = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-quartz", type_name = "item", shift = shift, scale = scale },
-        { name = "bob-quartz", type_name = "item", shift = shift, scale = scale },
-    },
-    -- Nickel
-    ["angelsore-chunk-mix2-processing"]   = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-nickel-ore", type_name = "item", shift = shift, scale = scale },
-    },
-    -- Aluminium
-    ["angelsore-chunk-mix3-processing"]   = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-bauxite-ore", type_name = "item", shift = shift, scale = scale },
-    },
-    -- Zinc
-    ["angelsore-chunk-mix4-processing"]   = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-zinc-ore", type_name = "item", shift = shift, scale = scale },
-    },
+	-- Lead
+	["angelsore-crushed-mix3-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-lead-ore", type_name = "item", shift = shift, scale = scale },
+	},
+	-- Tin
+	["angelsore-crushed-mix4-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-tin-ore", type_name = "item", shift = shift, scale = scale },
+	},
+	-- Silicon
+	["angelsore-chunk-mix1-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-quartz", type_name = "item", shift = shift, scale = scale },
+		{ name = "bob-quartz", type_name = "item", shift = shift, scale = scale },
+	},
+	-- Nickel
+	["angelsore-chunk-mix2-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-nickel-ore", type_name = "item", shift = shift, scale = scale },
+	},
+	-- Aluminium
+	["angelsore-chunk-mix3-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-bauxite-ore", type_name = "item", shift = shift, scale = scale },
+	},
+	-- Zinc
+	["angelsore-chunk-mix4-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-zinc-ore", type_name = "item", shift = shift, scale = scale },
+	},
 
-    -- -- Fluorite
-    -- ["angelsore-chunk-mix5-processing"]   = {
-    --     { icon_datum = make_sorting_icon_base() },
-    --     { name = "fluorite-ore", type_name = "item", shift = shift, scale = scale },
-    -- },
-    -- -- Manganese?
-    -- ["angelsore-chunk-mix6-processing"]   = {
-    --     { icon_datum = make_sorting_icon_base() },
-    --     { name = "manganese-ore", type_name = "item", shift = shift, scale = scale },
-    -- },
+	-- -- Fluorite
+	-- ["angelsore-chunk-mix5-processing"]   = {
+	--     { icon_datum = make_sorting_icon_base() },
+	--     { name = "fluorite-ore", type_name = "item", shift = shift, scale = scale },
+	-- },
+	-- -- Manganese?
+	-- ["angelsore-chunk-mix6-processing"]   = {
+	--     { icon_datum = make_sorting_icon_base() },
+	--     { name = "manganese-ore", type_name = "item", shift = shift, scale = scale },
+	-- },
 
-    -- Titanium
-    ["angelsore-crystal-mix1-processing"] = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-rutile-ore", type_name = "item", shift = shift, scale = scale },
-    },
+	-- Titanium
+	["angelsore-crystal-mix1-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-rutile-ore", type_name = "item", shift = shift, scale = scale },
+	},
 
-    -- Gold
-    ["angelsore-crystal-mix2-processing"] = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-gold-ore", type_name = "item", shift = shift, scale = scale },
-    },
+	-- Gold
+	["angelsore-crystal-mix2-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-gold-ore", type_name = "item", shift = shift, scale = scale },
+	},
 
-    -- Cobalt
-    ["angelsore-crystal-mix3-processing"] = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-cobalt-ore", type_name = "item", shift = shift, scale = scale },
-    },
+	-- Cobalt
+	["angelsore-crystal-mix3-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-cobalt-ore", type_name = "item", shift = shift, scale = scale },
+	},
 
-    -- Silver
-    ["angelsore-crystal-mix4-processing"] = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-silver-ore", type_name = "item", shift = shift, scale = scale },
-    },
+	-- Silver
+	["angelsore-crystal-mix4-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-silver-ore", type_name = "item", shift = shift, scale = scale },
+	},
 
-    -- Uranium
-    ["angelsore-crystal-mix5-processing"] = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "uranium-ore", type_name = "item", shift = shift, scale = scale },
-    },
+	-- Uranium
+	["angelsore-crystal-mix5-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "uranium-ore", type_name = "item", shift = shift, scale = scale },
+	},
 
-    -- Thorium
-    ["angelsore-crystal-mix6-processing"] = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-thorium-ore", type_name = "item", shift = shift, scale = scale },
-    },
+	-- Thorium
+	["angelsore-crystal-mix6-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-thorium-ore", type_name = "item", shift = shift, scale = scale },
+	},
 
-    -- Tungsten
-    ["angelsore-pure-mix1-processing"]    = {
-        { icon_datum = make_sorting_icon_base() },
-        { name = "bob-tungsten-ore", type_name = "item", shift = shift, scale = scale },
-    },
+	-- Tungsten
+	["angelsore-pure-mix1-processing"] = {
+		{ icon_datum = make_sorting_icon_base() },
+		{ name = "bob-tungsten-ore", type_name = "item", shift = shift, scale = scale },
+	},
 
-    -- -- Platinum
-    -- ["angelsore-pure-mix2-processing"]    = {
-    --     { icon_datum = make_sorting_icon_base() },
-    --     { name = "platinum-ore", type_name = "item", shift = shift, scale = scale },
-    -- },
+	-- -- Platinum
+	-- ["angelsore-pure-mix2-processing"]    = {
+	--     { icon_datum = make_sorting_icon_base() },
+	--     { name = "platinum-ore", type_name = "item", shift = shift, scale = scale },
+	-- },
 
-    -- -- Chrome?
-    -- ["angelsore-pure-mix3-processing"]    = {
-    --     { icon_datum = make_sorting_icon_base() },
-    --     { name = "chrome-ore", type_name = "item", shift = shift, scale = scale },
-    -- },
+	-- -- Chrome?
+	-- ["angelsore-pure-mix3-processing"]    = {
+	--     { icon_datum = make_sorting_icon_base() },
+	--     { name = "chrome-ore", type_name = "item", shift = shift, scale = scale },
+	-- },
 }
 
 -- Build Crystalizer slag processing recipes
 local slag_processing_recipe_names = {
-    "slag-processing-2",
-    "slag-processing-3",
-    "slag-processing-4",
-    "slag-processing-5",
-    "slag-processing-6",
-    "slag-processing-7",
-    "slag-processing-8",
-    "slag-processing-9",
+	"slag-processing-2",
+	"slag-processing-3",
+	"slag-processing-4",
+	"slag-processing-5",
+	"slag-processing-6",
+	"slag-processing-7",
+	"slag-processing-8",
+	"slag-processing-9",
 }
 
 ---@type data.Vector[]
 local slag_recipe_shifts = {
-    { -11.5, 12 },
-    { 11.5, 12 },
-    { 0, 12 },
+	{ -11.5, 12 },
+	{ 11.5, 12 },
+	{ 0, 12 },
 }
 
 for _, name in pairs(slag_processing_recipe_names) do
-    -- Check the recipe exists
-    local recipe = data.raw.recipe[name]
-    if not recipe then goto continue end
+	-- Check the recipe exists
+	local recipe = data.raw.recipe[name]
+	if not recipe then goto continue end
 
-    ---@type data.ProductPrototype[]
-    local recipe_results = recipe.normal and recipe.normal.results or recipe.results
+	---@type data.ProductPrototype[]
+	local recipe_results = recipe.normal and recipe.normal.results or recipe.results
 
-    -- Build icon overlays based on recipe ingredients
-    if recipe_results[1].name ~= "angels-void" then
-        -- Add the base layer icon source.
-        recipe_icon_source_map[name] = { { icon_data = make_slag_processing_icon_base() } }
+	-- Build icon overlays based on recipe ingredients
+	if recipe_results[1].name ~= "angels-void" then
+		-- Add the base layer icon source.
+		recipe_icon_source_map[name] = { { icon_data = make_slag_processing_icon_base() } }
 
-        -- Add up to three products.
-        for i, product in pairs(recipe_results) do
-            -- More than 3 products is unhandled, but also not expected in the first place.
-            if i > 3 then goto continue end
+		-- Add up to three products.
+		for i, product in pairs(recipe_results) do
+			-- More than 3 products is unhandled, but also not expected in the first place.
+			if i > 3 then goto continue end
 
-            ---@type PrototypeIconSource
-            local icon_source = {
-                name = product.name,
-                type_name = "item",
-                shift = slag_recipe_shifts[i],
-                scale = 0.32,
-            }
+			---@type PrototypeIconSource
+			local icon_source = {
+				name = product.name,
+				type_name = "item",
+				shift = slag_recipe_shifts[i],
+				scale = 0.32,
+			}
 
-            table.insert(recipe_icon_source_map[name], icon_source)
-        end
-    end
+			table.insert(recipe_icon_source_map[name], icon_source)
+		end
+	end
 
-    ::continue::
+	::continue::
 end
 
 reskins.lib.icons.create_and_assign_combined_icons_from_sources_to_recipe(recipe_icon_source_map)
