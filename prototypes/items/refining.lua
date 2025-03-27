@@ -8,10 +8,10 @@ if not (reskins.angels and reskins.angels.triggers.refining.items) then return e
 
 -- Setup inputs and constants
 local inputs = {
-    mod = "angels",
-    group = "refining",
-    make_icon_pictures = false,
-    flat_icon = true,
+	mod = "angels",
+	group = "refining",
+	make_icon_pictures = false,
+	flat_icon = true,
 }
 
 local shift = reskins.angels.constants.recipe_corner_shift

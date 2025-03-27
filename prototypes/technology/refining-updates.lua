@@ -8,10 +8,10 @@ if not (reskins.angels and reskins.angels.triggers.refining.technologies) then r
 
 ---@type CreateIconsFromListInputs
 local inputs = {
-    mod = "angels",
-    group = "refining",
-    type = "technology",
-    technology_icon_size = 256,
+	mod = "angels",
+	group = "refining",
+	type = "technology",
+	technology_icon_size = 256,
 }
 
 ---@type CreateIconsFromListTable

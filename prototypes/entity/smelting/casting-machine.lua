@@ -8,98 +8,96 @@ if not (reskins.angels and reskins.angels.triggers.smelting.entities) then retur
 
 -- Set input parameters
 local inputs = {
-    type = "assembling-machine",
-    icon_name = "casting-machine",
-    base_entity_name = "chemical-plant",
-    mod = "angels",
-    particles = { ["big"] = 1, ["medium"] = 2 },
-    group = "smelting",
-    make_remnants = false,
+	type = "assembling-machine",
+	icon_name = "casting-machine",
+	base_entity_name = "chemical-plant",
+	mod = "angels",
+	particles = { ["big"] = 1, ["medium"] = 2 },
+	group = "smelting",
+	make_remnants = false,
 }
 
 local tier_map = {
-    ["casting-machine"] = { tier = 1 },
-    ["casting-machine-2"] = { tier = 2 },
-    ["casting-machine-3"] = { tier = 3 },
-    ["casting-machine-4"] = { tier = 4 },
+	["casting-machine"] = { tier = 1 },
+	["casting-machine-2"] = { tier = 2 },
+	["casting-machine-3"] = { tier = 3 },
+	["casting-machine-4"] = { tier = 4 },
 }
 
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
-    ---@type data.AssemblingMachinePrototype
-    local entity = data.raw[inputs.type][name]
+	---@type data.AssemblingMachinePrototype
+	local entity = data.raw[inputs.type][name]
 
-    -- Check if entity exists, if not, skip this iteration
-    if not entity then goto continue end
+	-- Check if entity exists, if not, skip this iteration
+	if not entity then goto continue end
 
-    -- Handle tier
-    local tier = map.tier
-    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
-        tier = map.prog_tier or map.tier
-    end
+	-- Handle tier
+	local tier = map.tier
+	if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then tier = map.prog_tier or map.tier end
 
-    -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
+	-- Determine what tint we're using
+	inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
-    reskins.lib.setup_standard_entity(name, tier, inputs)
+	reskins.lib.setup_standard_entity(name, tier, inputs)
 
-    -- Reskin entities
-    entity.graphics_set.animation = {
-        layers = {
-            -- Base
-            {
-                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-base.png",
-                priority = "extra-high",
-                width = 205,
-                height = 244,
-                line_length = 7,
-                frame_count = 49,
-                animation_speed = 0.5,
-                shift = util.by_pixel(0, -2),
-                scale = 0.5,
-            },
-            -- Mask
-            {
-                filename = "__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-mask.png",
-                priority = "extra-high",
-                width = 205,
-                height = 244,
-                line_length = 7,
-                frame_count = 49,
-                animation_speed = 0.5,
-                shift = util.by_pixel(0, -2),
-                tint = inputs.tint,
-                scale = 0.5,
-            },
-            -- Highlights
-            {
-                filename = "__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-highlights.png",
-                priority = "extra-high",
-                width = 205,
-                height = 244,
-                line_length = 7,
-                frame_count = 49,
-                animation_speed = 0.5,
-                shift = util.by_pixel(0, -2),
-                blend_mode = reskins.lib.settings.blend_mode,
-                scale = 0.5,
-            },
-            -- Shadow
-            {
-                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
-                priority = "extra-high",
-                width = 248,
-                height = 206,
-                line_length = 7,
-                frame_count = 49,
-                animation_speed = 0.5,
-                draw_as_shadow = true,
-                shift = util.by_pixel(11.5, 8.5),
-                scale = 0.5,
-            },
-        },
-    }
+	-- Reskin entities
+	entity.graphics_set.animation = {
+		layers = {
+			-- Base
+			{
+				filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
+				priority = "extra-high",
+				width = 205,
+				height = 244,
+				line_length = 7,
+				frame_count = 49,
+				animation_speed = 0.5,
+				shift = util.by_pixel(0, -2),
+				scale = 0.5,
+			},
+			-- Mask
+			{
+				filename = "__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-mask.png",
+				priority = "extra-high",
+				width = 205,
+				height = 244,
+				line_length = 7,
+				frame_count = 49,
+				animation_speed = 0.5,
+				shift = util.by_pixel(0, -2),
+				tint = inputs.tint,
+				scale = 0.5,
+			},
+			-- Highlights
+			{
+				filename = "__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-highlights.png",
+				priority = "extra-high",
+				width = 205,
+				height = 244,
+				line_length = 7,
+				frame_count = 49,
+				animation_speed = 0.5,
+				shift = util.by_pixel(0, -2),
+				blend_mode = reskins.lib.settings.blend_mode,
+				scale = 0.5,
+			},
+			-- Shadow
+			{
+				filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
+				priority = "extra-high",
+				width = 248,
+				height = 206,
+				line_length = 7,
+				frame_count = 49,
+				animation_speed = 0.5,
+				draw_as_shadow = true,
+				shift = util.by_pixel(11.5, 8.5),
+				scale = 0.5,
+			},
+		},
+	}
 
-    -- Label to skip to next iteration
-    ::continue::
+	-- Label to skip to next iteration
+	::continue::
 end

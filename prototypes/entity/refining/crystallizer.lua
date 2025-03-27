@@ -8,91 +8,87 @@ if not (reskins.angels and reskins.angels.triggers.refining.entities) then retur
 
 -- Set input parameters
 local inputs = {
-    type = "assembling-machine",
-    icon_name = "crystallizer",
-    base_entity_name = "assembling-machine-1",
-    mod = "angels",
-    particles = { ["big"] = 1, ["medium"] = 2 },
-    group = "refining",
-    make_remnants = false,
+	type = "assembling-machine",
+	icon_name = "crystallizer",
+	base_entity_name = "assembling-machine-1",
+	mod = "angels",
+	particles = { ["big"] = 1, ["medium"] = 2 },
+	group = "refining",
+	make_remnants = false,
 }
 
 local tier_map = {
-    ["crystallizer"] = { tier = 1, prog_tier = 2 },
-    ["crystallizer-2"] = { tier = 2, prog_tier = 3 },
-    ["crystallizer-3"] = { tier = 3, prog_tier = 4 },
+	["crystallizer"] = { tier = 1, prog_tier = 2 },
+	["crystallizer-2"] = { tier = 2, prog_tier = 3 },
+	["crystallizer-3"] = { tier = 3, prog_tier = 4 },
 
-    -- Extended Angels
-    ["crystallizer-4"] = { tier = 4, prog_tier = 5 },
+	-- Extended Angels
+	["crystallizer-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Sea Block compatibility
-if mods["SeaBlock"] then
-    tier_map["crystallizer"].prog_tier = 1
-end
+if mods["SeaBlock"] then tier_map["crystallizer"].prog_tier = 1 end
 
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
-    ---@type data.AssemblingMachinePrototype
-    local entity = data.raw[inputs.type][name]
-    if not entity then goto continue end
+	---@type data.AssemblingMachinePrototype
+	local entity = data.raw[inputs.type][name]
+	if not entity then goto continue end
 
-    -- Handle tier
-    local tier = map.tier
-    if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
-        tier = map.prog_tier or map.tier
-    end
+	-- Handle tier
+	local tier = map.tier
+	if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then tier = map.prog_tier or map.tier end
 
-    -- Determine what tint we're using
-    inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
+	-- Determine what tint we're using
+	inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
-    reskins.lib.setup_standard_entity(name, tier, inputs)
+	reskins.lib.setup_standard_entity(name, tier, inputs)
 
-    -- Reskin entities
-    entity.graphics_set.animation = {
-        layers = {
-            -- Base
-            {
-                filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer.png",
-                priority = "extra-high",
-                width = 390,
-                height = 326,
-                shift = util.by_pixel(16, 0),
-                scale = 0.5,
-            },
-            -- Mask
-            {
-                filename = "__reskins-angels__/graphics/entity/refining/crystallizer/crystallizer-mask.png",
-                priority = "extra-high",
-                width = 390,
-                height = 326,
-                shift = util.by_pixel(16, 0),
-                tint = inputs.tint,
-                scale = 0.5,
-            },
-            -- Highlights
-            {
-                filename = "__reskins-angels__/graphics/entity/refining/crystallizer/crystallizer-highlights.png",
-                priority = "extra-high",
-                width = 390,
-                height = 326,
-                shift = util.by_pixel(16, 0),
-                blend_mode = reskins.lib.settings.blend_mode,
-                scale = 0.5,
-            },
-            -- Shadow
-            {
-                filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-shadow.png",
-                priority = "extra-high",
-                width = 390,
-                height = 326,
-                shift = util.by_pixel(16, 0),
-                draw_as_shadow = true,
-                scale = 0.5,
-            },
-        },
-    }
+	-- Reskin entities
+	entity.graphics_set.animation = {
+		layers = {
+			-- Base
+			{
+				filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer.png",
+				priority = "extra-high",
+				width = 390,
+				height = 326,
+				shift = util.by_pixel(16, 0),
+				scale = 0.5,
+			},
+			-- Mask
+			{
+				filename = "__reskins-angels__/graphics/entity/refining/crystallizer/crystallizer-mask.png",
+				priority = "extra-high",
+				width = 390,
+				height = 326,
+				shift = util.by_pixel(16, 0),
+				tint = inputs.tint,
+				scale = 0.5,
+			},
+			-- Highlights
+			{
+				filename = "__reskins-angels__/graphics/entity/refining/crystallizer/crystallizer-highlights.png",
+				priority = "extra-high",
+				width = 390,
+				height = 326,
+				shift = util.by_pixel(16, 0),
+				blend_mode = reskins.lib.settings.blend_mode,
+				scale = 0.5,
+			},
+			-- Shadow
+			{
+				filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-shadow.png",
+				priority = "extra-high",
+				width = 390,
+				height = 326,
+				shift = util.by_pixel(16, 0),
+				draw_as_shadow = true,
+				scale = 0.5,
+			},
+		},
+	}
 
-    -- Label to skip to next iteration
-    ::continue::
+	-- Label to skip to next iteration
+	::continue::
 end
