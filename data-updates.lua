@@ -17,7 +17,6 @@ require("prototypes.entity.refining.liquefier")
 ----------------------------------------------------------------------------------------------------
 -- ITEMS
 ----------------------------------------------------------------------------------------------------
-require("prototypes.items.bioprocessing-modules")
 require("prototypes.items.refining-updates")
 require("prototypes.items.smelting.ores")
 
@@ -38,7 +37,6 @@ require("prototypes.items.refining-secondary-updates")
 ----------------------------------------------------------------------------------------------------
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------
-require("prototypes.technology.bioprocessing-modules")
 -- require("prototypes.technology.refining-updates")
 require("prototypes.technology.smelting-updates")
 
