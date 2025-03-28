@@ -28,7 +28,9 @@ if reskins.lib.version.is_newer(mods["angelspetrochem"], "0.9.19") then
 end
 
 -- angelssmelting at this version or earlier does icon work in data-final-fixes
-if reskins.lib.version.is_newer(mods["angelssmelting"], "0.6.16") then require("prototypes.items.smelting-updates") end
+if reskins.lib.version.is_newer(mods["angelssmelting"], "0.6.16") then
+	require("prototypes.items.smelting-updates")
+end
 
 -- Second pass
 require("prototypes.items.refining-secondary-updates")

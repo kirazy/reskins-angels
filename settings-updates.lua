@@ -17,7 +17,11 @@ reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelsaddons-mob
 -- reskins.lib.setting_override("bool-setting", "reskins-angels-do-angelsaddons-storage")
 
 -- Override Bob's "Deuterium is Blue!" setting based on presence of Angel's Industries
-if mods["angelsindustries"] then reskins.lib.setting_override("bool-setting", "bobmods-plates-bluedeuterium", true) end
+if mods["angelsindustries"] then
+	reskins.lib.setting_override("bool-setting", "bobmods-plates-bluedeuterium", true)
+end
 
 -- Hide chemical furnace color setting, as Angel's Smelting disables these
-if mods["angelssmelting"] then reskins.lib.setting_override("string-setting", "reskins-bobs-chemical-furnace-color") end
+if mods["angelssmelting"] then
+	reskins.lib.setting_override("string-setting", "reskins-bobs-chemical-furnace-color")
+end

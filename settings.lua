@@ -32,32 +32,38 @@ data:extend({
 })
 
 -- Settings available based on mod loadout
-if mods["angelsbioprocessing"] then data:extend({
-	{
-		type = "bool-setting",
-		name = "reskins-angels-do-angelsbioprocessing",
-		setting_type = "startup",
-		default_value = true,
-	},
-}) end
+if mods["angelsbioprocessing"] then
+	data:extend({
+		{
+			type = "bool-setting",
+			name = "reskins-angels-do-angelsbioprocessing",
+			setting_type = "startup",
+			default_value = true,
+		},
+	})
+end
 
-if mods["angelsexploration"] then data:extend({
-	{
-		type = "bool-setting",
-		name = "reskins-angels-do-angelsexploration",
-		setting_type = "startup",
-		default_value = true,
-	},
-}) end
+if mods["angelsexploration"] then
+	data:extend({
+		{
+			type = "bool-setting",
+			name = "reskins-angels-do-angelsexploration",
+			setting_type = "startup",
+			default_value = true,
+		},
+	})
+end
 
-if mods["angelsindustries"] then data:extend({
-	{
-		type = "bool-setting",
-		name = "reskins-angels-do-angelsindustries",
-		setting_type = "startup",
-		default_value = true,
-	},
-}) end
+if mods["angelsindustries"] then
+	data:extend({
+		{
+			type = "bool-setting",
+			name = "reskins-angels-do-angelsindustries",
+			setting_type = "startup",
+			default_value = true,
+		},
+	})
+end
 
 if mods["angelspetrochem"] then
 	data:extend({
@@ -120,29 +126,35 @@ if mods["angelssmelting"] then
 	})
 end
 
-if mods["angelsaddons-cab"] then data:extend({
-	{
-		type = "bool-setting",
-		name = "reskins-angels-do-angelsaddons-cab",
-		setting_type = "startup",
-		default_value = true,
-	},
-}) end
+if mods["angelsaddons-cab"] then
+	data:extend({
+		{
+			type = "bool-setting",
+			name = "reskins-angels-do-angelsaddons-cab",
+			setting_type = "startup",
+			default_value = true,
+		},
+	})
+end
 
-if mods["angelsaddons-mobility"] then data:extend({
-	{
-		type = "bool-setting",
-		name = "reskins-angels-do-angelsaddons-mobility",
-		setting_type = "startup",
-		default_value = true,
-	},
-}) end
+if mods["angelsaddons-mobility"] then
+	data:extend({
+		{
+			type = "bool-setting",
+			name = "reskins-angels-do-angelsaddons-mobility",
+			setting_type = "startup",
+			default_value = true,
+		},
+	})
+end
 
-if mods["angelsaddons-storage"] then data:extend({
-	{
-		type = "bool-setting",
-		name = "reskins-angels-do-angelsaddons-storage",
-		setting_type = "startup",
-		default_value = true,
-	},
-}) end
+if mods["angelsaddons-storage"] then
+	data:extend({
+		{
+			type = "bool-setting",
+			name = "reskins-angels-do-angelsaddons-storage",
+			setting_type = "startup",
+			default_value = true,
+		},
+	})
+end

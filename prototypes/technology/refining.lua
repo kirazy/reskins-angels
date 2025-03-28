@@ -4,7 +4,9 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.refining.technologies) then return end
+if not (reskins.angels and reskins.angels.triggers.refining.technologies) then
+	return
+end
 
 ---@type CreateIconsFromListInputs
 local inputs = {
@@ -44,9 +46,13 @@ local technologies = {
 }
 
 -- Sea Block compatibility
-if mods["SeaBlock"] then technologies["ore-crushing"].icon_name = "advanced-ore-refining" end
+if mods["SeaBlock"] then
+	technologies["ore-crushing"].icon_name = "advanced-ore-refining"
+end
 
 -- Check if we're using Angel's material colors
-if mods["bobwarfare"] and mods["bobplates"] and reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") then technologies["bob-armor-making-3"] = { group = "smelting", subgroup = "armor", flat_icon = true } end
+if mods["bobwarfare"] and mods["bobplates"] and reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") then
+	technologies["bob-armor-making-3"] = { group = "smelting", subgroup = "armor", flat_icon = true }
+end
 
 reskins.internal.create_icons_from_list(technologies, inputs)

@@ -29,7 +29,9 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 		local entity = data.raw[inputs.type][name]
 
 		-- Check if entity exists, if not, skip this iteration
-		if not entity then goto continue end
+		if not entity then
+			goto continue
+		end
 
 		-- Determine what tint we're using
 		inputs.tint = map.tint
@@ -149,7 +151,9 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
 		local entity = data.raw[inputs.type][name]
 
 		-- Check if entity exists, if not, skip this iteration
-		if not entity then goto continue end
+		if not entity then
+			goto continue
+		end
 
 		-- Determine what tint we're using
 		inputs.tint = map.tint

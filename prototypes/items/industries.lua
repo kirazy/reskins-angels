@@ -4,7 +4,9 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.industries.items) then return end
+if not (reskins.angels and reskins.angels.triggers.industries.items) then
+	return
+end
 
 ---@type CreateIconsFromListInputs
 local inputs = {
@@ -15,7 +17,9 @@ local inputs = {
 }
 
 -- Check to see if reskinning needs to be done.
-if not mods["angelsindustries"] then return end
+if not mods["angelsindustries"] then
+	return
+end
 
 ---@param light_name LightSpriteNames
 ---@return CreateIconsFromListOverrides

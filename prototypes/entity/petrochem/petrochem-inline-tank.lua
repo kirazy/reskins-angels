@@ -4,7 +4,9 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then return end
+if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
+	return
+end
 
 -- Set input parameters
 local inputs = {
@@ -23,7 +25,9 @@ local name = "angels-storage-tank-3"
 
 ---@type data.StorageTankPrototype
 local entity = data.raw[inputs.type][name]
-if not entity then return end
+if not entity then
+	return
+end
 
 reskins.lib.setup_standard_entity(name, 0, inputs)
 

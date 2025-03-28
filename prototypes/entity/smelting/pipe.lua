@@ -4,9 +4,15 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors-pipes") == false then return end
-if not (reskins.angels and reskins.angels.triggers.smelting.entities) then return end
-if not (reskins.bobs and reskins.bobs.triggers.logistics.entities) then return end
+if reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors-pipes") == false then
+	return
+end
+if not (reskins.angels and reskins.angels.triggers.smelting.entities) then
+	return
+end
+if not (reskins.bobs and reskins.bobs.triggers.logistics.entities) then
+	return
+end
 
 -- Set trigger
 reskins.angels.triggers.smelting.pipes_use_material_colors = true

@@ -4,7 +4,9 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.refining.entities) then return end
+if not (reskins.angels and reskins.angels.triggers.refining.entities) then
+	return
+end
 
 local inputs = {
 	type = "furnace",
@@ -18,7 +20,9 @@ local inputs = {
 
 ---@type data.FurnacePrototype
 local entity = data.raw[inputs.type]["clarifier"]
-if not entity then return end
+if not entity then
+	return
+end
 
 local shadows = reskins.lib.sprites.make_4way_animation_from_spritesheet({
 	filename = "__reskins-angels__/graphics/entity/refining/clarifier/clarifier-shadow.png",

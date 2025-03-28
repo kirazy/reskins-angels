@@ -13,7 +13,9 @@ if reskins.lib.version.is_same_or_older(mods["angelspetrochem"], "0.9.19") then
 end
 
 -- angelssmelting at this version or earlier does icon work in data-final-fixes
-if reskins.lib.version.is_same_or_older(mods["angelssmelting"], "0.6.16") then require("prototypes.items.smelting") end
+if reskins.lib.version.is_same_or_older(mods["angelssmelting"], "0.6.16") then
+	require("prototypes.items.smelting")
+end
 
 ----------------------------------------------------------------------------------------------------
 -- RECIPE ADJUSTMENTS

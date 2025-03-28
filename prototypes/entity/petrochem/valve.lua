@@ -4,7 +4,9 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then return end
+if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
+	return
+end
 
 -- Set input parameters
 local inputs = {
@@ -59,7 +61,9 @@ for name, map in pairs(valves) do
 	local entity = data.raw[inputs.type][name]
 
 	-- Check if entity exists, if not, skip this iteration
-	if not entity then goto continue end
+	if not entity then
+		goto continue
+	end
 
 	-- Assign tint
 	inputs.tint = map.tint
@@ -86,7 +90,9 @@ inputs.tint = util.color("fdec2b")
 
 ---@type data.FurnacePrototype
 local entity = data.raw[inputs.type][name]
-if not entity then return end
+if not entity then
+	return
+end
 
 reskins.lib.setup_standard_entity(name, 0, inputs)
 

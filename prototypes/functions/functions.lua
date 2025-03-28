@@ -4,7 +4,9 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Add this mod to the reskins function host.
-if not reskins.angels then reskins.angels = {} end
+if not reskins.angels then
+	reskins.angels = {}
+end
 reskins.angels.directory = "__reskins-angels__"
 reskins.angels.constants = {
 	recipe_corner_shift = { -10, -10 },
@@ -18,7 +20,9 @@ local function copy_icon(destination_name, destination_type, source_name, source
 	local destination = data.raw[destination_type]
 
 	-- Validate pointers
-	if not (source and destination) then return end
+	if not (source and destination) then
+		return
+	end
 
 	-- Duplicate the icon
 	if source.icons then

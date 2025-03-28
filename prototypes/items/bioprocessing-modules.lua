@@ -8,8 +8,12 @@ if reskins.lib.settings.get_value("cp-override-modules") == false then --[[ Do n
 elseif mods["CircuitProcessing"] then
 	return
 end
-if not (reskins.bobs and reskins.bobs.triggers.modules.items) then return end
-if not (reskins.angels and reskins.angels.triggers.bioprocessing.items) then return end
+if not (reskins.bobs and reskins.bobs.triggers.modules.items) then
+	return
+end
+if not (reskins.angels and reskins.angels.triggers.bioprocessing.items) then
+	return
+end
 
 local modules_map = {
 	["angels-bio-yield"] = { "orange", true },
@@ -34,12 +38,16 @@ for class, map in pairs(modules_map) do
 	for tier = 1, 8 do
 		-- Naming convention exception handling
 		local name = class .. "-module-" .. tier
-		if tier == 1 and is_exception then name = class .. "-module" end
+		if tier == 1 and is_exception then
+			name = class .. "-module"
+		end
 
 		local entity = data.raw[inputs.type][name]
 
 		-- Check if entity exists, if not, skip this iteration
-		if not entity then goto continue end
+		if not entity then
+			goto continue
+		end
 
 		-- Setup icon path
 		inputs.icon_filename = "__reskins-bobs__/graphics/icons/modules/module/" .. color .. "/" .. color .. "_" .. tier .. ".png"

@@ -4,11 +4,15 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then return end
+if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
+	return
+end
 
 -- CHEMICAL PLANTS
 -- Flag available for Mini-Machines compatibility pass
-if reskins.compatibility then reskins.compatibility.triggers.minimachines.chemplants.angels = true end
+if reskins.compatibility then
+	reskins.compatibility.triggers.minimachines.chemplants.angels = true
+end
 
 local chemical_plants = {
 	["angels-chemical-plant"] = { tier = 1 },
@@ -26,7 +30,9 @@ if reskins.lib.version.is_same_or_newer(mods["angelspetrochem"], "0.9.18") and r
 end
 
 -- Sea Block 0.5.5 revises chemical plant recipe for earlier access, but obviated with Angel's Petrochem 0.9.23
-if reskins.lib.version.is_same_or_newer(mods["SeaBlock"], "0.5.5") and reskins.lib.version.is_older(mods["angelspetrochem"], "0.9.23") then chemical_plants["angels-chemical-plant"].prog_tier = 1 end
+if reskins.lib.version.is_same_or_newer(mods["SeaBlock"], "0.5.5") and reskins.lib.version.is_older(mods["angelspetrochem"], "0.9.23") then
+	chemical_plants["angels-chemical-plant"].prog_tier = 1
+end
 
 for name, map in pairs(chemical_plants) do
 	if reskins.lib.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites") and reskins.lib.settings.get_value("angels-disable-vanilla-chemical-plants") then

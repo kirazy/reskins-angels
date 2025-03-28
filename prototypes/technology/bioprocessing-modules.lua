@@ -8,8 +8,12 @@ if reskins.lib.settings.get_value("cp-override-modules") == false then --[[ Do n
 elseif mods["CircuitProcessing"] then
 	return
 end
-if not (reskins.bobs and reskins.bobs.triggers.modules.technologies) then return end
-if not (reskins.angels and reskins.angels.triggers.bioprocessing.technologies) then return end
+if not (reskins.bobs and reskins.bobs.triggers.modules.technologies) then
+	return
+end
+if not (reskins.angels and reskins.angels.triggers.bioprocessing.technologies) then
+	return
+end
 
 -- Modules
 local modules_map = {
@@ -33,13 +37,17 @@ for class, map in pairs(modules_map) do
 	for tier = 1, 8 do
 		-- Naming convention exception handling
 		local name = class .. "-module-" .. tier
-		if tier == 1 and map.is_exception then name = class .. "-module" end
+		if tier == 1 and map.is_exception then
+			name = class .. "-module"
+		end
 
 		-- Fetch technology
 		local technology = data.raw[inputs.type][name]
 
 		-- Check if technology exists, if not, skip this iteration
-		if not technology then goto continue end
+		if not technology then
+			goto continue
+		end
 
 		-- Setup icon path
 		inputs.technology_icon_filename = "__reskins-bobs__/graphics/technology/modules/module/" .. map.color .. "/" .. map.color .. "_" .. tier .. ".png"

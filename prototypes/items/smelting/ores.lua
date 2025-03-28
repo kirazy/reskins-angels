@@ -4,8 +4,12 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.smelting.items) then return end
-if not (mods["bobplates"] or (angelsmods and angelsmods.industries and angelsmods.industries.overhaul)) then return end
+if not (reskins.angels and reskins.angels.triggers.smelting.items) then
+	return
+end
+if not (mods["bobplates"] or (angelsmods and angelsmods.industries and angelsmods.industries.overhaul)) then
+	return
+end
 
 ---@class OreSpriteVariationsParameters
 ---@field key "angels"|"lib"
@@ -57,7 +61,9 @@ end
 
 for ore_name, parameters in pairs(ores) do
 	local item = data.raw.item[ore_name]
-	if not item then goto continue end
+	if not item then
+		goto continue
+	end
 
 	---@type data.IconData[]
 	local icon_data = { {
@@ -241,7 +247,9 @@ local slag_recipe_shifts = {
 for _, name in pairs(slag_processing_recipe_names) do
 	-- Check the recipe exists
 	local recipe = data.raw.recipe[name]
-	if not recipe then goto continue end
+	if not recipe then
+		goto continue
+	end
 
 	---@type data.ProductPrototype[]
 	local recipe_results = recipe.normal and recipe.normal.results or recipe.results
@@ -254,7 +262,9 @@ for _, name in pairs(slag_processing_recipe_names) do
 		-- Add up to three products.
 		for i, product in pairs(recipe_results) do
 			-- More than 3 products is unhandled, but also not expected in the first place.
-			if i > 3 then goto continue end
+			if i > 3 then
+				goto continue
+			end
 
 			---@type PrototypeIconSource
 			local icon_source = {

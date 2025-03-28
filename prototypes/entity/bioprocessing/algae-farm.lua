@@ -4,7 +4,9 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.bioprocessing.entities) then return end
+if not (reskins.angels and reskins.angels.triggers.bioprocessing.entities) then
+	return
+end
 
 -- Set input parameters
 local inputs = {
@@ -33,7 +35,9 @@ if reskins.lib.version.is_same_or_newer(mods["angelsbioprocessing"], "0.7.23") t
 end
 
 -- Algae farm recipes revised in Angel's Bioprocessing 0.7.18, and again in 0.7.20 with addition of Algae farm 4
-if reskins.lib.version.is_same_or_newer(mods["angelsbioprocessing"], "0.7.18") and reskins.lib.version.is_older(mods["angelsbioprocessing"], "0.7.20") then tier_map["algae-farm-3"].prog_tier = 4 end
+if reskins.lib.version.is_same_or_newer(mods["angelsbioprocessing"], "0.7.18") and reskins.lib.version.is_older(mods["angelsbioprocessing"], "0.7.20") then
+	tier_map["algae-farm-3"].prog_tier = 4
+end
 
 -- Sea Block 0.5.5 revises algae farm 3 recipe for earlier access
 if reskins.lib.version.is_same_or_newer(mods["SeaBlock"], "0.5.5") then
@@ -58,11 +62,15 @@ for name, map in pairs(tier_map) do
 	local entity = data.raw[inputs.type][name]
 
 	-- Check if entity exists, if not, skip this iteration
-	if not entity then goto continue end
+	if not entity then
+		goto continue
+	end
 
 	-- Handle tier
 	local tier = map.tier
-	if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then tier = map.prog_tier or map.tier end
+	if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
+		tier = map.prog_tier or map.tier
+	end
 
 	-- Determine what tint we're using
 	inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)

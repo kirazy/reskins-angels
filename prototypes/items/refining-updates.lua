@@ -4,7 +4,9 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.refining.items) then return end
+if not (reskins.angels and reskins.angels.triggers.refining.items) then
+	return
+end
 
 ---@type CreateIconsFromListInputs
 local inputs = {
@@ -25,7 +27,9 @@ local intermediates = {
 }
 
 -- Check if we're using Angel's material colors
-if mods["bobwarfare"] and mods["bobplates"] and reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") then intermediates["heavy-armor-2"] = { type = "armor", group = "smelting", subgroup = "armor" } end
+if mods["bobwarfare"] and mods["bobplates"] and reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") then
+	intermediates["heavy-armor-2"] = { type = "armor", group = "smelting", subgroup = "armor" }
+end
 
 reskins.internal.create_icons_from_list(intermediates, inputs)
 

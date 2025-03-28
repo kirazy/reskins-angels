@@ -4,7 +4,9 @@
 -- See LICENSE.md in the project directory for license information.
 
 -- Check to see if reskinning needs to be done.
-if not (reskins.angels and reskins.angels.triggers.smelting.items) then return end
+if not (reskins.angels and reskins.angels.triggers.smelting.items) then
+	return
+end
 
 ---@type CreateIconsFromListInputs
 local inputs = {
@@ -555,7 +557,9 @@ if reskins.lib.settings.get_value("reskins-angels-use-item-variations") then
 
 	for _, ingot in pairs(ingot_variations) do
 		local item = data.raw.item["ingot-" .. ingot]
-		if not item then goto continue end
+		if not item then
+			goto continue
+		end
 
 		-- Setup initial pictures table with primary icon
 		item.pictures = {
@@ -645,7 +649,9 @@ local recipes = {
 
 for _, name in pairs(recipes) do
 	local recipe = data.raw.recipe[name]
-	if not recipe then goto continue end
+	if not recipe then
+		goto continue
+	end
 
 	recipe.icon = nil
 	recipe.icons = nil

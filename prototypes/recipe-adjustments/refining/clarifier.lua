@@ -85,6 +85,8 @@ for _, recipe_data in pairs(data.raw.recipe) do
 	if recipe_data.category == "angels-water-void" then
 		local ingredient = data.raw.fluid[(recipe_data.ingredients and recipe_data.ingredients[1]) and recipe_data.ingredients[1].name]
 
-		if ingredient then recipe_data.crafting_machine_tint = { primary = ingredient.base_color } end
+		if ingredient then
+			recipe_data.crafting_machine_tint = { primary = ingredient.base_color }
+		end
 	end
 end
