@@ -28,8 +28,3 @@ require("prototypes.recipe-adjustments.refining.ore-flotation-cell")
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------
 -- require("prototypes.technology.smelting-final-fixes")
-
-----------------------------------------------------------------------------------------------------
--- COMPATIBILITY
-----------------------------------------------------------------------------------------------------
-require("prototypes.compatibility.bobselectronics")
