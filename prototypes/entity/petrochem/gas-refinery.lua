@@ -30,19 +30,11 @@ local tier_map = {
 for name, map in pairs(tier_map) do
 	---@type data.AssemblingMachinePrototype
 	local entity = data.raw[inputs.type][name]
-
-	-- Check if entity exists, if not, skip this iteration
 	if not entity then
 		goto continue
 	end
 
-	-- Handle tier
-	local tier = map.tier
-	if reskins.lib.settings.get_value("reskins-lib-tier-mapping") == "progression-map" then
-		tier = map.prog_tier or map.tier
-	end
-
-	-- Determine what tint we're using
+	local tier = reskins.lib.tiers.get_tier(map)
 	inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
 
 	reskins.lib.setup_standard_entity(name, tier, inputs)
@@ -92,6 +84,5 @@ for name, map in pairs(tier_map) do
 		},
 	})
 
-	-- Label to skip to next iteration
 	::continue::
 end

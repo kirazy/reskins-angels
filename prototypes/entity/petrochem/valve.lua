@@ -59,8 +59,6 @@ end
 for name, map in pairs(valves) do
 	---@type data.FurnacePrototype|data.StorageTankPrototype
 	local entity = data.raw[inputs.type][name]
-
-	-- Check if entity exists, if not, skip this iteration
 	if not entity then
 		goto continue
 	end
@@ -79,7 +77,6 @@ for name, map in pairs(valves) do
 	-- Add pipe overs
 	entity.fluid_box.pipe_covers = pipecoverspictures()
 
-	-- Label to skip to next iteration
 	::continue::
 end
 

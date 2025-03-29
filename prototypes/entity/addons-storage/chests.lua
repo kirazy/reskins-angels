@@ -19,8 +19,6 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 
 	---@type data.ContainerPrototype
 	local entity = data.raw[inputs.type][name]
-
-	-- Check if entity exists, if not, skip this iteration
 	if entity then
 		inputs.group = "addons-storage"
 		inputs.icon_name = "warehouse"
@@ -101,8 +99,6 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
 
 	---@type data.ContainerPrototype
 	local entity = data.raw[inputs.type][name]
-
-	-- Check if entity exists, if not, skip this iteration
 	if entity then
 		inputs.group = "addons-storage"
 		inputs.icon_name = "big-chest"

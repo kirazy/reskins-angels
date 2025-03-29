@@ -33,7 +33,6 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 			goto continue
 		end
 
-		-- Determine what tint we're using
 		inputs.tint = map.tint
 
 		inputs.group = "addons-storage"
@@ -96,7 +95,6 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 	--         -- Check if entity exists, if not, skip this iteration
 	--         if not entity then goto continue end
 
-	--         -- Determine what tint we're using
 	--         inputs.tint = map.tint
 
 	--         inputs.icon_name = "warehouse"
@@ -155,7 +153,6 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
 			goto continue
 		end
 
-		-- Determine what tint we're using
 		inputs.tint = map.tint
 
 		inputs.group = "addons-storage"
