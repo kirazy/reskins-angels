@@ -23,14 +23,8 @@ local tier_map = {
 	["hydro-plant"] = { tier = 1 },
 	["hydro-plant-2"] = { tier = 2 },
 	["hydro-plant-3"] = { tier = 3 },
-
-	-- Extended Angels
-	["hydro-plant-4"] = { tier = 4, prog_tier = 5 },
+	["hydro-plant-4"] = { tier = 4 }, -- Extended Angels
 }
-
-if reskins.lib.version.is_same_or_newer(mods["extendedangels"], "0.5.10") then
-	tier_map["hydro-plant-4"].prog_tier = nil
-end
 
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do

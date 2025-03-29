@@ -20,15 +20,10 @@ local inputs = {
 }
 
 local tier_map = {
-	["electro-whinning-cell"] = { tier = 1, prog_tier = 3 },
-	["electro-whinning-cell-2"] = { tier = 2, prog_tier = 4 },
-	["electro-whinning-cell-3"] = { tier = 3, prog_tier = 5 },
+	["electro-whinning-cell"] = { tier = 1, prog_tier = 4 },
+	["electro-whinning-cell-2"] = { tier = 2, prog_tier = 5 },
+	["electro-whinning-cell-3"] = { tier = 3, prog_tier = 6 }, -- FIXME: This may no longer exist.
 }
-
-if reskins.lib.version.is_same_or_newer(mods["angelsrefining"], "0.12.5") then
-	tier_map["electro-whinning-cell"].prog_tier = 4
-	tier_map["electro-whinning-cell-2"].prog_tier = 5
-end
 
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do

@@ -20,19 +20,11 @@ local inputs = {
 }
 
 local tier_map = {
-	["ore-processing-machine"] = { tier = 1 },
-	["ore-processing-machine-2"] = { tier = 2 },
-	["ore-processing-machine-3"] = { tier = 3 },
-	["ore-processing-machine-4"] = { tier = 4 },
+	["ore-processing-machine"] = { tier = 1, prog_tier = 2 },
+	["ore-processing-machine-2"] = { tier = 2, prog_tier = 3 },
+	["ore-processing-machine-3"] = { tier = 3, prog_tier = 4 },
+	["ore-processing-machine-4"] = { tier = 4, prog_tier = 5 },
 }
-
--- Support rework of Angel's Smelting ingredient tiers
-if reskins.lib.version.is_same_or_newer(mods["angelssmelting"], "0.6.20") then
-	tier_map["ore-processing-machine"].prog_tier = 2
-	tier_map["ore-processing-machine-2"].prog_tier = 3
-	tier_map["ore-processing-machine-3"].prog_tier = 4
-	tier_map["ore-processing-machine-4"].prog_tier = 5
-end
 
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do

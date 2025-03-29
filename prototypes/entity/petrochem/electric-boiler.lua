@@ -20,17 +20,10 @@ local inputs = {
 }
 
 local tier_map = {
-	["angels-electric-boiler"] = { tier = 1 },
-	["angels-electric-boiler-2"] = { tier = 2 },
-	["angels-electric-boiler-3"] = { tier = 3 },
+	["angels-electric-boiler"] = { tier = 1, prog_tier = 2 },
+	["angels-electric-boiler-2"] = { tier = 2, prog_tier = 3 },
+	["angels-electric-boiler-3"] = { tier = 3, prog_tier = 5 },
 }
-
--- Electric boiler recipes revised in Angel's Petrochem 0.9.18
-if reskins.lib.version.is_same_or_newer(mods["angelspetrochem"], "0.9.18") then
-	tier_map["angels-electric-boiler"].prog_tier = 2
-	tier_map["angels-electric-boiler-2"].prog_tier = 3
-	tier_map["angels-electric-boiler-3"].prog_tier = 5
-end
 
 local working_lights = reskins.lib.sprites.make_4way_animation_from_spritesheet({
 	filename = "__reskins-angels__/graphics/entity/petrochem/electric-boiler/electric-boiler-working-lights.png",

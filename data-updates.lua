@@ -19,17 +19,9 @@ require("prototypes.entity.refining.liquefier")
 ----------------------------------------------------------------------------------------------------
 require("prototypes.items.refining-updates")
 require("prototypes.items.smelting.ores")
-
--- angelspetrochem at this version or earlier do icon work in data-final-fixes
-if reskins.lib.version.is_newer(mods["angelspetrochem"], "0.9.19") then
-	require("prototypes.items.petrochem")
-	require("prototypes.items.petrochem.sulfur")
-end
-
--- angelssmelting at this version or earlier does icon work in data-final-fixes
-if reskins.lib.version.is_newer(mods["angelssmelting"], "0.6.16") then
-	require("prototypes.items.smelting-updates")
-end
+require("prototypes.items.petrochem")
+require("prototypes.items.petrochem.sulfur")
+require("prototypes.items.smelting-updates")
 
 -- Second pass
 require("prototypes.items.refining-secondary-updates")
