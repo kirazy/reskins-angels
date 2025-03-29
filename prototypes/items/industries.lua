@@ -45,13 +45,14 @@ local function get_isotope_overrides(name)
 		make_icon_pictures = true,
 		icon_picture_extras = {
 			{
-				draw_as_light = true,
-				blend_mode = "additive",
-				size = 64,
 				filename = "__reskins-angels__/graphics/icons/industries/nuclear/" .. name .. ".png",
-				scale = 0.5,
+				flags = { "icon" },
+				size = 64,
 				tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
 				mipmap_count = 4,
+				draw_as_light = true,
+				blend_mode = "additive",
+				scale = 0.5,
 			},
 		},
 	}
