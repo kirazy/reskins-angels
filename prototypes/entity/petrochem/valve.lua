@@ -21,10 +21,10 @@ local inputs = {
 }
 
 local valves = {
-	["valve-inspector"] = { tint = util.color("8dd24e") },
-	["valve-overflow"] = { tint = util.color("689ed3") },
-	["valve-return"] = { tint = util.color("d4933f") },
-	["valve-underflow"] = { tint = util.color("fcfcfc") },
+	["valve-inspector"] = { tint = util.color("#8dd24e") },
+	["valve-overflow"] = { tint = util.color("#689ed3") },
+	["valve-return"] = { tint = util.color("#d4933f") },
+	["valve-underflow"] = { tint = util.color("#fcfcfc") },
 }
 
 local function cardinal_pictures(x, tint)
@@ -83,7 +83,7 @@ end
 -- Setup for one-off converter valve
 local name = "valve-converter"
 inputs.type = "furnace"
-inputs.tint = util.color("fdec2b")
+inputs.tint = util.color("#fdec2b")
 
 ---@type data.FurnacePrototype
 local entity = data.raw[inputs.type][name]

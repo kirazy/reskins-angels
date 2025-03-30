@@ -74,10 +74,10 @@ end
 
 ---@type { [PipeNamePrefix]: PipeReskinParams }
 local pipe_material_map = {
-	["titanium"] = { material_type = "angels-titanium", tier = 4, tint = util.color("995f92") },
-	["ceramic"] = { material_type = "angels-ceramic", tier = 4, tint = util.color("ffffff") },
-	["tungsten"] = { material_type = "angels-tungsten", tier = 4, tint = util.color("7e5f45") },
-	["nitinol"] = { material_type = "angels-nitinol", tier = 5, tint = util.color("7664a9") },
+	["titanium"] = { material_type = "angels-titanium", tier = 4, tint = util.color("#995f92") },
+	["ceramic"] = { material_type = "angels-ceramic", tier = 4, tint = util.color("#ffffff") },
+	["tungsten"] = { material_type = "angels-tungsten", tier = 4, tint = util.color("#7e5f45") },
+	["nitinol"] = { material_type = "angels-nitinol", tier = 5, tint = util.color("#7664a9") },
 }
 
 -- Reskin pipes, create and assign extra details

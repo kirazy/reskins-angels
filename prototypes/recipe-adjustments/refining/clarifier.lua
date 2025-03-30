@@ -3,12 +3,12 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
-local water_tint = util.color("005799") -- Water void recipe tint for water
-local mud_tint = util.color("6a492c") -- AR:Angel's tint for mud
+local water_tint = util.color("#005799") -- Water void recipe tint for water
+local mud_tint = util.color("#6a492c") -- AR:Angel's tint for mud
 
 -- Ensure a tint is formatted as expected by reskins.lib functions
----@param color table [Types/Color](https://wiki.factorio.com/Types/Color)
----@return table tint [Types/Color](https://wiki.factorio.com/Types/Color) with fields r, g, b, a
+---@param color data.Color
+---@return data.Color
 local function format_tint(color)
 	local tint = {
 		r = color.r or color[1],
@@ -21,11 +21,11 @@ local function format_tint(color)
 end
 
 -- Takes two input tints and blends them in the following manner: `A*w + B*(1-w)`
----@param tint_A table [Types/Color](https://wiki.factorio.com/Types/Color)
----@param tint_B table [Types/Color](https://wiki.factorio.com/Types/Color)
----@param weighting? number In the range 0:1, default 0.5
----@param alpha? number In the range 0:1, default 1
----@return table tint [Types/Color](https://wiki.factorio.com/Types/Color)
+---@param tint_A data.Color
+---@param tint_B data.Color
+---@param weighting? number # In the range 0:1, default 0.5
+---@param alpha? number # In the range 0:1, default 1
+---@return data.Color
 local function blend_colors(tint_A, tint_B, weighting, alpha)
 	local A = format_tint(tint_A)
 	local B = format_tint(tint_B)
@@ -74,7 +74,7 @@ end
 --                 end
 --             end
 
---             -- Fix the localisation, hnng...
+--             -- Fix the localisation...
 --             -- recipe_data.localised_name = {"", ingredient.localised_name, " void"}
 --         end
 --     end

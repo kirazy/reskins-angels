@@ -20,7 +20,7 @@ local inputs = {
 }
 
 local tier_map = {
-	["burner-ore-crusher"] = { tier = 0, tint = util.color("262626"), is_burner = true },
+	["burner-ore-crusher"] = { tier = 0, tint = util.color("#262626"), is_burner = true },
 	["ore-crusher"] = { tier = 1 },
 	["ore-crusher-2"] = { tier = 2 },
 	["ore-crusher-3"] = { tier = 3 },

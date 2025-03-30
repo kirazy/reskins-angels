@@ -15,7 +15,7 @@ local inputs = {
 	base_entity_name = "storage-tank",
 	mod = "angels",
 	group = "petrochem",
-	tint = util.color("c20600"), -- Red
+	tint = util.color("#c20600"), -- Red
 	icon_layers = 1,
 	particles = { ["big"] = 1 },
 	make_remnants = false,

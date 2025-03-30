@@ -7,7 +7,7 @@
 local inputs = {
 	type = "container",
 	mod = "angels",
-	tint = util.color("403630"),
+	tint = util.color("#403630"),
 	icon_layers = 1,
 	make_remnants = false,
 	-- make_explosions = false,

@@ -15,7 +15,7 @@ reskins.angels.constants = {
 
 -- Maybe we'll use this one day?...
 local function copy_icon(destination_name, destination_type, source_name, source_type)
-	-- Fetch source and desination pointers
+	-- Fetch source and destination pointers
 	local source = data.raw[source_type]
 	local destination = data.raw[destination_type]
 
@@ -39,18 +39,18 @@ end
 
 -- Check to see if the new angels numbering function is available.
 local function check_add_number_icon_layer_is_available()
-	return angelsmods and angelsmods.functions.add_number_icon_layer({}, 1, util.get_color_with_alpha(util.color("000000"), 1))
+	return angelsmods and angelsmods.functions.add_number_icon_layer({}, 1, util.get_color_with_alpha(util.color("#000000"), 1))
 end
 
 local number_function_is_valid = pcall(check_add_number_icon_layer_is_available)
 
 ---comment
 ---@param tier integer
----@param mod string # The key to a specific Angel's mod subtable in the `angelsmods` global, e.g. `"smelting"`.
+---@param mod string # The key to a specific Angel's mod sub table in the `angelsmods` global, e.g. `"smelting"`.
 ---@return data.IconData[]
 function reskins.angels.num_tier(tier, mod)
 	-- Get the tint for the given mod; fallback to black if necessary
-	local tint = angelsmods and angelsmods[mod] and angelsmods[mod].number_tint or util.color("000000")
+	local tint = angelsmods and angelsmods[mod] and angelsmods[mod].number_tint or util.color("#000000")
 
 	local icons
 	if number_function_is_valid then

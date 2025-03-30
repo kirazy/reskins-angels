@@ -69,7 +69,6 @@ for ore_name, parameters in pairs(ores) do
 	local icon_data = { {
 		icon = reskins[parameters.key].directory .. "/graphics/icons/" .. parameters.subfolder .. "/" .. ore_name .. "/" .. ore_name .. ".png",
 		icon_size = 64,
-		icon_miumaps = 4,
 		scale = 0.5,
 	} }
 
@@ -98,22 +97,22 @@ local function make_slag_processing_icon_base()
 		{
 			icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-base.png",
 			icon_size = 600,
-			tint = util.color("404040b2"),
+			tint = util.color("#404040b2"),
 		},
 		{
 			icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-top.png",
 			icon_size = 600,
-			tint = util.color("ca6311"),
+			tint = util.color("#ca6311"),
 		},
 		{
 			icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-mid.png",
 			icon_size = 600,
-			tint = util.color("613414"),
+			tint = util.color("#613414"),
 		},
 		{
 			icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-recipe-bot.png",
 			icon_size = 600,
-			tint = util.color("613414"),
+			tint = util.color("#613414"),
 		},
 	}
 end

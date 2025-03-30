@@ -13,11 +13,11 @@ local inputs = {
 }
 
 local logistic_map = {
-	["active-provider"] = { tint = util.color("760fd6") },
-	["buffer"] = { tint = util.color("00bf13") },
-	["passive-provider"] = { tint = util.color("ff0000") },
-	["requester"] = { tint = util.color("227dae") },
-	["storage"] = { tint = util.color("ba7713") },
+	["active-provider"] = { tint = util.color("#760fd6") },
+	["buffer"] = { tint = util.color("#00bf13") },
+	["passive-provider"] = { tint = util.color("#ff0000") },
+	["requester"] = { tint = util.color("#227dae") },
+	["storage"] = { tint = util.color("#ba7713") },
 }
 
 -- Reskin Warehouses
