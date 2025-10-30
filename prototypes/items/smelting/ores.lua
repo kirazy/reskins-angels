@@ -127,98 +127,98 @@ local recipe_icon_source_map = {
 	-- Ore Sorting Machine Recipes
 
 	-- Lead
-	["angelsore-crushed-mix3-processing"] = {
+	["angels-ore-crushed-mix3-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-lead-ore", type_name = "item", shift = shift, scale = scale },
 	},
 	-- Tin
-	["angelsore-crushed-mix4-processing"] = {
+	["angels-ore-crushed-mix4-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-tin-ore", type_name = "item", shift = shift, scale = scale },
 	},
 	-- Silicon
-	["angelsore-chunk-mix1-processing"] = {
+	["angels-ore-chunk-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-quartz", type_name = "item", shift = shift, scale = scale },
 		{ name = "bob-quartz", type_name = "item", shift = shift, scale = scale },
 	},
 	-- Nickel
-	["angelsore-chunk-mix2-processing"] = {
+	["angels-ore-chunk-mix2-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-nickel-ore", type_name = "item", shift = shift, scale = scale },
 	},
 	-- Aluminium
-	["angelsore-chunk-mix3-processing"] = {
+	["angels-ore-chunk-mix3-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-bauxite-ore", type_name = "item", shift = shift, scale = scale },
 	},
 	-- Zinc
-	["angelsore-chunk-mix4-processing"] = {
+	["angels-ore-chunk-mix4-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-zinc-ore", type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- -- Fluorite
-	-- ["angelsore-chunk-mix5-processing"]   = {
+	-- ["angels-ore-chunk-mix5-processing"]   = {
 	--     { icon_datum = make_sorting_icon_base() },
 	--     { name = "fluorite-ore", type_name = "item", shift = shift, scale = scale },
 	-- },
 	-- -- Manganese?
-	-- ["angelsore-chunk-mix6-processing"]   = {
+	-- ["angels-ore-chunk-mix6-processing"]   = {
 	--     { icon_datum = make_sorting_icon_base() },
 	--     { name = "manganese-ore", type_name = "item", shift = shift, scale = scale },
 	-- },
 
 	-- Titanium
-	["angelsore-crystal-mix1-processing"] = {
+	["angels-ore-crystal-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-rutile-ore", type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Gold
-	["angelsore-crystal-mix2-processing"] = {
+	["angels-ore-crystal-mix2-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-gold-ore", type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Cobalt
-	["angelsore-crystal-mix3-processing"] = {
+	["angels-ore-crystal-mix3-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-cobalt-ore", type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Silver
-	["angelsore-crystal-mix4-processing"] = {
+	["angels-ore-crystal-mix4-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-silver-ore", type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Uranium
-	["angelsore-crystal-mix5-processing"] = {
+	["angels-ore-crystal-mix5-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "uranium-ore", type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Thorium
-	["angelsore-crystal-mix6-processing"] = {
+	["angels-ore-crystal-mix6-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-thorium-ore", type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Tungsten
-	["angelsore-pure-mix1-processing"] = {
+	["angels-ore-pure-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
 		{ name = "bob-tungsten-ore", type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- -- Platinum
-	-- ["angelsore-pure-mix2-processing"]    = {
+	-- ["angels-ore-pure-mix2-processing"]    = {
 	--     { icon_datum = make_sorting_icon_base() },
 	--     { name = "platinum-ore", type_name = "item", shift = shift, scale = scale },
 	-- },
 
 	-- -- Chrome?
-	-- ["angelsore-pure-mix3-processing"]    = {
+	-- ["angels-ore-pure-mix3-processing"]    = {
 	--     { icon_datum = make_sorting_icon_base() },
 	--     { name = "chrome-ore", type_name = "item", shift = shift, scale = scale },
 	-- },
@@ -226,14 +226,14 @@ local recipe_icon_source_map = {
 
 -- Build Crystalizer slag processing recipes
 local slag_processing_recipe_names = {
-	"slag-processing-2",
-	"slag-processing-3",
-	"slag-processing-4",
-	"slag-processing-5",
-	"slag-processing-6",
-	"slag-processing-7",
-	"slag-processing-8",
-	"slag-processing-9",
+	"angels-slag-processing-2",
+	"angels-slag-processing-3",
+	"angels-slag-processing-4",
+	"angels-slag-processing-5",
+	"angels-slag-processing-6",
+	"angels-slag-processing-7",
+	"angels-slag-processing-8",
+	"angels-slag-processing-9",
 }
 
 ---@type data.Vector[]

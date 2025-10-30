@@ -29,6 +29,7 @@ if angelsmods.trigger.early_chemical_furnace then
 	}
 else
 	tier_map = {
+		["angels-chemical-furnace"] = { tier = 0, prog_tier = 2, defer_to_data_updates = true },
 		["angels-chemical-furnace-2"] = { tier = 1, prog_tier = 3, defer_to_data_updates = true },
 		["angels-chemical-furnace-3"] = { tier = 2, prog_tier = 4, defer_to_data_updates = true },
 		["angels-chemical-furnace-4"] = { tier = 3, prog_tier = 5, defer_to_data_updates = true },

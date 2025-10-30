@@ -20,10 +20,10 @@ local inputs = {
 }
 
 local tier_map = {
-	["separator"] = { tier = 1, prog_tier = 2 },
-	["separator-2"] = { tier = 2, prog_tier = 3 },
-	["separator-3"] = { tier = 3, prog_tier = 4 },
-	["separator-4"] = { tier = 4, prog_tier = 5 },
+	["angels-separator"] = { tier = 1, prog_tier = 2 },
+	["angels-separator-2"] = { tier = 2, prog_tier = 3 },
+	["angels-separator-3"] = { tier = 3, prog_tier = 4 },
+	["angels-separator-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details

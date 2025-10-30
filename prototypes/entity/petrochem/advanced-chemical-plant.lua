@@ -20,11 +20,11 @@ local inputs = {
 }
 
 local tier_map = {
-	["advanced-chemical-plant"] = { tier = 1, prog_tier = 2 },
-	["advanced-chemical-plant-2"] = { tier = 2, prog_tier = 4 },
+	["angels-advanced-chemical-plant"] = { tier = 1, prog_tier = 2 },
+	["angels-advanced-chemical-plant-2"] = { tier = 2, prog_tier = 4 },
 
 	-- Extended Angels
-	["advanced-chemical-plant-3"] = { tier = 3, prog_tier = 5 },
+	["angels-advanced-chemical-plant-3"] = { tier = 3, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details

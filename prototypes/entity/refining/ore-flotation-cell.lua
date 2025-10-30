@@ -20,12 +20,12 @@ local inputs = {
 }
 
 local tier_map = {
-	["ore-floatation-cell"] = { tier = 1, prog_tier = 2 },
-	["ore-floatation-cell-2"] = { tier = 2, prog_tier = 3 },
-	["ore-floatation-cell-3"] = { tier = 3, prog_tier = 4 },
+	["angels-ore-floatation-cell"] = { tier = 1, prog_tier = 2 },
+	["angels-ore-floatation-cell-2"] = { tier = 2, prog_tier = 3 },
+	["angels-ore-floatation-cell-3"] = { tier = 3, prog_tier = 4 },
 
 	-- Extended Angels
-	["ore-floatation-cell-4"] = { tier = 4, prog_tier = 5 },
+	["angels-ore-floatation-cell-4"] = { tier = 4, prog_tier = 5 },
 }
 
 local function return_pipe_overlay(direction)

@@ -21,10 +21,10 @@ local inputs = {
 }
 
 local valves = {
-	["valve-inspector"] = { tint = util.color("#8dd24e") },
-	["valve-overflow"] = { tint = util.color("#689ed3") },
-	["valve-return"] = { tint = util.color("#d4933f") },
-	["valve-underflow"] = { tint = util.color("#fcfcfc") },
+	["angels-valve-inspector"] = { tint = util.color("#8dd24e") },
+	["angels-valve-overflow"] = { tint = util.color("#689ed3") },
+	["angels-valve-return"] = { tint = util.color("#d4933f") },
+	["angels-valve-underflow"] = { tint = util.color("#fcfcfc") },
 }
 
 local function cardinal_pictures(x, tint)

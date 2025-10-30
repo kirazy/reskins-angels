@@ -20,9 +20,9 @@ local inputs = {
 }
 
 local tier_map = {
-	["electro-whinning-cell"] = { tier = 1, prog_tier = 4 },
-	["electro-whinning-cell-2"] = { tier = 2, prog_tier = 5 },
-	["electro-whinning-cell-3"] = { tier = 3, prog_tier = 6 }, -- FIXME: This may no longer exist.
+	["angels-electro-whinning-cell"] = { tier = 1, prog_tier = 4 },
+	["angels-electro-whinning-cell-2"] = { tier = 2, prog_tier = 5 },
+	["angels-electro-whinning-cell-3"] = { tier = 3, prog_tier = 6 }, -- FIXME: This may no longer exist.
 }
 
 -- Reskin entities, create and assign extra details

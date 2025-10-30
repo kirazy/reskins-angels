@@ -20,12 +20,12 @@ local inputs = {
 }
 
 local tier_map = {
-	["ore-leaching-plant"] = { tier = 1, prog_tier = 3 },
-	["ore-leaching-plant-2"] = { tier = 2, prog_tier = 4 },
-	["ore-leaching-plant-3"] = { tier = 3, prog_tier = 5 },
+	["angels-ore-leaching-plant"] = { tier = 1, prog_tier = 3 },
+	["angels-ore-leaching-plant-2"] = { tier = 2, prog_tier = 4 },
+	["angels-ore-leaching-plant-3"] = { tier = 3, prog_tier = 5 },
 
 	-- Extended Angels
-	["ore-leaching-plant-4"] = { tier = 4, prog_tier = 6 },
+	["angels-ore-leaching-plant-4"] = { tier = 4, prog_tier = 6 },
 }
 
 -- Reskin entities, create and assign extra details

@@ -31,13 +31,13 @@ reskins.internal.create_icons_from_list(intermediates, inputs)
 ---@type { [string]: IconSources }
 local recipe_icon_source_map = {
 	-- Lead plates
-	["angelsore5-crushed-smelting"] = {
+	["angels-ore5-crushed-smelting"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-lead-plate", "angels-plate-lead"), type_name = "item" },
 		{ name = "angels-ore5-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed rubyte
 	},
 
 	-- Tin plates
-	["angelsore6-crushed-smelting"] = {
+	["angels-ore6-crushed-smelting"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-tin-plate", "angels-plate-tin"), type_name = "item" },
 		{ name = "angels-ore6-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed bobmonium
 	},

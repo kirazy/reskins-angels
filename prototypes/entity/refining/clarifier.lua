@@ -19,7 +19,7 @@ local inputs = {
 }
 
 ---@type data.FurnacePrototype
-local entity = data.raw[inputs.type]["clarifier"]
+local entity = data.raw[inputs.type]["angels-clarifier"]
 if not entity then
 	return
 end

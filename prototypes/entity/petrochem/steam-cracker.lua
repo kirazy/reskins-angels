@@ -20,10 +20,10 @@ local inputs = {
 }
 
 local tier_map = {
-	["steam-cracker"] = { tier = 1, prog_tier = 2 },
-	["steam-cracker-2"] = { tier = 2, prog_tier = 3 },
-	["steam-cracker-3"] = { tier = 3, prog_tier = 4 },
-	["steam-cracker-4"] = { tier = 4, prog_tier = 5 },
+	["angels-steam-cracker"] = { tier = 1, prog_tier = 2 },
+	["angels-steam-cracker-2"] = { tier = 2, prog_tier = 3 },
+	["angels-steam-cracker-3"] = { tier = 3, prog_tier = 4 },
+	["angels-steam-cracker-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details

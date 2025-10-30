@@ -20,17 +20,17 @@ local inputs = {
 }
 
 local tier_map = {
-	["filtration-unit"] = { tier = 1, prog_tier = 2 },
-	["filtration-unit-2"] = { tier = 2, prog_tier = 3 },
-	["filtration-unit-3"] = { tier = 3, prog_tier = 4 },
+	["angels-filtration-unit"] = { tier = 1, prog_tier = 2 },
+	["angels-filtration-unit-2"] = { tier = 2, prog_tier = 3 },
+	["angels-filtration-unit-3"] = { tier = 3, prog_tier = 4 },
 
 	-- Extended Angels
-	["filtration-unit-4"] = { tier = 4, prog_tier = 5 },
+	["angels-filtration-unit-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Sea Block compatibility
 if mods["SeaBlock"] then
-	tier_map["filtration-unit"].prog_tier = 1
+	tier_map["angels-filtration-unit"].prog_tier = 1
 end
 
 -- Reskin entities, create and assign extra details

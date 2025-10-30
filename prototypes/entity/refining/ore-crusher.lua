@@ -20,13 +20,13 @@ local inputs = {
 }
 
 local tier_map = {
-	["burner-ore-crusher"] = { tier = 0, tint = util.color("#262626"), is_burner = true },
-	["ore-crusher"] = { tier = 1 },
-	["ore-crusher-2"] = { tier = 2 },
-	["ore-crusher-3"] = { tier = 3 },
+	["angels-burner-ore-crusher"] = { tier = 0, tint = util.color("#262626"), is_burner = true },
+	["angels-ore-crusher"] = { tier = 1 },
+	["angels-ore-crusher-2"] = { tier = 2 },
+	["angels-ore-crusher-3"] = { tier = 3 },
 
 	-- Extended Angels
-	["ore-crusher-4"] = { tier = 4, defer_to_data_updates = true },
+	["angels-ore-crusher-4"] = { tier = 4, defer_to_data_updates = true },
 }
 
 -- Reskin entities, create and assign extra details

@@ -22,7 +22,7 @@ local intermediates = {
 	-- Intermediates
 	----------------------------------------------------------------------------------------------------
 	-- Miscellaneous
-	["pellet-coke"] = { subgroup = "intermediates" },
+	["angels-pellet-coke"] = { subgroup = "intermediates", image = "pellet-coke" },
 
 	----------------------------------------------------------------------------------------------------
 	-- Recipes

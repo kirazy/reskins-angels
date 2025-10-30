@@ -28,7 +28,7 @@ if not mods["angelssmelting"] then
 	---@type { [string]: IconSources }
 	local recipe_icon_source_map = {
 		-- Lead plates
-		["angelsore5-crushed-smelting"] = {
+		["angels-ore5-crushed-smelting"] = {
 			{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-lead-plate", "angels-plate-lead"), type_name = "item" },
 			{
 				name = "angels-ore5-crushed",
@@ -39,7 +39,7 @@ if not mods["angelssmelting"] then
 		},
 
 		-- Tin plates
-		["angelsore6-crushed-smelting"] = {
+		["angels-ore6-crushed-smelting"] = {
 			{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-tin-plate", "angels-plate-tin"), type_name = "item" },
 			{
 				name = "angels-ore6-crushed",
@@ -214,9 +214,9 @@ local recipe_icon_source_map = {
 	-- Aluminium
 	["angels-plate-aluminium"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-aluminium-plate", "angels-plate-aluminium"), type_name = "item" },
-		{ name = "liquid-molten-aluminium", type_name = "fluid", scale = scale, shift = shift }, -- Molten aluminium
+		{ name = "angels-liquid-molten-aluminium", type_name = "fluid", scale = scale, shift = shift }, -- Molten aluminium
 	},
-	["angels-roll-aluminium-converting"] = {
+	["angels-plate-aluminium-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-aluminium-plate", "angels-plate-aluminium"), type_name = "item" },
 		{ name = "angels-roll-aluminium", type_name = "item", scale = scale, shift = shift }, -- Aluminium sheet coil
 	},
@@ -224,9 +224,9 @@ local recipe_icon_source_map = {
 	-- Chrome
 	["angels-plate-chrome"] = {
 		{ name = "angels-plate-chrome", type_name = "item" },
-		{ name = "liquid-molten-chrome", type_name = "fluid", scale = scale, shift = shift }, -- Molten chrome
+		{ name = "angels-liquid-molten-chrome", type_name = "fluid", scale = scale, shift = shift }, -- Molten chrome
 	},
-	["angels-roll-chrome-converting"] = {
+	["angels-plate-chrome-2"] = {
 		{ name = "angels-plate-chrome", type_name = "item" },
 		{ name = "angels-roll-chrome", type_name = "item", scale = scale, shift = shift }, -- Chrome sheet coil
 	},
@@ -234,15 +234,15 @@ local recipe_icon_source_map = {
 	-- Cobalt
 	["angels-plate-cobalt"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("cobalt-plate", "angels-plate-cobalt"), type_name = "item" },
-		{ name = "liquid-molten-cobalt", type_name = "fluid", scale = scale, shift = shift }, -- Molten cobalt
+		{ name = "angels-liquid-molten-cobalt", type_name = "fluid", scale = scale, shift = shift }, -- Molten cobalt
 	},
-	["angels-roll-cobalt-converting"] = {
+	["angels-plate-cobalt-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("cobalt-plate", "angels-plate-cobalt"), type_name = "item" },
 		{ name = "angels-roll-cobalt", type_name = "item", scale = scale, shift = shift }, -- Cobalt sheet coil
 	},
 
 	-- Copper
-	["angelsore3-crushed-smelting"] = {
+	["angels-ore3-crushed-smelting"] = {
 		{ name = "copper-plate", type_name = "item" },
 		{ name = "angels-ore3-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed stiratite
 	},
@@ -252,9 +252,9 @@ local recipe_icon_source_map = {
 	},
 	["angels-plate-copper"] = {
 		{ name = "copper-plate", type_name = "item" },
-		{ name = "liquid-molten-copper", type_name = "fluid", scale = scale, shift = shift }, -- Molten copper
+		{ name = "angels-liquid-molten-copper", type_name = "fluid", scale = scale, shift = shift }, -- Molten copper
 	},
-	["angels-roll-copper-converting"] = {
+	["angels-plate-copper-2"] = {
 		{ name = "copper-plate", type_name = "item" },
 		{ name = "angels-roll-copper", type_name = "item", scale = scale, shift = shift }, -- Copper sheet coil
 	},
@@ -276,9 +276,9 @@ local recipe_icon_source_map = {
 	-- Gold
 	["angels-plate-gold"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-gold-plate", "angels-plate-gold"), type_name = "item" },
-		{ name = "liquid-molten-gold", type_name = "fluid", scale = scale, shift = shift }, -- Molten gold
+		{ name = "angels-liquid-molten-gold", type_name = "fluid", scale = scale, shift = shift }, -- Molten gold
 	},
-	["angels-roll-gold-converting"] = {
+	["angels-plate-gold-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-gold-plate", "angels-plate-gold"), type_name = "item" },
 		{ name = "angels-roll-gold", type_name = "item", scale = scale, shift = shift }, -- Gold sheet coil
 	},
@@ -286,7 +286,7 @@ local recipe_icon_source_map = {
 	-- Invar
 	["angels-plate-invar"] = {
 		{ name = "invar-alloy", type_name = "item" },
-		{ name = "liquid-molten-invar", type_name = "fluid", scale = scale, shift = shift }, -- Molten invar
+		{ name = "angels-liquid-molten-invar", type_name = "fluid", scale = scale, shift = shift }, -- Molten invar
 	},
 	["invar-alloy"] = {
 		{ name = "invar-alloy", type_name = "item" },
@@ -295,7 +295,7 @@ local recipe_icon_source_map = {
 	},
 
 	-- Iron
-	["angelsore1-crushed-smelting"] = {
+	["angels-ore1-crushed-smelting"] = {
 		{ name = "iron-plate", type_name = "item" },
 		{ name = "angels-ore1-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed saphirite
 	},
@@ -305,9 +305,9 @@ local recipe_icon_source_map = {
 	},
 	["angels-plate-iron"] = {
 		{ name = "iron-plate", type_name = "item" },
-		{ name = "liquid-molten-iron", type_name = "fluid", scale = scale, shift = shift }, -- Molten iron
+		{ name = "angels-liquid-molten-iron", type_name = "fluid", scale = scale, shift = shift }, -- Molten iron
 	},
-	["angels-roll-iron-converting"] = {
+	["angels-plate-iron-2"] = {
 		{ name = "iron-plate", type_name = "item" },
 		{ name = "angels-roll-iron", type_name = "item", scale = scale, shift = shift }, -- Iron sheet coil
 	},
@@ -327,9 +327,9 @@ local recipe_icon_source_map = {
 	},
 	["angels-plate-lead"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-lead-plate", "angels-plate-lead"), type_name = "item" },
-		{ name = "liquid-molten-lead", type_name = "fluid", scale = scale, shift = shift }, -- Molten lead
+		{ name = "angels-liquid-molten-lead", type_name = "fluid", scale = scale, shift = shift }, -- Molten lead
 	},
-	["angels-roll-lead-converting"] = {
+	["angels-plate-lead-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-lead-plate", "angels-plate-lead"), type_name = "item" },
 		{ name = "angels-roll-lead", type_name = "item", scale = scale, shift = shift }, -- Lead sheet coil
 	},
@@ -341,9 +341,9 @@ local recipe_icon_source_map = {
 	-- Manganese
 	["angels-plate-manganese"] = {
 		{ name = "angels-plate-manganese", type_name = "item" },
-		{ name = "liquid-molten-manganese", type_name = "fluid", scale = scale, shift = shift }, -- Molten manganese
+		{ name = "angels-liquid-molten-manganese", type_name = "fluid", scale = scale, shift = shift }, -- Molten manganese
 	},
-	["angels-roll-manganese-converting"] = {
+	["angels-plate-manganese-2"] = {
 		{ name = "angels-plate-manganese", type_name = "item" },
 		{ name = "angels-roll-manganese", type_name = "item", scale = scale, shift = shift }, -- Manganese sheet coil
 	},
@@ -351,9 +351,9 @@ local recipe_icon_source_map = {
 	-- Nickel
 	["angels-plate-nickel"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-nickel-plate", "angels-plate-nickel"), type_name = "item" },
-		{ name = "liquid-molten-nickel", type_name = "fluid", scale = scale, shift = shift }, -- Molten nickel
+		{ name = "angels-liquid-molten-nickel", type_name = "fluid", scale = scale, shift = shift }, -- Molten nickel
 	},
-	["angels-roll-nickel-converting"] = {
+	["angels-plate-nickel-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-nickel-plate", "angels-plate-nickel"), type_name = "item" },
 		{ name = "angels-roll-nickel", type_name = "item", scale = scale, shift = shift }, -- Nickel sheet roll
 	},
@@ -361,15 +361,15 @@ local recipe_icon_source_map = {
 	-- Nitinol
 	["angels-plate-nitinol"] = {
 		{ name = "nitinol-alloy", type_name = "item" },
-		{ name = "liquid-molten-nitinol", type_name = "fluid", scale = scale, shift = shift }, -- Molten nitinol
+		{ name = "angels-liquid-molten-nitinol", type_name = "fluid", scale = scale, shift = shift }, -- Molten nitinol
 	},
 
 	-- Platinum
 	["angels-plate-platinum"] = {
 		{ name = "angels-plate-platinum", type_name = "item" },
-		{ name = "liquid-molten-platinum", type_name = "fluid", scale = scale, shift = shift }, -- Molten platinum
+		{ name = "angels-liquid-molten-platinum", type_name = "fluid", scale = scale, shift = shift }, -- Molten platinum
 	},
-	["angels-roll-platinum-converting"] = {
+	["angels-plate-platinum-2"] = {
 		{ name = "angels-plate-platinum", type_name = "item" },
 		{ name = "angels-roll-platinum", type_name = "item", scale = scale, shift = shift }, -- Platinum sheet coil
 	},
@@ -381,9 +381,9 @@ local recipe_icon_source_map = {
 	},
 	["angels-plate-silver"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("silver-plate", "angels-plate-silver"), type_name = "item" },
-		{ name = "liquid-molten-silver", type_name = "fluid", scale = scale, shift = shift }, -- Molten silver
+		{ name = "angels-liquid-molten-silver", type_name = "fluid", scale = scale, shift = shift }, -- Molten silver
 	},
-	["angels-roll-silver-converting"] = {
+	["angels-plate-silver-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("silver-plate", "angels-plate-silver"), type_name = "item" },
 		{ name = "angels-roll-silver", type_name = "item", scale = scale, shift = shift }, -- Silver sheet coil
 	},
@@ -399,9 +399,9 @@ local recipe_icon_source_map = {
 	},
 	["angels-plate-steel"] = {
 		{ name = "steel-plate", type_name = "item" },
-		{ name = "liquid-molten-steel", type_name = "fluid", scale = scale, shift = shift }, -- Molten steel
+		{ name = "angels-liquid-molten-steel", type_name = "fluid", scale = scale, shift = shift }, -- Molten steel
 	},
-	["angels-roll-steel-converting"] = {
+	["angels-plate-steel-2"] = {
 		{ name = "steel-plate", type_name = "item" },
 		{ name = "angels-roll-steel", type_name = "item", scale = scale, shift = shift }, -- Steel sheet coil
 	},
@@ -413,9 +413,9 @@ local recipe_icon_source_map = {
 	},
 	["angels-plate-tin"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tin-plate", "angels-plate-tin"), type_name = "item" },
-		{ name = "liquid-molten-tin", type_name = "fluid", scale = scale, shift = shift }, -- Molten tin
+		{ name = "angels-liquid-molten-tin", type_name = "fluid", scale = scale, shift = shift }, -- Molten tin
 	},
-	["angels-roll-tin-converting"] = {
+	["angels-plate-tin-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tin-plate", "angels-plate-tin"), type_name = "item" },
 		{ name = "angels-roll-tin", type_name = "item", scale = scale, shift = shift }, -- Tin sheet coil
 	},
@@ -423,9 +423,9 @@ local recipe_icon_source_map = {
 	-- Titanium
 	["angels-plate-titanium"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-titanium-plate", "angels-plate-titanium"), type_name = "item" },
-		{ name = "liquid-molten-titanium", type_name = "fluid", scale = scale, shift = shift }, -- Molten titanium
+		{ name = "angels-liquid-molten-titanium", type_name = "fluid", scale = scale, shift = shift }, -- Molten titanium
 	},
-	["angels-roll-titanium-converting"] = {
+	["angels-plate-titanium-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-titanium-plate", "angels-plate-titanium"), type_name = "item" },
 		{ name = "angels-roll-titanium", type_name = "item", scale = scale, shift = shift }, -- Titanium sheet coil
 	},
@@ -433,9 +433,9 @@ local recipe_icon_source_map = {
 	-- Zinc
 	["angels-plate-zinc"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-zinc-plate", "angels-plate-zinc"), type_name = "item" },
-		{ name = "liquid-molten-zinc", type_name = "fluid", scale = scale, shift = shift }, -- Molten Zinc
+		{ name = "angels-liquid-molten-zinc", type_name = "fluid", scale = scale, shift = shift }, -- Molten Zinc
 	},
-	["angels-roll-zinc-converting"] = {
+	["angels-plate-zinc-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-zinc-plate", "angels-plate-zinc"), type_name = "item" },
 		{ name = "angels-roll-zinc", type_name = "item", scale = scale, shift = shift }, -- Zinc sheet coil
 	},
@@ -448,7 +448,7 @@ local recipe_icon_source_map = {
 		{ name = "copper-cable", type_name = "item" },
 		{ name = "copper-plate", type_name = "item", scale = scale, shift = shift }, -- Copper plate
 	},
-	["angels-wire-coil-copper-converting"] = {
+	["angels-wire-copper-2"] = {
 		{ name = "copper-cable", type_name = "item" },
 		{ name = "angels-wire-coil-copper", type_name = "item", scale = scale, shift = shift }, -- Copper wire coil
 	},
@@ -458,7 +458,7 @@ local recipe_icon_source_map = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("gilded-copper-cable", "angels-wire-gold"), type_name = "item" },
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-gold-plate", "angels-plate-gold"), type_name = "item", scale = scale, shift = shift }, -- Gold plate
 	},
-	["angels-wire-coil-gold-converting"] = {
+	["angels-wire-gold-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("gilded-copper-cable", "angels-wire-gold"), type_name = "item" },
 		{ name = "angels-wire-coil-gold", type_name = "item", scale = scale, shift = shift }, -- Gold wire coil
 	},
@@ -468,7 +468,7 @@ local recipe_icon_source_map = {
 		{ name = "angels-wire-silver", type_name = "item" },
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("silver-plate", "angels-plate-silver"), type_name = "item", scale = scale, shift = shift }, -- Silver plate
 	},
-	["angels-wire-coil-silver-converting"] = {
+	["angels-wire-silver-2"] = {
 		{ name = "angels-wire-silver", type_name = "item" },
 		{ name = "angels-wire-coil-silver", type_name = "item", scale = scale, shift = shift }, -- Silver wire coil
 	},
@@ -478,7 +478,7 @@ local recipe_icon_source_map = {
 		{ name = "angels-wire-platinum", type_name = "item" },
 		{ name = "angels-plate-platinum", type_name = "item", scale = scale, shift = shift }, -- Platinum plate
 	},
-	["angels-wire-coil-platinum-converting"] = {
+	["angels-wire-platinum-2"] = {
 		{ name = "angels-wire-platinum", type_name = "item" },
 		{ name = "angels-wire-coil-platinum", type_name = "item", scale = scale, shift = shift }, -- Platinum wire coil
 	},
@@ -488,13 +488,13 @@ local recipe_icon_source_map = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tinned-copper-cable", "angels-wire-tin"), type_name = "item" },
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tin-plate", "angels-plate-tin"), type_name = "item", scale = scale, shift = shift }, -- Tin plate
 	},
-	["angels-wire-coil-tin-converting"] = {
+	["angels-wire-tin-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("tinned-copper-cable", "angels-wire-tin"), type_name = "item" },
 		{ name = "angels-wire-coil-tin", type_name = "item", scale = scale, shift = shift }, -- Tin wire coil
 	},
 
 	-- Insulated cable (Angel's Extended Smelting and Compression)
-	["angels-wire-coil-insulated-converting"] = {
+	["angels-wire-insulated-2"] = {
 		{ name = "insulated-cable", type_name = "item" },
 		{ name = "angels-wire-coil-insulated", type_name = "item", shift = shift, scale = scale },
 	},
@@ -506,9 +506,9 @@ local recipe_icon_source_map = {
 	},
 	["angels-solder"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("solder", "angels-solder"), type_name = "item" },
-		{ name = "liquid-molten-solder", type_name = "fluid", scale = scale, shift = shift },
+		{ name = "angels-liquid-molten-solder", type_name = "fluid", scale = scale, shift = shift },
 	},
-	["angels-roll-solder-converting"] = {
+	["angels-plate-solder-2"] = {
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("solder", "angels-solder"), type_name = "item" },
 		{ name = "angels-roll-solder", type_name = "item", scale = scale, shift = shift },
 	},

@@ -20,11 +20,11 @@ local inputs = {
 }
 
 local tier_map = {
-	["ore-sorting-facility"] = { tier = 1 },
-	["ore-sorting-facility-2"] = { tier = 2 },
-	["ore-sorting-facility-3"] = { tier = 3 },
-	["ore-sorting-facility-4"] = { tier = 4 },
-	["ore-sorting-facility-5"] = { tier = 5 },
+	["angels-ore-sorting-facility"] = { tier = 1 },
+	["angels-ore-sorting-facility-2"] = { tier = 2 },
+	["angels-ore-sorting-facility-3"] = { tier = 3 },
+	["angels-ore-sorting-facility-4"] = { tier = 4 },
+	["angels-ore-sorting-facility-5"] = { tier = 5 },
 
 	-- Sea Block
 	["sb-ore-sorting-facility-5"] = { tier = 5 },

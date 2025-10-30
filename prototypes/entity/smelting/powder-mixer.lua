@@ -20,10 +20,10 @@ local inputs = {
 }
 
 local tier_map = {
-	["powder-mixer"] = { tier = 1, prog_tier = 2 },
-	["powder-mixer-2"] = { tier = 2, prog_tier = 3 },
-	["powder-mixer-3"] = { tier = 3, prog_tier = 4 },
-	["powder-mixer-4"] = { tier = 4, prog_tier = 5 },
+	["angels-powder-mixer"] = { tier = 1, prog_tier = 2 },
+	["angels-powder-mixer-2"] = { tier = 2, prog_tier = 3 },
+	["angels-powder-mixer-3"] = { tier = 3, prog_tier = 4 },
+	["angels-powder-mixer-4"] = { tier = 4, prog_tier = 5 },
 }
 
 -- Reskin entities, create and assign extra details

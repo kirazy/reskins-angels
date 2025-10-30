@@ -19,7 +19,7 @@ local inputs = {
 ---@type CreateIconsFromListTable
 local technologies = {
 	-- Gas Processing (Gas Refinery)
-	["gas-processing"] = { tier = 1, prog_tier = 2, icon_name = "gas-processing" },
+	["angels-gas-processing"] = { tier = 1, prog_tier = 2, icon_name = "gas-processing" },
 
 	-- Advanced Chemistry
 	-- ["angels-advanced-chemistry-1"] = { tier = 1, prog_tier = 2, icon_name = "advanced-chemistry" },

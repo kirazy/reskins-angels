@@ -20,9 +20,9 @@ local inputs = {
 }
 
 local tier_map = {
-	["ore-powderizer"] = { tier = 1, prog_tier = 2 },
-	["ore-powderizer-2"] = { tier = 2, prog_tier = 3 },
-	["ore-powderizer-3"] = { tier = 3, prog_tier = 4 },
+	["angels-ore-powderizer"] = { tier = 1, prog_tier = 2 },
+	["angels-ore-powderizer-2"] = { tier = 2, prog_tier = 3 },
+	["angels-ore-powderizer-3"] = { tier = 3, prog_tier = 4 },
 }
 
 -- Reskin entities, create and assign extra details

@@ -22,8 +22,8 @@ local intermediates = {
 	-- Intermediates
 	----------------------------------------------------------------------------------------------------
 	-- Miscellaneous
-	["solid-limestone"] = { subgroup = "intermediates" },
-	["slag"] = { subgroup = "intermediates" },
+	["angels-solid-limestone"] = { subgroup = "intermediates", image = "solid-limestone" },
+	["angels-slag"] = { subgroup = "intermediates", image = "slag" },
 }
 
 -- Check if we're using Angel's material colors
@@ -38,24 +38,24 @@ reskins.internal.create_icons_from_list(intermediates, inputs)
 ---@type { [string]: IconSources }
 local recipe_icon_source_map = {
 	-- Mud water progression
-	["washing-1"] = {
-		{ name = "water-heavy-mud", type_name = "fluid" },
+	["angels-water-heavy-mud"] = {
+		{ name = "angels-water-heavy-mud", type_name = "fluid" },
 		{ icon_data = reskins.angels.num_tier(1, "refining") },
 	},
-	["washing-2"] = {
-		{ name = "water-concentrated-mud", type_name = "fluid" },
+	["angels-water-concentrated-mud"] = {
+		{ name = "angels-water-concentrated-mud", type_name = "fluid" },
 		{ icon_data = reskins.angels.num_tier(2, "refining") },
 	},
-	["washing-3"] = {
-		{ name = "water-light-mud", type_name = "fluid" },
+	["angels-water-light-mud"] = {
+		{ name = "angels-water-light-mud", type_name = "fluid" },
 		{ icon_data = reskins.angels.num_tier(3, "refining") },
 	},
-	["washing-4"] = {
-		{ name = "water-thin-mud", type_name = "fluid" },
+	["angels-water-thin-mud"] = {
+		{ name = "angels-water-thin-mud", type_name = "fluid" },
 		{ icon_data = reskins.angels.num_tier(4, "refining") },
 	},
-	["washing-5"] = {
-		{ name = "water-saline", type_name = "fluid" },
+	["angels-water-saline"] = {
+		{ name = "angels-water-saline", type_name = "fluid" },
 		{ icon_data = reskins.angels.num_tier(5, "refining") },
 	},
 }

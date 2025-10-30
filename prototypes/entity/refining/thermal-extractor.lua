@@ -20,8 +20,8 @@ local inputs = {
 reskins.lib.set_inputs_defaults(inputs)
 
 local tier_map = {
-	["thermal-bore"] = { tier = 1, prog_tier = 2 },
-	["thermal-extractor"] = { tier = 2, prog_tier = 3 },
+	["angels-thermal-bore"] = { tier = 1, prog_tier = 2 },
+	["angels-thermal-extractor"] = { tier = 2, prog_tier = 3 },
 }
 
 for name, map in pairs(tier_map) do

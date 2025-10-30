@@ -52,17 +52,17 @@ local technologies = {
 	["angels-metallurgy-5"] = { tier = 5, icon_name = "metallurgy" },
 
 	-- Strand Casting
-	["strand-casting-1"] = { tier = 1, prog_tier = 2, icon_name = "strand-casting" },
-	["strand-casting-2"] = { tier = 2, prog_tier = 3, icon_name = "strand-casting" },
-	["strand-casting-3"] = { tier = 3, prog_tier = 4, icon_name = "strand-casting" },
-	["strand-casting-4"] = { tier = 4, prog_tier = 5, icon_name = "strand-casting" },
+	["angels-strand-casting-1"] = { tier = 1, prog_tier = 2, icon_name = "strand-casting" },
+	["angels-strand-casting-2"] = { tier = 2, prog_tier = 3, icon_name = "strand-casting" },
+	["angels-strand-casting-3"] = { tier = 3, prog_tier = 4, icon_name = "strand-casting" },
+	["angels-strand-casting-4"] = { tier = 4, prog_tier = 5, icon_name = "strand-casting" },
 
 	-- Ore Processing
-	["ore-processing-1"] = { tier = 1, prog_tier = 2, icon_name = "ore-processing-machine" },
-	["ore-processing-2"] = { tier = 1, prog_tier = 3, icon_name = "pellet-press" },
-	["ore-processing-3"] = { tier = 2, prog_tier = 4, icon_name = "pellet-press" },
-	["ore-processing-4"] = { tier = 3, prog_tier = 5, icon_name = "pellet-press" },
-	["ore-processing-5"] = { tier = 4, prog_tier = 6, icon_name = "pellet-press" },
+	["angels-ore-processing-1"] = { tier = 1, prog_tier = 2, icon_name = "ore-processing-machine" },
+	["angels-ore-processing-2"] = { tier = 1, prog_tier = 3, icon_name = "pellet-press" },
+	["angels-ore-processing-3"] = { tier = 2, prog_tier = 4, icon_name = "pellet-press" },
+	["angels-ore-processing-4"] = { tier = 3, prog_tier = 5, icon_name = "pellet-press" },
+	["angels-ore-processing-5"] = { tier = 4, prog_tier = 6, icon_name = "pellet-press" },
 
 	-- Smelting
 	["angels-solder-smelting-basic"] = get_casting_overrides("solder"),
@@ -172,24 +172,24 @@ local technologies = {
 
 -- Powder Metallurgy
 if angelsmods.trigger.early_sintering_oven then
-	technologies["powder-metallurgy-1"] = { tier = 1, prog_tier = 1, icon_name = "powder-metallurgy" }
-	technologies["powder-metallurgy-2"] = { tier = 2, prog_tier = 2, icon_name = "powder-metallurgy" }
-	technologies["powder-metallurgy-3"] = { tier = 3, prog_tier = 3, icon_name = "powder-metallurgy" }
-	technologies["powder-metallurgy-4"] = { tier = 4, prog_tier = 4, icon_name = "powder-metallurgy" }
-	technologies["powder-metallurgy-5"] = { tier = 5, prog_tier = 5, icon_name = "powder-metallurgy" }
+	technologies["angels-powder-metallurgy-1"] = { tier = 1, prog_tier = 1, icon_name = "powder-metallurgy" }
+	technologies["angels-powder-metallurgy-2"] = { tier = 2, prog_tier = 2, icon_name = "powder-metallurgy" }
+	technologies["angels-powder-metallurgy-3"] = { tier = 3, prog_tier = 3, icon_name = "powder-metallurgy" }
+	technologies["angels-powder-metallurgy-4"] = { tier = 4, prog_tier = 4, icon_name = "powder-metallurgy" }
+	technologies["angels-powder-metallurgy-5"] = { tier = 5, prog_tier = 5, icon_name = "powder-metallurgy" }
 else
-	technologies["powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy" }
-	technologies["powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy" }
+	technologies["angels-powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla" }
+	technologies["angels-powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla" }
+	technologies["angels-powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy" }
+	technologies["angels-powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy" }
 end
 
 -- Check for special vanilla and override the powder metallurgy technology icons
 if angelsmods and angelsmods.functions.is_special_vanilla() then
-	technologies["powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy-special-vanilla" }
+	technologies["angels-powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla" }
+	technologies["angels-powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla" }
+	technologies["angels-powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy-special-vanilla" }
+	technologies["angels-powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy-special-vanilla" }
 end
 
 -- Check if we're using Angel's material colors

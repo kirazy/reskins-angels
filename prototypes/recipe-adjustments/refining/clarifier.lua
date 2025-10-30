@@ -43,11 +43,11 @@ end
 
 -- Adjust mud water fluid colors
 local fluids = {
-	["water-viscous-mud"] = mud_tint,
-	["water-heavy-mud"] = blend_colors(mud_tint, water_tint, 0.8),
-	["water-concentrated-mud"] = blend_colors(mud_tint, water_tint, 0.6),
-	["water-light-mud"] = blend_colors(mud_tint, water_tint, 0.4),
-	["water-thin-mud"] = blend_colors(mud_tint, water_tint, 0.2),
+	["angels-water-viscous-mud"] = mud_tint,
+	["angels-water-heavy-mud"] = blend_colors(mud_tint, water_tint, 0.8),
+	["angels-water-concentrated-mud"] = blend_colors(mud_tint, water_tint, 0.6),
+	["angels-water-light-mud"] = blend_colors(mud_tint, water_tint, 0.4),
+	["angels-water-thin-mud"] = blend_colors(mud_tint, water_tint, 0.2),
 }
 
 -- Revise fluid tints
