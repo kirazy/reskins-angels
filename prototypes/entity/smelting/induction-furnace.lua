@@ -26,6 +26,36 @@ local tier_map = {
 	["angels-induction-furnace-4"] = { tier = 4 },
 }
 
+---@param is_flipped boolean?
+---@return data.WorkingVisualisation
+local function get_color_mask_working_visualisation(is_flipped)
+	local flipped = is_flipped == true and "-flipped" or ""
+
+	local working_vis = {
+		always_draw = true,
+		animation = {
+			layers = {
+				util.sprite_load("__reskins-angels__/graphics/entity/smelting/induction-furnace/induction-furnace-mask" .. flipped, {
+					priority = "high",
+					frame_count = 36,
+					animation_speed = 0.5,
+					tint = inputs.tint,
+					scale = 0.5,
+				}),
+				util.sprite_load("__reskins-angels__/graphics/entity/smelting/induction-furnace/induction-furnace-highlights" .. flipped, {
+					priority = "high",
+					frame_count = 36,
+					animation_speed = 0.5,
+					blend_mode = reskins.lib.settings.blend_mode,
+					scale = 0.5,
+				}),
+			},
+		},
+	}
+
+	return working_vis
+end
+
 -- Reskin entities, create and assign extra details
 for name, map in pairs(tier_map) do
 	---@type data.AssemblingMachinePrototype
@@ -39,102 +69,13 @@ for name, map in pairs(tier_map) do
 
 	reskins.lib.setup_standard_entity(name, tier, inputs)
 
-	-- Reskin entities
-	entity.graphics_set.animation = {
-		layers = {
-			-- Base
-			{
-				priority = "extra-high",
-				width = 336,
-				height = 381,
-				frame_count = 36,
-				stripes = {
-					{
-						filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-base_01.png",
-						width_in_frames = 6,
-						height_in_frames = 3,
-					},
-					{
-						filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-base_02.png",
-						width_in_frames = 6,
-						height_in_frames = 3,
-					},
-				},
-				animation_speed = 0.5,
-				shift = util.by_pixel(0, -5),
-				scale = 0.5,
-			},
-			-- Mask
-			{
-				priority = "extra-high",
-				width = 336,
-				height = 381,
-				frame_count = 36,
-				stripes = {
-					{
-						filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/induction-furnace-mask_01.png",
-						width_in_frames = 6,
-						height_in_frames = 3,
-					},
-					{
-						filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/induction-furnace-mask_02.png",
-						width_in_frames = 6,
-						height_in_frames = 3,
-					},
-				},
-				animation_speed = 0.5,
-				tint = inputs.tint,
-				shift = util.by_pixel(0, -5),
-				scale = 0.5,
-			},
-			-- Highlights
-			{
-				priority = "extra-high",
-				width = 336,
-				height = 381,
-				frame_count = 36,
-				stripes = {
-					{
-						filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/induction-furnace-highlights_01.png",
-						width_in_frames = 6,
-						height_in_frames = 3,
-					},
-					{
-						filename = "__reskins-angels__/graphics/entity/smelting/induction-furnace/induction-furnace-highlights_02.png",
-						width_in_frames = 6,
-						height_in_frames = 3,
-					},
-				},
-				animation_speed = 0.5,
-				blend_mode = reskins.lib.settings.blend_mode,
-				shift = util.by_pixel(0, -5),
-				scale = 0.5,
-			},
-			-- Shadow
-			{
-				priority = "extra-high",
-				width = 429,
-				height = 336,
-				frame_count = 36,
-				stripes = {
-					{
-						filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-shadow_01.png",
-						width_in_frames = 3,
-						height_in_frames = 6,
-					},
-					{
-						filename = "__angelssmeltinggraphics__/graphics/entity/induction-furnace/induction-furnace-shadow_02.png",
-						width_in_frames = 3,
-						height_in_frames = 6,
-					},
-				},
-				animation_speed = 0.5,
-				draw_as_shadow = true,
-				shift = util.by_pixel(23, 8.5),
-				scale = 0.5,
-			},
-		},
-	}
+	if entity.graphics_set and entity.graphics_set.working_visualisations then
+		table.insert(entity.graphics_set.working_visualisations, get_color_mask_working_visualisation())
+	end
+
+	if entity.graphics_set_flipped and entity.graphics_set_flipped.working_visualisations then
+		table.insert(entity.graphics_set_flipped.working_visualisations, get_color_mask_working_visualisation(true))
+	end
 
 	::continue::
 end
