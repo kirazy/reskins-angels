@@ -82,8 +82,8 @@ local pipe_material_map = {
 
 -- Reskin pipes, create and assign extra details
 for name_prefix, params in pairs(pipe_material_map) do
-	local pipe_entity = data.raw["pipe"][name_prefix .. "-pipe"]
-	local pipe_to_ground_entity = data.raw["pipe-to-ground"][name_prefix .. "-pipe-to-ground"]
+	local pipe_entity = data.raw["pipe"]["bob-" .. name_prefix .. "-pipe"]
+	local pipe_to_ground_entity = data.raw["pipe-to-ground"]["bob-" .. name_prefix .. "-pipe-to-ground"]
 
 	if pipe_entity and pipe_to_ground_entity then
 		do_pipe(pipe_entity, params)
