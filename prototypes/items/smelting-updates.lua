@@ -248,7 +248,7 @@ local recipe_icon_source_map = {
 	},
 	["copper-plate"] = {
 		{ name = "copper-plate", type_name = "item" },
-		{ name = "copper-ore", type_name = "item", scale = scale, shift = shift }, -- Copper ore
+		{ name = "angels-ore3-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed stiratite
 	},
 	["angels-plate-copper"] = {
 		{ name = "copper-plate", type_name = "item" },
@@ -301,7 +301,7 @@ local recipe_icon_source_map = {
 	},
 	["iron-plate"] = {
 		{ name = "iron-plate", type_name = "item" },
-		{ name = "iron-ore", type_name = "item", scale = scale, shift = shift }, -- Iron ore
+		{ name = "angels-ore1-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed saphirite
 	},
 	["angels-plate-iron"] = {
 		{ name = "iron-plate", type_name = "item" },
