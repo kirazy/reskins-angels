@@ -15,13 +15,13 @@ if reskins.compatibility then
 end
 
 local chemical_plants = {
-	["angels-chemical-plant"] = { tier = 1 },
+	["chemical-plant"] = { tier = 1 },
 	["angels-chemical-plant-2"] = { tier = 2 },
 	["angels-chemical-plant-3"] = { tier = 3 },
 	["angels-chemical-plant-4"] = { tier = 4 },
 }
 
-local use_vanilla_chemical_plant_sprites = reskins.lib.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites") and reskins.lib.settings.get_value("angels-disable-vanilla-chemical-plants")
+local use_vanilla_chemical_plant_sprites = reskins.lib.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites")
 
 for name, map in pairs(chemical_plants) do
 	local tier = reskins.lib.tiers.get_tier(map)
