@@ -67,12 +67,20 @@ for name, map in pairs(valves) do
 	reskins.lib.setup_standard_entity(name, 0, inputs)
 
 	-- Reskin entities
-	entity.animations = {
+	local animations = {
 		north = cardinal_pictures(0, inputs.tint),
 		east = cardinal_pictures(1, inputs.tint),
 		south = cardinal_pictures(2, inputs.tint),
 		west = cardinal_pictures(3, inputs.tint),
 	}
+
+	if map.type == "storage-tank" then
+		entity.pictures = {
+			picture = animations,
+		}
+	else
+		entity.animations = animations
+	end
 
 	-- Add pipe overs
 	entity.fluid_box.pipe_covers = pipecoverspictures()
