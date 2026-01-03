@@ -172,24 +172,24 @@ local technologies = {
 
 -- Powder Metallurgy
 if angelsmods.trigger.early_sintering_oven then
-	technologies["angels-powder-metallurgy-1"] = { tier = 1, prog_tier = 1, icon_name = "powder-metallurgy" }
-	technologies["angels-powder-metallurgy-2"] = { tier = 2, prog_tier = 2, icon_name = "powder-metallurgy" }
-	technologies["angels-powder-metallurgy-3"] = { tier = 3, prog_tier = 3, icon_name = "powder-metallurgy" }
-	technologies["angels-powder-metallurgy-4"] = { tier = 4, prog_tier = 4, icon_name = "powder-metallurgy" }
-	technologies["angels-powder-metallurgy-5"] = { tier = 5, prog_tier = 5, icon_name = "powder-metallurgy" }
+	technologies["angels-powder-metallurgy-1"] = { tier = 1, prog_tier = 1, icon_name = "powder-metallurgy", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-2"] = { tier = 2, prog_tier = 2, icon_name = "powder-metallurgy", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-3"] = { tier = 3, prog_tier = 3, icon_name = "powder-metallurgy", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-4"] = { tier = 4, prog_tier = 4, icon_name = "powder-metallurgy", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-5"] = { tier = 5, prog_tier = 5, icon_name = "powder-metallurgy", defer_to_data_updates = true }
 else
-	technologies["angels-powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["angels-powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["angels-powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy" }
-	technologies["angels-powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy" }
+	technologies["angels-powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy", defer_to_data_updates = true }
 end
 
 -- Check for special vanilla and override the powder metallurgy technology icons
 if angelsmods and angelsmods.functions.is_special_vanilla() then
-	technologies["angels-powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["angels-powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["angels-powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy-special-vanilla" }
-	technologies["angels-powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy-special-vanilla" }
+	technologies["angels-powder-metallurgy-2"] = { tier = 1, prog_tier = 2, icon_name = "powder-metallurgy-special-vanilla", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-3"] = { tier = 2, prog_tier = 3, icon_name = "powder-metallurgy-special-vanilla", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-4"] = { tier = 3, prog_tier = 4, icon_name = "powder-metallurgy-special-vanilla", defer_to_data_updates = true }
+	technologies["angels-powder-metallurgy-5"] = { tier = 4, prog_tier = 5, icon_name = "powder-metallurgy-special-vanilla", defer_to_data_updates = true }
 end
 
 -- Check if we're using Angel's material colors
