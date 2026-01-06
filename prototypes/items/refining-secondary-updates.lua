@@ -14,7 +14,8 @@ local inputs = {
 local shift = reskins.angels.constants.recipe_corner_shift
 local scale = reskins.angels.constants.recipe_corner_scale
 
--- TODO: https://github.com/kirazy/reskins-angels/issues/16 Improve handling of refining->smelting->refining icon processing
+-- FIXME: Improve handling of refining->smelting->refining icon processing
+-- https://github.com/kirazy/reskins-angels/issues/48
 
 ---@type CreateIconsFromListTable
 local intermediates = {}
