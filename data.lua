@@ -1,8 +1,3 @@
--- Copyright (c) 2024 Kirazy
--- Part of Artisanal Reskins: Angel's Mods
---
--- See LICENSE.md in the project directory for license information.
-
 -- Core functions
 require("prototypes.functions.functions")
 require("prototypes.functions.entity-functions")

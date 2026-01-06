@@ -1,8 +1,3 @@
--- Copyright (c) 2024 Kirazy
--- Part of Artisanal Reskins: Angel's Mods
---
--- See LICENSE.md in the project directory for license information.
-
 ---Provides angel-style sprite definition for chemical plant `animation` field. See [Prototype/AssemblingMachine](https://wiki.factorio.com/Prototype/AssemblingMachine).
 ---@param tint data.Color
 ---@return data.Animation4Way

@@ -1,8 +1,3 @@
--- Copyright (c) 2024 Kirazy
--- Part of Artisanal Reskins: Angel's Mods
---
--- See LICENSE.md in the project directory for license information.
-
 -- Setup ore flotation cell recipes
 for _, recipe_data in pairs(data.raw.recipe) do
 	if recipe_data.category == "ore-refining-t2" then
