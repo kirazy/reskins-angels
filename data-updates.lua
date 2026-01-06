@@ -31,4 +31,5 @@ require("prototypes.technology.smelting-updates")
 -- GUI Modifications
 ----------------------------------------------------------------------------------------------------
 -- FIXME: This is a temporary disablement of the item group icons, until new ones are created.
+-- https://github.com/kirazy/reskins-angels/issues/70
 -- require("prototypes.item-group.item-group")
