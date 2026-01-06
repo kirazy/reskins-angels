@@ -1,8 +1,3 @@
--- Copyright (c) 2024 Kirazy
--- Part of Artisanal Reskins: Angel's Mods
---
--- See LICENSE.md in the project directory for license information.
-
 local water_tint = util.color("#005799") -- Water void recipe tint for water
 local mud_tint = util.color("#6a492c") -- AR:Angel's tint for mud
 

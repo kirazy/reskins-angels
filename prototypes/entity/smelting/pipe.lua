@@ -1,8 +1,3 @@
--- Copyright (c) 2024 Kirazy
--- Part of Artisanal Reskins: Angel's Mods
---
--- See LICENSE.md in the project directory for license information.
-
 -- Check to see if reskinning needs to be done.
 if reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors-pipes") == false then
 	return

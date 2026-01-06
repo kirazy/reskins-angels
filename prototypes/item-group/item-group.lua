@@ -1,8 +1,3 @@
--- Copyright (c) 2025 Kirazy
--- Part of Artisanal Reskins: Bob's Mods
---
--- See LICENSE in the project directory for license information.
-
 if angelsmods.industries and angelsmods.industries.overhaul then
 	if data.raw["item-group"]["bob-gems"] then
 		-- gems group
