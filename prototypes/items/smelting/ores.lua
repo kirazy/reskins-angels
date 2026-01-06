@@ -43,7 +43,8 @@ if reskins.lib.settings.get_value("reskins-angels-use-vanilla-style-ores") then
 end
 
 for ore_name, params in pairs(ores) do
-	-- FIXME: https://github.com/kirazy/reskins-library/issues/11
+	-- FIXME: Images should not be prefixed with "bob-", as they are more general than just Bob's mods.
+	-- https://github.com/kirazy/reskins-framework/issues/11
 	local sprite_name = "bob-" .. ore_name
 
 	---@type data.IconData[]
