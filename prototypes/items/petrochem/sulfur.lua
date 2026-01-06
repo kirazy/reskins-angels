@@ -17,7 +17,7 @@ local deferrable_icon = {
 reskins.lib.icons.assign_deferrable_icon(deferrable_icon)
 
 -- Fix recipe icons, but in the lazy hard-coded way we'll come back to later.
--- TO-DO: Make this a more general, robust process rather than a one-off
+-- FIXME: https://github.com/kirazy/reskins-angels/issues/69
 if data.raw.recipe["solid-sulfur"] and data.raw.recipe["solid-sulfur"].icons and data.raw.recipe["solid-sulfur"].icons[5] then
 	data.raw.recipe["solid-sulfur"].icons[5] = {
 		icon = deferrable_icon.icon_datum.icon,
