@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.1
-Date: ????
+Date: 2026-01-05
   Changes:
     - Fixed that ore icons were not correctly reskinned (42)
     - Tin and Lead ore are no longer affected by the setting "Use Angel's material colors for intermediates" (43)
