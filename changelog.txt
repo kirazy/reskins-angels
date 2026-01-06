@@ -2,6 +2,7 @@
 Version: 2.3.1
 Date: ????
   Changes:
+    - Tin and Lead ore are no longer affected by the setting "Use Angel's material colors for intermediates" (43)
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.0
 Date: 2026-01-03

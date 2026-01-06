@@ -42,12 +42,6 @@ if reskins.lib.settings.get_value("reskins-angels-use-vanilla-style-ores") then
 	})
 end
 
--- Check if we're using Angel's material colors
-if reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") == false then
-	ores["bob-lead-ore"] = { key = "lib", subfolder = "shared/ores" }
-	ores["bob-tin-ore"] = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
-end
-
 if not mods["bobores"] or not mods["reskins-bobs"] then
 	ores["bob-bauxite-ore"] = { key = "lib", subfolder = "shared/ores", num_variations = 8 }
 	ores["bob-cobalt-ore"] = { key = "lib", subfolder = "shared/ores" }
