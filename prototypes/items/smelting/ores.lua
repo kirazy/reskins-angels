@@ -32,7 +32,8 @@ local ores = {
 	["zinc-ore"] = { key = "lib", subfolder = "shared/ores" },
 }
 
--- TODO: Not implemented. Needs sprites.
+-- FIXME: Not implemented. Needs sprites.
+-- https://github.com/kirazy/reskins-angels/issues/71
 if reskins.lib.settings.get_value("reskins-angels-use-vanilla-style-ores") then
 	table.insert(ores, {
 		-- ["angels-ore1"] = { key = "angels", subfolder = "smelting/ores" }, -- Saphirite
