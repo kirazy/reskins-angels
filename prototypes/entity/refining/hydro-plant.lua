@@ -72,6 +72,39 @@ for name, map in pairs(tier_map) do
 				scale = 0.5,
 			},
 		},
+	}	
+	entity.graphics_set_flipped.animation = {
+		layers = {
+			-- Base
+			{
+				filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-base.png",
+				priority = "extra-high",
+				width = 459,
+				height = 491,
+				shift = util.by_pixel(0, 0),
+				scale = 0.5,
+			},
+			-- Mask
+			{
+				filename = "__reskins-angels__/graphics/entity/refining/hydro-plant/hydro-plant-mask.png",
+				priority = "extra-high",
+				width = 459,
+				height = 491,
+				shift = util.by_pixel(0, 0),
+				tint = inputs.tint,
+				scale = 0.5,
+			},
+			-- Highlights
+			{
+				filename = "__reskins-angels__/graphics/entity/refining/hydro-plant/hydro-plant-highlights.png",
+				priority = "extra-high",
+				width = 459,
+				height = 491,
+				shift = util.by_pixel(0, 0),
+				blend_mode = reskins.lib.settings.blend_mode,
+				scale = 0.5,
+			},
+		},
 	}
 
 	::continue::
