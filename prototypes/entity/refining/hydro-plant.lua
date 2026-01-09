@@ -72,7 +72,7 @@ for name, map in pairs(tier_map) do
 				scale = 0.5,
 			},
 		},
-	}	
+	}
 	entity.graphics_set_flipped.animation = {
 		layers = {
 			-- Base
