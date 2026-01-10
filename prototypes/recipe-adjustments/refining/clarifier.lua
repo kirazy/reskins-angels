@@ -15,7 +15,7 @@ local function format_tint(color)
 	return tint
 end
 
--- Takes two input tints and blends them in the following manner: `A*w + B*(1-w)`
+-- Takes two input tints and blends them in the following manner: `A*w + B*(1-west)`
 ---@param tint_A data.Color
 ---@param tint_B data.Color
 ---@param weighting? number # In the range 0:1, default 0.5
