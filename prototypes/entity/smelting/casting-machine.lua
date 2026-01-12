@@ -30,20 +30,26 @@ local function get_color_mask_working_visualisation(is_flipped)
 		always_draw = true,
 		animation = {
 			layers = {
-				util.sprite_load("__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-mask" .. flipped, {
-					priority = "high",
-					frame_count = 49,
-					animation_speed = 0.5,
-					tint = inputs.tint,
-					scale = 0.5,
-				}),
-				util.sprite_load("__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-highlights" .. flipped, {
-					priority = "high",
-					frame_count = 49,
-					animation_speed = 0.5,
-					blend_mode = reskins.lib.settings.blend_mode,
-					scale = 0.5,
-				}),
+				util.sprite_load(
+					"__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-mask" .. flipped,
+					{
+						priority = "high",
+						frame_count = 49,
+						animation_speed = 0.5,
+						tint = inputs.tint,
+						scale = 0.5,
+					}
+				),
+				util.sprite_load(
+					"__reskins-angels__/graphics/entity/smelting/casting-machine/casting-machine-highlights" .. flipped,
+					{
+						priority = "high",
+						frame_count = 49,
+						animation_speed = 0.5,
+						blend_mode = reskins.lib.settings.blend_mode,
+						scale = 0.5,
+					}
+				),
 			},
 		},
 	}

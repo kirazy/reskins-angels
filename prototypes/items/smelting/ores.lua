@@ -49,13 +49,28 @@ for ore_name, params in pairs(ores) do
 	local sprite_name = "bob-" .. ore_name
 
 	---@type data.IconData[]
-	local icon_data = { {
-		icon = reskins[params.key].directory .. "/graphics/icons/" .. params.subfolder .. "/" .. sprite_name .. "/" .. sprite_name .. ".png",
-		icon_size = 64,
-		scale = 0.5,
-	} }
+	local icon_data = {
+		{
+			icon = reskins[params.key].directory
+				.. "/graphics/icons/"
+				.. params.subfolder
+				.. "/"
+				.. sprite_name
+				.. "/"
+				.. sprite_name
+				.. ".png",
+			icon_size = 64,
+			scale = 0.5,
+		},
+	}
 
-	local pictures = reskins.internal.create_sprite_variations(params.key, params.subfolder, sprite_name, params.num_variations or 4, params.is_light)
+	local pictures = reskins.internal.create_sprite_variations(
+		params.key,
+		params.subfolder,
+		sprite_name,
+		params.num_variations or 4,
+		params.is_light
+	)
 
 	reskins.lib.icons.assign_deferrable_icon({
 		name = "bob-" .. ore_name,

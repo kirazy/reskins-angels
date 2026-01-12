@@ -44,7 +44,9 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 			layers = {
 				-- Base
 				{
-					filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/logistic-warehouse-" .. chest .. ".png",
+					filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/logistic-warehouse-"
+						.. chest
+						.. ".png",
 					priority = "extra-high",
 					width = 391,
 					height = 446,
@@ -164,7 +166,9 @@ if reskins.angels and reskins.angels.triggers.industries.entities then
 			layers = {
 				-- Base
 				{
-					filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/logistic-big-chest-" .. chest .. ".png",
+					filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/logistic-big-chest-"
+						.. chest
+						.. ".png",
 					priority = "extra-high",
 					width = 135,
 					height = 169,

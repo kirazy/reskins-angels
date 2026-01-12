@@ -22,7 +22,11 @@ local intermediates = {
 }
 
 -- Check if we're using Angel's material colors
-if mods["bobwarfare"] and mods["bobplates"] and reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") then
+if
+	mods["bobwarfare"]
+	and mods["bobplates"]
+	and reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors")
+then
 	intermediates["heavy-armor-2"] = { type = "armor", group = "smelting", subgroup = "armor" }
 end
 

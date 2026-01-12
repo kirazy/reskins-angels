@@ -16,7 +16,8 @@ local chemical_plants = {
 	["angels-chemical-plant-4"] = { tier = 4 },
 }
 
-local use_vanilla_chemical_plant_sprites = reskins.lib.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites")
+local use_vanilla_chemical_plant_sprites =
+	reskins.lib.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites")
 
 for name, map in pairs(chemical_plants) do
 	local tier = reskins.lib.tiers.get_tier(map)
