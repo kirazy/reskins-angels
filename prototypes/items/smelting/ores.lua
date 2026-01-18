@@ -125,33 +125,33 @@ local recipe_icon_source_map = {
 	-- Lead
 	["angels-ore-crushed-mix3-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-lead-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("lead-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 	-- Tin
 	["angels-ore-crushed-mix4-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-tin-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("tin-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 	-- Silicon
 	["angels-ore-chunk-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-quartz"), type_name = "item", shift = shift, scale = scale },
-		{ name = angelsmods.functions.get_ore_name("bob-quartz"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("quartz"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("quartz"), type_name = "item", shift = shift, scale = scale },
 	},
 	-- Nickel
 	["angels-ore-chunk-mix2-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-nickel-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("nickel-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 	-- Aluminium
 	["angels-ore-chunk-mix3-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-bauxite-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("bauxite-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 	-- Zinc
 	["angels-ore-chunk-mix4-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-zinc-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("zinc-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- -- Fluorite
@@ -168,25 +168,25 @@ local recipe_icon_source_map = {
 	-- Titanium
 	["angels-ore-crystal-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-rutile-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("rutile-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Gold
 	["angels-ore-crystal-mix2-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-gold-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("gold-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Cobalt
 	["angels-ore-crystal-mix3-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-cobalt-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("cobalt-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Silver
 	["angels-ore-crystal-mix4-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-silver-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("silver-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Uranium
@@ -198,13 +198,13 @@ local recipe_icon_source_map = {
 	-- Thorium
 	["angels-ore-crystal-mix6-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-thorium-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("thorium-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- Tungsten
 	["angels-ore-pure-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-tungsten-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("tungsten-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- -- Platinum
