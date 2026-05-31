@@ -204,7 +204,7 @@ local recipe_icon_source_map = {
 	-- Tungsten
 	["angels-ore-pure-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("bob-tungsten-ore"), type_name = "item", shift = shift, scale = scale },
+		{ name = angelsmods.functions.get_ore_name("tungsten-ore"), type_name = "item", shift = shift, scale = scale },
 	},
 
 	-- -- Platinum
