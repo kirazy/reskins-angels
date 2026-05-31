@@ -97,7 +97,7 @@ local intermediates = {
 	["bob-silver-plate"] = { subgroup = "plates", image = "angels-plate-silver" },
 	["bob-tin-plate"] = { subgroup = "plates", image = "angels-plate-tin" },
 	["bob-titanium-plate"] = { subgroup = "plates", image = "angels-plate-titanium" },
-	["bob-tungsten-plate"] = { subgroup = "plates", image = "angels-plate-tungsten" },
+	["tungsten-plate"] = { subgroup = "plates", image = "angels-plate-tungsten" },
 	["bob-zinc-plate"] = { subgroup = "plates", image = "angels-plate-zinc" },
 
 	-- Pure Angels Wires
@@ -135,27 +135,23 @@ local intermediates = {
 }
 
 if mods["reskins-bobs"] then
-	intermediates["bob-tungsten-carbide"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "plates", image = "bob-tungsten-carbide", icon_extras = reskins.angels.num_tier(1, inputs.group) }
-	intermediates["bob-tungsten-carbide-2"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "plates", image = "bob-tungsten-carbide", icon_extras = reskins.angels.num_tier(2, inputs.group) }
+	intermediates["tungsten-carbide"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "plates", image = "tungsten-carbide" }
 end
 
 -- Check if we're using Angel's material colors
 if reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors") then
 	-- Gears
-	intermediates["bob-cobalt-steel-gear-wheel"] = { subgroup = "gears" }
 	intermediates["bob-nitinol-gear-wheel"] = { subgroup = "gears" }
 	intermediates["bob-titanium-gear-wheel"] = { subgroup = "gears" }
 	intermediates["bob-tungsten-gear-wheel"] = { subgroup = "gears" }
 
 	-- Bearing Balls
-	intermediates["bob-ceramic-bearing-ball"] = { subgroup = "bearing-balls" }
-	intermediates["bob-cobalt-steel-bearing-ball"] = { subgroup = "bearing-balls" }
+	intermediates["bob-brass-bearing-ball"] = { subgroup = "bearing-balls" }
 	intermediates["bob-nitinol-bearing-ball"] = { subgroup = "bearing-balls" }
 	intermediates["bob-titanium-bearing-ball"] = { subgroup = "bearing-balls" }
 
 	-- Bearings
-	intermediates["bob-ceramic-bearing"] = { subgroup = "bearings" }
-	intermediates["bob-cobalt-steel-bearing"] = { subgroup = "bearings" }
+	intermediates["bob-brass-bearing"] = { subgroup = "bearings" }
 	intermediates["bob-nitinol-bearing"] = { subgroup = "bearings" }
 	intermediates["bob-titanium-bearing"] = { subgroup = "bearings" }
 
