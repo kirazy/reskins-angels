@@ -79,7 +79,10 @@ local pipe_material_map = {
 	["tungsten"] = { material_type = "angels-tungsten", tier = 5, tint = util.color("#7e5f45") },
 }
 
-if reskins.lib.version.is_older(mods["boblibrary"], "2.1.0") then
+if reskins.lib.version.is_same_or_newer(mods["boblibrary"], "2.1.0") then
+	-- Brass is tier 3 in Angel's, but became tier 4 in Bob's.
+	pipe_material_map["brass"] = { material_type = "brass", tier = 3, tint = util.color("#f9c854") }
+else
 	pipe_material_map["tungsten"].tier = 4
 	pipe_material_map["nitinol"] = { material_type = "angels-nitinol", tier = 5, tint = util.color("#7664a9") }
 end
