@@ -5,6 +5,7 @@ Date: ????
     - Adjustments to support changes made for Bob's mods 2.1+.
   Bugfixes:
     - Fixed potentially wrong results when resolving ore sprites in some circumstances
+    - Fixed that Angel's powder icons were not reskinned
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.3
 Date: 2026-01-10
