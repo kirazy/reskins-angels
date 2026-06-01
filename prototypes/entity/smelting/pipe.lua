@@ -79,6 +79,11 @@ local pipe_material_map = {
 	["tungsten"] = { material_type = "angels-tungsten", tier = 5, tint = util.color("#7e5f45") },
 }
 
+if reskins.lib.version.is_older(mods["boblibrary"], "2.1.0") then
+	pipe_material_map["tungsten"].tier = 4
+	pipe_material_map["nitinol"] = { material_type = "angels-nitinol", tier = 5, tint = util.color("#7664a9") }
+end
+
 -- Reskin pipes, create and assign extra details
 for name_prefix, params in pairs(pipe_material_map) do
 	local pipe_entity = data.raw["pipe"]["bob-" .. name_prefix .. "-pipe"]
