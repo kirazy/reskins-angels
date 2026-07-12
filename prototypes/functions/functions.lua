@@ -39,7 +39,8 @@ end
 
 -- Check to see if the new angels numbering function is available.
 local function check_add_number_icon_layer_is_available()
-	return angelsmods and angelsmods.functions.add_number_icon_layer({}, 1, util.get_color_with_alpha(util.color("#000000"), 1))
+	return angelsmods
+		and angelsmods.functions.add_number_icon_layer({}, 1, util.get_color_with_alpha(util.color("#000000"), 1))
 end
 
 local number_function_is_valid = pcall(check_add_number_icon_layer_is_available)

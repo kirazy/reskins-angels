@@ -83,7 +83,8 @@ end
 -- Setup clarifier recipes
 for _, recipe_data in pairs(data.raw.recipe) do
 	if recipe_data.category == "angels-water-void" then
-		local ingredient = data.raw.fluid[(recipe_data.ingredients and recipe_data.ingredients[1]) and recipe_data.ingredients[1].name]
+		local ingredient_name = (recipe_data.ingredients and recipe_data.ingredients[1]) and recipe_data.ingredients[1].name
+		local ingredient = data.raw.fluid[ingredient_name]
 
 		if ingredient then
 			recipe_data.crafting_machine_tint = { primary = ingredient.base_color }

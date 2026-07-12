@@ -32,12 +32,14 @@ reskins.internal.create_icons_from_list(intermediates, inputs)
 local recipe_icon_source_map = {
 	-- Lead plates
 	["angels-ore5-crushed-smelting"] = {
+		-- stylua: ignore
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-lead-plate", "angels-plate-lead"), type_name = "item" },
 		{ name = "angels-ore5-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed rubyte
 	},
 
 	-- Tin plates
 	["angels-ore6-crushed-smelting"] = {
+		-- stylua: ignore
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-tin-plate", "angels-plate-tin"), type_name = "item" },
 		{ name = "angels-ore6-crushed", type_name = "item", scale = scale, shift = shift }, -- Crushed bobmonium
 	},

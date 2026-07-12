@@ -18,11 +18,6 @@ end
 ---Ore names are shared with the name of the icon subfolder and file.
 ---@type { [string]: OreSpriteVariationsParameters }
 local ores = {
-	-- ["angels-ore2"]   = { key = "angels", subfolder = "smelting/ores" }, -- Jivolite
-	-- ["angels-ore4"]   = { key = "angels", subfolder = "smelting/ores" }, -- Crotinnium
-	-- ["chrome-ore"]    = { key = "angels", subfolder = "smelting/ores" },
-	-- ["manganese-ore"] = { key = "angels", subfolder = "smelting/ores" },
-	-- ["platinum-ore"]  = { key = "angels", subfolder = "smelting/ores" },
 	["bauxite-ore"] = { key = "lib", subfolder = "shared/ores", num_variations = 8 },
 	["cobalt-ore"] = { key = "lib", subfolder = "shared/ores" },
 	["gold-ore"] = { key = "lib", subfolder = "shared/ores" },
@@ -37,28 +32,27 @@ local ores = {
 	["zinc-ore"] = { key = "lib", subfolder = "shared/ores" },
 }
 
--- TODO: Not implemented. Needs sprites.
-if reskins.lib.settings.get_value("reskins-angels-use-vanilla-style-ores") then
-	table.insert(ores, {
-		-- ["angels-ore1"] = { key = "angels", subfolder = "smelting/ores" }, -- Saphirite
-		-- ["angels-ore3"] = { key = "angels", subfolder = "smelting/ores" }, -- Stiratite
-		-- ["angels-ore5"] = { key = "angels", subfolder = "smelting/ores" }, -- Rubyte
-		-- ["angels-ore6"] = { key = "angels", subfolder = "smelting/ores" }, -- Bobmonium
-	})
-end
-
 for ore_name, params in pairs(ores) do
 	-- FIXME: https://github.com/kirazy/reskins-library/issues/11
 	local sprite_name = "bob-" .. ore_name
 
 	---@type data.IconData[]
-	local icon_data = { {
-		icon = reskins[params.key].directory .. "/graphics/icons/" .. params.subfolder .. "/" .. sprite_name .. "/" .. sprite_name .. ".png",
-		icon_size = 64,
-		scale = 0.5,
-	} }
+	local icon_data = {
+		{
+		-- stylua: ignore
+			icon = reskins[params.key].directory .. "/graphics/icons/" .. params.subfolder .. "/" .. sprite_name .. "/" .. sprite_name .. ".png",
+			icon_size = 64,
+			scale = 0.5,
+		},
+	}
 
-	local pictures = reskins.internal.create_sprite_variations(params.key, params.subfolder, sprite_name, params.num_variations or 4, params.is_light)
+	local pictures = reskins.internal.create_sprite_variations(
+		params.key,
+		params.subfolder,
+		sprite_name,
+		params.num_variations or 4,
+		params.is_light
+	)
 
 	reskins.lib.icons.assign_deferrable_icon({
 		name = "bob-" .. ore_name,
@@ -86,7 +80,7 @@ local function make_sorting_icon_base()
 	}
 end
 
----Creates the base icon layer for the Crystalizer slag processing recipes.
+---Creates the base icon layer for the Crystallizer slag processing recipes.
 ---@return data.IconData[]
 local function make_slag_processing_icon_base()
 	return {
@@ -125,101 +119,143 @@ local recipe_icon_source_map = {
 	-- Lead
 	["angels-ore-crushed-mix3-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-lead-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-lead-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 	-- Tin
 	["angels-ore-crushed-mix4-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-tin-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-tin-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 	-- Silicon
 	["angels-ore-chunk-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-quartz"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-quartz"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 	-- Nickel
 	["angels-ore-chunk-mix2-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-nickel-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-nickel-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
-	-- Aluminium
+	-- Aluminum
 	["angels-ore-chunk-mix3-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-bauxite-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-bauxite-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 	-- Zinc
 	["angels-ore-chunk-mix4-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-zinc-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-zinc-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
-
-	-- -- Fluorite
-	-- ["angels-ore-chunk-mix5-processing"]   = {
-	--     { icon_datum = make_sorting_icon_base() },
-	--     { name = angelsmods.functions.get_ore_name("angels-fluorite-ore"), type_name = "item", shift = shift, scale = scale },
-	-- },
-	-- -- Manganese?
-	-- ["angels-ore-chunk-mix6-processing"]   = {
-	--     { icon_datum = make_sorting_icon_base() },
-	--     { name = angelsmods.functions.get_ore_name("manganese-ore"), type_name = "item", shift = shift, scale = scale },
-	-- },
 
 	-- Titanium
 	["angels-ore-crystal-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-rutile-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-rutile-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 
 	-- Gold
 	["angels-ore-crystal-mix2-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-gold-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-gold-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 
 	-- Cobalt
 	["angels-ore-crystal-mix3-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-cobalt-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-cobalt-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 
 	-- Silver
 	["angels-ore-crystal-mix4-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-silver-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-silver-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 
 	-- Uranium
 	["angels-ore-crystal-mix5-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("uranium-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("uranium-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 
 	-- Thorium
 	["angels-ore-crystal-mix6-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-thorium-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-thorium-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
 
 	-- Tungsten
 	["angels-ore-pure-mix1-processing"] = {
 		{ icon_datum = make_sorting_icon_base() },
-		{ name = angelsmods.functions.get_ore_name("angels-tungsten-ore"), type_name = "item", shift = shift, scale = scale },
+		{
+			name = angelsmods.functions.get_ore_name("angels-tungsten-ore"),
+			type_name = "item",
+			shift = shift,
+			scale = scale,
+		},
 	},
-
-	-- -- Platinum
-	-- ["angels-ore-pure-mix2-processing"]    = {
-	--     { icon_datum = make_sorting_icon_base() },
-	--     { name = angelsmods.functions.get_ore_name("angels-platinum-ore"), type_name = "item", shift = shift, scale = scale },
-	-- },
-
-	-- -- Chrome?
-	-- ["angels-ore-pure-mix3-processing"]    = {
-	--     { icon_datum = make_sorting_icon_base() },
-	--     { name = angelsmods.functions.get_ore_name("angels-chrome-ore"), type_name = "item", shift = shift, scale = scale },
-	-- },
 }
 
--- Build Crystalizer slag processing recipes
+-- Build Crystallizer slag processing recipes
 local slag_processing_recipe_names = {
 	"angels-slag-processing-2",
 	"angels-slag-processing-3",

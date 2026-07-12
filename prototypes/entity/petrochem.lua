@@ -21,11 +21,11 @@ local chemical_plants = {
 	["angels-chemical-plant-4"] = { tier = 4 },
 }
 
-local use_vanilla_chemical_plant_sprites = reskins.lib.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites")
+local use_vanilla_sprites = reskins.lib.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites")
 
 for name, map in pairs(chemical_plants) do
 	local tier = reskins.lib.tiers.get_tier(map)
-	if use_vanilla_chemical_plant_sprites then
+	if use_vanilla_sprites then
 		reskins.lib.apply_skin.chemical_plant(name, tier)
 	else
 		reskins.lib.apply_skin.angels_chemical_plant(name, tier)

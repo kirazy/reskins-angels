@@ -28,14 +28,18 @@ local intermediates = {
 	-- Recipes
 	----------------------------------------------------------------------------------------------------
 	-- Miscellaneous
+	-- stylua: ignore start
 	["bob-rubber"] = { type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(1, inputs.group) }, -- "1"
 	["angels-solid-rubber"] = { type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(2, inputs.group) }, -- "2"
+	-- stylua: ignore end
 }
 
 if mods["reskins-bobs"] then
+	-- stylua: ignore start
 	intermediates["bob-resin-wood"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "bob-resin", icon_extras = reskins.angels.num_tier(1, inputs.group) }
 	intermediates["angels-solid-resin"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "bob-resin" }
 	intermediates["angels-solid-resin"] = { type = "item", mod = "bobs", group = "plates", subgroup = "items", image = "bob-resin" }
+	-- stylua: ignore end
 end
 
 if not data.raw.recipe["bob-rubber"] then
@@ -50,6 +54,7 @@ reskins.internal.create_icons_from_list(intermediates, inputs)
 ---@type { [string]: IconSources }
 local recipe_icon_source_map = {
 	["bio-resin-wood-reprocessing"] = {
+		-- stylua: ignore
 		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-resin", "solid-resin"), type_name = "item" },
 		{ name = "wood", type_name = "item", scale = 0.5, shift = { -8, -8 } },
 	},
