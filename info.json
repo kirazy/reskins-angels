@@ -1,33 +1,33 @@
 {
-    "name": "reskins-angels",
-    "version": "2.4.0",
-    "factorio_version": "2.1",
-    "title": "Artisanal Reskins: Angel's Mods",
-    "author": "Kirazy",
-    "contact": "https://discord.gg/qAvSyzZFPr",
-    "homepage": "https://github.com/kirazy/reskins-angels",
-    "dependencies": [
-        "base",
-        "reskins-library",
-        "? reskins-bobs",
-        "? angelsbioprocessing",
-        "? angelsbioprocessinggraphics",
-        "? angelsexploration",
-        "? angelsexplorationgraphics",
-        "? angelsindustries",
-        "? angelsindustriesgraphics",
-        "? angelspetrochem",
-        "? angelspetrochemgraphics",
-        "? angelsrefining",
-        "? angelsrefininggraphics",
-        "? angelssmelting",
-        "? angelssmeltinggraphics",
-        "(?) angelsaddons-cab",
-        "(?) angelsaddons-mobility",
-        "(?) angelsaddons-storage",
-        "(?) extendedangels"
-    ],
-    "package": {
-        "git_publish_branch": "dev2.1"
-    }
+	"name": "reskins-angels",
+	"version": "2.4.0",
+	"factorio_version": "2.1",
+	"title": "Artisanal Reskins: Angel's Mods",
+	"author": "Kirazy",
+	"contact": "https://discord.gg/qAvSyzZFPr",
+	"homepage": "https://github.com/kirazy/reskins-angels",
+	"dependencies": [
+		"base",
+		"reskins-library",
+		"? reskins-bobs",
+		"? angelsbioprocessing",
+		"? angelsbioprocessinggraphics",
+		"? angelsexploration",
+		"? angelsexplorationgraphics",
+		"? angelsindustries",
+		"? angelsindustriesgraphics",
+		"? angelspetrochem",
+		"? angelspetrochemgraphics",
+		"? angelsrefining",
+		"? angelsrefininggraphics",
+		"? angelssmelting",
+		"? angelssmeltinggraphics",
+		"(?) angelsaddons-cab",
+		"(?) angelsaddons-mobility",
+		"(?) angelsaddons-storage",
+		"(?) extendedangels"
+	],
+	"package": {
+		"git_publish_branch": "dev2.1"
+	}
 }
