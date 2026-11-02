@@ -9,7 +9,7 @@
 	"dependencies": [
 		"base",
 		"reskins-library",
-		"reskins-assets-base",
+		"reskins-assets-assorted >= 2.2.0",
 		"? reskins-bobs",
 		"? angelsbioprocessing",
 		"? angelsbioprocessinggraphics",
