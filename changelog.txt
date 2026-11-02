@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
-Date: ????
+Date: 2026-11-02
   Changes:
     - Use Artisanal Reskins: Assorted Assets for oil refinery sprites, pending revisions to use the updated models
 ---------------------------------------------------------------------------------------------------
