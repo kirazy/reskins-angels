@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.4.2
+Version: 2.5.0
 Date: ????
   Changes:
+    - Migrated some entity sprites to use the Artisanal Reskins: Assets API
+  Bugfixes:
+    - Fixed that the mod failed to load with Angel's Petrochem when Bob's Metals, Chemicals and Intermediates was not active
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
 Date: 2026-11-02
