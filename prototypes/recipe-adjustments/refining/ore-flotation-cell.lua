@@ -3,9 +3,23 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
+---Indicates whether the given `recipe` is in the crafting category with the given `name`.
+---@param recipe data.RecipePrototype
+---@param name data.RecipeCategoryID
+---@return boolean
+local function is_in_category(recipe, name)
+	for _, category in pairs(recipe.categories or {}) do
+		if category == name then
+			return true
+		end
+	end
+
+	return false
+end
+
 -- Setup ore flotation cell recipes
 for _, recipe_data in pairs(data.raw.recipe) do
-	if recipe_data.category == "ore-refining-t2" then
+	if is_in_category(recipe_data, "angels-ore-refining-t2") then
 		local primary, secondary = util.color("0"), util.color("0")
 
 		-- Extract the ingredient fluid color

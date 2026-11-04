@@ -8,6 +8,7 @@ Date: ????
     - Chemical furnaces are now labeled tiers 1 to 4 under the traditional tier mapping, matching Angel's mods
   Bugfixes:
     - Fixed that the mod failed to load with Angel's Petrochem when Bob's Metals, Chemicals and Intermediates was not active
+    - Fixed that the big chests and logistic big chests of Angel's Addons - Robot Logistics were not reskinned, and that the recipe tints of the ore flotation cell and clarifier were not applied
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
 Date: 2026-11-02

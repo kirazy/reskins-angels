@@ -41,6 +41,20 @@ local function blend_colors(tint_A, tint_B, weighting, alpha)
 	return tint
 end
 
+---Indicates whether the given `recipe` is in the crafting category with the given `name`.
+---@param recipe data.RecipePrototype
+---@param name data.RecipeCategoryID
+---@return boolean
+local function is_in_category(recipe, name)
+	for _, category in pairs(recipe.categories or {}) do
+		if category == name then
+			return true
+		end
+	end
+
+	return false
+end
+
 -- Adjust mud water fluid colors
 local fluids = {
 	["angels-water-viscous-mud"] = mud_tint,
@@ -82,7 +96,7 @@ end
 
 -- Setup clarifier recipes
 for _, recipe_data in pairs(data.raw.recipe) do
-	if recipe_data.category == "angels-water-void" then
+	if is_in_category(recipe_data, "angels-water-void") then
 		local ingredient_name = (recipe_data.ingredients and recipe_data.ingredients[1]) and recipe_data.ingredients[1].name
 		local ingredient = data.raw.fluid[ingredient_name]
 
