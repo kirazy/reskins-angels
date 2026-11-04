@@ -3,23 +3,17 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
--- Check to see if reskinning needs to be done.
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
+local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
+
+local Applicators = require("__reskins-assets-api__.api.applicators")
+local WashingPlant = require("__reskins-assets-api__.assets.angels.entities.refining.washing-plant")
+
 if not (reskins.angels and reskins.angels.triggers.refining.entities) then
 	return
 end
 
--- Set input parameters
-local inputs = {
-	type = "assembling-machine",
-	icon_name = "washing-plant",
-	base_entity_name = "assembling-machine-1",
-	mod = "angels",
-	particles = { ["big"] = 1, ["medium"] = 2 },
-	group = "refining",
-	make_remnants = false,
-}
-
-local tier_map = {
+local entities = {
 	["angels-washing-plant"] = { tier = 1 },
 	["angels-washing-plant-2"] = { tier = 2 },
 
@@ -28,63 +22,28 @@ local tier_map = {
 	["angels-washing-plant-4"] = { tier = 4 },
 }
 
--- Reskin entities, create and assign extra details
-for name, map in pairs(tier_map) do
-	---@type data.AssemblingMachinePrototype
-	local entity = data.raw[inputs.type][name]
+local TYPE = "assembling-machine"
+
+for name, options in pairs(entities) do
+	local entity = data.raw[TYPE][name]
 	if not entity then
 		goto continue
 	end
 
-	local tier = reskins.lib.tiers.get_tier(map)
-	inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
+	local tier = _framework.tiers.get_tier(options)
+	local tint = _framework.tiers.get_tint(tier)
 
-	reskins.lib.setup_standard_entity(name, tier, inputs)
+	local sprite_set = WashingPlant.get_sprite_set({ tint = tint })
+	Applicators.apply_sprite_set(entity, sprite_set)
 
-	-- Reskin entities
-	entity.graphics_set.animation = {
-		layers = {
-			-- Base
-			{
-				filename = "__angelsrefininggraphics__/graphics/entity/washing-plant/washing-plant.png",
-				priority = "extra-high",
-				width = 224,
-				height = 224,
-				frame_count = 25,
-				line_length = 5,
-				shift = { 0, 0 },
-			},
-			-- Base Patch
-			{
-				filename = "__reskins-angels__/graphics/entity/refining/washing-plant/washing-plant-base-patch.png",
-				priority = "extra-high",
-				width = 224,
-				height = 224,
-				repeat_count = 25,
-				shift = { 0, 0 },
-			},
-			-- Mask
-			{
-				filename = "__reskins-angels__/graphics/entity/refining/washing-plant/washing-plant-mask.png",
-				priority = "extra-high",
-				width = 224,
-				height = 224,
-				repeat_count = 25,
-				shift = { 0, 0 },
-				tint = inputs.tint,
-			},
-			-- Highlights
-			{
-				filename = "__reskins-angels__/graphics/entity/refining/washing-plant/washing-plant-highlights.png",
-				priority = "extra-high",
-				width = 224,
-				height = 224,
-				repeat_count = 25,
-				shift = { 0, 0 },
-				blend_mode = reskins.lib.settings.blend_mode,
-			},
-		},
-	}
+	local icon_data = WashingPlant.get_icon({ tint = tint })
+	local icon_assignment = _framework.tiers.icon_assignment_with_tier_labels({
+		tier = tier,
+		name = entity.name,
+		type_name = entity.type,
+		icon_data = icon_data,
+	})
+	_sprite_utils.icons.apply_icon_assignment(icon_assignment)
 
 	::continue::
 end

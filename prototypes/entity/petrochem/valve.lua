@@ -3,21 +3,16 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
+local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
+
+local Applicators = require("__reskins-assets-api__.api.applicators")
+local PipeValve = require("__reskins-assets-api__.assets.angels.entities.petrochem.pipe-valve")
+
 -- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
 	return
 end
-
--- Set input parameters
-local inputs = {
-	icon_name = "valve",
-	base_entity_name = "pipe",
-	mod = "angels",
-	group = "petrochem",
-	particles = { ["small"] = 2 },
-	icon_layers = 2,
-	make_remnants = false,
-}
 
 local valves = {
 	["angels-valve-inspector"] = { tint = util.color("#8dd24e"), type = "storage-tank" },
@@ -26,64 +21,24 @@ local valves = {
 	["angels-valve-top-up"] = { tint = util.color("#fcfcfc"), type = "valve" },
 }
 
-local function cardinal_pictures(x, tint)
-	local x_hr = 128 * x
-
-	return {
-		layers = {
-			-- Base
-			{
-				filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-base.png",
-				priority = "extra-high",
-				x = x_hr,
-				width = 128,
-				height = 128,
-				scale = 0.5,
-			},
-			-- Mask
-			{
-				filename = "__reskins-angels__/graphics/entity/petrochem/valve/valve-mask.png",
-				priority = "extra-high",
-				x = x_hr,
-				width = 128,
-				height = 128,
-				tint = tint,
-				scale = 0.5,
-			},
-		},
-	}
-end
-
-for name, map in pairs(valves) do
+for name, options in pairs(valves) do
 	---@type data.ValvePrototype|data.StorageTankPrototype
-	local entity = data.raw[map.type][name]
+	local entity = data.raw[options.type][name]
 	if not entity then
 		goto continue
 	end
 
-	inputs.tint = map.tint
-	inputs.type = map.type
+	local sprite_set = PipeValve.get_sprite_set({ tint = options.tint })
+	Applicators.apply_sprite_set(entity, sprite_set)
 
-	reskins.lib.setup_standard_entity(name, 0, inputs)
-
-	-- Reskin entities
-	local animations = {
-		north = cardinal_pictures(0, inputs.tint),
-		east = cardinal_pictures(1, inputs.tint),
-		south = cardinal_pictures(2, inputs.tint),
-		west = cardinal_pictures(3, inputs.tint),
-	}
-
-	if map.type == "storage-tank" then
-		entity.pictures = {
-			picture = animations,
-		}
-	else
-		entity.animations = animations
-	end
-
-	-- Add pipe overs
-	entity.fluid_box.pipe_covers = pipecoverspictures()
+	local icon_data = PipeValve.get_icon({ tint = options.tint })
+	local icon_assignment = _framework.tiers.icon_assignment_with_tier_labels({
+		tier = 0,
+		name = entity.name,
+		type_name = entity.type,
+		icon_data = icon_data,
+	})
+	_sprite_utils.icons.apply_icon_assignment(icon_assignment)
 
 	::continue::
 end

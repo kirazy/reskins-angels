@@ -3,31 +3,39 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
--- Check to see if reskinning needs to be done.
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
+local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
+
+local ThermalExtractor = require("__reskins-assets-api__.assets.angels.entities.refining.thermal-extractor")
+
 if not (reskins.angels and reskins.angels.triggers.refining.entities) then
 	return
 end
 
----@type ConstructIconInputsOld
-local inputs = {
-	type = "mining-drill",
-	icon_name = "thermal-extractor",
-	mod = "angels",
-	group = "refining",
-}
-
--- Setup defaults.
-reskins.lib.set_inputs_defaults(inputs)
-
-local tier_map = {
+local entities = {
 	["angels-thermal-bore"] = { tier = 1, prog_tier = 2 },
 	["angels-thermal-extractor"] = { tier = 2, prog_tier = 3 },
 }
 
-for name, map in pairs(tier_map) do
-	local tier = reskins.lib.tiers.get_tier(map)
+local TYPE = "mining-drill"
 
-	inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
+for name, options in pairs(entities) do
+	local entity = data.raw[TYPE][name]
+	if not entity then
+		goto continue
+	end
 
-	reskins.lib.construct_icon(name, tier, inputs)
+	local tier = _framework.tiers.get_tier(options)
+	local tint = _framework.tiers.get_tint(tier)
+
+	local icon_data = ThermalExtractor.get_icon({ tint = tint })
+	local icon_assignment = _framework.tiers.icon_assignment_with_tier_labels({
+		tier = tier,
+		name = entity.name,
+		type_name = entity.type,
+		icon_data = icon_data,
+	})
+	_sprite_utils.icons.apply_icon_assignment(icon_assignment)
+
+	::continue::
 end

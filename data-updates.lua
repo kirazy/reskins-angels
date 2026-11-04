@@ -10,6 +10,7 @@ require("prototypes.entity.petrochem-updates")
 
 -- Angel's Smelting
 require("prototypes.entity.smelting.pipe")
+require("prototypes.entity.smelting.sintering-oven")
 
 -- Angel's Refining
 require("prototypes.entity.refining.liquefier")

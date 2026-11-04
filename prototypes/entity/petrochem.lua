@@ -3,7 +3,16 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
--- Check to see if reskinning needs to be done.
+local _framework = {
+	tiers = require("__reskins-framework__.api.tiers"),
+	settings = require("__reskins-framework__.api.settings"),
+}
+local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
+
+local Applicators = require("__reskins-assets-api__.api.applicators")
+local AngelsChemicalPlant = require("__reskins-assets-api__.assets.angels.entities.petrochem.chemical-plant")
+local VanillaChemicalPlant = require("__reskins-assets-api__.assets.base.entities.chemical-plant")
+
 if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
 	return
 end
@@ -14,20 +23,40 @@ if reskins.compatibility then
 	reskins.compatibility.triggers.minimachines.chemplants.angels = true
 end
 
-local chemical_plants = {
+local entities = {
 	["chemical-plant"] = { tier = 1 },
 	["angels-chemical-plant-2"] = { tier = 2 },
 	["angels-chemical-plant-3"] = { tier = 3 },
 	["angels-chemical-plant-4"] = { tier = 4 },
 }
 
-local use_vanilla_sprites = reskins.lib.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites")
+local ChemicalPlant = AngelsChemicalPlant
+if _framework.settings.get_value("reskins-angels-use-vanilla-chemical-plant-sprites") then
+	ChemicalPlant = VanillaChemicalPlant
+end
 
-for name, map in pairs(chemical_plants) do
-	local tier = reskins.lib.tiers.get_tier(map)
-	if use_vanilla_sprites then
-		reskins.lib.apply_skin.chemical_plant(name, tier)
-	else
-		reskins.lib.apply_skin.angels_chemical_plant(name, tier)
+local TYPE = "assembling-machine"
+
+for name, options in pairs(entities) do
+	local entity = data.raw[TYPE][name]
+	if not entity then
+		goto continue
 	end
+
+	local tier = _framework.tiers.get_tier(options)
+	local tint = _framework.tiers.get_tint(tier)
+
+	local sprite_set = ChemicalPlant.get_sprite_set({ tint = tint })
+	Applicators.apply_sprite_set(entity, sprite_set)
+
+	local icon_data = ChemicalPlant.get_icon({ tint = tint })
+	local icon_assignment = _framework.tiers.icon_assignment_with_tier_labels({
+		tier = tier,
+		name = entity.name,
+		type_name = entity.type,
+		icon_data = icon_data,
+	})
+	_sprite_utils.icons.apply_icon_assignment(icon_assignment)
+
+	::continue::
 end

@@ -3,95 +3,44 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
--- Check to see if reskinning needs to be done.
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
+local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
+
+local Applicators = require("__reskins-assets-api__.api.applicators")
+local ElectricBoiler = require("__reskins-assets-api__.assets.angels.entities.petrochem.electric-boiler")
+
 if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
 	return
 end
 
--- Set input parameters
-local inputs = {
-	type = "assembling-machine",
-	icon_name = "electric-boiler",
-	base_entity_name = "boiler",
-	mod = "angels",
-	particles = { ["big"] = 3 },
-	group = "petrochem",
-	make_remnants = false,
-}
-
-local tier_map = {
+local entities = {
 	["angels-electric-boiler"] = { tier = 1, prog_tier = 2 },
 	["angels-electric-boiler-2"] = { tier = 2, prog_tier = 3 },
 	["angels-electric-boiler-3"] = { tier = 3, prog_tier = 5 },
 }
 
-local working_lights = reskins.lib.sprites.make_4way_animation_from_spritesheet({
-	filename = "__reskins-angels__/graphics/entity/petrochem/electric-boiler/electric-boiler-working-lights.png",
-	priority = "extra-high",
-	width = 160,
-	height = 160,
-	shift = { 0, 0 },
-	blend_mode = "additive",
-	draw_as_glow = true,
-})
+local TYPE = "assembling-machine"
 
--- Reskin entities, create and assign extra details
-for name, map in pairs(tier_map) do
-	---@type data.AssemblingMachinePrototype
-	local entity = data.raw[inputs.type][name]
+for name, options in pairs(entities) do
+	local entity = data.raw[TYPE][name]
 	if not entity then
 		goto continue
 	end
 
-	local tier = reskins.lib.tiers.get_tier(map)
-	inputs.tint = map.tint or reskins.lib.tiers.get_tint(tier)
+	local tier = _framework.tiers.get_tier(options)
+	local tint = _framework.tiers.get_tint(tier)
 
-	reskins.lib.setup_standard_entity(name, tier, inputs)
+	local sprite_set = ElectricBoiler.get_sprite_set({ tint = tint })
+	Applicators.apply_sprite_set(entity, sprite_set)
 
-	-- Reskin entities
-	entity.graphics_set.animation = reskins.lib.sprites.make_4way_animation_from_spritesheet({
-		layers = {
-			-- Base
-			{
-				filename = "__reskins-angels__/graphics/entity/petrochem/electric-boiler/electric-boiler-base.png",
-				priority = "extra-high",
-				width = 160,
-				height = 160,
-				shift = { 0, 0 },
-			},
-			-- Mask
-			{
-				filename = "__reskins-angels__/graphics/entity/petrochem/electric-boiler/electric-boiler-mask.png",
-				priority = "extra-high",
-				width = 160,
-				height = 160,
-				shift = { 0, 0 },
-				tint = inputs.tint,
-			},
-			-- Highlights
-			{
-				filename = "__reskins-angels__/graphics/entity/petrochem/electric-boiler/electric-boiler-highlights.png",
-				priority = "extra-high",
-				width = 160,
-				height = 160,
-				shift = { 0, 0 },
-				blend_mode = reskins.lib.settings.blend_mode,
-			},
-		},
+	local icon_data = ElectricBoiler.get_icon({ tint = tint })
+	local icon_assignment = _framework.tiers.icon_assignment_with_tier_labels({
+		tier = tier,
+		name = entity.name,
+		type_name = entity.type,
+		icon_data = icon_data,
 	})
-
-	entity.graphics_set.idle_animation = nil
-
-	entity.graphics_set.working_visualisations = {
-		{
-			fadeout = true,
-			effect = "uranium-glow",
-			north_animation = working_lights.north,
-			east_animation = working_lights.east,
-			south_animation = working_lights.south,
-			west_animation = working_lights.west,
-		},
-	}
+	_sprite_utils.icons.apply_icon_assignment(icon_assignment)
 
 	::continue::
 end

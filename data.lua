@@ -5,7 +5,6 @@
 
 -- Core functions
 require("prototypes.functions.functions")
-require("prototypes.functions.entity-functions")
 
 ----------------------------------------------------------------------------------------------------
 -- ENTITIES
@@ -87,7 +86,6 @@ require("prototypes.entity.smelting.induction-furnace")
 require("prototypes.entity.smelting.ore-processing-machine")
 require("prototypes.entity.smelting.pellet-press")
 require("prototypes.entity.smelting.powder-mixer")
-require("prototypes.entity.smelting.sintering-oven")
 require("prototypes.entity.smelting.strand-casting-machine")
 
 -- Angel's Addons - Storage Options

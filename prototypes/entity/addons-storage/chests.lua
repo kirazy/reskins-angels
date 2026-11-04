@@ -3,132 +3,49 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
--- Set input parameters
-local inputs = {
-	type = "container",
-	mod = "angels",
-	tint = util.color("#403630"),
-	icon_layers = 1,
-	make_remnants = false,
-	-- make_explosions = false,
-}
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
+local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
+
+local Applicators = require("__reskins-assets-api__.api.applicators")
+local BigChest = require("__reskins-assets-api__.assets.angels.entities.assorted.big-chest")
+local Warehouse = require("__reskins-assets-api__.assets.angels.entities.assorted.warehouse")
+
+local TYPE = "container"
 
 -- Reskin Warehouses
 if reskins.angels and reskins.angels.triggers.storage.entities then
-	local name = "angels-warehouse"
-
 	---@type data.ContainerPrototype
-	local entity = data.raw[inputs.type][name]
+	local entity = data.raw[TYPE]["angels-warehouse"]
 	if entity then
-		inputs.group = "addons-storage"
-		inputs.icon_name = "warehouse"
-		inputs.base_entity_name = "oil-refinery"
-		inputs.particles = { ["big-tint"] = 5, ["medium"] = 2 }
+		local sprite_set = Warehouse.get_sprite_set()
+		Applicators.apply_sprite_set(entity, sprite_set)
 
-		reskins.lib.setup_standard_entity(name, 0, inputs)
-
-		entity.picture = {
-			layers = {
-				-- Base
-				{
-					filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse.png",
-					priority = "extra-high",
-					width = 391,
-					height = 446,
-					shift = util.by_pixel(-0.5, -15),
-					scale = 0.5,
-				},
-				-- Shadow
-				{
-					filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse-shadow.png",
-					priority = "extra-high",
-					width = 592,
-					height = 276,
-					shift = util.by_pixel(52.5, 30.5),
-					draw_as_shadow = true,
-					scale = 0.5,
-				},
-			},
-		}
+		local icon_data = Warehouse.get_icon()
+		local icon_assignment = _framework.tiers.icon_assignment_with_tier_labels({
+			tier = 0,
+			name = entity.name,
+			type_name = entity.type,
+			icon_data = icon_data,
+		})
+		_sprite_utils.icons.apply_icon_assignment(icon_assignment)
 	end
-end
-
--- Reskin Silos
-if reskins.angels and reskins.angels.triggers.storage.entities then
-	-- local name = "angels-warehouse"
-
-	-- ---@type data.ContainerPrototype
-	-- local entity = data.raw[inputs.type][name]
-
-	-- -- Check if entity exists, if not, skip this iteration
-	-- if entity then
-	--     inputs.group = "addons-storage"
-	--     inputs.icon_name = "warehouse"
-
-	--     reskins.lib.setup_standard_entity(name, 0, inputs)
-
-	--     entity.picture = {
-	--         layers = {
-	--             -- Base
-	--             {
-	--                 filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse.png",
-	--                 priority = "extra-high",
-	--                 width = 391,
-	--                 height = 446,
-	--                 shift = util.by_pixel(-0.5, -15),
-	--                 scale = 0.5,
-	--             },
-	--             -- Shadow
-	--             {
-	--                 filename = "__reskins-angels__/graphics/entity/addons-storage/warehouse/warehouse-shadow.png",
-	--                 priority = "extra-high",
-	--                 width = 592,
-	--                 height = 276,
-	--                 shift = util.by_pixel(52.5, 30.5),
-	--                 draw_as_shadow = true,
-	--                 scale = 0.5,
-	--             },
-	--         }
-	--     }
-	-- end
 end
 
 -- Reskin Big Chests
 if reskins.angels and reskins.angels.triggers.industries.entities then
-	local name = "angels-big-chest"
-
 	---@type data.ContainerPrototype
-	local entity = data.raw[inputs.type][name]
+	local entity = data.raw[TYPE]["angels-big-chest"]
 	if entity then
-		inputs.group = "addons-storage"
-		inputs.icon_name = "big-chest"
-		inputs.base_entity_name = "storage-tank"
-		inputs.particles = { ["big"] = 1 }
+		local sprite_set = BigChest.get_sprite_set()
+		Applicators.apply_sprite_set(entity, sprite_set)
 
-		reskins.lib.setup_standard_entity(name, 0, inputs)
-
-		entity.picture = {
-			layers = {
-				-- Base
-				{
-					filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/big-chest.png",
-					priority = "extra-high",
-					width = 135,
-					height = 169,
-					shift = util.by_pixel(-0.5, -10),
-					scale = 0.5,
-				},
-				-- Shadow
-				{
-					filename = "__reskins-angels__/graphics/entity/addons-storage/big-chest/big-chest-shadow.png",
-					priority = "extra-high",
-					width = 209,
-					height = 97,
-					shift = util.by_pixel(18.5, 8.5),
-					draw_as_shadow = true,
-					scale = 0.5,
-				},
-			},
-		}
+		local icon_data = BigChest.get_icon()
+		local icon_assignment = _framework.tiers.icon_assignment_with_tier_labels({
+			tier = 0,
+			name = entity.name,
+			type_name = entity.type,
+			icon_data = icon_data,
+		})
+		_sprite_utils.icons.apply_icon_assignment(icon_assignment)
 	end
 end
