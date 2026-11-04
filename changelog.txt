@@ -6,9 +6,10 @@ Date: ????
     - Entity tints and tier labels now follow the settings of Artisanal Reskins: Framework
     - Dying explosions, particles, and remnants now come from the Artisanal Reskins: Assets API, and machines now use the generic remnants of the base game that match their size
     - Chemical furnaces are now labeled tiers 1 to 4 under the traditional tier mapping, matching Angel's mods
+    - The recipes of the ore flotation cell and clarifier now keep the recipe tints of Angel's mods
   Bugfixes:
     - Fixed that the mod failed to load with Angel's Petrochem when Bob's Metals, Chemicals and Intermediates was not active
-    - Fixed that the big chests and logistic big chests of Angel's Addons - Robot Logistics were not reskinned, and that the recipe tints of the ore flotation cell and clarifier were not applied
+    - Fixed that the big chests and logistic big chests of Angel's Addons - Robot Logistics were not reskinned
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
 Date: 2026-11-02

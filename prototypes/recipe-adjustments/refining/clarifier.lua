@@ -41,20 +41,6 @@ local function blend_colors(tint_A, tint_B, weighting, alpha)
 	return tint
 end
 
----Indicates whether the given `recipe` is in the crafting category with the given `name`.
----@param recipe data.RecipePrototype
----@param name data.RecipeCategoryID
----@return boolean
-local function is_in_category(recipe, name)
-	for _, category in pairs(recipe.categories or {}) do
-		if category == name then
-			return true
-		end
-	end
-
-	return false
-end
-
 -- Adjust mud water fluid colors
 local fluids = {
 	["angels-water-viscous-mud"] = mud_tint,
@@ -71,37 +57,5 @@ for name, tint in pairs(fluids) do
 	if fluid then
 		fluid.base_color = tint
 		fluid.flow_color = { 0.7, 0.7, 0.7 }
-	end
-end
-
--- Setup clarifier recipes
--- for _, recipe_data in pairs(data.raw.recipe) do
---     if recipe_data.category == "angels-water-void" then
---         -- Fetch recipe data
---         local ingredient = data.raw.fluid[(recipe_data.ingredients and recipe_data.ingredients[1]) and recipe_data.ingredients[1].name]
-
---         if ingredient then
---             -- Check it's a mud fluid
---             for name, _ in pairs(fluids) do
---                 if ingredient.name == name then
---                     recipe_data.crafting_machine_tint = {primary = reskins.lib.adjust_alpha(ingredient.base_color, 0.72549)}
---                 end
---             end
-
---             -- Fix the localisation...
---             -- recipe_data.localised_name = {"", ingredient.localised_name, " void"}
---         end
---     end
--- end
-
--- Setup clarifier recipes
-for _, recipe_data in pairs(data.raw.recipe) do
-	if is_in_category(recipe_data, "angels-water-void") then
-		local ingredient_name = (recipe_data.ingredients and recipe_data.ingredients[1]) and recipe_data.ingredients[1].name
-		local ingredient = data.raw.fluid[ingredient_name]
-
-		if ingredient then
-			recipe_data.crafting_machine_tint = { primary = ingredient.base_color }
-		end
 	end
 end
