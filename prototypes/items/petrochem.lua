@@ -53,9 +53,9 @@ reskins.internal.create_icons_from_list(intermediates, inputs)
 -- The first entry in each IconSources is the first layer of the created icon.
 ---@type { [string]: IconSources }
 local recipe_icon_source_map = {
-	["bio-resin-wood-reprocessing"] = {
+	["angels-bio-resin-wood-reprocessing"] = {
 		-- stylua: ignore
-		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-resin", "solid-resin"), type_name = "item" },
+		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-resin", "angels-solid-resin"), type_name = "item" },
 		{ name = "wood", type_name = "item", scale = 0.5, shift = { -8, -8 } },
 	},
 }
