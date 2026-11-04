@@ -126,6 +126,17 @@ if mods["angelssmelting"] then
 	})
 end
 
+if mods["angelsaddons-bots"] then
+	data:extend({
+		{
+			type = "bool-setting",
+			name = "reskins-angels-do-angelsaddons-bots",
+			setting_type = "startup",
+			default_value = true,
+		},
+	})
+end
+
 if mods["angelsaddons-cab"] then
 	data:extend({
 		{

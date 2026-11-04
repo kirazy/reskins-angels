@@ -32,7 +32,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 end
 
 -- Reskin Big Chests
-if reskins.angels and reskins.angels.triggers.industries.entities then
+if reskins.angels and reskins.angels.triggers.bots.entities then
 	---@type data.ContainerPrototype
 	local entity = data.raw[TYPE]["angels-big-chest"]
 	if entity then

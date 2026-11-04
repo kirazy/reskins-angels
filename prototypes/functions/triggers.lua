@@ -64,6 +64,13 @@ triggers.mobility = {
 }
 
 -- Angel's Addons - Storage
+triggers.bots = {
+	entities = reskins.lib.settings.is_feature_set_enabled("entities", "reskins-angels", "angelsaddons-bots"),
+	equipment = reskins.lib.settings.is_feature_set_enabled("equipment", "reskins-angels", "angelsaddons-bots"),
+	items = reskins.lib.settings.is_feature_set_enabled("items-and-fluids", "reskins-angels", "angelsaddons-bots"),
+	technologies = reskins.lib.settings.is_feature_set_enabled("technologies", "reskins-angels", "angelsaddons-bots"),
+}
+
 triggers.storage = {
 	entities = reskins.lib.settings.is_feature_set_enabled("entities", "reskins-angels", "angelsaddons-storage"),
 	equipment = reskins.lib.settings.is_feature_set_enabled("equipment", "reskins-angels", "angelsaddons-storage"),

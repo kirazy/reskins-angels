@@ -45,8 +45,8 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 	end
 end
 
--- Reskin Big Chests from Angel's Industries
-if reskins.angels and reskins.angels.triggers.industries.entities then
+-- Reskin Big Chests from Angel's Addons - Robot Logistics
+if reskins.angels and reskins.angels.triggers.bots.entities then
 	local entities = {
 		["angels-logistic-chest-active-provider"] = { logistic_mode = "active-provider" },
 		["angels-logistic-chest-buffer"] = { logistic_mode = "buffer" },
