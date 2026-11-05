@@ -23,9 +23,6 @@ require("prototypes.items.petrochem")
 require("prototypes.items.petrochem.sulfur")
 require("prototypes.items.smelting-updates")
 
--- Second pass
-require("prototypes.items.refining-secondary-updates")
-
 ----------------------------------------------------------------------------------------------------
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------

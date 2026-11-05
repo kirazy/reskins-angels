@@ -73,23 +73,7 @@ local function roll(material, label)
 	return { composition = Rolls.get_icon_composition({ material = material }), label = label }
 end
 
--- Assign the composite recipes that Angel's Refining adds when Angel's Smelting is not active.
 if not mods["angelssmelting"] then
-	_framework.tiers.assign_icons_with_tier_labels("recipe", {
-		["angels-ore5-crushed-smelting"] = {
-			sources = {
-				{ names = { "bob-lead-plate", "angels-plate-lead" }, type_name = "item" },
-				{ name = "angels-ore5-crushed", type_name = "item", transform = corner },
-			},
-		},
-		["angels-ore6-crushed-smelting"] = {
-			sources = {
-				{ names = { "bob-tin-plate", "angels-plate-tin" }, type_name = "item" },
-				{ name = "angels-ore6-crushed", type_name = "item", transform = corner },
-			},
-		},
-	})
-
 	return
 end
 
