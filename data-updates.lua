@@ -20,6 +20,7 @@ require("prototypes.entity.refining.liquefier")
 require("prototypes.items.refining-updates")
 require("prototypes.items.smelting.ores")
 require("prototypes.items.petrochem")
+require("prototypes.items.industries-updates")
 require("prototypes.items.petrochem.sulfur")
 require("prototypes.items.smelting-updates")
 

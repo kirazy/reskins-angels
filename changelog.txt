@@ -21,6 +21,7 @@ Date: ????
     - Fixed that the item variations of the ingots had no effect
     - Fixed that the icons of the steel plate and Bob's lead plate recipes had a blank layer
     - Fixed that Bob's tungsten ore was not reskinned, and that the cobalt-steel smelting technology showed the cobalt casting icon
+    - Fixed that Bob's plutonium-239 and thorium-232 showed the icons of Angel's Petrochem instead of their reskinned icons
     - Fixed that the big chests and logistic big chests of Angel's Addons - Robot Logistics were not reskinned
     - Fixed that the thorium power technology of Angel's Petrochem was not reskinned
 ---------------------------------------------------------------------------------------------------
