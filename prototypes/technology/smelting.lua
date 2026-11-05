@@ -84,6 +84,7 @@ local technologies = {
 	["angels-iron-casting-2"] = casting("iron"),
 	["angels-iron-smelting-3"] = smelting("iron"),
 	["angels-iron-casting-3"] = casting("iron"),
+	["angels-iron-casting-4"] = casting("iron"),
 
 	["angels-lead-smelting-1"] = casting("lead"),
 	["angels-lead-smelting-2"] = smelting("lead"),
@@ -149,6 +150,7 @@ local technologies = {
 	["angels-steel-smelting-1"] = casting("steel"),
 	["angels-steel-smelting-2"] = casting("steel"),
 	["angels-steel-smelting-3"] = casting("steel"),
+	["angels-steel-smelting-4"] = casting("steel"),
 
 	["angels-zinc-smelting-1"] = casting("zinc"),
 	["angels-zinc-smelting-2"] = smelting("zinc"),

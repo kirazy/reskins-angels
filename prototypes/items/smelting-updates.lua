@@ -233,6 +233,14 @@ local recipes = {
 		composition = Powders.get_icon_composition({ material = "tungsten-mixture" }),
 		label = numeral(1),
 	},
+	["angels-casting-powder-tungsten-2"] = {
+		composition = Powders.get_icon_composition({ material = "tungsten-mixture" }),
+		label = numeral(2),
+	},
+	["angels-casting-powder-tungsten-3"] = {
+		composition = Powders.get_icon_composition({ material = "tungsten-mixture" }),
+		label = numeral(3),
+	},
 
 	-- Composite recipes.
 	-- Aluminium
