@@ -15,20 +15,21 @@ end
 
 -- This file is loaded in data-updates. When sintering ovens 1, 2, and 3 are hidden, Angel's Smelting replaces the icons
 -- of sintering ovens 4 and 5 in data-updates.
-local entities
+--
+-- Sintering ovens 1, 2, and 3 are reskinned with their own tiers when they are hidden, since they still show in the
+-- editor, and sintering ovens 4 and 5 take the tiers 1 and 2 of the numbers that Angel's Smelting gives them.
+local entities = {
+	["angels-sintering-oven"] = { tier = 1, prog_tier = 1 },
+	["angels-sintering-oven-2"] = { tier = 2, prog_tier = 2 },
+	["angels-sintering-oven-3"] = { tier = 3, prog_tier = 3 },
+}
+
 if angelsmods.trigger.early_sintering_oven then
-	entities = {
-		["angels-sintering-oven"] = { tier = 1, prog_tier = 1 },
-		["angels-sintering-oven-2"] = { tier = 2, prog_tier = 2 },
-		["angels-sintering-oven-3"] = { tier = 3, prog_tier = 3 },
-		["angels-sintering-oven-4"] = { tier = 4, prog_tier = 4 },
-		["angels-sintering-oven-5"] = { tier = 5, prog_tier = 5 },
-	}
+	entities["angels-sintering-oven-4"] = { tier = 4, prog_tier = 4 }
+	entities["angels-sintering-oven-5"] = { tier = 5, prog_tier = 5 }
 else
-	entities = {
-		["angels-sintering-oven-4"] = { tier = 1, prog_tier = 4 },
-		["angels-sintering-oven-5"] = { tier = 2, prog_tier = 5 },
-	}
+	entities["angels-sintering-oven-4"] = { tier = 1, prog_tier = 4 }
+	entities["angels-sintering-oven-5"] = { tier = 2, prog_tier = 5 }
 end
 
 local TYPE = "assembling-machine"
