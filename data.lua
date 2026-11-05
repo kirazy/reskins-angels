@@ -13,17 +13,21 @@ require("prototypes.entity.petrochem")
 
 -- Angel's Bio-Processing
 require("prototypes.entity.bioprocessing.algae-farm")
--- require("prototypes.entity.bioprocessing.butchery")
--- require("prototypes.entity.bioprocessing.composter")
--- require("prototypes.entity.bioprocessing.crop-farm")
+require("prototypes.entity.bioprocessing.arboretum")
+require("prototypes.entity.bioprocessing.bioprocessor")
+require("prototypes.entity.bioprocessing.butchery")
+require("prototypes.entity.bioprocessing.composter")
+require("prototypes.entity.bioprocessing.field")
 -- require("prototypes.entity.bioprocessing.gardens")
--- require("prototypes.entity.bioprocessing.hatchery")
--- require("prototypes.entity.bioprocessing.nutrient-extractor")
--- require("prototypes.entity.bioprocessing.press")
+require("prototypes.entity.bioprocessing.hatchery")
+require("prototypes.entity.bioprocessing.nutrient-extractor")
+require("prototypes.entity.bioprocessing.press")
 -- require("prototypes.entity.bioprocessing.processing-plant")
--- require("prototypes.entity.bioprocessing.processor")
--- require("prototypes.entity.bioprocessing.refugium")
--- require("prototypes.entity.bioprocessing.seed-extractor")
+require("prototypes.entity.bioprocessing.refugium-biter")
+require("prototypes.entity.bioprocessing.refugium-fish")
+require("prototypes.entity.bioprocessing.refugium-puffer")
+require("prototypes.entity.bioprocessing.seed-extractor")
+require("prototypes.entity.bioprocessing.tree-generator")
 
 -- Angel's Exploration
 -- require("prototypes.entity.exploration.tank")
@@ -92,6 +96,9 @@ require("prototypes.entity.smelting.strand-casting-machine")
 -- Angel's Addons - Storage Options
 require("prototypes.entity.addons-storage.chests")
 require("prototypes.entity.addons-storage.logistics-chests")
+
+-- Angel's entities that keep the artwork of Angel's mods
+require("prototypes.entity.corpses-and-explosions")
 
 ----------------------------------------------------------------------------------------------------
 -- EQUIPMENT

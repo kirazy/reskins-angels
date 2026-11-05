@@ -4,7 +4,9 @@ Date: ????
   Changes:
     - Migrated some entity sprites to use the Artisanal Reskins: Assets API
     - Entity tints and tier labels now follow the settings of Artisanal Reskins: Framework
-    - Dying explosions, particles, and remnants now come from the Artisanal Reskins: Assets API, and machines now use the generic remnants of the base game that match their size
+    - Dying explosions, particles, and remnants now come from the Artisanal Reskins: Assets API, and machines now use generic remnants that fit their size
+    - The Angel's entities that keep the artwork of Angel's mods, such as the clarifier, flare stack, tanks, silos, sea pumps, and the buildings of Angel's Addons - Robot Logistics, now use generic remnants that fit their size and the dying explosion of a base entity
+    - The bioprocessing buildings are now reskinned untinted, with high resolution icons, unless Artisanal Reskins: Compatibility reskins the tiers that Extended Angel's adds
     - The oil refineries are now reskinned by this mod instead of Artisanal Reskins: Library
     - Chemical furnaces are now labeled tiers 1 to 4 under the traditional tier mapping, matching Angel's mods
     - The recipes of the ore flotation cell and clarifier, and the mud waters, now keep the tints and colors of Angel's mods
