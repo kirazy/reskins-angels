@@ -45,21 +45,21 @@ local function base_icon(name)
 end
 
 ---Gets the definition of the plate of the given `material`.
----@param material string The material of the plate.
+---@param material string
 ---@return TieredIconDefinition
 local function plate(material)
 	return { composition = Plates.get_icon_composition({ material = material }) }
 end
 
 ---Gets the definition of the alloy of the given `alloy`.
----@param alloy string The alloy.
+---@param alloy string
 ---@return TieredIconDefinition
 local function alloy(alloy)
 	return { composition = Plates.get_alloy_icon_composition({ alloy = alloy }) }
 end
 
 ---Gets the definition of the wire of the given `material`.
----@param material string The material of the wire.
+---@param material string
 ---@return TieredIconDefinition
 local function wire(material)
 	return { composition = Wires.get_icon_composition({ material = material }) }
