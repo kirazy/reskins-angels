@@ -14,7 +14,6 @@ Date: ????
     - The icons of the Angel's Smelting items and recipes now come from the Artisanal Reskins: Assets API, and the composite recipe icons no longer show the tier labels of the items they show
     - The powders now show their icon as one of their in-world pictures, and the ingots take their reskinned icon with 9 in-world pictures when item variations are enabled
     - Now depends on Artisanal Reskins: Bob's Assets, which has the bearings and bearing balls in the colors of Angel's materials
-    - Sintering ovens 1 to 3 and the powder metallurgy 1 technology are now reskinned when Angel's Smelting hides them, since they still show in the editor
   Bugfixes:
     - Fixed that the recipes of the silver, platinum, and tin wires lost the plate in the corner of their icons, and that the first tungsten casting powder recipe lost its numeral
     - The icons of the other Angel's items, recipes, and technologies now come from the Artisanal Reskins: Assets API, and the in-world pictures of the isotopes, fuel cells, and nuclear fuels now have mipmaps

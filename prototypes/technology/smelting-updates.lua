@@ -61,10 +61,8 @@ local technologies = {
 }
 
 -- Powder Metallurgy
--- Powder metallurgy 1 is reskinned when it is hidden as well.
-technologies["angels-powder-metallurgy-1"] = technology(PowderMetallurgy, 1, 1)
-
 if angelsmods.trigger.early_sintering_oven then
+	technologies["angels-powder-metallurgy-1"] = technology(PowderMetallurgy, 1, 1)
 	technologies["angels-powder-metallurgy-2"] = technology(PowderMetallurgy, 2, 2)
 	technologies["angels-powder-metallurgy-3"] = technology(PowderMetallurgy, 3, 3)
 	technologies["angels-powder-metallurgy-4"] = technology(PowderMetallurgy, 4, 4)
