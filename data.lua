@@ -29,27 +29,10 @@ require("prototypes.entity.bioprocessing.refugium-puffer")
 require("prototypes.entity.bioprocessing.seed-extractor")
 require("prototypes.entity.bioprocessing.tree-generator")
 
--- Angel's Exploration
--- require("prototypes.entity.exploration.tank")
--- require("prototypes.entity.exploration.turrets")
-
--- Angel's Industries
--- require("prototypes.entity.industries.basic-lab")
--- require("prototypes.entity.industries.chests")
--- require("prototypes.entity.industries.energy-lab")
--- require("prototypes.entity.industries.enhance-lab")
--- require("prototypes.entity.industries.exploration-lab")
--- require("prototypes.entity.industries.lamp")
--- require("prototypes.entity.industries.logistic-lab")
--- require("prototypes.entity.industries.main-lab")
--- require("prototypes.entity.industries.processing-lab")
--- require("prototypes.entity.industries.war-lab")
-
 -- Angel's Petrochem
 require("prototypes.entity.petrochem.advanced-chemical-plant")
 require("prototypes.entity.petrochem.advanced-gas-refinery")
 require("prototypes.entity.petrochem.air-filter")
--- require("prototypes.entity.petrochem.chemical-plant")
 require("prototypes.entity.petrochem.electric-boiler")
 require("prototypes.entity.petrochem.electrolyser")
 -- require("prototypes.entity.petrochem.flare-stack") -- fully implemented in Angel's Petrochem
@@ -59,7 +42,6 @@ require("prototypes.entity.petrochem.oil-refinery")
 -- require("prototypes.entity.petrochem.petrochem-gas-tank") -- fully implemented in Angel's Petrochem
 -- require("prototypes.entity.petrochem.petrochem-inline-tank") -- fully implemented in Angel's Petrochem
 -- require("prototypes.entity.petrochem.petrochem-oil-tank") -- fully implemented in Angel's Petrochem
--- require("prototypes.entity.petrochem.polymerization-chamber")
 require("prototypes.entity.petrochem.separator")
 require("prototypes.entity.petrochem.steam-cracker")
 require("prototypes.entity.petrochem.valve")
