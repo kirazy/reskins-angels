@@ -25,7 +25,6 @@ local Icons = require("__reskins-assets-api__.assets.angels.items.icons")
 local Ingots = require("__reskins-assets-api__.assets.angels.items.ingots")
 local Plates = require("__reskins-assets-api__.assets.angels.items.plates")
 local Powders = require("__reskins-assets-api__.assets.angels.items.powders")
-local Rolls = require("__reskins-assets-api__.assets.angels.items.rolls")
 local Wires = require("__reskins-assets-api__.assets.angels.items.wires")
 
 local corner = _sprite_utils.defines.icon_transforms.compass.northwest
@@ -65,14 +64,6 @@ local function wire(material)
 	return { composition = Wires.get_icon_composition({ material = material }) }
 end
 
----Gets the definition of the sheet coil of the given `material`, with the given `label`, if any.
----@param material string The material of the sheet coil.
----@param label? IconData[] The label of the icon.
----@return TieredIconDefinition
-local function roll(material, label)
-	return { composition = Rolls.get_icon_composition({ material = material }), label = label }
-end
-
 if not mods["angelssmelting"] then
 	return
 end
@@ -90,8 +81,6 @@ local items = {
 	["angels-plate-cobalt"] = plate("cobalt"),
 	["angels-plate-glass"] = { composition = Icons.get_glass_icon_composition() },
 	["angels-plate-gold"] = plate("gold"),
-	["angels-plate-hot-iron"] = plate("hot-iron"),
-	["angels-plate-iron"] = plate("iron"),
 	["angels-plate-lead"] = plate("lead"),
 	["angels-plate-manganese"] = plate("manganese"),
 	["angels-plate-nickel"] = plate("nickel"),
@@ -137,14 +126,6 @@ local items = {
 	["angels-solid-lime"] = { composition = Icons.get_solid_lime_icon_composition() },
 	["angels-quartz-crucible"] = { composition = Icons.get_quartz_crucible_icon_composition() },
 
-	-- The sheet coils of Angel's Extended Smelting and Compression.
-	["angels-roll-brass"] = roll("brass"),
-	["angels-roll-bronze"] = roll("bronze"),
-	["angels-roll-cobalt-steel"] = roll("cobalt-steel"),
-	["angels-roll-gunmetal"] = roll("gunmetal"),
-	["angels-roll-invar"] = roll("invar"),
-	["angels-roll-nitinol"] = roll("nitinol"),
-
 	-- Rods.
 	["iron-stick"] = base_icon("iron-stick"),
 }
@@ -162,8 +143,10 @@ if _framework.settings.get_value("reskins-angels-use-angels-material-colors") th
 
 	-- Bearing balls.
 	items["bob-brass-bearing-ball"] = { composition = BearingBalls.get_angels_icon_composition({ material = "brass" }) }
-	items["bob-nitinol-bearing-ball"] = { composition = BearingBalls.get_angels_icon_composition({ material = "nitinol" }) }
-	items["bob-titanium-bearing-ball"] = { composition = BearingBalls.get_angels_icon_composition({ material = "titanium" }) }
+	items["bob-nitinol-bearing-ball"] =
+		{ composition = BearingBalls.get_angels_icon_composition({ material = "nitinol" }) }
+	items["bob-titanium-bearing-ball"] =
+		{ composition = BearingBalls.get_angels_icon_composition({ material = "titanium" }) }
 
 	-- Bearings.
 	items["bob-brass-bearing"] = { composition = Bearings.get_angels_icon_composition({ material = "brass" }) }
@@ -244,22 +227,6 @@ local recipes = {
 	["angels-plate-glass"] = { composition = Icons.get_glass_icon_composition(), label = numeral(1) },
 	["angels-plate-glass-2"] = { composition = Icons.get_glass_icon_composition(), label = numeral(2) },
 	["angels-plate-glass-3"] = { composition = Icons.get_glass_icon_composition(), label = numeral(3) },
-
-	-- The sheet coils of Angel's Extended Smelting and Compression.
-	["angels-roll-brass-casting"] = roll("brass", numeral(1)),
-	["angels-roll-brass-casting-fast"] = roll("brass", numeral(2)),
-	["angels-roll-bronze-casting"] = roll("bronze", numeral(1)),
-	["angels-roll-bronze-casting-fast"] = roll("bronze", numeral(2)),
-	["angels-roll-cobalt-steel-casting"] = roll("cobalt-steel", numeral(1)),
-	["angels-roll-cobalt-steel-casting-fast"] = roll("cobalt-steel", numeral(2)),
-	["angels-roll-gunmetal-casting"] = roll("gunmetal", numeral(1)),
-	["angels-roll-gunmetal-casting-fast"] = roll("gunmetal", numeral(2)),
-	["angels-roll-invar-casting"] = roll("invar", numeral(1)),
-	["angels-roll-invar-casting-fast"] = roll("invar", numeral(2)),
-	["angels-roll-nitinol-casting"] = roll("nitinol", numeral(1)),
-	["angels-roll-nitinol-casting-fast"] = roll("nitinol", numeral(2)),
-	["angels-roll-tungsten-casting"] = roll("tungsten", numeral(1)),
-	["angels-roll-tungsten-casting-fast"] = roll("tungsten", numeral(2)),
 
 	-- Composite recipes.
 	-- Aluminium
