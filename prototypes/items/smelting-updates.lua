@@ -228,6 +228,12 @@ local recipes = {
 	["angels-plate-glass-2"] = { composition = Icons.get_glass_icon_composition(), label = numeral(2) },
 	["angels-plate-glass-3"] = { composition = Icons.get_glass_icon_composition(), label = numeral(3) },
 
+	-- Tungsten casting powder.
+	["angels-casting-powder-tungsten"] = {
+		composition = Powders.get_icon_composition({ material = "tungsten-mixture" }),
+		label = numeral(1),
+	},
+
 	-- Composite recipes.
 	-- Aluminium
 	["angels-plate-aluminium"] = {
@@ -575,6 +581,12 @@ local recipes = {
 	},
 
 	-- Silver cable
+	["angels-wire-silver"] = {
+		sources = {
+			{ name = "angels-wire-silver", type_name = "item" },
+			{ names = { "bob-silver-plate", "angels-plate-silver" }, type_name = "item", transform = corner },
+		},
+	},
 	["angels-wire-silver-2"] = {
 		sources = {
 			{ name = "angels-wire-silver", type_name = "item" },
@@ -583,6 +595,12 @@ local recipes = {
 	},
 
 	-- Platinum cable
+	["angels-wire-platinum"] = {
+		sources = {
+			{ name = "angels-wire-platinum", type_name = "item" },
+			{ name = "angels-plate-platinum", type_name = "item", transform = corner },
+		},
+	},
 	["angels-wire-platinum-2"] = {
 		sources = {
 			{ name = "angels-wire-platinum", type_name = "item" },
@@ -591,6 +609,12 @@ local recipes = {
 	},
 
 	-- Tin cable
+	["angels-wire-tin"] = {
+		sources = {
+			{ names = { "bob-tinned-copper-cable", "angels-wire-tin" }, type_name = "item" },
+			{ names = { "bob-tin-plate", "angels-plate-tin" }, type_name = "item", transform = corner },
+		},
+	},
 	["angels-wire-tin-2"] = {
 		sources = {
 			{ names = { "bob-tinned-copper-cable", "angels-wire-tin" }, type_name = "item" },
