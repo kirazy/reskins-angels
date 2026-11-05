@@ -36,12 +36,12 @@ for name, options in pairs(entities) do
 	local sprite_set = WashingPlant.get_sprite_set({ tint = tint })
 	Applicators.apply_sprite_set(entity, sprite_set)
 
-	local icon_data = WashingPlant.get_icon({ tint = tint })
+	local composition = WashingPlant.get_icon_composition({ tint = tint })
 	local icon_assignment = _framework.tiers.icon_assignment_with_tier_labels({
 		tier = tier,
 		name = entity.name,
 		type_name = entity.type,
-		icon_data = icon_data,
+		composition = composition,
 	})
 	_sprite_utils.icons.apply_icon_assignment(icon_assignment)
 
