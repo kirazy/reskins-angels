@@ -27,9 +27,3 @@ require("prototypes.items.smelting-updates")
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------
 require("prototypes.technology.smelting-updates")
-
-----------------------------------------------------------------------------------------------------
--- GUI Modifications
-----------------------------------------------------------------------------------------------------
--- FIXME: This is a temporary disablement of the item group icons, until new ones are created.
--- require("prototypes.item-group.item-group")

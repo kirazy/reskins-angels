@@ -43,28 +43,6 @@ if mods["angelsbioprocessing"] then
 	})
 end
 
-if mods["angelsexploration"] then
-	data:extend({
-		{
-			type = "bool-setting",
-			name = "reskins-angels-do-angelsexploration",
-			setting_type = "startup",
-			default_value = true,
-		},
-	})
-end
-
-if mods["angelsindustries"] then
-	data:extend({
-		{
-			type = "bool-setting",
-			name = "reskins-angels-do-angelsindustries",
-			setting_type = "startup",
-			default_value = true,
-		},
-	})
-end
-
 if mods["angelspetrochem"] then
 	data:extend({
 		{

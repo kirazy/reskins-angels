@@ -13,22 +13,6 @@ triggers.bioprocessing = {
 	technologies = reskins.lib.settings.is_feature_set_enabled("technologies", "reskins-angels", "angelsbioprocessing"),
 }
 
--- Angel's Exploration
-triggers.exploration = {
-	entities = reskins.lib.settings.is_feature_set_enabled("entities", "reskins-angels", "angelsexploration"),
-	equipment = reskins.lib.settings.is_feature_set_enabled("equipment", "reskins-angels", "angelsexploration"),
-	items = reskins.lib.settings.is_feature_set_enabled("items-and-fluids", "reskins-angels", "angelsexploration"),
-	technologies = reskins.lib.settings.is_feature_set_enabled("technologies", "reskins-angels", "angelsexploration"),
-}
-
--- Angel's Industries
-triggers.industries = {
-	entities = reskins.lib.settings.is_feature_set_enabled("entities", "reskins-angels", "angelsindustries"),
-	equipment = reskins.lib.settings.is_feature_set_enabled("equipment", "reskins-angels", "angelsindustries"),
-	items = reskins.lib.settings.is_feature_set_enabled("items-and-fluids", "reskins-angels", "angelsindustries"),
-	technologies = reskins.lib.settings.is_feature_set_enabled("technologies", "reskins-angels", "angelsindustries"),
-}
-
 -- Angel's Petrochem
 triggers.petrochem = {
 	entities = reskins.lib.settings.is_feature_set_enabled("entities", "reskins-angels", "angelspetrochem"),
@@ -84,12 +68,9 @@ triggers.mad_clowns = {
 		or mods["Clowns-Extended-Minerals"] and true
 		or mods["Clowns-Nuclear"] and true
 		or mods["Clowns-Processing"] and true
-		or mods["Clowns-Science"] and true
 		or false,
 }
 
--- Angel components
-triggers.use_angels_components = (angelsmods and angelsmods.industries and angelsmods.industries.components)
 triggers.use_angels_plates = not mods["bobplates"]
 
 return triggers

@@ -15,12 +15,14 @@ Date: ????
     - The powders now show their icon as one of their in-world pictures, and the ingots take their reskinned icon with 9 in-world pictures when item variations are enabled
     - Now depends on Artisanal Reskins: Bob's Assets, which has the bearings and bearing balls in the colors of Angel's materials
     - The icons of the other Angel's items, recipes, and technologies now come from the Artisanal Reskins: Assets API, and the in-world pictures of the isotopes, fuel cells, and nuclear fuels now have mipmaps
+    - Removed support for Angel's Industries, Angel's Exploration, and MadClown01's Science, which are not available for Factorio 2.0 or later
   Bugfixes:
     - Fixed that the mod failed to load with Angel's Petrochem when Bob's Metals, Chemicals and Intermediates was not active
     - Fixed that the item variations of the ingots had no effect
     - Fixed that the icons of the steel plate and Bob's lead plate recipes had a blank layer
     - Fixed that Bob's tungsten ore was not reskinned, and that the cobalt-steel smelting technology showed the cobalt casting icon
     - Fixed that the big chests and logistic big chests of Angel's Addons - Robot Logistics were not reskinned
+    - Fixed that the thorium power technology of Angel's Petrochem was not reskinned
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
 Date: 2026-11-02
