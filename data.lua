@@ -18,11 +18,9 @@ require("prototypes.entity.bioprocessing.bioprocessor")
 require("prototypes.entity.bioprocessing.butchery")
 require("prototypes.entity.bioprocessing.composter")
 require("prototypes.entity.bioprocessing.field")
--- require("prototypes.entity.bioprocessing.gardens")
 require("prototypes.entity.bioprocessing.hatchery")
 require("prototypes.entity.bioprocessing.nutrient-extractor")
 require("prototypes.entity.bioprocessing.press")
--- require("prototypes.entity.bioprocessing.processing-plant")
 require("prototypes.entity.bioprocessing.refugium-biter")
 require("prototypes.entity.bioprocessing.refugium-fish")
 require("prototypes.entity.bioprocessing.refugium-puffer")
@@ -36,7 +34,6 @@ require("prototypes.entity.petrochem.air-filter")
 require("prototypes.entity.petrochem.electric-boiler")
 require("prototypes.entity.petrochem.electrolyser")
 -- require("prototypes.entity.petrochem.flare-stack") -- fully implemented in Angel's Petrochem
--- require("prototypes.entity.petrochem.fluid-splitter")
 require("prototypes.entity.petrochem.gas-refinery")
 require("prototypes.entity.petrochem.oil-refinery")
 -- require("prototypes.entity.petrochem.petrochem-gas-tank") -- fully implemented in Angel's Petrochem
@@ -47,7 +44,6 @@ require("prototypes.entity.petrochem.steam-cracker")
 require("prototypes.entity.petrochem.valve")
 
 -- Angel's Refining
--- require("prototypes.entity.refining.barreling-pump")
 -- require("prototypes.entity.refining.clarifier") -- fully implemented in Angel's Refining
 require("prototypes.entity.refining.crystallizer")
 require("prototypes.entity.refining.electrowinning-cell")
@@ -60,10 +56,8 @@ require("prototypes.entity.refining.ore-powderizer")
 require("prototypes.entity.refining.ore-refinery")
 require("prototypes.entity.refining.ore-sorting-facility")
 require("prototypes.entity.refining.salination-plant")
--- require("prototypes.entity.refining.seafloor-pump")
 require("prototypes.entity.refining.thermal-extractor")
 require("prototypes.entity.refining.washing-plant")
--- require("prototypes.entity.refining.water-pump")
 
 -- Angel's Smelting
 require("prototypes.entity.smelting.blast-furnace")
@@ -89,15 +83,11 @@ require("prototypes.entity.corpses-and-explosions")
 ----------------------------------------------------------------------------------------------------
 -- ITEMS
 ----------------------------------------------------------------------------------------------------
--- require("prototypes.items.bioprocessing")
--- require("prototypes.items.exploration")
 require("prototypes.items.industries")
 
 ----------------------------------------------------------------------------------------------------
 -- TECHNOLOGY
 ----------------------------------------------------------------------------------------------------
--- require("prototypes.technology.bioprocessing")
--- require("prototypes.technology.exploration")
 require("prototypes.technology.industries")
 require("prototypes.technology.petrochem")
 require("prototypes.technology.refining")
