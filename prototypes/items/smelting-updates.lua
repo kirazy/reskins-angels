@@ -15,8 +15,8 @@ local _framework = {
 local _sprite_utils = { defines = require("__reskins-sprite-utils__.defines") }
 
 local Armor = require("__reskins-assets-api__.assets.angels.items.armor")
-local BearingBalls = require("__reskins-assets-api__.assets.angels.items.bearing-balls")
-local Bearings = require("__reskins-assets-api__.assets.angels.items.bearings")
+local BearingBalls = require("__reskins-assets-api__.assets.bobs.items.bearing-balls")
+local Bearings = require("__reskins-assets-api__.assets.bobs.items.bearings")
 local Gears = require("__reskins-assets-api__.assets.angels.items.gears")
 local Icons = require("__reskins-assets-api__.assets.angels.items.icons")
 local Ingots = require("__reskins-assets-api__.assets.angels.items.ingots")
@@ -174,14 +174,14 @@ if _framework.settings.get_value("reskins-angels-use-angels-material-colors") th
 	items["bob-tungsten-gear-wheel"] = { composition = Gears.get_icon_composition({ material = "tungsten" }) }
 
 	-- Bearing balls.
-	items["bob-brass-bearing-ball"] = { composition = BearingBalls.get_icon_composition({ material = "brass" }) }
-	items["bob-nitinol-bearing-ball"] = { composition = BearingBalls.get_icon_composition({ material = "nitinol" }) }
-	items["bob-titanium-bearing-ball"] = { composition = BearingBalls.get_icon_composition({ material = "titanium" }) }
+	items["bob-brass-bearing-ball"] = { composition = BearingBalls.get_angels_icon_composition({ material = "brass" }) }
+	items["bob-nitinol-bearing-ball"] = { composition = BearingBalls.get_angels_icon_composition({ material = "nitinol" }) }
+	items["bob-titanium-bearing-ball"] = { composition = BearingBalls.get_angels_icon_composition({ material = "titanium" }) }
 
 	-- Bearings.
-	items["bob-brass-bearing"] = { composition = Bearings.get_icon_composition({ material = "brass" }) }
-	items["bob-nitinol-bearing"] = { composition = Bearings.get_icon_composition({ material = "nitinol" }) }
-	items["bob-titanium-bearing"] = { composition = Bearings.get_icon_composition({ material = "titanium" }) }
+	items["bob-brass-bearing"] = { composition = Bearings.get_angels_icon_composition({ material = "brass" }) }
+	items["bob-nitinol-bearing"] = { composition = Bearings.get_angels_icon_composition({ material = "nitinol" }) }
+	items["bob-titanium-bearing"] = { composition = Bearings.get_angels_icon_composition({ material = "titanium" }) }
 end
 
 -- Add the powders and their picture variations.
