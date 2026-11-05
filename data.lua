@@ -33,18 +33,13 @@ require("prototypes.entity.petrochem.advanced-gas-refinery")
 require("prototypes.entity.petrochem.air-filter")
 require("prototypes.entity.petrochem.electric-boiler")
 require("prototypes.entity.petrochem.electrolyser")
--- require("prototypes.entity.petrochem.flare-stack") -- fully implemented in Angel's Petrochem
 require("prototypes.entity.petrochem.gas-refinery")
 require("prototypes.entity.petrochem.oil-refinery")
--- require("prototypes.entity.petrochem.petrochem-gas-tank") -- fully implemented in Angel's Petrochem
--- require("prototypes.entity.petrochem.petrochem-inline-tank") -- fully implemented in Angel's Petrochem
--- require("prototypes.entity.petrochem.petrochem-oil-tank") -- fully implemented in Angel's Petrochem
 require("prototypes.entity.petrochem.separator")
 require("prototypes.entity.petrochem.steam-cracker")
 require("prototypes.entity.petrochem.valve")
 
 -- Angel's Refining
--- require("prototypes.entity.refining.clarifier") -- fully implemented in Angel's Refining
 require("prototypes.entity.refining.crystallizer")
 require("prototypes.entity.refining.electrowinning-cell")
 require("prototypes.entity.refining.filtration-unit")
