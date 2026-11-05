@@ -11,8 +11,12 @@ Date: ????
     - Chemical furnaces are now labeled tiers 1 to 4 under the traditional tier mapping, matching Angel's mods
     - The recipes of the ore flotation cell and clarifier, and the mud waters, now keep the tints and colors of Angel's mods
     - The in-world pictures of the items of entities that use the Artisanal Reskins: Assets API now have mipmaps
+    - The icons of the Angel's Smelting items and recipes now come from the Artisanal Reskins: Assets API, and the composite recipe icons no longer show the tier labels of the items they show
+    - The powders now show their icon as one of their in-world pictures, and the ingots take their reskinned icon with 9 in-world pictures when item variations are enabled
   Bugfixes:
     - Fixed that the mod failed to load with Angel's Petrochem when Bob's Metals, Chemicals and Intermediates was not active
+    - Fixed that the item variations of the ingots had no effect
+    - Fixed that the icons of the steel plate and Bob's lead plate recipes had a blank layer
     - Fixed that the big chests and logistic big chests of Angel's Addons - Robot Logistics were not reskinned
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
