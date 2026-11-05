@@ -3,61 +3,58 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
+---@using data
+---@using Reskins.Framework
+
 -- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.petrochem.items) then
 	return
 end
 
----@type CreateIconsFromListInputs
-local inputs = {
-	mod = "angels",
-	group = "petrochem",
-	make_icon_pictures = false,
-	flat_icon = true,
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
+local _sprite_utils = { defines = require("__reskins-sprite-utils__.defines") }
+
+local BobsIcons = require("__reskins-assets-api__.assets.bobs.items.icons")
+local Icons = require("__reskins-assets-api__.assets.angels.items.icons")
+local Pellets = require("__reskins-assets-api__.assets.angels.items.pellets")
+
+---Gets the numeral of the given `tier`, in the style of Angel's petrochemistry.
+---@param tier integer The number of the numeral.
+---@return IconData[]
+local function numeral(tier)
+	return reskins.angels.num_tier(tier, "petrochem")
+end
+
+---@type table<string, TieredIconDefinition>
+local items = {
+	["angels-pellet-coke"] = { composition = Pellets.get_icon_composition({ material = "coke" }) },
 }
 
----@type CreateIconsFromListTable
-local intermediates = {
-	----------------------------------------------------------------------------------------------------
-	-- Intermediates
-	----------------------------------------------------------------------------------------------------
-	-- Miscellaneous
-	["angels-pellet-coke"] = { subgroup = "intermediates", image = "pellet-coke" },
+---@type table<string, TieredIconDefinition>
+local recipes = {}
 
-	----------------------------------------------------------------------------------------------------
-	-- Recipes
-	----------------------------------------------------------------------------------------------------
-	-- Miscellaneous
-	-- stylua: ignore start
-	["bob-rubber"] = { type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(1, inputs.group) }, -- "1"
-	["angels-solid-rubber"] = { type = "recipe", mod = "lib", group = "shared", subgroup = "items", image = "rubber", icon_extras = reskins.angels.num_tier(2, inputs.group) }, -- "2"
-	-- stylua: ignore end
-}
+-- Bob's rubber is the first of the rubber recipes.
+if data.raw["recipe"]["bob-rubber"] then
+	recipes["bob-rubber"] = { composition = Icons.get_rubber_icon_composition(), label = numeral(1) }
+	recipes["angels-solid-rubber"] = { composition = Icons.get_rubber_icon_composition(), label = numeral(2) }
+else
+	items["angels-solid-rubber"] = { composition = Icons.get_rubber_icon_composition() }
+end
 
+-- Angel's resin takes the icon of Bob's resin.
 if mods["reskins-bobs"] then
-	-- stylua: ignore start
-	intermediates["bob-resin-wood"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "bob-resin", icon_extras = reskins.angels.num_tier(1, inputs.group) }
-	intermediates["angels-solid-resin"] = { type = "recipe", mod = "bobs", group = "plates", subgroup = "items", image = "bob-resin" }
-	intermediates["angels-solid-resin"] = { type = "item", mod = "bobs", group = "plates", subgroup = "items", image = "bob-resin" }
-	-- stylua: ignore end
+	items["angels-solid-resin"] = { composition = BobsIcons.get_resin_icon_composition() }
+	recipes["bob-resin-wood"] = { composition = BobsIcons.get_resin_icon_composition(), label = numeral(1) }
 end
 
-if not data.raw.recipe["bob-rubber"] then
-	intermediates["angels-solid-rubber"].icon_extras = nil
-	intermediates["angels-solid-rubber"].type = nil
-end
+_framework.tiers.assign_icons_with_tier_labels("item", items)
 
-reskins.internal.create_icons_from_list(intermediates, inputs)
-
--- A map of recipe names to the icon sources used to create a combined icon.
--- The first entry in each IconSources is the first layer of the created icon.
----@type { [string]: IconSources }
-local recipe_icon_source_map = {
-	["angels-bio-resin-wood-reprocessing"] = {
-		-- stylua: ignore
-		{ name = reskins.lib.prototypes.get_name_of_first_item_that_exists("bob-resin", "angels-solid-resin"), type_name = "item" },
-		{ name = "wood", type_name = "item", scale = 0.5, shift = { -8, -8 } },
+-- Assign the recipes after the items. A composite recipe reads the icons of the items.
+recipes["angels-bio-resin-wood-reprocessing"] = {
+	sources = {
+		{ names = { "bob-resin", "angels-solid-resin" }, type_name = "item" },
+		{ name = "wood", type_name = "item", transform = _sprite_utils.defines.icon_transforms.corners.northwest },
 	},
 }
 
-reskins.lib.icons.create_and_assign_combined_icons_from_sources_to_recipe(recipe_icon_source_map)
+_framework.tiers.assign_icons_with_tier_labels("recipe", recipes)

@@ -3,60 +3,68 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
+---@using data
+---@using Reskins.Framework
+
 -- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.refining.technologies) then
 	return
 end
 
----@type CreateIconsFromListInputs
-local inputs = {
-	mod = "angels",
-	group = "refining",
-	type = "technology",
-	technology_icon_size = 256,
-}
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
 
----@type CreateIconsFromListTable
+local AdvancedOreRefining = require("__reskins-assets-api__.assets.angels.technologies.advanced-ore-refining")
+local OreCrushing = require("__reskins-assets-api__.assets.angels.technologies.ore-crushing")
+local OreFlotation = require("__reskins-assets-api__.assets.angels.technologies.ore-flotation")
+local OreRefining = require("__reskins-assets-api__.assets.angels.technologies.ore-refining")
+local WaterTreatment = require("__reskins-assets-api__.assets.angels.technologies.water-treatment")
+
+---Gets the definition of a technology with the icon of the given `module`, in the tint of the tier given by `tier` and
+---`prog_tier`.
+---@param module { get_icon: fun(params: { tint: Color }): SafeIconData[] } The catalog module of the icon.
+---@param tier Tier The traditional tier.
+---@param prog_tier? Tier The progression tier, if any.
+---@return TieredIconDefinition
+local function technology(module, tier, prog_tier)
+	local tint = _framework.tiers.get_tint(_framework.tiers.get_tier(tier, prog_tier))
+
+	return { icon_data = module.get_icon({ tint = tint }) }
+end
+
+---@type table<string, TieredIconDefinition>
 local technologies = {
 	-- Advanced ore refinining (Ore sorting facility)
-	["angels-advanced-ore-refining-1"] = { tier = 2, icon_name = "advanced-ore-refining" },
-	["angels-advanced-ore-refining-2"] = { tier = 3, icon_name = "advanced-ore-refining" },
-	["angels-advanced-ore-refining-3"] = { tier = 4, icon_name = "advanced-ore-refining" },
-	["angels-advanced-ore-refining-4"] = { tier = 5, icon_name = "advanced-ore-refining" },
-	["angels-advanced-ore-refining-5"] = { tier = 6, icon_name = "advanced-ore-refining" },
+	["angels-advanced-ore-refining-1"] = technology(AdvancedOreRefining, 2),
+	["angels-advanced-ore-refining-2"] = technology(AdvancedOreRefining, 3),
+	["angels-advanced-ore-refining-3"] = technology(AdvancedOreRefining, 4),
+	["angels-advanced-ore-refining-4"] = technology(AdvancedOreRefining, 5),
+	["angels-advanced-ore-refining-5"] = technology(AdvancedOreRefining, 6),
 
 	-- Water treatment (Hydro plant)
-	["angels-water-treatment"] = { tier = 1, icon_name = "water-treatment" },
-	["angels-water-treatment-2"] = { tier = 2, icon_name = "water-treatment" },
-	["angels-water-treatment-3"] = { tier = 3, icon_name = "water-treatment" },
-	["angels-water-treatment-4"] = { tier = 4, icon_name = "water-treatment" },
-	["angels-water-treatment-5"] = { tier = 5, icon_name = "water-treatment" },
+	["angels-water-treatment"] = technology(WaterTreatment, 1),
+	["angels-water-treatment-2"] = technology(WaterTreatment, 2),
+	["angels-water-treatment-3"] = technology(WaterTreatment, 3),
+	["angels-water-treatment-4"] = technology(WaterTreatment, 4),
+	["angels-water-treatment-5"] = technology(WaterTreatment, 5),
 
 	-- Mechanical refining (Ore crusher)
-	["angels-ore-crushing"] = { tier = 1, icon_name = "ore-crushing" },
-	["clowns-ore-crushing"] = { tier = 0, icon_name = "ore-crushing", technology_icon_layers = 1 },
+	["angels-ore-crushing"] = technology(OreCrushing, 1),
 
 	-- Thermal refining (Ore refining)
-	["angels-ore-refining"] = { tier = 1, prog_tier = 4, icon_name = "ore-refining" },
-	["clowns-ore-refining"] = { tier = 0, icon_name = "ore-refining", technology_icon_layers = 1 },
+	["angels-ore-refining"] = technology(OreRefining, 1, 4),
 
 	-- Hydro-refining (Ore flotation cell)
-	["angels-ore-floatation"] = { tier = 1, prog_tier = 2, icon_name = "ore-flotation" },
-	["clowns-ore-floatation"] = { tier = 0, icon_name = "ore-flotation", technology_icon_layers = 1 },
+	["angels-ore-floatation"] = technology(OreFlotation, 1, 2),
+
+	-- The technologies of Mad Clown's mods take the base layer of the icon only.
+	["clowns-ore-crushing"] = { icon_data = OreCrushing.get_icon() },
+	["clowns-ore-floatation"] = { icon_data = OreFlotation.get_icon() },
+	["clowns-ore-refining"] = { icon_data = OreRefining.get_icon() },
 }
 
 -- Sea Block compatibility
 if mods["SeaBlock"] then
-	technologies["angels-ore-crushing"].icon_name = "advanced-ore-refining"
+	technologies["angels-ore-crushing"] = technology(AdvancedOreRefining, 1)
 end
 
--- Check if we're using Angel's material colors
-if
-	mods["bobwarfare"]
-	and mods["bobplates"]
-	and reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors")
-then
-	technologies["bob-armor-making-3"] = { group = "smelting", subgroup = "armor", flat_icon = true }
-end
-
-reskins.internal.create_icons_from_list(technologies, inputs)
+_framework.tiers.assign_icons_with_tier_labels("technology", technologies)

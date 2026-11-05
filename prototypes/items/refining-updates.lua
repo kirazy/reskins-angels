@@ -3,65 +3,43 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
+---@using data
+---@using Reskins.Framework
+
 -- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.refining.items) then
 	return
 end
 
----@type CreateIconsFromListInputs
-local inputs = {
-	mod = "angels",
-	group = "refining",
-	make_icon_pictures = false,
-	flat_icon = true,
-}
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
 
----@type CreateIconsFromListTable
-local intermediates = {
-	----------------------------------------------------------------------------------------------------
-	-- Intermediates
-	----------------------------------------------------------------------------------------------------
-	-- Miscellaneous
-	["angels-solid-limestone"] = { subgroup = "intermediates", image = "solid-limestone" },
-	["angels-slag"] = { subgroup = "intermediates", image = "slag" },
-}
+local Icons = require("__reskins-assets-api__.assets.angels.items.icons")
 
--- Check if we're using Angel's material colors
-if
-	mods["bobwarfare"]
-	and mods["bobplates"]
-	and reskins.lib.settings.get_value("reskins-angels-use-angels-material-colors")
-then
-	intermediates["heavy-armor-2"] = { type = "armor", group = "smelting", subgroup = "armor" }
+---Gets the numeral of the given `tier`, in the style of Angel's refining.
+---@param tier integer The number of the numeral.
+---@return IconData[]
+local function numeral(tier)
+	return reskins.angels.num_tier(tier, "refining")
 end
 
-reskins.internal.create_icons_from_list(intermediates, inputs)
+---Gets the definition of a recipe with the icon of the given `fluid` and the numeral of the given `tier`.
+---@param fluid string The name of the fluid.
+---@param tier integer The number of the numeral.
+---@return TieredIconDefinition
+local function mud_water(fluid, tier)
+	return { sources = { { name = fluid, type_name = "fluid" } }, label = numeral(tier) }
+end
 
--- A map of recipe names to the icon sources used to create a combined icon.
--- The first entry in each IconSources is the first layer of the created icon.
----@type { [string]: IconSources }
-local recipe_icon_source_map = {
+_framework.tiers.assign_icons_with_tier_labels("item", {
+	["angels-slag"] = { composition = Icons.get_slag_icon_composition() },
+	["angels-solid-limestone"] = { composition = Icons.get_solid_limestone_icon_composition() },
+})
+
+_framework.tiers.assign_icons_with_tier_labels("recipe", {
 	-- Mud water progression
-	["angels-water-heavy-mud"] = {
-		{ name = "angels-water-heavy-mud", type_name = "fluid" },
-		{ icon_data = reskins.angels.num_tier(1, "refining") },
-	},
-	["angels-water-concentrated-mud"] = {
-		{ name = "angels-water-concentrated-mud", type_name = "fluid" },
-		{ icon_data = reskins.angels.num_tier(2, "refining") },
-	},
-	["angels-water-light-mud"] = {
-		{ name = "angels-water-light-mud", type_name = "fluid" },
-		{ icon_data = reskins.angels.num_tier(3, "refining") },
-	},
-	["angels-water-thin-mud"] = {
-		{ name = "angels-water-thin-mud", type_name = "fluid" },
-		{ icon_data = reskins.angels.num_tier(4, "refining") },
-	},
-	["angels-water-saline"] = {
-		{ name = "angels-water-saline", type_name = "fluid" },
-		{ icon_data = reskins.angels.num_tier(5, "refining") },
-	},
-}
-
-reskins.lib.icons.create_and_assign_combined_icons_from_sources_to_recipe(recipe_icon_source_map)
+	["angels-water-heavy-mud"] = mud_water("angels-water-heavy-mud", 1),
+	["angels-water-concentrated-mud"] = mud_water("angels-water-concentrated-mud", 2),
+	["angels-water-light-mud"] = mud_water("angels-water-light-mud", 3),
+	["angels-water-thin-mud"] = mud_water("angels-water-thin-mud", 4),
+	["angels-water-saline"] = mud_water("angels-water-saline", 5),
+})

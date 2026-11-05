@@ -8,24 +8,12 @@ if not (reskins.angels and reskins.angels.triggers.storage.technologies) then
 	return
 end
 
----@type CreateIconsFromListInputs
-local inputs = {
-	mod = "angels",
-	group = "addons-storage",
-	type = "technology",
-	technology_icon_size = 256,
-	flat_icon = true,
-}
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
 
----@type CreateIconsFromListTable
-local technologies = {}
+local Icons = require("__reskins-assets-api__.assets.angels.technologies.icons")
 
--- Reskin warehouse technologies
-technologies["angels-logistic-warehouses"] = { subgroup = "warehouses" }
-technologies["angels-warehouses"] = { subgroup = "warehouses" }
-
--- Reskin silo technologies
--- technologies["logistic-silos"] = {subgroup = "silos"}
--- technologies["ore-silos"] = {subgroup = "silos"}
-
-reskins.internal.create_icons_from_list(technologies, inputs)
+_framework.tiers.assign_icons_with_tier_labels("technology", {
+	-- Reskin warehouse technologies
+	["angels-logistic-warehouses"] = { icon_data = Icons.get_logistic_warehouses_icon() },
+	["angels-warehouses"] = { icon_data = Icons.get_warehouses_icon() },
+})

@@ -8,19 +8,11 @@ if not (reskins.angels and reskins.angels.triggers.industries.technologies) then
 	return
 end
 
----@type CreateIconsFromListInputs
-local inputs = {
-	mod = "angels",
-	group = "industries",
-	type = "technology",
-	technology_icon_size = 256,
-	flat_icon = true,
-}
+local _framework = { tiers = require("__reskins-framework__.api.tiers") }
 
----@type CreateIconsFromListTable
-local technologies = {
+local Icons = require("__reskins-assets-api__.assets.angels.technologies.icons")
+
+_framework.tiers.assign_icons_with_tier_labels("technology", {
 	-- Nuclear
-	["angels-thorium-power"] = { subgroup = "nuclear" },
-}
-
-reskins.internal.create_icons_from_list(technologies, inputs)
+	["angels-thorium-power"] = { icon_data = Icons.get_thorium_power_icon() },
+})
