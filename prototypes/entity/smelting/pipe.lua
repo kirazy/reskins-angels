@@ -16,15 +16,12 @@ local PipeToGround = require("__reskins-assets-api__.assets.base.entities.pipe-t
 if _framework.settings.get_value("reskins-angels-use-angels-material-colors-pipes") == false then
 	return
 end
-if not (reskins.angels and reskins.angels.triggers.smelting.entities) then
+if not mods["angelssmelting"] then
 	return
 end
-if not (reskins.bobs and reskins.bobs.triggers.logistics.entities) then
+if not mods["boblogistics"] then
 	return
 end
-
--- Set trigger
-reskins.angels.triggers.smelting.pipes_use_material_colors = true
 
 local pipe_material_map = {
 	["bob-titanium-pipe"] = {

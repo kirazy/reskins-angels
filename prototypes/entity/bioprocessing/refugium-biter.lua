@@ -9,7 +9,7 @@ local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
 local Applicators = require("__reskins-assets-api__.api.applicators")
 local RefugiumBiter = require("__reskins-assets-api__.assets.angels.entities.bioprocessing.refugium-biter")
 
-if not (reskins.angels and reskins.angels.triggers.bioprocessing.entities) then
+if not mods["angelsbioprocessing"] then
 	return
 end
 

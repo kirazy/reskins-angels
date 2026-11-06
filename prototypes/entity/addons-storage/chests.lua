@@ -13,7 +13,7 @@ local Warehouse = require("__reskins-assets-api__.assets.angels.entities.assorte
 local TYPE = "container"
 
 -- Reskin Warehouses
-if reskins.angels and reskins.angels.triggers.storage.entities then
+if mods["angelsaddons-storage"] then
 	---@type data.ContainerPrototype
 	local entity = data.raw[TYPE]["angels-warehouse"]
 	if entity then
@@ -32,7 +32,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 end
 
 -- Reskin Big Chests
-if reskins.angels and reskins.angels.triggers.bots.entities then
+if mods["angelsaddons-bots"] then
 	---@type data.ContainerPrototype
 	local entity = data.raw[TYPE]["angels-big-chest"]
 	if entity then

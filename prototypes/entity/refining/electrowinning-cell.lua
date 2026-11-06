@@ -9,7 +9,7 @@ local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
 local Applicators = require("__reskins-assets-api__.api.applicators")
 local ElectroWinningCell = require("__reskins-assets-api__.assets.angels.entities.refining.electro-winning-cell")
 
-if not (reskins.angels and reskins.angels.triggers.refining.entities) then
+if not mods["angelsrefining"] then
 	return
 end
 

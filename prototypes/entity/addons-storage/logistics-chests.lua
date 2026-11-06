@@ -13,7 +13,7 @@ local Warehouse = require("__reskins-assets-api__.assets.angels.entities.assorte
 local TYPE = "logistic-container"
 
 -- Reskin Warehouses
-if reskins.angels and reskins.angels.triggers.storage.entities then
+if mods["angelsaddons-storage"] then
 	local entities = {
 		["angels-warehouse-active-provider"] = { logistic_mode = "active-provider" },
 		["angels-warehouse-buffer"] = { logistic_mode = "buffer" },
@@ -46,7 +46,7 @@ if reskins.angels and reskins.angels.triggers.storage.entities then
 end
 
 -- Reskin Big Chests from Angel's Addons - Robot Logistics
-if reskins.angels and reskins.angels.triggers.bots.entities then
+if mods["angelsaddons-bots"] then
 	local entities = {
 		["angels-logistic-chest-active-provider"] = { logistic_mode = "active-provider" },
 		["angels-logistic-chest-buffer"] = { logistic_mode = "buffer" },

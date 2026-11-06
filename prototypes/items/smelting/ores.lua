@@ -6,7 +6,7 @@
 ---@using data
 ---@using Reskins.Framework
 
-if not (reskins.angels and reskins.angels.triggers.smelting.items) then
+if not mods["angelssmelting"] then
 	return
 end
 

@@ -9,7 +9,7 @@ local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
 local Applicators = require("__reskins-assets-api__.api.applicators")
 local BlastFurnace = require("__reskins-assets-api__.assets.angels.entities.smelting.blast-furnace")
 
-if not (reskins.angels and reskins.angels.triggers.smelting.entities) then
+if not mods["angelssmelting"] then
 	return
 end
 

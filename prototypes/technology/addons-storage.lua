@@ -3,7 +3,7 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
-if not (reskins.angels and reskins.angels.triggers.storage.technologies) then
+if not mods["angelsaddons-storage"] then
 	return
 end
 

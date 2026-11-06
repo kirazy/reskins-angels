@@ -9,7 +9,7 @@ local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
 local Applicators = require("__reskins-assets-api__.api.applicators")
 local AdvancedGasRefinery = require("__reskins-assets-api__.assets.angels.entities.petrochem.advanced-gas-refinery")
 
-if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
+if not mods["angelspetrochem"] then
 	return
 end
 

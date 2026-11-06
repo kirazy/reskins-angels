@@ -13,7 +13,7 @@ local Applicators = require("__reskins-assets-api__.api.applicators")
 local AngelsChemicalPlant = require("__reskins-assets-api__.assets.angels.entities.petrochem.chemical-plant")
 local VanillaChemicalPlant = require("__reskins-assets-api__.assets.base.entities.chemical-plant")
 
-if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
+if not mods["angelspetrochem"] then
 	return
 end
 

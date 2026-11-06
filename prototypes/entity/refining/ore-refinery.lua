@@ -9,7 +9,7 @@ local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
 local Applicators = require("__reskins-assets-api__.api.applicators")
 local OreRefinery = require("__reskins-assets-api__.assets.angels.entities.refining.ore-refinery")
 
-if not (reskins.angels and reskins.angels.triggers.refining.entities) then
+if not mods["angelsrefining"] then
 	return
 end
 

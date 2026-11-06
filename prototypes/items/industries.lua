@@ -6,10 +6,6 @@
 ---@using data
 ---@using Reskins.Framework
 
-if not (reskins.angels and reskins.angels.triggers.petrochem.items) then
-	return
-end
-
 if not mods["angelspetrochem"] then
 	return
 end

@@ -31,26 +31,8 @@ data:extend({
 	},
 })
 
--- Settings available based on mod loadout
-if mods["angelsbioprocessing"] then
-	data:extend({
-		{
-			type = "bool-setting",
-			name = "reskins-angels-do-angelsbioprocessing",
-			setting_type = "startup",
-			default_value = true,
-		},
-	})
-end
-
 if mods["angelspetrochem"] then
 	data:extend({
-		{
-			type = "bool-setting",
-			name = "reskins-angels-do-angelspetrochem",
-			setting_type = "startup",
-			default_value = true,
-		},
 		{
 			type = "bool-setting",
 			name = "reskins-angels-use-vanilla-chemical-plant-sprites",
@@ -62,12 +44,6 @@ end
 
 if mods["angelsrefining"] then
 	data:extend({
-		{
-			type = "bool-setting",
-			name = "reskins-angels-do-angelsrefining",
-			setting_type = "startup",
-			default_value = true,
-		},
 		{
 			type = "bool-setting",
 			name = "reskins-angels-use-vanilla-style-ores",
@@ -83,12 +59,6 @@ if mods["angelssmelting"] then
 	data:extend({
 		{
 			type = "bool-setting",
-			name = "reskins-angels-do-angelssmelting",
-			setting_type = "startup",
-			default_value = true,
-		},
-		{
-			type = "bool-setting",
 			name = "reskins-angels-use-angels-material-colors",
 			setting_type = "startup",
 			default_value = true,
@@ -100,50 +70,6 @@ if mods["angelssmelting"] then
 			setting_type = "startup",
 			default_value = true,
 			order = "a",
-		},
-	})
-end
-
-if mods["angelsaddons-bots"] then
-	data:extend({
-		{
-			type = "bool-setting",
-			name = "reskins-angels-do-angelsaddons-bots",
-			setting_type = "startup",
-			default_value = true,
-		},
-	})
-end
-
-if mods["angelsaddons-cab"] then
-	data:extend({
-		{
-			type = "bool-setting",
-			name = "reskins-angels-do-angelsaddons-cab",
-			setting_type = "startup",
-			default_value = true,
-		},
-	})
-end
-
-if mods["angelsaddons-mobility"] then
-	data:extend({
-		{
-			type = "bool-setting",
-			name = "reskins-angels-do-angelsaddons-mobility",
-			setting_type = "startup",
-			default_value = true,
-		},
-	})
-end
-
-if mods["angelsaddons-storage"] then
-	data:extend({
-		{
-			type = "bool-setting",
-			name = "reskins-angels-do-angelsaddons-storage",
-			setting_type = "startup",
-			default_value = true,
 		},
 	})
 end
