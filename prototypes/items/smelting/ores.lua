@@ -5,6 +5,7 @@
 
 ---@using data
 ---@using Reskins.Framework
+---@using Reskins.SpriteUtils
 
 if not mods["angelssmelting"] then
 	return
@@ -61,7 +62,6 @@ if mods["bobores"] then
 	items["tungsten-ore"] = bobs_ore("tungsten-ore")
 end
 
--- FIXME: https://github.com/kirazy/reskins-library/issues/11
 items["angels-thorium-ore"] = { composition = AngelsOres.get_thorium_ore_icon_composition() }
 items["bob-thorium-ore"] = { composition = AngelsOres.get_thorium_ore_icon_composition() }
 
