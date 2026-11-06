@@ -648,8 +648,9 @@ local recipes = {
 	},
 }
 
--- Bob's glass is the first of the glass recipes.
-if data.raw["recipe"]["bob-glass"] then
+-- Bob's glass is the first of the glass recipes, unless Angel's Smelting hides it.
+local bob_glass = data.raw["recipe"]["bob-glass"]
+if bob_glass and not bob_glass.hidden then
 	recipes["bob-glass"] = { composition = Icons.get_glass_icon_composition(), label = numeral(1) }
 	recipes["angels-plate-glass"].label = numeral(2)
 	recipes["angels-plate-glass-2"].label = numeral(3)
