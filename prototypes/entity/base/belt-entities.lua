@@ -4,6 +4,7 @@
 -- See LICENSE.md in the project directory for license information.
 
 ---@using data
+---@using Reskins.Framework
 
 local _framework = {
 	settings = require("__reskins-framework__.api.settings"),
@@ -19,6 +20,7 @@ local Applicators = require("__reskins-assets-api__.api.applicators")
 local Splitter = require("__reskins-assets-api__.assets.base.entities.splitter")
 local TransportBelt = require("__reskins-assets-api__.assets.base.entities.transport-belt")
 local UndergroundBelt = require("__reskins-assets-api__.assets.base.entities.underground-belt")
+local Logistics = require("__reskins-assets-api__.assets.base.technologies.logistics")
 
 -- Artisanal Reskins: Bob's Mods reskins the belt entities of the base game when it is loaded.
 if mods["reskins-bobs"] then
@@ -27,36 +29,49 @@ end
 
 local reskin_entities = _framework.settings.get_value("reskins-framework-use-custom-tier-colors") == true
 
--- The transport belt, underground belt, and splitter of each tier. The entities are reskinned when the tier colors are
--- customized, and are otherwise given tier labels.
+-- The transport belt, underground belt, splitter, and logistics technology of each tier. The entities and technologies
+-- are reskinned when the tier colors are customized, and the entities are otherwise given tier labels.
 local belt_tiers = {
 	{
 		transport_belt = "transport-belt",
 		underground_belt = "underground-belt",
 		splitter = "splitter",
+		technology = "logistics",
 		tier = 1,
 	},
 	{
 		transport_belt = "fast-transport-belt",
 		underground_belt = "fast-underground-belt",
 		splitter = "fast-splitter",
+		technology = "logistics-2",
 		tier = 2,
 	},
 	{
 		transport_belt = "express-transport-belt",
 		underground_belt = "express-underground-belt",
 		splitter = "express-splitter",
+		technology = "logistics-3",
 		tier = 3,
 	},
 	{
 		transport_belt = "turbo-transport-belt",
 		underground_belt = "turbo-underground-belt",
 		splitter = "turbo-splitter",
+		technology = "turbo-transport-belt",
 		tier = 4,
 	},
 }
 
+---@type table<string, TieredIconDefinition>
+local technologies = {}
+
 for _, belt_tier in pairs(belt_tiers) do
+	local tint = _framework.tiers.get_tint(belt_tier.tier)
+
+	if reskin_entities and data.raw["technology"][belt_tier.technology] then
+		technologies[belt_tier.technology] = { composition = Logistics.get_icon_composition({ tint = tint }) }
+	end
+
 	local belt = data.raw["transport-belt"][belt_tier.transport_belt]
 	if not belt then
 		goto continue
@@ -73,7 +88,6 @@ for _, belt_tier in pairs(belt_tiers) do
 		goto continue
 	end
 
-	local tint = _framework.tiers.get_tint(belt_tier.tier)
 	local params = { tint = tint, belt_sprite = _defines.get_belt_sprites(belt.speed) }
 
 	-- Find the entities that use the belt animation set of the belt before it is replaced.
@@ -110,3 +124,5 @@ for _, belt_tier in pairs(belt_tiers) do
 
 	::continue::
 end
+
+_framework.tiers.assign_icons_with_tier_labels("technology", technologies)

@@ -16,7 +16,7 @@ Date: ????
     - Now depends on Artisanal Reskins: Bob's Assets, which has the bearings and bearing balls in the colors of Angel's materials
     - Removed the settings that turned off the reskins of each of Angel's mods; every Angel's mod that is loaded is reskinned
     - The inspector valve now has its own artwork, which has no arrow
-    - The belt entities of the base game now have tier labels, or are reskinned when the custom tier colors of Artisanal Reskins: Framework are used, when Artisanal Reskins: Bob's Mods is not loaded
+    - The belt entities of the base game now have tier labels, and the belt entities and logistics technologies of the base game are reskinned when the custom tier colors of Artisanal Reskins: Framework are used, when Artisanal Reskins: Bob's Mods is not loaded
   Bugfixes:
     - Fixed that the chemical furnace color setting of Artisanal Reskins: Bob's Mods was shown when Angel's Smelting hides the chemical furnaces of Bob's mods
     - Fixed that the recipes of the silver, platinum, and tin wires lost the plate in the corner of their icons, and that the first tungsten casting powder recipe lost its numeral
