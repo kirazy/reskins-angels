@@ -6,12 +6,10 @@
 ---@using data
 ---@using Reskins.Framework
 
--- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.petrochem.items) then
 	return
 end
 
--- Check to see if reskinning needs to be done.
 if not mods["angelspetrochem"] then
 	return
 end

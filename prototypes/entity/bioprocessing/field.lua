@@ -9,7 +9,6 @@ local _sprite_utils = { icons = require("__reskins-sprite-utils__.icons") }
 local Applicators = require("__reskins-assets-api__.api.applicators")
 local CropFarm = require("__reskins-assets-api__.assets.angels.entities.bioprocessing.crop-farm")
 
--- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.bioprocessing.entities) then
 	return
 end

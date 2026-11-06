@@ -6,7 +6,6 @@
 ---@using data
 ---@using Reskins.Framework
 
--- Check to see if reskinning needs to be done.
 if not (reskins.angels and reskins.angels.triggers.smelting.items) then
 	return
 end
@@ -130,7 +129,7 @@ local items = {
 	["iron-stick"] = base_icon("iron-stick"),
 }
 
--- Bob's mods take the name of the tungsten plate of Space Age.
+-- Bob's mods use the name of the tungsten plate from Space Age.
 if mods["boblibrary"] then
 	items["tungsten-plate"] = plate("tungsten")
 end
@@ -181,7 +180,6 @@ for name, material in pairs(powders) do
 	items[name] = { composition = Powders.get_icon_composition({ material = material }) }
 end
 
--- Add the ingots and their picture variations when item variations are enabled.
 if _framework.settings.get_value("reskins-angels-use-item-variations") then
 	for _, material in pairs({
 		"aluminium",
@@ -211,7 +209,7 @@ end
 
 _framework.tiers.assign_icons_with_tier_labels("item", items)
 
--- Assign Bob's armor in the colors of Angel's materials. Armor is a prototype type of its own.
+-- Assign Bob's armor in the colors of Angel's materials.
 if _framework.settings.get_value("reskins-angels-use-angels-material-colors") then
 	_framework.tiers.assign_icons_with_tier_labels("armor", {
 		["bob-power-armor-mk4"] = { composition = Armor.get_power_armor_mk4_icon_composition() },

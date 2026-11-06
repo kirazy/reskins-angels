@@ -13,7 +13,6 @@ local Applicators = require("__reskins-assets-api__.api.applicators")
 local Pipe = require("__reskins-assets-api__.assets.base.entities.pipe")
 local PipeToGround = require("__reskins-assets-api__.assets.base.entities.pipe-to-ground")
 
--- Check to see if reskinning needs to be done.
 if _framework.settings.get_value("reskins-angels-use-angels-material-colors-pipes") == false then
 	return
 end
