@@ -18,6 +18,7 @@ Date: ????
     - The inspector valve now has its own artwork, which has no arrow
     - The belt entities of the base game now have tier labels, and the belt entities and logistics technologies of the base game are reskinned when the custom tier colors of Artisanal Reskins: Framework are used, when Artisanal Reskins: Bob's Mods is not loaded
     - No longer depends on Artisanal Reskins: Library, and is incompatible with it
+    - Removed the graphics of this mod; every reskin draws the artwork of the asset mods, and other mods that drew files of this mod must draw the asset mods instead
   Bugfixes:
     - Fixed that the chemical furnace color setting of Artisanal Reskins: Bob's Mods was shown when Angel's Smelting hides the chemical furnaces of Bob's mods
     - Fixed that the glass recipes were numbered from II when Angel's Smelting hides the glass recipe of Bob's mods
