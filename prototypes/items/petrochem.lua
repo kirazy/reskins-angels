@@ -4,6 +4,7 @@
 -- See LICENSE.md in the project directory for license information.
 
 ---@using data
+---@using Reskins.Assets.Angels.Items
 ---@using Reskins.Framework
 
 if not mods["angelspetrochem"] then
@@ -15,13 +16,17 @@ local _sprite_utils = { defines = require("__reskins-sprite-utils__.defines") }
 
 local BobsIcons = require("__reskins-assets-api__.assets.bobs.items.icons")
 local Icons = require("__reskins-assets-api__.assets.angels.items.icons")
+local Numerals = require("__reskins-assets-api__.assets.angels.items.numerals")
 local Pellets = require("__reskins-assets-api__.assets.angels.items.pellets")
 
 ---Gets the numeral of the given `tier`, in the style of Angel's petrochemistry.
----@param tier integer The number of the numeral.
+---@param tier NumeralNumber The number of the numeral.
 ---@return IconData[]
 local function numeral(tier)
-	return reskins.angels.num_tier(tier, "petrochem")
+	return Numerals.get_icon({
+		number = tier,
+		tint = angelsmods.petrochem.number_tint --[[@as data.Color]],
+	})
 end
 
 ---@type table<string, TieredIconDefinition>

@@ -4,6 +4,7 @@
 -- See LICENSE.md in the project directory for license information.
 
 ---@using data
+---@using Reskins.Assets.Angels.Items
 ---@using Reskins.Framework
 
 if not mods["angelssmelting"] then
@@ -22,6 +23,7 @@ local Bearings = require("__reskins-assets-api__.assets.bobs.items.bearings")
 local Gears = require("__reskins-assets-api__.assets.angels.items.gears")
 local Icons = require("__reskins-assets-api__.assets.angels.items.icons")
 local Ingots = require("__reskins-assets-api__.assets.angels.items.ingots")
+local Numerals = require("__reskins-assets-api__.assets.angels.items.numerals")
 local Plates = require("__reskins-assets-api__.assets.angels.items.plates")
 local Powders = require("__reskins-assets-api__.assets.angels.items.powders")
 local Wires = require("__reskins-assets-api__.assets.angels.items.wires")
@@ -29,10 +31,13 @@ local Wires = require("__reskins-assets-api__.assets.angels.items.wires")
 local corner = _sprite_utils.defines.icon_transforms.compass.northwest
 
 ---Gets the numeral of the given `tier`, in the style of Angel's smelting.
----@param tier integer The number of the numeral.
+---@param tier NumeralNumber The number of the numeral.
 ---@return IconData[]
 local function numeral(tier)
-	return reskins.angels.num_tier(tier, "smelting")
+	return Numerals.get_icon({
+		number = tier,
+		tint = angelsmods.smelting.number_tint --[[@as data.Color]],
+	})
 end
 
 ---Gets the definition of an icon from the base game.

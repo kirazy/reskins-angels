@@ -4,6 +4,7 @@
 -- See LICENSE.md in the project directory for license information.
 
 ---@using data
+---@using Reskins.Assets.Angels.Items
 ---@using Reskins.Framework
 
 if not mods["angelsrefining"] then
@@ -13,17 +14,21 @@ end
 local _framework = { tiers = require("__reskins-framework__.api.tiers") }
 
 local Icons = require("__reskins-assets-api__.assets.angels.items.icons")
+local Numerals = require("__reskins-assets-api__.assets.angels.items.numerals")
 
 ---Gets the numeral of the given `tier`, in the style of Angel's refining.
----@param tier integer The number of the numeral.
+---@param tier NumeralNumber The number of the numeral.
 ---@return IconData[]
 local function numeral(tier)
-	return reskins.angels.num_tier(tier, "refining")
+	return Numerals.get_icon({
+		number = tier,
+		tint = angelsmods.refining.number_tint --[[@as data.Color]],
+	})
 end
 
 ---Gets the definition of a recipe with the icon of the given `fluid` and the numeral of the given `tier`.
 ---@param fluid string The name of the fluid.
----@param tier integer The number of the numeral.
+---@param tier NumeralNumber The number of the numeral.
 ---@return TieredIconDefinition
 local function mud_water(fluid, tier)
 	return { sources = { { name = fluid, type_name = "fluid" } }, label = numeral(tier) }
