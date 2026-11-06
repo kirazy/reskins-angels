@@ -15,7 +15,7 @@ Date: ????
     - The powders now show their icon as one of their in-world pictures, and the ingots use their reskinned icon with 9 in-world pictures when item variations are enabled
     - Now depends on Artisanal Reskins: Bob's Assets, which has the bearings and bearing balls in the colors of Angel's materials
     - Removed the settings that turned off the reskins of each of Angel's mods; every Angel's mod that is loaded is reskinned
-    - The belt entities of the base game now have tier labels, or are reskinned when the custom tier colors of Artisanal Reskins: Framework are used, when Artisanal Reskins: Bob's Mods does not reskin them
+    - The belt entities of the base game now have tier labels, or are reskinned when the custom tier colors of Artisanal Reskins: Framework are used, when Artisanal Reskins: Bob's Mods is not loaded
   Bugfixes:
     - Fixed that the chemical furnace color setting of Artisanal Reskins: Bob's Mods was shown when Angel's Smelting hides the chemical furnaces of Bob's mods
     - Fixed that the recipes of the silver, platinum, and tin wires lost the plate in the corner of their icons, and that the first tungsten casting powder recipe lost its numeral

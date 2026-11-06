@@ -20,8 +20,8 @@ local Splitter = require("__reskins-assets-api__.assets.base.entities.splitter")
 local TransportBelt = require("__reskins-assets-api__.assets.base.entities.transport-belt")
 local UndergroundBelt = require("__reskins-assets-api__.assets.base.entities.underground-belt")
 
--- Artisanal Reskins: Bob's Mods reskins the belt entities of the base game when Bob's Logistics is loaded.
-if mods["reskins-bobs"] and mods["boblogistics"] then
+-- Artisanal Reskins: Bob's Mods reskins the belt entities of the base game when it is loaded.
+if mods["reskins-bobs"] then
 	return
 end
 
