@@ -18,11 +18,6 @@ if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
 end
 
 -- CHEMICAL PLANTS
--- Flag available for Mini-Machines compatibility pass
-if reskins.compatibility then
-	reskins.compatibility.triggers.minimachines.chemplants.angels = true
-end
-
 local entities = {
 	["chemical-plant"] = { tier = 1 },
 	["angels-chemical-plant-2"] = { tier = 2 },

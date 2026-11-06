@@ -13,11 +13,6 @@ if not (reskins.angels and reskins.angels.triggers.petrochem.entities) then
 	return
 end
 
--- Flag available for Mini-Machines compatibility pass
-if reskins.compatibility then
-	reskins.compatibility.triggers.minimachines.refineries = true
-end
-
 local entities = {
 	["oil-refinery"] = { tier = 1, prog_tier = 2 },
 	["angels-oil-refinery-2"] = { tier = 2, prog_tier = 3 },
