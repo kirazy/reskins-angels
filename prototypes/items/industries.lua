@@ -24,7 +24,7 @@ local FuelCells = require("__reskins-assets-api__.assets.angels.items.fuel-cells
 local Isotopes = require("__reskins-assets-api__.assets.angels.items.isotopes")
 local NuclearFuel = require("__reskins-assets-api__.assets.angels.items.nuclear-fuel")
 
----Gets the definition of the fuel cell of the given `fuel`, with the light of a fuel cell in its pictures.
+---Gets the definition of the fuel cell for the given `fuel`, with the light of a fuel cell in its pictures.
 ---@param fuel string The fuel of the fuel cell.
 ---@return TieredIconDefinition
 local function fuel_cell(fuel)
@@ -54,7 +54,8 @@ _framework.tiers.assign_icons_with_tier_labels("item", {
 	["angels-nuclear-fuel-2"] = nuclear_fuel(NuclearFuel.get_nuclear_fuel_2_icon_composition()),
 })
 
----Gets the definition of the isotope of the given `name`, with pictures that draw the isotope a second time as a light.
+---Gets the definition of the isotope for the given `name`, with pictures that draw the isotope a second time
+---as a light.
 ---@param name string The isotope.
 ---@return TieredIconDefinition
 local function isotope(name)

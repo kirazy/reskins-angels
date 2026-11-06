@@ -56,7 +56,7 @@ local items = {
 	["bob-zinc-ore"] = bobs_ore("zinc-ore"),
 }
 
--- Bob's mods take the name of the tungsten ore of Space Age.
+-- Bob's mods use the name of the tungsten ore from Space Age.
 if mods["bobores"] then
 	items["tungsten-ore"] = bobs_ore("tungsten-ore")
 end
@@ -67,7 +67,7 @@ items["bob-thorium-ore"] = { composition = AngelsOres.get_thorium_ore_icon_compo
 
 _framework.tiers.assign_icons_with_tier_labels("item", items)
 
----The base layer of the ore sorting recipes of the ore sorting facility.
+---The base layer of the ore sorting recipes for the ore sorting facility.
 ---@type IconDatumSource
 local sorting_base = {
 	icon_datum = {
@@ -110,7 +110,7 @@ local recipes = {
 	["angels-ore-pure-mix1-processing"] = sorting("angels-tungsten-ore"),
 }
 
----The base layers of the slag processing recipes of the crystallizer.
+---The base layers of the slag processing recipes for the crystallizer.
 ---@type IconDataSource
 local slag_processing_base = {
 	icon_data = {

@@ -40,7 +40,7 @@ else
 	items["angels-solid-rubber"] = { composition = Icons.get_rubber_icon_composition() }
 end
 
--- Angel's resin takes the icon of Bob's resin.
+-- Angel's resin uses the icon of Bob's resin.
 if mods["reskins-bobs"] then
 	items["angels-solid-resin"] = { composition = BobsIcons.get_resin_icon_composition() }
 	recipes["bob-resin-wood"] = { composition = BobsIcons.get_resin_icon_composition(), label = numeral(1) }

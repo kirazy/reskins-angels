@@ -55,7 +55,7 @@ local technologies = {
 	-- Hydro-refining (Ore flotation cell)
 	["angels-ore-floatation"] = technology(OreFlotation, 1, 2),
 
-	-- The technologies of Mad Clown's mods take the base layer of the icon only.
+	-- The technologies of Mad Clown's mods use the base layer of the icon only.
 	["clowns-ore-crushing"] = { icon_data = OreCrushing.get_icon() },
 	["clowns-ore-floatation"] = { icon_data = OreFlotation.get_icon() },
 	["clowns-ore-refining"] = { icon_data = OreRefining.get_icon() },

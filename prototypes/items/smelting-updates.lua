@@ -35,28 +35,28 @@ local function numeral(tier)
 	return reskins.angels.num_tier(tier, "smelting")
 end
 
----Gets the definition of an icon of the base game.
+---Gets the definition of an icon from the base game.
 ---@param name string The name of the file in `__base__/graphics/icons`, without its extension.
 ---@return TieredIconDefinition
 local function base_icon(name)
 	return { icon_datum = { icon = "__base__/graphics/icons/" .. name .. ".png", icon_size = 64 } }
 end
 
----Gets the definition of the plate of the given `material`.
+---Gets the definition of the plate for the given `material`.
 ---@param material string
 ---@return TieredIconDefinition
 local function plate(material)
 	return { composition = Plates.get_icon_composition({ material = material }) }
 end
 
----Gets the definition of the alloy of the given `alloy`.
+---Gets the definition of the alloy for the given `alloy`.
 ---@param alloy string
 ---@return TieredIconDefinition
 local function alloy(alloy)
 	return { composition = Plates.get_alloy_icon_composition({ alloy = alloy }) }
 end
 
----Gets the definition of the wire of the given `material`.
+---Gets the definition of the wire for the given `material`.
 ---@param material string
 ---@return TieredIconDefinition
 local function wire(material)
@@ -218,7 +218,7 @@ if _framework.settings.get_value("reskins-angels-use-angels-material-colors") th
 end
 
 -- Assign the recipes after the items. A composite recipe reads the icons of the items, and the assignment of an item
--- sets the icon of the recipe of the same name.
+-- sets the icon of the recipe with the same name.
 ---@type table<string, TieredIconDefinition>
 local recipes = {
 	-- Glass.
