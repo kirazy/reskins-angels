@@ -7,7 +7,7 @@ local _defines = require("__reskins-assets-api__.api.defines")
 local Applicators = require("__reskins-assets-api__.api.applicators")
 
 -- Each group of Angel's entities that keep the artwork of Angel's mods, with the triggers that enable it and the base
--- entity of which the dying explosion is used. Each entity takes the generic remnants for its size.
+-- entity of which the dying explosion is used. Each entity uses the generic remnants for its size.
 local groups = {
 	{
 		triggers = { "refining" },
@@ -118,7 +118,7 @@ local groups = {
 	},
 }
 
----Indicates whether the entities of any of the given `triggers` are reskinned.
+---Indicates whether the entities of any trigger in the given `triggers` are reskinned.
 ---@param triggers string[]
 ---@return boolean
 local function is_enabled(triggers)
