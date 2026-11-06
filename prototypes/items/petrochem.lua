@@ -45,10 +45,18 @@ else
 	items["angels-solid-rubber"] = { composition = Icons.get_rubber_icon_composition() }
 end
 
--- Angel's resin uses the icon of Bob's resin.
+-- Angel's resin uses the icon of Bob's resin. Bob's resin from wood is the first of the resin recipes, unless Angel's
+-- mods hide it.
 if mods["reskins-bobs"] then
 	items["angels-solid-resin"] = { composition = BobsIcons.get_resin_icon_composition() }
-	recipes["bob-resin-wood"] = { composition = BobsIcons.get_resin_icon_composition(), label = numeral(1) }
+
+	local bob_resin_wood = data.raw["recipe"]["bob-resin-wood"]
+	if bob_resin_wood and not bob_resin_wood.hidden then
+		recipes["bob-resin-wood"] = { composition = BobsIcons.get_resin_icon_composition(), label = numeral(1) }
+		recipes["angels-solid-resin"] = { composition = BobsIcons.get_resin_icon_composition(), label = numeral(2) }
+	else
+		recipes["angels-solid-resin"] = { composition = BobsIcons.get_resin_icon_composition() }
+	end
 end
 
 _framework.tiers.assign_icons_with_tier_labels("item", items)

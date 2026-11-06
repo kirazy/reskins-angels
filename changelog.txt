@@ -21,6 +21,7 @@ Date: ????
   Bugfixes:
     - Fixed that the chemical furnace color setting of Artisanal Reskins: Bob's Mods was shown when Angel's Smelting hides the chemical furnaces of Bob's mods
     - Fixed that the glass recipes were numbered from II when Angel's Smelting hides the glass recipe of Bob's mods
+    - Fixed that the solid resin recipe kept the low resolution icon of Bob's resin
     - Fixed that the recipes of the silver, platinum, and tin wires lost the plate in the corner of their icons, and that the first tungsten casting powder recipe lost its numeral
     - Fixed that the iron casting 4 and steel smelting 4 technologies and the second and third tungsten casting powder recipes were not reskinned
     - The icons of the other Angel's items, recipes, and technologies now come from the Artisanal Reskins: Assets API, and the in-world pictures of the isotopes, fuel cells, and nuclear fuels now have mipmaps
