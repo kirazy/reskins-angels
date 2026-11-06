@@ -8,6 +8,9 @@
 ----------------------------------------------------------------------------------------------------
 require("prototypes.entity.petrochem")
 
+-- Base game
+require("prototypes.entity.base.belt-entities")
+
 -- Angel's Bio-Processing
 require("prototypes.entity.bioprocessing.algae-farm")
 require("prototypes.entity.bioprocessing.arboretum")
