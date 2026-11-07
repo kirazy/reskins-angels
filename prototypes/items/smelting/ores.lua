@@ -57,8 +57,9 @@ local items = {
 	["bob-zinc-ore"] = bobs_ore("zinc-ore"),
 }
 
--- Bob's mods use the name of the tungsten ore from Space Age.
-if mods["bobores"] then
+-- Bob's mods use the name of the tungsten ore from Space Age. When Space Age is loaded, the ore keeps the icon from
+-- Space Age.
+if mods["bobores"] and not mods["space-age"] then
 	items["tungsten-ore"] = bobs_ore("tungsten-ore")
 end
 

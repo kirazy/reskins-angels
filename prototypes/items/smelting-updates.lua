@@ -134,8 +134,9 @@ local items = {
 	["iron-stick"] = base_icon("iron-stick"),
 }
 
--- Bob's mods use the name of the tungsten plate from Space Age.
-if mods["boblibrary"] then
+-- Bob's mods use the name of the tungsten plate from Space Age. When Space Age is loaded, the plate keeps the icon from
+-- Space Age.
+if mods["boblibrary"] and not mods["space-age"] then
 	items["tungsten-plate"] = plate("tungsten")
 end
 
@@ -657,7 +658,8 @@ if bob_glass and not bob_glass.hidden then
 	recipes["angels-plate-glass-3"].label = numeral(4)
 end
 
-if mods["reskins-bobs"] then
+-- When Space Age is loaded, the tungsten carbide recipe keeps the icon from Space Age.
+if mods["reskins-bobs"] and not mods["space-age"] then
 	recipes["tungsten-carbide"] = {
 		icon_datum = { icon = "__reskins-assets-bobs__/graphics/icons/plates/tungsten-carbide-plate.png", icon_size = 64 },
 	}
