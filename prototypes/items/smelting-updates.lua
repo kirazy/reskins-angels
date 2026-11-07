@@ -26,6 +26,7 @@ local Ingots = require("__reskins-assets-api__.assets.angels.items.ingots")
 local Numerals = require("__reskins-assets-api__.assets.angels.items.numerals")
 local Plates = require("__reskins-assets-api__.assets.angels.items.plates")
 local Powders = require("__reskins-assets-api__.assets.angels.items.powders")
+local SpaceAgeIcons = require("__reskins-assets-api__.assets.base.items.space-age-icons")
 local Wires = require("__reskins-assets-api__.assets.angels.items.wires")
 
 local corner = _sprite_utils.defines.icon_transforms.compass.northwest
@@ -134,9 +135,11 @@ local items = {
 	["iron-stick"] = base_icon("iron-stick"),
 }
 
--- Bob's mods use the name of the tungsten plate from Space Age. When Space Age is loaded, the plate keeps the icon from
+-- Bob's mods use the name of the tungsten plate from Space Age. When Space Age is loaded, the plate uses the icon from
 -- Space Age.
-if mods["boblibrary"] and not mods["space-age"] then
+if mods["boblibrary"] and mods["space-age"] then
+	items["tungsten-plate"] = { composition = SpaceAgeIcons.get_tungsten_plate_icon_composition() }
+elseif mods["boblibrary"] then
 	items["tungsten-plate"] = plate("tungsten")
 end
 

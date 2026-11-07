@@ -15,6 +15,7 @@ local _framework = { tiers = require("__reskins-framework__.api.tiers") }
 
 local AngelsOres = require("__reskins-assets-api__.assets.angels.items.ores")
 local BobsOres = require("__reskins-assets-api__.assets.bobs.items.ores")
+local SpaceAgeIcons = require("__reskins-assets-api__.assets.base.items.space-age-icons")
 
 ---Gets the definition of the given `ore` in the Angel's assets, with its picture variations.
 ---@param ore string The ore.
@@ -57,9 +58,11 @@ local items = {
 	["bob-zinc-ore"] = bobs_ore("zinc-ore"),
 }
 
--- Bob's mods use the name of the tungsten ore from Space Age. When Space Age is loaded, the ore keeps the icon from
+-- Bob's mods use the name of the tungsten ore from Space Age. When Space Age is loaded, the ore uses the icon from
 -- Space Age.
-if mods["bobores"] and not mods["space-age"] then
+if mods["bobores"] and mods["space-age"] then
+	items["tungsten-ore"] = { composition = SpaceAgeIcons.get_tungsten_ore_icon_composition() }
+elseif mods["bobores"] then
 	items["tungsten-ore"] = bobs_ore("tungsten-ore")
 end
 
