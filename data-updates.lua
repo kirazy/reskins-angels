@@ -14,6 +14,9 @@ require("prototypes.entity.smelting.sintering-oven")
 -- Angel's Refining
 require("prototypes.entity.refining.liquefier")
 
+-- Angel's Petrochem
+require("prototypes.entity.petrochem.oil-refinery-updates")
+
 ----------------------------------------------------------------------------------------------------
 -- ITEMS
 ----------------------------------------------------------------------------------------------------
