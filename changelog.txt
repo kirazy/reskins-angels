@@ -2,39 +2,20 @@
 Version: 2.5.0
 Date: ????
   Changes:
-    - Migrated some entity sprites to use the Artisanal Reskins: Assets API
-    - Entity tints and tier labels now follow the settings of Artisanal Reskins: Framework
-    - Dying explosions, particles, and remnants now come from the Artisanal Reskins: Assets API, and machines now use generic remnants that fit their size
-    - The Angel's entities that keep the artwork of Angel's mods, such as the clarifier, flare stack, tanks, silos, sea pumps, and the buildings of Angel's Addons - Robot Logistics, now use generic remnants that fit their size and the dying explosion of a base entity
-    - The bioprocessing buildings are now reskinned untinted, with high resolution icons, unless Artisanal Reskins: Compatibility reskins the tiers that Extended Angel's adds
-    - The oil refineries are now reskinned by this mod instead of Artisanal Reskins: Library
-    - Chemical furnaces are now labeled tiers 1 to 4 under the traditional tier mapping, matching Angel's mods
-    - The recipes of the ore flotation cell and clarifier, and the mud waters, now keep the tints and colors of Angel's mods
-    - The in-world pictures of the items for entities that use the Artisanal Reskins: Assets API now have mipmaps
-    - The icons of the Angel's Smelting items and recipes now come from the Artisanal Reskins: Assets API, and the composite recipe icons no longer show the tier labels of the items they show
-    - The powders now show their icon as one of their in-world pictures, and the ingots use their reskinned icon with 9 in-world pictures when item variations are enabled
-    - Now depends on Artisanal Reskins: Bob's Assets, which has the bearings and bearing balls in the colors of Angel's materials
-    - Removed the settings that turned off the reskins of each of Angel's mods; every Angel's mod that is loaded is reskinned
-    - The inspector valve now has its own artwork, which has no arrow
-    - The belt entities of the base game now have tier labels, and the belt entities and logistics technologies of the base game are reskinned when the custom tier colors of Artisanal Reskins: Framework are used, when Artisanal Reskins: Bob's Mods is not loaded
-    - No longer depends on Artisanal Reskins: Library, and is incompatible with it
-    - Removed the graphics of this mod; every reskin draws the artwork of the asset mods, and other mods that drew files of this mod must draw the asset mods instead
-  Bugfixes:
-    - Fixed that the chemical furnace color setting of Artisanal Reskins: Bob's Mods was shown when Angel's Smelting hides the chemical furnaces of Bob's mods
-    - Fixed that the glass recipes were numbered from II when Angel's Smelting hides the glass recipe of Bob's mods
-    - Fixed that the solid resin recipe kept the low resolution icon of Bob's resin
-    - Fixed that the recipes of the silver, platinum, and tin wires lost the plate in the corner of their icons, and that the first tungsten casting powder recipe lost its numeral
-    - Fixed that the iron casting 4 and steel smelting 4 technologies and the second and third tungsten casting powder recipes were not reskinned
-    - The icons of the other Angel's items, recipes, and technologies now come from the Artisanal Reskins: Assets API, and the in-world pictures of the isotopes, fuel cells, and nuclear fuels now have mipmaps
-    - Removed support for Angel's Industries, Angel's Exploration, and MadClown01's Science, which are not available for Factorio 2.0 or later
+    - Migrated all artwork to the Artisanal Reskins: Assets API
+    - Migrated to use Artisanal Reskins: Framework; Artisanal Reskins: Library is no longer required, nor are the settings used
+    - Removed the settings to toggle reskinning for each of Angel's mods; every loaded Angel's mod is now reskinned
+    - Entities without bespoke remnant artwork now use generic remnants that match their size
+    - Explosions have been added to entities that are not otherwise reskinned, such as the clarifier, flare stack, and Petrochemical tanks
+    - Bioprocessing buildings now have higher resolution icons
+    - Removed the arrow from the two-way inspector valve
+    - Belt entities are now marked with tier labels and respond to custom tier colors when playing Angel's mods standalone without Bob's mods
   Bugfixes:
     - Fixed that the mod failed to load with Angel's Petrochem when Bob's Metals, Chemicals and Intermediates was not active
-    - Fixed that the item variations of the ingots had no effect
-    - Fixed that the icons of the steel plate and Bob's lead plate recipes had a blank layer
-    - Fixed that Bob's tungsten ore was not reskinned, and that the cobalt-steel smelting technology showed the cobalt casting icon
-    - Fixed that Bob's plutonium-239 and thorium-232 showed the icons of Angel's Petrochem instead of their reskinned icons
-    - Fixed that the big chests and logistic big chests of Angel's Addons - Robot Logistics were not reskinned
-    - Fixed that the thorium power technology of Angel's Petrochem was not reskinned
+    - Fixed that the chemical furnace color setting of Artisanal Reskins: Bob's Mods was shown when Angel's Smelting hides Bob's chemical furnaces
+    - Fixed that the glass recipes were numbered from II when Angel's Smelting hides Bob's glass recipe
+    - Fixed that ingot item variations did not work
+    - Fixed that the solid resin recipe used the low resolution icon of Bob's resin
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
 Date: 2026-11-02
