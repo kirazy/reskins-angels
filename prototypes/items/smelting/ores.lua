@@ -160,7 +160,7 @@ for _, name in pairs({
 	local recipe = data.raw["recipe"][name]
 
 	if recipe and recipe.results[1].name ~= "angels-void" then
-		---@type IconDefinitionSource[]
+		---@type IconSource[]
 		local sources = { slag_processing_base }
 
 		for index = 1, math.min(#recipe.results, #product_placements) do
