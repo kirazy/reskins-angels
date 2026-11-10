@@ -16,6 +16,8 @@ Date: ????
     - Fixed that the glass recipes were numbered from II when Angel's Smelting hides Bob's glass recipe
     - Fixed that ingot item variations did not work
     - Fixed that the solid resin recipe used the low resolution icon of Bob's resin
+  Locale:
+    - Added localization for Swedish
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
 Date: 2026-11-02
