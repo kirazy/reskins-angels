@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.5.0
-Date: ????
+Date: 2026-11-09
   Changes:
     - Migrated all artwork to the Artisanal Reskins: Assets API
     - Migrated to use Artisanal Reskins: Framework; the settings of Artisanal Reskins: Library are no longer used
